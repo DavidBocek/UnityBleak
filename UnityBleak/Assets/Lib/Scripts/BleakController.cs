@@ -226,6 +226,7 @@ public class BleakController : MonoBehaviour {
 		if (directionInt >0)
 			facing = RIGHT;
 		
+		//raycast 3 rays from the right to check collisions
 		if (Physics.Raycast(topRayRight,out rayHitInfoRight, rayLengthSide) || Physics.Raycast(centerRayRight,out rayHitInfoRight, rayLengthSide) || Physics.Raycast(bottomRayRight,out rayHitInfoRight, rayLengthSide)){
 			bool collidableRight = true;
 			if (rayHitInfoRight.transform.gameObject.GetComponent<IgnoreCollisions>()) 
@@ -237,6 +238,8 @@ public class BleakController : MonoBehaviour {
 			} else { obstructedRight = false; }
 		} else
 			obstructedRight = false;
+		
+		//raycast 3 rays from the left to check collisions
 		if (Physics.Raycast(topRayLeft,out rayHitInfoLeft, rayLengthSide) || Physics.Raycast(centerRayLeft,out rayHitInfoLeft, rayLengthSide) || Physics.Raycast(bottomRayLeft,out rayHitInfoLeft, rayLengthSide)){
 			bool collidableLeft = true;
 			if (rayHitInfoLeft.transform.gameObject.GetComponent<IgnoreCollisions>())
@@ -278,6 +281,8 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateJump(float dt){
+		
+		//jumping is 0 when on the ground, >0 for a split second while the jump impulse is occuring, and -1 after that before he hits the ground (so that you can't jump again in air)
 		if (Input.GetKey(KeyCode.Space) && jumping >= 0){
 			//play jump sound
 			jumping += dt;
@@ -298,6 +303,7 @@ public class BleakController : MonoBehaviour {
 				velocity.y = jumpSpeed;
 			}
 		}
+		//reset jump component, this should only run in the frame after bleak hits the ground.
 		if (isGrounded && jumping == -1){
 			if (slamming == true)
 				slamLanding = true;
@@ -312,7 +318,7 @@ public class BleakController : MonoBehaviour {
 			//play slamming animation and sound
 		}
 		
-		//landing from a slam
+		//landing from a slam (not used right now)
 		if (slamLanding){
 			slamLanding=false;
 			slamDelay=0;
