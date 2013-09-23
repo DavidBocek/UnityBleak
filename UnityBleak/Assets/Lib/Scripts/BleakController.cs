@@ -109,24 +109,29 @@ public class BleakController : MonoBehaviour {
 			dt = Time.deltaTime;
 			UpdateRays(dt);
 			if (canControl){
+				//enable gravity if no raycasts return true from the three downward rays
 				if (!Physics.Raycast(leftRayBottom,out rayHitInfoBottom,rayLengthBottom) && !Physics.Raycast(centerRayBottom,out rayHitInfoBottom,rayLengthBottom) && !Physics.Raycast(rightRayBottom,out rayHitInfoBottom,rayLengthBottom)){
 					tempVelVert = velocity.y - gravityAcceleration * dt;
 					velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 					isGrounded = false;
+				//otherwise deal with collisions from the top if the object is not ignoring them
 				} else if (Physics.Raycast(leftRayBottom,out rayHitInfoBottom,rayLengthBottom) || Physics.Raycast(centerRayBottom,out rayHitInfoBottom,rayLengthBottom) || Physics.Raycast(rightRayBottom,out rayHitInfoBottom,rayLengthBottom)){
 					bool collidableDown = true;
+					bool collidableUp = true;
 					bool aboveCollider = true;
-					Debug.Log (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>());
 					if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
 						collidableDown = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreUp();
+						collidableUp = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreDown();
 						//have to check that the object is below bleak, or it will catch the raycasts which start from the center y line of bleak's collider
-						aboveCollider = (rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2) <= (transform.position.y - boxCollider.size.y/2);
+						aboveCollider = (rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2 + rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().center.y) <= (transform.position.y - boxCollider.size.y/2 + boxCollider.center.y);
+						Debug.Log ("above collider: "+aboveCollider+" object: "+(rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2-5)+" player: "+(transform.position.y - boxCollider.size.y/2));
+						//Debug.Log("object collider y/2: "+(rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2)+" player collider y/2: "+(boxCollider.size.y/2));
 					}
 					Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					
-					if (collidableDown && aboveCollider){
+					if (collidableDown && aboveCollider && velocity.y <= 0){
 						HandleBottomCollision(rayHitInfoBottom,dt);	
 					} else {
 						tempVelVert = velocity.y - gravityAcceleration * dt;
@@ -292,7 +297,7 @@ public class BleakController : MonoBehaviour {
 			jumping = -1;
 		}
 		if (jumping > 0){
-			Debug.Log ("jumping next: "+jumping);
+			//Debug.Log ("jumping next: "+jumping);
 			if (jumping < SMALL_JUMP_TIME){
 				velocity.y = jumpSpeed*2/3;
 			}
@@ -517,7 +522,6 @@ public class BleakController : MonoBehaviour {
 			attachedClimbObject = climbable;
 		}
 	}
-	
 	
 	public int numLives = 3;
 	void Damage(){

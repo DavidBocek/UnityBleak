@@ -1,6 +1,8 @@
 .DS_Store
 Library
 Temp
+Assets/-tk2d
+Assets/Resources/tk2d/*
 *.csproj
 *.pidb
 *.unityproj
