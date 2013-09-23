@@ -7,6 +7,8 @@ public class BackAndForthMovement : MonoBehaviour {
 	public Transform destPos;
 	public int moveSpeed;
 	public int numberOfBounces;
+	public float downDelay = 1.5f;
+	public bool canBeKnockedDown = false;
 	
 	private bool movingLeft;
 	private bool movingRight;
@@ -25,6 +27,11 @@ public class BackAndForthMovement : MonoBehaviour {
 			_moving = value;
 		}
 	}
+	private float downTimer = 1.5f;
+	
+	private uint state = 0;
+	private const uint STATE_NORMAL = 0;
+	private const uint STATE_STOPPED = 1;
 	
 	private float epsilon = .1f;
 	
@@ -49,30 +56,51 @@ public class BackAndForthMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((bounceCounter < numberOfBounces || numberOfBounces == -1) && _moving){
-			if (movingRight){
-				if (transform.position.x >= rightPoint.x - epsilon){
-					movingRight = false;
-					movingLeft = true;
-					lastTouchTime = Time.time;
-					if (numberOfBounces != -1) bounceCounter++;
-				} else {
-					distCovered = (Time.time - lastTouchTime) * moveSpeed;
-	        		fracJourney = distCovered / journeyLength;
-	        		transform.position = Vector3.Lerp(leftPoint, rightPoint, fracJourney);
-				}
-			} else if (movingLeft){
-				if (transform.position.x <= leftPoint.x + epsilon){
-					movingRight = true;
-					movingLeft = false;
-					lastTouchTime = Time.time;
-					if (numberOfBounces != -1) bounceCounter++;
-				} else {
-					distCovered = (Time.time - lastTouchTime) * moveSpeed;
-	        		fracJourney = distCovered / journeyLength;
-	        		transform.position = Vector3.Lerp(rightPoint, leftPoint, fracJourney);
+		switch (state){
+		case STATE_NORMAL:
+			if ((bounceCounter < numberOfBounces || numberOfBounces == -1) && _moving){
+				if (movingRight){
+					if (transform.position.x >= rightPoint.x - epsilon){
+						movingRight = false;
+						movingLeft = true;
+						lastTouchTime = Time.time;
+						if (numberOfBounces != -1) bounceCounter++;
+					} else {
+						distCovered = (Time.time - lastTouchTime) * moveSpeed;
+		        		fracJourney = distCovered / journeyLength;
+		        		transform.position = Vector3.Lerp(leftPoint, rightPoint, fracJourney);
+					}
+				} else if (movingLeft){
+					if (transform.position.x <= leftPoint.x + epsilon){
+						movingRight = true;
+						movingLeft = false;
+						lastTouchTime = Time.time;
+						if (numberOfBounces != -1) bounceCounter++;
+					} else {
+						distCovered = (Time.time - lastTouchTime) * moveSpeed;
+		        		fracJourney = distCovered / journeyLength;
+		        		transform.position = Vector3.Lerp(rightPoint, leftPoint, fracJourney);
+					}
 				}
 			}
+			break;
+		case STATE_STOPPED:
+			lastTouchTime += Time.deltaTime;
+			if (downTimer <= 0){
+				state = STATE_NORMAL;
+				downTimer = downDelay;
+			} else {
+				downTimer -= Time.deltaTime;
+			}
+			break;
+		}
+	}
+	
+	
+	public void KnockDown(){
+		if (canBeKnockedDown){
+			state = STATE_STOPPED;
+			downTimer = downDelay;
 		}
 	}
 }

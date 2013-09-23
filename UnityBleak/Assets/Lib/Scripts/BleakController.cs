@@ -478,19 +478,24 @@ public class BleakController : MonoBehaviour {
 			}
 		}*/
 		isGrounded = true;
-		
+		//kill zones component check, to see if bleak should die touching this
 		KillZones killZones = hitInfo.transform.gameObject.GetComponent<KillZones>();
 		if (killZones){
 			if (killZones.HasKillUp()){
 				Damage();
 			}
 		}
-		
+		//bounce off component check, to see if bleak should spring off this
 		BounceOffTop bounceOff = hitInfo.transform.gameObject.GetComponent<BounceOffTop>();
 		if (bounceOff && IsSlamming() && !bounceOff.IsSprung()){
 			SpringJump(bounceOff);
 			bounceOff.SetSprung(true);
 			//spring animation message
+		}
+		//back and forth knock over, to see if bleak should knock this down by jumping on it
+		BackAndForthMovement backAndForth = hitInfo.transform.gameObject.GetComponent<BackAndForthMovement>();
+		if (backAndForth){
+			backAndForth.KnockDown();
 		}
 	}
 	
