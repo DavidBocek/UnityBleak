@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.7513428, y: 98.4344482, z: 0}
+  m_LocalPosition: {x: 60.9249268, y: 919.86499, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -161,16 +161,15 @@ MonoBehaviour:
   runSpeed: 260
   joggingMultiplier: .699999988
   jumpSpeed: 350
-  maxFallSpeed: 400
+  maxFallSpeed: 900
   gravityAcceleration: 1050
-  slamMultiplayer: 1.35000002
+  slamMultiplayer: 3
   canControl: 1
   startPoint: {fileID: 0}
   fallKillSpeed: 800
   timeUntilRun: 1.5
   bottomOffsetPushIn: 3
   sideOffsetPushIn: 1.5
-  numLives: 3
 --- !u!143 &14300000
 CharacterController:
   m_ObjectHideFlags: 1

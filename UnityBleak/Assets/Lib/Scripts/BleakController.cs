@@ -13,7 +13,7 @@ public class BleakController : MonoBehaviour {
 	public int jumpSpeed = 250;
 	public int maxFallSpeed = 400;
 	public int gravityAcceleration = 600;
-	public float slamMultiplayer = 1.25f;
+	public float slamMultiplayer;
 	public bool canControl = true;
 	public Transform startPoint;
 	public float fallKillSpeed;
@@ -38,9 +38,11 @@ public class BleakController : MonoBehaviour {
 	private bool facing = true;
 	private bool isGrounded;
 	private Climbable attachedClimbObject;
+	private KeyCode actionButton = KeyCode.E;
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
+	
 	
 
 	//=========== states =========
@@ -51,7 +53,9 @@ public class BleakController : MonoBehaviour {
 	public const short STATE_CLIMBING_RIGHT = 2;
 	public const short STATE_DYING = 3;
 	public const short STATE_DEAD = 4;
-	public const short STATE_FORCE_MOVE = 5;
+	public const short STATE_HURTING = 5;
+	public const short STATE_HURT = 6;
+	public const short STATE_FORCE_MOVE = 7;	public Transform forceMoveDestination;	public float forceMoveSpeed;
 	
 	
 	//=========== rays ===========
@@ -130,18 +134,17 @@ public class BleakController : MonoBehaviour {
 					Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-					
+					//falling
 					if (collidableDown && aboveCollider && velocity.y <= 0){
 						HandleBottomCollision(rayHitInfoBottom,dt);	
 					} else {
 						tempVelVert = velocity.y - gravityAcceleration * dt;
 						velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
-						isGrounded = false;
 					}
 				}
+				UpdateInputNormal(dt);
 				UpdateIdle(dt);
 				UpdateLeftRight(dt);
-				
 			} else {
 				//accel y is 0, so velocity.y shouldn't change. walking up stairs and such
 				//DEPRECATED canControl? using FORCE_MOVE and death states should replace this i think?
@@ -166,6 +169,20 @@ public class BleakController : MonoBehaviour {
 				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
 			}
 			UpdatePositionChangeClimbing(dt);
+			break;
+		case STATE_FORCE_MOVE:
+			UpdateForceMove(dt);
+			break;
+		case STATE_HURT:
+			transform.position = startPoint.position;
+			SetState(STATE_NORMAL);
+			break;
+		case STATE_DEAD:
+			if (Input.GetKeyDown(KeyCode.R)){
+				transform.position = startPoint.position;
+				numLives = 3;
+				SetState(STATE_NORMAL);
+			}
 			break;
 		}
 		if (Debug.isDebugBuild)
@@ -213,6 +230,20 @@ public class BleakController : MonoBehaviour {
 					runDelay = 0;
 				}
 			}
+		}
+	}
+	
+	/// <summary>
+	/// Updates movement while in a force move
+	/// </summary>
+	/// <param name='dt'>
+	/// time since last frame was called (in seconds)
+	/// </param>
+	void UpdateForceMove(float dt){
+		if ((transform.position - forceMoveDestination.position).sqrMagnitude >= .25f){
+			velocity = (forceMoveDestination.position-transform.position).normalized * forceMoveSpeed;
+		} else {
+			Messenger.Broadcast<Transform,BleakController>("CompletedForceMove",forceMoveDestination,this);
 		}
 	}
 	
@@ -330,6 +361,22 @@ public class BleakController : MonoBehaviour {
 			runDelay=0;
 		}
 	}
+	
+	
+	/// <summary>
+	/// Handles input while in the normal state
+	/// </summary>
+	/// <param name='dt'>
+	/// time since last frame was called (in seconds)
+	/// </param>
+	void UpdateInputNormal(float dt){
+		if (Input.GetKeyDown(actionButton)){
+			//send action message on the position, listeners will handle the action if the position is within their bounds
+			Messenger.Broadcast<Transform,BleakController>("BleakActionActivate",transform,this);
+		}
+	}
+	
+	
 	
 	/// <summary>
 	/// Updates rotation
@@ -467,7 +514,7 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void HandleBottomCollision(RaycastHit hitInfo, float dt){
-		if (velocity.y > Mathf.Abs(fallKillSpeed)) Damage ();
+		if (velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage ();
 		else if (velocity.y < 0) velocity.y = 0;
 		/*if (hitInfo.distance < (rayLengthBottom - 1f) && jumping == 0 && hitInfo.collider!=controller.collider){
 			Vector3 correctionDelta = Vector3.zero;
@@ -528,13 +575,15 @@ public class BleakController : MonoBehaviour {
 		}
 	}
 	
-	public int numLives = 3;
+	static public int numLives = 3;
 	void Damage(){
 		Debug.Log ("apply damage!");
 		if (numLives > 0){
-			SetState (STATE_DYING);
+			//hurt should reset to a checkpoint and graphically change bleak to look more battered
+			SetState (STATE_HURT);
 			numLives--;
 		} else {
+			//dead is like a game over and should switch to a menu or move the player back to the beginning of the level
 			SetState(STATE_DEAD);
 		}
 	}
