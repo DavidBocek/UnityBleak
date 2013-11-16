@@ -242,6 +242,7 @@ public class BleakController : MonoBehaviour {
 	void UpdateForceMove(float dt){
 		if ((transform.position - forceMoveDestination.position).sqrMagnitude >= .25f){
 			velocity = (forceMoveDestination.position-transform.position).normalized * forceMoveSpeed;
+			controller.Move(velocity*dt);
 		} else {
 			Messenger.Broadcast<Transform,BleakController>("CompletedForceMove",forceMoveDestination,this);
 		}
