@@ -25,6 +25,8 @@ public class tk2dUIHoverItem : tk2dUIBaseItemControl
     /// </summary>
     public event System.Action<tk2dUIHoverItem> OnToggleHover;
 
+    public string SendMessageOnToggleHoverMethodName = "";
+
     /// <summary>
     /// Is mouse currently over
     /// </summary>
@@ -38,8 +40,8 @@ public class tk2dUIHoverItem : tk2dUIBaseItemControl
                 isOver = value;
                 SetState();
                 if (OnToggleHover != null) { OnToggleHover(this); }
+                base.DoSendMessage( SendMessageOnToggleHoverMethodName, this );
             }
-
         }
     }
 

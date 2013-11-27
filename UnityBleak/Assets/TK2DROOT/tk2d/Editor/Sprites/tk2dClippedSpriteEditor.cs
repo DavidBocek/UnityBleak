@@ -23,15 +23,19 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 			return;
 		}
 
-		bool newCreateBoxCollider = EditorGUILayout.Toggle("Create Box Collider", sprite.CreateBoxCollider);
+		var spriteData = sprite.GetCurrentSpriteDef();
+		if (spriteData != null)
+			WarnSpriteRenderType(spriteData);
+
+		bool newCreateBoxCollider = base.DrawCreateBoxColliderCheckbox(sprite.CreateBoxCollider);
 		if (newCreateBoxCollider != sprite.CreateBoxCollider) {
-			Undo.RegisterUndo(targetClippedSprites, "Create Box Collider");
 			sprite.CreateBoxCollider = newCreateBoxCollider;
+			if (sprite.CreateBoxCollider) { sprite.EditMode__CreateCollider(); }
 		}
 
 		Rect newClipRect = EditorGUILayout.RectField("Clip Region", sprite.ClipRect);
 		if (newClipRect != sprite.ClipRect) {
-			Undo.RegisterUndo(targetClippedSprites, "Clipped Sprite Rect");
+			tk2dUndo.RecordObjects(targetClippedSprites, "Clipped Sprite Rect");
 			foreach (tk2dClippedSprite spr in targetClippedSprites) {
 				spr.ClipRect = newClipRect;
 			}
@@ -62,7 +66,6 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 		Rect localRect = new Rect(b.min.x, b.min.y, b.size.x, b.size.y);
 		Rect clipRect = new Rect(b.min.x + b.size.x * spr.clipBottomLeft.x, b.min.y + b.size.y * spr.clipBottomLeft.y,
 		                         b.size.x * spr.ClipRect.width, b.size.y * spr.ClipRect.height);
-		Vector3 unscaledBoundsSize = sprite.untrimmedBoundsData[1];
 
 		// Draw rect outline
 		Handles.color = new Color(1,1,1,0.5f);
@@ -80,21 +83,11 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 			if (tk2dSceneHelper.RectControlsToggle ()) {
 				EditorGUI.BeginChangeCheck();
 				Rect resizeRect = tk2dSceneHelper.RectControl (102030, localRect, t);
-				if (EditorGUI.EndChangeCheck()) {
-					Vector3 newScale = new Vector3 (resizeRect.width / unscaledBoundsSize.x, resizeRect.height / unscaledBoundsSize.y, spr.scale.z);
-					if (newScale != spr.scale) {
-						Undo.RegisterUndo (new Object[] {t, spr}, "Resize");
-						float factorX = (Mathf.Abs (spr.scale.x) > Mathf.Epsilon) ? (newScale.x / spr.scale.x) : 0.0f;
-						float factorY = (Mathf.Abs (spr.scale.y) > Mathf.Epsilon) ? (newScale.y / spr.scale.y) : 0.0f;
-						Vector3 offset = new Vector3(resizeRect.xMin - localRect.xMin * factorX,
-						                             resizeRect.yMin - localRect.yMin * factorY, 0.0f);
-						Vector3 newPosition = t.TransformPoint (offset);
-						if (newPosition != t.position) {
-							t.position = newPosition;
-						}
-						spr.scale = newScale;
-						EditorUtility.SetDirty(spr);
-					}
+				if (EditorGUI.EndChangeCheck ()) {
+					tk2dUndo.RecordObjects (new Object[] {t, spr}, "Resize");
+					spr.ReshapeBounds(new Vector3(resizeRect.xMin, resizeRect.yMin) - new Vector3(localRect.xMin, localRect.yMin),
+						new Vector3(resizeRect.xMax, resizeRect.yMax) - new Vector3(localRect.xMax, localRect.yMax));
+					EditorUtility.SetDirty(spr);
 				}
 			}
 			// Rotate handles
@@ -102,8 +95,8 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 				EditorGUI.BeginChangeCheck();
 				float theta = tk2dSceneHelper.RectRotateControl (405060, localRect, t, new List<int>());
 				if (EditorGUI.EndChangeCheck()) {
-					Undo.RegisterUndo (t, "Rotate");
 					if (Mathf.Abs(theta) > Mathf.Epsilon) {
+						tk2dUndo.RecordObject (t, "Rotate");
 						t.Rotate(t.forward, theta, Space.World);
 					}
 				}
@@ -117,7 +110,7 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 				Rect newSprClipRect = new Rect((resizeRect.xMin - localRect.xMin) / localRect.width, (resizeRect.yMin - localRect.yMin) / localRect.height,
 				                               resizeRect.width / localRect.width, resizeRect.height / localRect.height);
 				if (newSprClipRect != spr.ClipRect) {
-					Undo.RegisterUndo (spr, "Resize");
+					tk2dUndo.RecordObject (spr, "Resize");
 					spr.ClipRect = newSprClipRect;
 					EditorUtility.SetDirty(spr);
 				}
@@ -130,6 +123,10 @@ class tk2dClippedSpriteEditor : tk2dSpriteEditor
 
 		// Move targeted sprites
 		tk2dSceneHelper.HandleMoveSprites(t, localRect);
+
+    	if (GUI.changed) {
+    		EditorUtility.SetDirty(target);
+    	}
 	}
 
     [MenuItem("GameObject/Create Other/tk2d/Clipped Sprite", false, 12901)]

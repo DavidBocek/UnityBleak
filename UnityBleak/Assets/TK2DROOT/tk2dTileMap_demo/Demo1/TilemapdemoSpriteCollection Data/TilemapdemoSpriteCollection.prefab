@@ -5,7 +5,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 3
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -35,9 +35,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 1}
   m_Name: 
-  m_EditorClassIdentifier: 
   version: 3
   materialIdsValid: 1
   needMaterialInstance: 0
@@ -73,6 +72,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -81,6 +81,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/1
     boundsData:
@@ -113,6 +115,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -121,6 +124,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/2
     boundsData:
@@ -153,6 +158,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: .400000006, z: 0}
@@ -161,6 +167,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/3
     boundsData:
@@ -193,6 +201,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -205,6 +214,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: 0}
+      - {x: .800000012, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/4
     boundsData:
@@ -237,6 +252,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -249,6 +265,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/5
     boundsData:
@@ -281,6 +303,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -295,6 +318,13 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000006000000050000000700000006000000060000000100000000000000070000000100000006000000020000000400000006000000060000000000000002000000070000000500000003000000030000000100000007000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: 0}
+      - {x: .800000012, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/6
     boundsData:
@@ -327,6 +357,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: -.400000006, z: 0}
@@ -335,6 +366,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/7
     boundsData:
@@ -367,6 +400,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: 0, z: -1}
@@ -379,6 +413,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: 0}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: -.800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/8
     boundsData:
@@ -411,6 +451,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -423,6 +464,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: -.800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/9
     boundsData:
@@ -455,6 +502,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -469,6 +517,13 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000006000000050000000700000006000000060000000100000000000000070000000100000006000000020000000400000006000000060000000000000002000000070000000500000003000000030000000100000007000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: -.800000012}
+      - {x: .800000012, y: 0}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/10
     boundsData:
@@ -501,6 +556,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: -.400000006, y: 0, z: 0}
@@ -509,6 +565,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/11
     boundsData:
@@ -541,6 +599,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -553,6 +612,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: 0, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/12
     boundsData:
@@ -585,6 +650,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -599,6 +665,13 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000006000000050000000700000006000000060000000100000000000000070000000100000006000000020000000400000006000000060000000000000002000000070000000500000003000000030000000100000007000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: 0, y: -.800000012}
+      - {x: .800000012, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/13
     boundsData:
@@ -631,6 +704,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -643,6 +717,12 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000000000000050000000100000000000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: 0, y: -.800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/14
     boundsData:
@@ -675,6 +755,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -689,6 +770,13 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000006000000050000000700000006000000060000000100000000000000070000000100000006000000020000000400000006000000060000000000000002000000070000000500000003000000030000000100000007000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: -.800000012}
+      - {x: 0, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/15
     boundsData:
@@ -721,6 +809,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -729,6 +818,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/16
     boundsData:
@@ -761,6 +852,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -769,6 +861,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/17
     boundsData:
@@ -801,6 +895,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -809,6 +904,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/18
     boundsData:
@@ -841,6 +938,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -849,6 +947,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/19
     boundsData:
@@ -881,6 +981,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -889,6 +990,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/20
     boundsData:
@@ -921,6 +1024,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -929,6 +1033,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/21
     boundsData:
@@ -961,6 +1067,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -969,6 +1076,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/22
     boundsData:
@@ -1001,6 +1110,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1009,6 +1119,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/23
     boundsData:
@@ -1041,6 +1153,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1049,6 +1162,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/24
     boundsData:
@@ -1081,6 +1196,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1089,6 +1205,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/25
     boundsData:
@@ -1121,6 +1239,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1129,6 +1248,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/26
     boundsData:
@@ -1161,6 +1282,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1169,6 +1291,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/27
     boundsData:
@@ -1201,6 +1325,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1209,6 +1334,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: rocks/28
     boundsData:
@@ -1241,6 +1368,7 @@ MonoBehaviour:
     regionH: 32
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 2
     colliderVertices:
     - {x: 0, y: 0, z: 0}
@@ -1249,6 +1377,8 @@ MonoBehaviour:
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coinIcon
     boundsData:
@@ -1281,12 +1411,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: smallPlantIcon
     boundsData:
@@ -1319,12 +1452,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0001
     boundsData:
@@ -1357,12 +1493,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0002
     boundsData:
@@ -1395,12 +1534,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0003
     boundsData:
@@ -1433,12 +1575,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0004
     boundsData:
@@ -1471,12 +1616,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0005
     boundsData:
@@ -1509,12 +1657,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0006
     boundsData:
@@ -1547,12 +1698,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0007
     boundsData:
@@ -1585,12 +1739,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0008
     boundsData:
@@ -1623,12 +1780,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0009
     boundsData:
@@ -1661,12 +1821,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0010
     boundsData:
@@ -1699,12 +1862,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0011
     boundsData:
@@ -1737,12 +1903,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0012
     boundsData:
@@ -1775,12 +1944,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0013
     boundsData:
@@ -1813,12 +1985,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0014
     boundsData:
@@ -1851,12 +2026,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0015
     boundsData:
@@ -1889,12 +2067,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0016
     boundsData:
@@ -1927,12 +2108,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0017
     boundsData:
@@ -1965,12 +2149,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0018
     boundsData:
@@ -2003,12 +2190,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: coin_0019
     boundsData:
@@ -2041,12 +2231,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: player
     boundsData:
@@ -2079,12 +2272,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: player_disabled
     boundsData:
@@ -2117,12 +2313,15 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: blocker
     boundsData:
@@ -2155,6 +2354,7 @@ MonoBehaviour:
     regionH: 0
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 3
     colliderVertices:
     - {x: -.800000012, y: .800000012, z: -1}
@@ -2169,13 +2369,23 @@ MonoBehaviour:
     colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000500000006000000050000000700000006000000060000000100000000000000070000000100000006000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D:
+    - points:
+      - {x: -.800000012, y: .800000012}
+      - {x: -.800000012, y: -.800000012}
+      - {x: .800000012, y: -.800000012}
+      - {x: .800000012, y: .800000012}
+    edgeCollider2D: []
     attachPoints: []
   premultipliedAlpha: 1
   material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: 6ba0cc53dadfc474aadeffea5f241db6, type: 2}
   textures:
-  - {fileID: 2800000, guid: e296260733c7bc1469716da4f48bd888, type: 3}
+  - {fileID: 2800000, guid: e296260733c7bc1469716da4f48bd888, type: 1}
+  pngTextures: []
+  textureFilterMode: 1
+  textureMipMaps: 0
   allowMultipleAtlases: 0
   spriteCollectionGUID: 3c24cb31cb6f180469332c6b611fbde2
   spriteCollectionName: TilemapdemoSpriteCollection
@@ -2183,7 +2393,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 10
-  buildKey: 1373173407
+  buildKey: 473255449
   dataGuid: f5e64bab9902aaa4593a2652b8552744
   managedSpriteCollection: 0
   hasPlatformData: 0

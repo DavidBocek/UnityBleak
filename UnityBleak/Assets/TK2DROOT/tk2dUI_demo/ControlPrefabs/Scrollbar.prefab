@@ -776,11 +776,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 15
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 39}
   _anchor: 4
   _borderOnly: 0
@@ -804,11 +804,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 15
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 39}
   _anchor: 4
   _borderOnly: 0
@@ -832,11 +832,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 14
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 39}
   _anchor: 4
   _borderOnly: 0
@@ -895,11 +895,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 14
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 39}
   _anchor: 4
   _borderOnly: 0
@@ -978,11 +978,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 16
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 50}
   _anchor: 4
   _borderOnly: 0
@@ -1027,6 +1027,7 @@ MonoBehaviour:
   allowScrollWheel: 1
   scrollAxes: 1
   highlightProgressBar: {fileID: 0}
+  barLayoutItem: {fileID: 0}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1057,6 +1058,7 @@ MonoBehaviour:
   downStateGO: {fileID: 100000}
   hoverOverStateGO: {fileID: 100000}
   useOnReleaseInsteadOfOnUp: 0
+  SendMessageOnToggleOverMethodName: 
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1070,6 +1072,7 @@ MonoBehaviour:
   uiItem: {fileID: 11400016}
   outStateGO: {fileID: 100012}
   overStateGO: {fileID: 100028}
+  SendMessageOnToggleHoverMethodName: 
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1084,11 +1087,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 17
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 50}
   _anchor: 4
   _borderOnly: 0
@@ -1132,11 +1135,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 18
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 32, y: 250}
   _anchor: 6
   _borderOnly: 0
@@ -1161,6 +1164,7 @@ MonoBehaviour:
   downStateGO: {fileID: 100002}
   hoverOverStateGO: {fileID: 100002}
   useOnReleaseInsteadOfOnUp: 0
+  SendMessageOnToggleOverMethodName: 
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1175,11 +1179,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 17
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 39, y: 50}
   _anchor: 4
   _borderOnly: 0

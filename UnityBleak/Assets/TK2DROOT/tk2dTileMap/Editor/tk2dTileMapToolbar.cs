@@ -71,6 +71,7 @@ public static class tk2dTileMapToolbar
 	public static MainMode mainMode = MainMode.Brush;
 	public static bool workBrushFlipX = false;
 	public static bool workBrushFlipY = false;
+	public static bool workBrushRot90 = false;
 
 	public static bool scratchpadOpen = false;
 
@@ -106,6 +107,7 @@ public static class tk2dTileMapToolbar
 		GUI.contentColor = Color.white;
 		workBrushFlipX = ToggleBtn(workBrushFlipX, tk2dEditorSkin.GetTexture("icon_fliph"), "Flip Horizontal (H)", toolbarButtonStyle);
 		workBrushFlipY = ToggleBtn(workBrushFlipY, tk2dEditorSkin.GetTexture("icon_flipv"), "Flip Vertical (J)", toolbarButtonStyle);
+		workBrushRot90 = ToggleBtn(workBrushRot90, tk2dEditorSkin.GetTexture("icon_pencil"), "Rotate 90", toolbarButtonStyle);
 		GUILayout.Space (20);
 
 		// Scratchpad

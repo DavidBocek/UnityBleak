@@ -34,13 +34,14 @@ public class tk2dUIDragItem : tk2dUIBaseItemControl
 
         if (isBtnActive)
         {
-            if (tk2dUIManager.Instance != null)
+            if (tk2dUIManager.Instance__NoCreate != null)
             {
                 tk2dUIManager.Instance.OnInputUpdate -= UpdateBtnPosition;
             }
             isBtnActive = false;
         }
     }
+
 
     private void UpdateBtnPosition()
     {
@@ -51,7 +52,8 @@ public class tk2dUIDragItem : tk2dUIBaseItemControl
     {
         Vector2 pos = uiItem.Touch.position;
 
-        Vector3 worldPos = tk2dUIManager.Instance.UICamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, transform.position.z - tk2dUIManager.Instance.UICamera.transform.position.z));
+        Camera viewingCamera = tk2dUIManager.Instance.GetUICameraForControl( gameObject );
+        Vector3 worldPos = viewingCamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, transform.position.z - viewingCamera.transform.position.z));
         worldPos.z = transform.position.z;
         worldPos += offset;
         return worldPos;

@@ -22,7 +22,9 @@ public class tk2dUIProgressBar : MonoBehaviour
     /// <summary>
     /// This will clip the sprite from right to left based on the progress (this will be used instead of scalableBar or clippedSpriteBar)
     /// </summary>
-    public tk2dSlicedSprite slicedSpriteBar; 
+    public tk2dSlicedSprite slicedSpriteBar;
+
+    bool initializedSlicedSpriteDimensions = false;
     Vector2 emptySlicedSpriteDimensions = Vector2.zero;
     Vector2 fullSlicedSpriteDimensions = Vector2.zero;
     Vector2 currentDimensions = Vector2.zero;
@@ -32,17 +34,17 @@ public class tk2dUIProgressBar : MonoBehaviour
 
     private bool isProgressComplete = false;
 
+    /// <summary>
+    /// Target GameObject to SendMessage to. Use only if you want to use SendMessage, recommend using events instead if possble
+    /// </summary>
+    public GameObject sendMessageTarget = null;
+
+    public string SendMessageOnProgressCompleteMethodName = "";
+
     void Start() 
     {
-        if (slicedSpriteBar != null) 
-        {
-            // Until there is a better way to do this.
-            tk2dSpriteDefinition spriteDef = slicedSpriteBar.CurrentSprite;
-            Vector3 extents = spriteDef.boundsData[1];
-            fullSlicedSpriteDimensions = slicedSpriteBar.dimensions;
-            emptySlicedSpriteDimensions.Set( (slicedSpriteBar.borderLeft + slicedSpriteBar.borderRight) * extents.x / spriteDef.texelSize.x,
-                                             fullSlicedSpriteDimensions.y );
-        }
+        InitializeSlicedSpriteDimensions();
+        Value = percent;
     }
 
     /// <summary>
@@ -54,30 +56,53 @@ public class tk2dUIProgressBar : MonoBehaviour
         set
         {
             percent = Mathf.Clamp(value, 0f, 1f);
-            if (clippedSpriteBar != null)
-            {
-                clippedSpriteBar.clipTopRight = new Vector2(Value, 1);
+            if (Application.isPlaying) {
+                if (clippedSpriteBar != null)
+                {
+                    clippedSpriteBar.clipTopRight = new Vector2(Value, 1);
+                }
+                else if (scalableBar != null)
+                {
+                    scalableBar.localScale = new Vector3(Value, scalableBar.localScale.y, scalableBar.localScale.z);
+                }
+                else if (slicedSpriteBar != null)
+                {
+                    InitializeSlicedSpriteDimensions();
+                    float slicedLength = Mathf.Lerp( emptySlicedSpriteDimensions.x, fullSlicedSpriteDimensions.x, Value );
+                    currentDimensions.Set( slicedLength, fullSlicedSpriteDimensions.y );
+                    slicedSpriteBar.dimensions = currentDimensions;
+                }
+                
+                if (!isProgressComplete && Value == 1)
+                {
+                    isProgressComplete = true;
+                    if (OnProgressComplete != null) { OnProgressComplete(); }
+    
+                    if (sendMessageTarget != null && SendMessageOnProgressCompleteMethodName.Length > 0)
+                    {
+                        sendMessageTarget.SendMessage( SendMessageOnProgressCompleteMethodName, this, SendMessageOptions.RequireReceiver );
+                    }     
+                }
+                else if (isProgressComplete && Value < 1)
+                {
+                    isProgressComplete = false;
+                }
             }
-            else if (scalableBar != null)
+        }
+    }
+
+    void InitializeSlicedSpriteDimensions() {
+        if (!initializedSlicedSpriteDimensions) {
+            if (slicedSpriteBar != null) 
             {
-                scalableBar.localScale = new Vector3(Value, scalableBar.localScale.y, scalableBar.localScale.z);
+                // Until there is a better way to do this.
+                tk2dSpriteDefinition spriteDef = slicedSpriteBar.CurrentSprite;
+                Vector3 extents = spriteDef.boundsData[1];
+                fullSlicedSpriteDimensions = slicedSpriteBar.dimensions;
+                emptySlicedSpriteDimensions.Set( (slicedSpriteBar.borderLeft + slicedSpriteBar.borderRight) * extents.x / spriteDef.texelSize.x,
+                                                 fullSlicedSpriteDimensions.y );
             }
-            else if (slicedSpriteBar != null)
-            {
-                float slicedLength = Mathf.Lerp( emptySlicedSpriteDimensions.x, fullSlicedSpriteDimensions.x, Value );
-                currentDimensions.Set( slicedLength, fullSlicedSpriteDimensions.y );
-                slicedSpriteBar.dimensions = currentDimensions;
-            }
-            
-            if (!isProgressComplete && Value == 1)
-            {
-                isProgressComplete = true;
-                if (OnProgressComplete != null) { OnProgressComplete(); }
-            }
-            else if (isProgressComplete && Value < 1)
-            {
-                isProgressComplete = false;
-            }
+            initializedSlicedSpriteDimensions = true;
         }
     }
 }

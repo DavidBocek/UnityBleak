@@ -109,6 +109,8 @@ public static class tk2dGuiUtility
 	/// </summary>
 	public static int InfoBoxWithButtons(string message, WarningLevel warningLevel, params string[] buttons)
 	{
+		InfoBox(message, warningLevel);
+
 		Color oldBackgroundColor = GUI.backgroundColor;
 		switch (warningLevel)
 		{
@@ -117,14 +119,6 @@ public static class tk2dGuiUtility
 		case WarningLevel.Error: GUI.backgroundColor = new Color32(255, 0, 0, 255); break;
 		}
 
-		GUILayout.BeginVertical("textarea");
-		GUI.backgroundColor = oldBackgroundColor;
-		
-		GUIStyle labelStyle = new GUIStyle("label");
-		labelStyle.wordWrap = true;
-		
-		GUILayout.Label(message, labelStyle, GUILayout.ExpandWidth(true));
-		
 		int buttonPressed = -1;
 		if (buttons != null)
 		{
@@ -137,9 +131,7 @@ public static class tk2dGuiUtility
 			}
 			GUILayout.EndHorizontal();
 		}
-		
-		GUILayout.EndVertical();
-		
+		GUI.backgroundColor = oldBackgroundColor;
 		return buttonPressed;
 	}
 
@@ -233,6 +225,27 @@ public static class tk2dGuiUtility
 				break;
 		}
 		EditorGUI.indentLevel--;
+	}
+
+	public static void LookLikeControls() {
+#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2
+		EditorGUIUtility.LookLikeControls();
+#endif
+	}
+	public static void LookLikeControls(float labelWidth) {
+#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2
+		EditorGUIUtility.LookLikeControls(labelWidth);
+#endif
+	}
+	public static void LookLikeControls(float labelWidth, float fieldWidth) {
+#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2
+		EditorGUIUtility.LookLikeControls(labelWidth, fieldWidth);
+#endif
+	}
+	public static void LookLikeInspector() {
+#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2
+		EditorGUIUtility.LookLikeInspector();
+#endif
 	}
 
 	public static string PlatformPopup(tk2dSystem system, string label, string platform)

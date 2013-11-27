@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace tk2dRuntime.TileMap
 {
-	public static class ColliderBuilder
+	public static class ColliderBuilder3D
 	{
 		public static void Build(tk2dTileMap tileMap, bool forceBuild)
 		{
@@ -34,8 +34,9 @@ namespace tk2dRuntime.TileMap
 						BuildForChunk(tileMap, chunk, baseX, baseY);
 
 						PhysicMaterial material = tileMap.data.Layers[layerId].physicMaterial;
-						if (material != null)
+						if (chunk.meshCollider != null) {
 							chunk.meshCollider.sharedMaterial = material;
+						}
 					}
 				}
 			}
@@ -63,11 +64,20 @@ namespace tk2dRuntime.TileMap
 				// Optimize (remove unused vertices, reindex)
 			}
 	
+#if !(UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2)
+			foreach (EdgeCollider2D c2d in chunk.edgeColliders) {
+				if (c2d != null) {
+					tk2dUtil.DestroyImmediate(c2d);
+				}
+			}
+			chunk.edgeColliders.Clear();
+#endif
+
 			if (localMeshVertices.Length > 0)
 			{
 				if (chunk.colliderMesh != null)
 				{
-					GameObject.DestroyImmediate(chunk.colliderMesh);
+					tk2dUtil.DestroyImmediate(chunk.colliderMesh);
 					chunk.colliderMesh = null;
 				}
 				
@@ -75,10 +85,10 @@ namespace tk2dRuntime.TileMap
 				{
 					chunk.meshCollider = chunk.gameObject.GetComponent<MeshCollider>();
 					if (chunk.meshCollider == null)
-						chunk.meshCollider = chunk.gameObject.AddComponent<MeshCollider>();
+						chunk.meshCollider = tk2dUtil.AddComponent<MeshCollider>(chunk.gameObject);
 				}
 				
-				chunk.colliderMesh = new Mesh();
+				chunk.colliderMesh = tk2dUtil.CreateMesh();
 				chunk.colliderMesh.vertices = localMeshVertices;
 				chunk.colliderMesh.triangles = localMeshIndices;
 
@@ -124,6 +134,7 @@ namespace tk2dRuntime.TileMap
 
 					bool flipH = BuilderUtil.IsRawTileFlagSet(spriteId, tk2dTileFlags.FlipX);
 					bool flipV = BuilderUtil.IsRawTileFlagSet(spriteId, tk2dTileFlags.FlipY);
+					bool rot90 = BuilderUtil.IsRawTileFlagSet(spriteId, tk2dTileFlags.Rot90);
 
 					bool reverseIndices = false;
 					if (flipH) reverseIndices = !reverseIndices;
@@ -149,7 +160,7 @@ namespace tk2dRuntime.TileMap
 						pos[6] = new Vector3(max.x, max.y, min.z);
 						pos[7] = new Vector3(max.x, max.y, max.z);
 						for (int i = 0; i < 8; ++i) {
-							Vector3 flippedPos = BuilderUtil.FlipSpriteVertexPosition(tileMap, spriteData, pos[i], flipH, flipV);
+							Vector3 flippedPos = BuilderUtil.ApplySpriteVertexTileFlags(tileMap, spriteData, pos[i], flipH, flipV, rot90);
 							vertexList.Add (flippedPos + currentPos);
 						}
 	
@@ -167,7 +178,7 @@ namespace tk2dRuntime.TileMap
 					{
 						for (int i = 0; i < spriteData.colliderVertices.Length; ++i)
 						{
-							Vector3 flippedPos = BuilderUtil.FlipSpriteVertexPosition(tileMap, spriteData, spriteData.colliderVertices[i], flipH, flipV);
+							Vector3 flippedPos = BuilderUtil.ApplySpriteVertexTileFlags(tileMap, spriteData, spriteData.colliderVertices[i], flipH, flipV, rot90);
 							vertexList.Add(flippedPos + currentPos);
 						}
 						

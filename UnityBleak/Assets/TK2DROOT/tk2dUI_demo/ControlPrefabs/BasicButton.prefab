@@ -186,6 +186,7 @@ MonoBehaviour:
   registerPressFromChildren: 0
   isHoverEnabled: 1
   editorExtraBounds: []
+  editorIgnoreBounds: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,11 +201,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 187.699997, y: 75}
   _anchor: 4
   _borderOnly: 0
@@ -237,9 +238,26 @@ MonoBehaviour:
   _inlineStyling: 0
   _formatting: 0
   _wordWrapWidth: 0
-  pixelPerfect: 0
   spacing: 0
   lineSpacing: 0
+  data:
+    version: 0
+    font: {fileID: 0}
+    text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
+    color2: {r: 1, g: 1, b: 1, a: 1}
+    useGradient: 0
+    textureGradient: 0
+    anchor: 6
+    renderLayer: 0
+    scale: {x: 1, y: 1, z: 1}
+    kerning: 0
+    maxChars: 16
+    inlineStyling: 0
+    formatting: 0
+    wordWrapWidth: 0
+    spacing: 0
+    lineSpacing: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

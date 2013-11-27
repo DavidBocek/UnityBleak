@@ -5,7 +5,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 3
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1002 &100001
 EditorExtensionImpl:
   serializedVersion: 6
@@ -41,9 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c7a4b4ee15890498f818262bca0312, type: 3}
+  m_Script: {fileID: 11500000, guid: 84c7a4b4ee15890498f818262bca0312, type: 1}
   m_Name: 
-  m_EditorClassIdentifier: 
   textures: []
   textureRefs: []
   spriteSheets: []
@@ -59,6 +58,7 @@ MonoBehaviour:
     spriteCollection: {fileID: 0}
   managedSpriteCollection: 0
   loadable: 0
+  atlasFormat: 0
   maxTextureSize: 1024
   forceTextureSize: 0
   forcedTextureWidth: 1024
@@ -75,7 +75,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c3cedcf3f2f726c4ea2af2b350a9ce88, type: 3}
+    texture: {fileID: 2800000, guid: c3cedcf3f2f726c4ea2af2b350a9ce88, type: 1}
     materialId: 0
     anchor: 4
     anchorX: 22
@@ -87,6 +87,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -114,7 +115,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 5083dbb889212cf4082bbce0e506a093, type: 3}
+    texture: {fileID: 2800000, guid: 5083dbb889212cf4082bbce0e506a093, type: 1}
     materialId: 0
     anchor: 4
     anchorX: 22
@@ -126,6 +127,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -153,7 +155,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 775e311b21d73a74c93ca74a71671b1e, type: 3}
+    texture: {fileID: 2800000, guid: 775e311b21d73a74c93ca74a71671b1e, type: 1}
     materialId: 0
     anchor: 4
     anchorX: 22
@@ -165,6 +167,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -192,7 +195,7 @@ MonoBehaviour:
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 03fff0d1701d7e14399d5ee2209561dc, type: 3}
+    texture: {fileID: 2800000, guid: 03fff0d1701d7e14399d5ee2209561dc, type: 1}
     materialId: 0
     anchor: 4
     anchorX: 22
@@ -204,6 +207,7 @@ MonoBehaviour:
     dice: 0
     diceUnitX: 64
     diceUnitY: 0
+    diceFilter: 0
     pad: 0
     extraPadding: 0
     source: 0
@@ -234,7 +238,8 @@ MonoBehaviour:
   atlasMaterials:
   - {fileID: 2100000, guid: 45d35519481f70649a530df6dcddd423, type: 2}
   atlasTextures:
-  - {fileID: 2800000, guid: 6a5c20ae58dae9d44b7cdade69bd0bbc, type: 3}
+  - {fileID: 2800000, guid: 6a5c20ae58dae9d44b7cdade69bd0bbc, type: 1}
+  atlasTextureFiles: []
   useTk2dCamera: 1
   targetHeight: 1
   targetOrthoSize: .5
@@ -253,6 +258,7 @@ MonoBehaviour:
   userDefinedTextureSettings: 0
   mipmapEnabled: 0
   anisoLevel: 1
+  physicsEngine: 0
   physicsDepth: .100000001
   disableTrimming: 0
   normalGenerationMode: 0

@@ -131,6 +131,7 @@ namespace tk2dEditor
 					int spriteIdx = tk2dRuntime.TileMap.BuilderUtil.GetTileFromRawTile(tile.spriteId);
 					bool flipH = tk2dRuntime.TileMap.BuilderUtil.IsRawTileFlagSet(tile.spriteId, tk2dTileFlags.FlipX);
 					bool flipV = tk2dRuntime.TileMap.BuilderUtil.IsRawTileFlagSet(tile.spriteId, tk2dTileFlags.FlipY);
+					bool rot90 = tk2dRuntime.TileMap.BuilderUtil.IsRawTileFlagSet(tile.spriteId, tk2dTileFlags.Rot90);
 
 					if (spriteIdx < 0 || spriteIdx >= spriteCollection.Count)
 						continue;
@@ -145,7 +146,7 @@ namespace tk2dEditor
 		
 					for (int j = 0; j < sprite.positions.Length; ++j)
 					{
-						Vector3 flippedPos = tk2dRuntime.TileMap.BuilderUtil.FlipSpriteVertexPosition(tileMap, sprite, sprite.positions[j], flipH, flipV);
+						Vector3 flippedPos = tk2dRuntime.TileMap.BuilderUtil.ApplySpriteVertexTileFlags(tileMap, sprite, sprite.positions[j], flipH, flipV, rot90);
 						
 						// Offset so origin is at bottom left (if not using bounds)
 						Vector3 v = flippedPos;

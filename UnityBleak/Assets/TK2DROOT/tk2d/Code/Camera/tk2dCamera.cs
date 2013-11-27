@@ -44,7 +44,11 @@ public class tk2dCamera : MonoBehaviour
 			float pixelWidth = cam.pixelWidth;
 			float pixelHeight = cam.pixelHeight;
 #if UNITY_EDITOR
-			if (settings.forceResolutionInEditor)
+			if (settings.useGameWindowResolutionInEditor) {
+				pixelWidth = settings.gameWindowResolution.x;
+				pixelHeight = settings.gameWindowResolution.y;
+			}
+			else if (settings.forceResolutionInEditor)
 			{
 				pixelWidth = settings.forceResolution.x;
 				pixelHeight = settings.forceResolution.y;
@@ -143,8 +147,10 @@ public class tk2dCamera : MonoBehaviour
 	/// </summary>
 	public static tk2dCamera CameraForLayer( int layer ) {
 		int layerMask = 1 << layer;
-		foreach (tk2dCamera cam in allCameras) {
-			if ((cam.cameraSettings.cullingMask & layerMask) == layerMask) {
+		int cameraCount = allCameras.Count;
+		for (int i = 0; i < cameraCount; ++i) {
+			tk2dCamera cam = allCameras[i];
+			if ((cam.UnityCamera.cullingMask & layerMask) == layerMask) {
 				return cam;
 			}
 		}
@@ -208,10 +214,13 @@ public class tk2dCamera : MonoBehaviour
 		set { zoomFactor = Mathf.Max(0.01f, value); }
 	}
 
-	// Fallback obselete interface
+	/// <summary>
+	/// Obselete - use <see cref="ZoomFactor"/> instead.
+	/// </summary>
 	[System.Obsolete]
 	public float zoomScale {
-		get { return 1.0f / Mathf.Max(0.01f, zoomFactor); }
+		get { return 1.0f / Mathf.Max(0.001f, zoomFactor); }
+		set { ZoomFactor = 1.0f / Mathf.Max(0.001f, value); }
 	}
 
 	[SerializeField] float zoomFactor = 1.0f;
@@ -222,13 +231,21 @@ public class tk2dCamera : MonoBehaviour
 	/// Forces the resolution in the editor. This option is only used when tk2dCamera can't detect the game window resolution.
 	/// </summary>
 	public bool forceResolutionInEditor = false;
-	
+
 	[HideInInspector]
 	/// <summary>
 	/// The resolution to force the game window to when <see cref="forceResolutionInEditor"/> is enabled.
 	/// </summary>
 	public Vector2 forceResolution = new Vector2(960, 640);
 	
+#if UNITY_EDITOR
+	// When true, overrides the "forceResolutionInEditor" flag above
+   	bool useGameWindowResolutionInEditor = false;
+
+	// Usred when useGameWindowResolutionInEditor == true
+	Vector2 gameWindowResolution = new Vector2(960, 640);
+#endif
+
 	/// <summary>
 	/// The camera that sees the screen - i.e. if viewport clipping is enabled, its the camera that sees the entire screen
 	/// </summary>
@@ -244,6 +261,12 @@ public class tk2dCamera : MonoBehaviour
 		Upgrade();
 		if (allCameras.IndexOf(this) == -1) {
 			allCameras.Add(this);
+		}
+
+		tk2dCamera settings = SettingsRoot;
+		tk2dCameraSettings inheritedCameraSettings = settings.CameraSettings;
+		if (inheritedCameraSettings.projection == tk2dCameraSettings.ProjectionType.Perspective) {
+			UnityCamera.transparencySortMode = inheritedCameraSettings.transparencySortMode;
 		}
 	}
 
@@ -271,6 +294,9 @@ public class tk2dCamera : MonoBehaviour
 	}
 	
 	void OnPreCull() {
+		// Commit all pending changes - this more or less guarantees
+		// everything is committed before drawing this camera.
+		tk2dUpdateManager.FlushQueues();
 		UpdateCameraMatrix();
 	}
 
@@ -516,7 +542,7 @@ public class tk2dCamera : MonoBehaviour
 #if UNITY_EDITOR
 	private Matrix4x4 Editor__GetPerspectiveMatrix() {
 		float aspect = (float)nativeResolutionWidth / (float)nativeResolutionHeight;
-		return Matrix4x4.Perspective(SettingsRoot.CameraSettings.fieldOfView, aspect, CameraSettings.nearClipPlane, CameraSettings.farClipPlane);
+		return Matrix4x4.Perspective(SettingsRoot.CameraSettings.fieldOfView, aspect, UnityCamera.nearClipPlane, UnityCamera.farClipPlane);
 	}
 
 	public Matrix4x4 Editor__GetNativeProjectionMatrix(  ) {
@@ -557,10 +583,15 @@ public class tk2dCamera : MonoBehaviour
 			Vector4 sr = new Vector4((int)this.viewportRegion.x, (int)this.viewportRegion.y,
 									 (int)this.viewportRegion.z, (int)this.viewportRegion.w);
 
+	
 			float viewportLeft = -offset.x / pixelWidth + sr.x / vw;
 			float viewportBottom = -offset.y / pixelHeight + sr.y / vh;
 			float viewportWidth = sr.z / vw;
 			float viewportHeight = sr.w / vh;
+			if (settings.cameraSettings.orthographicOrigin == tk2dCameraSettings.OrthographicOrigin.Center) {
+				viewportLeft += (pixelWidth - settings.nativeResolutionWidth * scale.x) / pixelWidth / 2.0f;
+				viewportBottom += (pixelHeight - settings.nativeResolutionHeight * scale.y) / pixelHeight / 2.0f;
+			}
 
 			Rect r = new Rect( viewportLeft, viewportBottom, viewportWidth, viewportHeight );
 			if (UnityCamera.rect.x != viewportLeft ||
@@ -575,6 +606,11 @@ public class tk2dCamera : MonoBehaviour
 
 			float rectOffsetX = sr.x * scale.x - offset.x;
 			float rectOffsetY = sr.y * scale.y - offset.y;
+
+			if (settings.cameraSettings.orthographicOrigin == tk2dCameraSettings.OrthographicOrigin.Center) {
+				rectOffsetX -= settings.nativeResolutionWidth * 0.5f * scale.x;
+				rectOffsetY -= settings.nativeResolutionHeight * 0.5f * scale.y;
+			}
 
 			if (r.x < 0.0f) {
 				rectOffsetX += -r.x * pixelWidth;
@@ -594,16 +630,25 @@ public class tk2dCamera : MonoBehaviour
 			if (UnityCamera.rect != CameraSettings.rect) {
 				UnityCamera.rect = CameraSettings.rect;
 			}
+
+			// By default the camera is orthographic, bottom left, 1 pixel per meter
+			if (settings.cameraSettings.orthographicOrigin == tk2dCameraSettings.OrthographicOrigin.Center) {
+				float w = (right - left) * 0.5f;
+				left -= w; right -= w;
+				float h = (top - bottom) * 0.5f;
+				top -= h; bottom -= h;
+				nativeResolutionOffset.Set(-nativeResolutionWidth / 2.0f, -nativeResolutionHeight / 2.0f);
+			}
+
 		}
 
-		// By default the camera is orthographic, bottom left, 1 pixel per meter
-		if (settings.cameraSettings.orthographicOrigin == tk2dCameraSettings.OrthographicOrigin.Center) {
-			float w = (right - left) * 0.5f;
-			left -= w; right -= w;
-			float h = (top - bottom) * 0.5f;
-			top -= h; bottom -= h;
-			nativeResolutionOffset.Set(-nativeResolutionWidth / 2.0f, -nativeResolutionHeight / 2.0f);
-		}
+		float zoomScale = 1.0f / ZoomFactor;
+
+		// Only need the half texel offset on PC/D3D
+		bool needHalfTexelOffset = (Application.platform == RuntimePlatform.WindowsPlayer ||
+						   			Application.platform == RuntimePlatform.WindowsWebPlayer ||
+						   			Application.platform == RuntimePlatform.WindowsEditor);
+		float halfTexel = (halfTexelOffset && needHalfTexelOffset) ? 0.5f : 0.0f;
 
 		float orthoSize = settings.cameraSettings.orthographicSize;
 		switch (settings.cameraSettings.orthographicType) {
@@ -615,14 +660,6 @@ public class tk2dCamera : MonoBehaviour
 				break;
 		}
 
-		float zoomScale = 1.0f / ZoomFactor;
-
-		// Only need the half texel offset on PC/D3D
-		bool needHalfTexelOffset = (Application.platform == RuntimePlatform.WindowsPlayer ||
-						   			Application.platform == RuntimePlatform.WindowsWebPlayer ||
-						   			Application.platform == RuntimePlatform.WindowsEditor);
-		float halfTexel = (halfTexelOffset && needHalfTexelOffset) ? 0.5f : 0.0f;
-
 		float s = orthoSize * zoomScale;
 		screenExtents = new Rect(left * s / scale.x, bottom * s / scale.y, 
 						   		 (right - left) * s / scale.x, (top - bottom) * s / scale.y);
@@ -633,7 +670,7 @@ public class tk2dCamera : MonoBehaviour
 		// Near and far clip planes are tweakable per camera, so we pull from current camera instance regardless of inherited values
 		return OrthoOffCenter(scale, orthoSize * (left + halfTexel) * zoomScale, orthoSize * (right + halfTexel) * zoomScale, 
 									 orthoSize * (bottom - halfTexel) * zoomScale, orthoSize * (top - halfTexel) * zoomScale, 
-									 this.cameraSettings.nearClipPlane, this.cameraSettings.farClipPlane);
+									 UnityCamera.nearClipPlane, UnityCamera.farClipPlane);
 	}
 
 	Vector2 GetScreenPixelDimensions(tk2dCamera settings) {
@@ -643,18 +680,22 @@ public class tk2dCamera : MonoBehaviour
 		// This bit here allocates memory, but only runs in the editor
 		float gameViewPixelWidth = 0, gameViewPixelHeight = 0;
 		float gameViewAspect = 0;
+		settings.useGameWindowResolutionInEditor = false;
 		if (Editor__GetGameViewSize( out gameViewPixelWidth, out gameViewPixelHeight, out gameViewAspect)) {
 			if (gameViewPixelWidth != 0 && gameViewPixelHeight != 0) {
-				settings.forceResolutionInEditor = true;
-				settings.forceResolution.x = gameViewPixelWidth;
-				settings.forceResolution.y = gameViewPixelHeight;
-				dimensions.x = settings.forceResolution.x;
-				dimensions.y = settings.forceResolution.y;
-				UnityEditor.EditorUtility.SetDirty(settings);
+				if (!settings.useGameWindowResolutionInEditor ||
+					settings.gameWindowResolution.x != gameViewPixelWidth ||
+					settings.gameWindowResolution.y != gameViewPixelHeight) {
+					settings.useGameWindowResolutionInEditor = true;
+					settings.gameWindowResolution.x = gameViewPixelWidth;
+					settings.gameWindowResolution.y = gameViewPixelHeight;
+				}
+				dimensions.x = settings.gameWindowResolution.x;
+				dimensions.y = settings.gameWindowResolution.y;
 			}
 		}
 
-		if (settings.forceResolutionInEditor)
+		if (!settings.useGameWindowResolutionInEditor && settings.forceResolutionInEditor)
 		{
 			dimensions.x = settings.forceResolution.x;
 			dimensions.y = settings.forceResolution.y;
@@ -680,20 +721,10 @@ public class tk2dCamera : MonoBehaviour
 				// Mirror camera settings
 				Camera unityCamera = camera;
 				if (unityCamera != null) {
-					cameraSettings.clearFlags = unityCamera.clearFlags;
-					cameraSettings.backgroundColor = unityCamera.backgroundColor;
-					cameraSettings.cullingMask = unityCamera.cullingMask;
-					cameraSettings.farClipPlane = unityCamera.farClipPlane;
-					cameraSettings.nearClipPlane = unityCamera.nearClipPlane;
 					cameraSettings.rect = unityCamera.rect;
-					cameraSettings.depth = unityCamera.depth;
-					cameraSettings.renderingPath = unityCamera.renderingPath;
-					cameraSettings.targetTexture = unityCamera.targetTexture;
-					cameraSettings.hdr = unityCamera.hdr;
 					if (!unityCamera.isOrthoGraphic) {
 						cameraSettings.projection = tk2dCameraSettings.ProjectionType.Perspective;
 						cameraSettings.fieldOfView = unityCamera.fieldOfView * ZoomFactor;
-						cameraSettings.transparencySortMode = unityCamera.transparencySortMode;
 					}
 
 					unityCamera.hideFlags = HideFlags.HideInInspector | HideFlags.HideInHierarchy;
@@ -720,33 +751,21 @@ public class tk2dCamera : MonoBehaviour
 		tk2dCamera settings = SettingsRoot;
 		tk2dCameraSettings inheritedCameraSettings = settings.CameraSettings;
 
-		if (unityCamera.clearFlags != cameraSettings.clearFlags) unityCamera.clearFlags = cameraSettings.clearFlags;
-		if (unityCamera.backgroundColor != cameraSettings.backgroundColor) unityCamera.backgroundColor = cameraSettings.backgroundColor;
-		if (unityCamera.cullingMask != cameraSettings.cullingMask) unityCamera.cullingMask = cameraSettings.cullingMask;
-		if (unityCamera.farClipPlane != cameraSettings.farClipPlane) unityCamera.farClipPlane = cameraSettings.farClipPlane;
-		if (unityCamera.nearClipPlane != cameraSettings.nearClipPlane) unityCamera.nearClipPlane = cameraSettings.nearClipPlane;
 		if (unityCamera.rect != cameraSettings.rect) unityCamera.rect = cameraSettings.rect;
-		if (unityCamera.depth != cameraSettings.depth) unityCamera.depth = cameraSettings.depth;
-		if (unityCamera.renderingPath != cameraSettings.renderingPath) unityCamera.renderingPath = cameraSettings.renderingPath;
-		// Checking unityCamera.targetTexture allocates memory. Simply setting it all the time now.
-		unityCamera.targetTexture = cameraSettings.targetTexture;
-		if (unityCamera.hdr != cameraSettings.hdr) unityCamera.hdr = cameraSettings.hdr;
 
 		// Projection type is inherited from base camera
 		_targetResolution = GetScreenPixelDimensions(settings);
 
 		if (inheritedCameraSettings.projection == tk2dCameraSettings.ProjectionType.Perspective) {
-			unityCamera.orthographic = false;
-			unityCamera.fieldOfView = inheritedCameraSettings.fieldOfView * ZoomFactor;
-			unityCamera.transparencySortMode = inheritedCameraSettings.transparencySortMode;
+			if (unityCamera.orthographic == true) unityCamera.orthographic = false;
+			float fov = Mathf.Min(179.9f, inheritedCameraSettings.fieldOfView / Mathf.Max(0.001f, ZoomFactor));
+			if (unityCamera.fieldOfView != fov) unityCamera.fieldOfView = fov;
 			_screenExtents.Set( -unityCamera.aspect, -1, unityCamera.aspect * 2, 2 );
 			_nativeScreenExtents = _screenExtents;
 			unityCamera.ResetProjectionMatrix();
 		}
 		else {
-			unityCamera.transparencySortMode = TransparencySortMode.Orthographic;
-			unityCamera.orthographic = true;
-			
+			if (unityCamera.orthographic == false) unityCamera.orthographic = true;
 			// Find an override if necessary
 			Matrix4x4 m = GetProjectionMatrixForOverride( settings, settings.CurrentResolutionOverride, _targetResolution.x, _targetResolution.y, true, out _screenExtents, out _nativeScreenExtents );
 

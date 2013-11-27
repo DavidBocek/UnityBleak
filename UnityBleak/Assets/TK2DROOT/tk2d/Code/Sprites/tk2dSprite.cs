@@ -95,6 +95,7 @@ public class tk2dSprite : tk2dBaseSprite
 		mesh.colors32 = meshColors;
 		mesh.uv = sprite.uvs;
 		mesh.triangles = sprite.indices;
+		mesh.bounds = AdjustedMeshBounds( GetBounds(), renderLayer );
 		
 		UpdateMaterial();
 		CreateCollider();
@@ -167,7 +168,7 @@ public class tk2dSprite : tk2dBaseSprite
 		mesh.normals = meshNormals;
 		mesh.tangents = meshTangents;
 		mesh.uv = sprite.uvs;
-		mesh.bounds = GetBounds();
+		mesh.bounds = AdjustedMeshBounds( GetBounds(), renderLayer );
 	}
 
 	protected void UpdateGeometryImpl()
@@ -193,7 +194,7 @@ public class tk2dSprite : tk2dBaseSprite
 		mesh.tangents = meshTangents;
 		mesh.colors32 = meshColors;
 		mesh.uv = sprite.uvs;
-		mesh.bounds = GetBounds();
+		mesh.bounds = AdjustedMeshBounds( GetBounds(), renderLayer );
         mesh.triangles = sprite.indices;
 	}
 	
@@ -228,5 +229,20 @@ public class tk2dSprite : tk2dBaseSprite
 	{
 		base.ForceBuild();
 		GetComponent<MeshFilter>().mesh = mesh;
+	}
+
+	public override void ReshapeBounds(Vector3 dMin, Vector3 dMax) {
+		var sprite = CurrentSprite;
+		Vector3 oldMin = Vector3.Scale(sprite.untrimmedBoundsData[0] - 0.5f * sprite.untrimmedBoundsData[1], _scale);
+		Vector3 oldSize = Vector3.Scale(sprite.untrimmedBoundsData[1], _scale);
+		Vector3 newScale = oldSize + dMax - dMin;
+		newScale.x /= sprite.untrimmedBoundsData[1].x;
+		newScale.y /= sprite.untrimmedBoundsData[1].y;
+		Vector3 scaledMin = new Vector3(Mathf.Approximately(_scale.x, 0) ? 0 : (oldMin.x * newScale.x / _scale.x),
+			Mathf.Approximately(_scale.y, 0) ? 0 : (oldMin.y * newScale.y / _scale.y));
+		Vector3 offset = oldMin + dMin - scaledMin;
+		offset.z = 0;
+		transform.position = transform.TransformPoint(offset);
+		scale = new Vector3(newScale.x, newScale.y, _scale.z);
 	}
 }

@@ -16,7 +16,7 @@ public class tk2dUIUpDownHoverButtonEditor : tk2dUIBaseItemControlEditor
         upDownHoverButton.downStateGO = tk2dUICustomEditorGUILayout.SceneObjectField("Down State GameObject", upDownHoverButton.downStateGO,target);
         upDownHoverButton.hoverOverStateGO = tk2dUICustomEditorGUILayout.SceneObjectField("Hover State GameObject", upDownHoverButton.hoverOverStateGO, target);
 
-        EditorGUIUtility.LookLikeControls(200);
+        tk2dGuiUtility.LookLikeControls(200);
 
         bool newUseOnReleaseInsteadOfOnUp = EditorGUILayout.Toggle("Use OnRelease Instead of OnUp", upDownHoverButton.UseOnReleaseInsteadOfOnUp);
         if (newUseOnReleaseInsteadOfOnUp != upDownHoverButton.UseOnReleaseInsteadOfOnUp)
@@ -24,6 +24,10 @@ public class tk2dUIUpDownHoverButtonEditor : tk2dUIBaseItemControlEditor
             upDownHoverButton.InternalSetUseOnReleaseInsteadOfOnUp(newUseOnReleaseInsteadOfOnUp);
             GUI.changed = true;
         }
+
+        BeginMessageGUI();
+        methodBindingUtil.MethodBinding( "On Toggle Over", typeof(tk2dUIUpDownHoverButton), upDownHoverButton.SendMessageTarget, ref upDownHoverButton.SendMessageOnToggleOverMethodName );
+        EndMessageGUI();
 
         if (GUI.changed)
         {

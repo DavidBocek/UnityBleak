@@ -12,12 +12,26 @@ public abstract class tk2dUIBaseItemControl : MonoBehaviour
     /// </summary>
     public tk2dUIItem uiItem;
 
+    public GameObject SendMessageTarget {
+        get {
+            if (uiItem != null) {
+                return uiItem.sendMessageTarget;
+            }
+            else return null;
+        }
+        set {
+            if (uiItem != null) {
+                uiItem.sendMessageTarget = value;
+            }
+        }
+    }
+
     /// <summary>
     /// Used for SetActive so easily works between Unity 3.x and Unity 4.x
     /// </summary>
     public static void ChangeGameObjectActiveState(GameObject go, bool isActive)
     {
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+#if UNITY_3_5
         go.SetActiveRecursively(isActive);
 #else
         go.SetActive(isActive);
@@ -35,5 +49,11 @@ public abstract class tk2dUIBaseItemControl : MonoBehaviour
         }
     }
 
+    protected void DoSendMessage( string methodName, object parameter )
+    {
+        if (SendMessageTarget != null && methodName.Length > 0)
+        {
+            SendMessageTarget.SendMessage( methodName, parameter, SendMessageOptions.RequireReceiver );
+        }
+    }
 }
-

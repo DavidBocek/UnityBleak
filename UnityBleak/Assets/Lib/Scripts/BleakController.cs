@@ -5,9 +5,8 @@ public class BleakController : MonoBehaviour {
 	
 	//============ standard vars =============
 	//public vars
-	public CharacterController controller;
-	public Rigidbody rigidBody;
-	public BoxCollider boxCollider;
+	public Rigidbody2D rigidBody;
+	public BoxCollider2D boxCollider;
 	public int runSpeed = 350;
 	public float joggingMultiplier = .6f;
 	public int jumpSpeed = 250;
@@ -33,8 +32,8 @@ public class BleakController : MonoBehaviour {
 	private float jumping = 0f;
 	private bool slamming = false;
 	private bool slamLanding = false;
-	private Vector3 velocity = new Vector3 (0,0,0);
-	private Vector3 moveDelta = new Vector3 (0,0,0);
+	private Vector2 velocity = new Vector2 (0,0);
+	private Vector2 moveDelta = new Vector2 (0,0);
 	private bool facing = true;
 	private bool isGrounded;
 	private Climbable attachedClimbObject;
@@ -60,24 +59,25 @@ public class BleakController : MonoBehaviour {
 	
 	//=========== rays ===========
 	//bottom
-	private Ray leftRayBottom;
-	private Ray centerRayBottom;
-	private Ray rightRayBottom;
+	private Ray2D leftRayBottom;
+	private Ray2D centerRayBottom;
+	private Ray2D rightRayBottom;
 	private float rayLengthBottom;
-	private RaycastHit rayHitInfoBottom;
-	private Vector3 bottomOffset;
+	private RaycastHit2D rayHitInfoBottom;
+	private Vector2 bottomOffset;
 	//sides
-	private Ray topRayRight;
-	private Ray centerRayRight;
-	private Ray bottomRayRight;
-	private RaycastHit rayHitInfoRight;
-	private Ray topRayLeft;
-	private Ray centerRayLeft;
-	private Ray bottomRayLeft;
-	private RaycastHit rayHitInfoLeft;
+	private Ray2D topRayRight;
+	private Ray2D centerRayRight;
+	private Ray2D bottomRayRight;
+	private RaycastHit2D rayHitInfoRight;
+	private Ray2D topRayLeft;
+	private Ray2D centerRayLeft;
+	private Ray2D bottomRayLeft;
+	private RaycastHit2D rayHitInfoLeft;
 	private float rayLengthSide;
-	private Vector3 sideOffset;
-	
+	private Vector2 sideOffset;
+	private Vector2 position2d;
+
 	private float deltaY;
 	private float deltaX;
 	
@@ -86,27 +86,31 @@ public class BleakController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.position = startPoint.position;
-		
+		position2d = new Vector2(transform.position[0],transform.position[1]);
+		boxCollider = transform.gameObject.GetComponent<BoxCollider2D>();
+		rigidBody = transform.gameObject.GetComponent<Rigidbody2D>();
+
 		rayLengthBottom = (boxCollider.size.y / 2f)+1f;
 		rayLengthSide = (boxCollider.size.x / 2f)+1f;
 		
-		bottomOffset = new Vector3(boxCollider.size.x/2-bottomOffsetPushIn,0,0);
-		sideOffset = new Vector3(0,boxCollider.size.y/2-sideOffsetPushIn,0);
+		bottomOffset = new Vector2(boxCollider.size.x/2-bottomOffsetPushIn,0);
+		sideOffset = new Vector2(0,boxCollider.size.y/2-sideOffsetPushIn);
 		
-		leftRayBottom = new Ray(transform.position - bottomOffset + boxCollider.center,Vector3.down);
-		centerRayBottom = new Ray(transform.position + boxCollider.center,Vector3.down);
-		rightRayBottom = new Ray(transform.position + bottomOffset + boxCollider.center, Vector3.down);
-		topRayRight = new Ray(transform.position + sideOffset + boxCollider.center,Vector3.right);
-		centerRayRight = new Ray(transform.position + boxCollider.center,Vector3.right);
-		bottomRayRight = new Ray(transform.position - sideOffset + boxCollider.center,Vector3.right);
-		topRayLeft = new Ray(transform.position + sideOffset + boxCollider.center,Vector3.left);
-		centerRayLeft = new Ray(transform.position + boxCollider.center,Vector3.left);
-		bottomRayLeft = new Ray(transform.position - sideOffset + boxCollider.center,Vector3.left);
+		leftRayBottom = new Ray2D(position2d - bottomOffset + boxCollider.center,-Vector2.up);
+		centerRayBottom = new Ray2D(position2d + boxCollider.center,-Vector2.up);
+		rightRayBottom = new Ray2D(position2d + bottomOffset + boxCollider.center, -Vector2.up);
+		topRayRight = new Ray2D(position2d + sideOffset + boxCollider.center,Vector2.right);
+		centerRayRight = new Ray2D(position2d + boxCollider.center,Vector2.right);
+		bottomRayRight = new Ray2D(position2d - sideOffset + boxCollider.center,Vector2.right);
+		topRayLeft = new Ray2D(position2d + sideOffset + boxCollider.center,-Vector2.right);
+		centerRayLeft = new Ray2D(position2d + boxCollider.center,-Vector2.right);
+		bottomRayLeft = new Ray2D(position2d - sideOffset + boxCollider.center,-Vector2.right);
 	}
 	
 	// Update is called once per frame
 	float tempVelVert;
 	void Update () {
+		position2d.x = transform.position[0]; position2d.y = transform.position[1];
 		switch (state){
 		case STATE_NORMAL:
 			velocity.x = 0;
@@ -114,28 +118,34 @@ public class BleakController : MonoBehaviour {
 			UpdateRays(dt);
 			if (canControl){
 				//enable gravity if no raycasts return true from the three downward rays
-				if (!Physics.Raycast(leftRayBottom,out rayHitInfoBottom,rayLengthBottom) && !Physics.Raycast(centerRayBottom,out rayHitInfoBottom,rayLengthBottom) && !Physics.Raycast(rightRayBottom,out rayHitInfoBottom,rayLengthBottom)){
-					tempVelVert = velocity.y - gravityAcceleration * dt;
+				RaycastHit2D rayHitInfoLBottom = Physics2D.Raycast(leftRayBottom.origin, leftRayBottom.direction,rayLengthBottom);
+				RaycastHit2D rayHitInfoCBottom = Physics2D.Raycast(centerRayBottom.origin,centerRayBottom.direction,rayLengthBottom);
+				RaycastHit2D rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
+				if (rayHitInfoLBottom == null && rayHitInfoCBottom == null && rayHitInfoRBottom == null){
+				    tempVelVert = velocity.y - gravityAcceleration * dt;
 					velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 					isGrounded = false;
 				//otherwise deal with collisions from the top if the object is not ignoring them
-				} else if (Physics.Raycast(leftRayBottom,out rayHitInfoBottom,rayLengthBottom) || Physics.Raycast(centerRayBottom,out rayHitInfoBottom,rayLengthBottom) || Physics.Raycast(rightRayBottom,out rayHitInfoBottom,rayLengthBottom)){
+				} else if (rayHitInfoLBottom != null || rayHitInfoCBottom != null || rayHitInfoRBottom != null){
 					bool collidableDown = true;
 					bool collidableUp = true;
 					bool aboveCollider = true;
-					if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
+					if (rayHitInfoLBottom != null) rayHitInfoBottom = rayHitInfoLBottom;
+					else if (rayHitInfoCBottom != null) rayHitInfoBottom = rayHitInfoCBottom;
+					else if (rayHitInfoRBottom != null) rayHitInfoBottom = rayHitInfoRBottom;
+					/*if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
 						collidableDown = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreUp();
 						collidableUp = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreDown();
 						//have to check that the object is below bleak, or it will catch the raycasts which start from the center y line of bleak's collider
 						aboveCollider = (rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2 + rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().center.y) <= (transform.position.y - boxCollider.size.y/2 + boxCollider.center.y);
 						Debug.Log ("above collider: "+aboveCollider+" object: "+(rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2-5)+" player: "+(transform.position.y - boxCollider.size.y/2));
 						//Debug.Log("object collider y/2: "+(rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2)+" player collider y/2: "+(boxCollider.size.y/2));
-					}
+					}*/
 					Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
 					//falling
-					if (collidableDown && aboveCollider && velocity.y <= 0){
+					if (/*collidableDown && aboveCollider && */velocity.y <= 0){
 						HandleBottomCollision(rayHitInfoBottom,dt);	
 					} else {
 						tempVelVert = velocity.y - gravityAcceleration * dt;
@@ -242,7 +252,7 @@ public class BleakController : MonoBehaviour {
 	void UpdateForceMove(float dt){
 		if ((transform.position - forceMoveDestination.position).sqrMagnitude >= .25f){
 			velocity = (forceMoveDestination.position-transform.position).normalized * forceMoveSpeed;
-			controller.Move(velocity*dt);
+			rigidBody.velocity = velocity;
 		} else {
 			Messenger.Broadcast<Transform,BleakController>("CompletedForceMove",forceMoveDestination,this);
 		}
@@ -264,8 +274,14 @@ public class BleakController : MonoBehaviour {
 			facing = RIGHT;
 		
 		//raycast 3 rays from the right to check collisions
-		if (Physics.Raycast(topRayRight,out rayHitInfoRight, rayLengthSide) || Physics.Raycast(centerRayRight,out rayHitInfoRight, rayLengthSide) || Physics.Raycast(bottomRayRight,out rayHitInfoRight, rayLengthSide)){
+		RaycastHit2D rayHitInfoTRight = Physics2D.Raycast(topRayRight.origin,topRayRight.direction,rayLengthSide);
+		RaycastHit2D rayHitInfoCRight = Physics2D.Raycast(centerRayRight.origin,centerRayRight.direction,rayLengthSide);
+		RaycastHit2D rayHitInfoBRight = Physics2D.Raycast(bottomRayRight.origin,bottomRayRight.direction,rayLengthSide);
+		if (rayHitInfoTRight != null || rayHitInfoCRight != null || rayHitInfoBRight != null){
 			bool collidableRight = true;
+			if (rayHitInfoTRight != null){ rayHitInfoRight = rayHitInfoTRight; }
+			else if (rayHitInfoCRight != null){ rayHitInfoRight = rayHitInfoCRight; }
+			else if (rayHitInfoBRight != null) { rayHitInfoRight = rayHitInfoBRight; }
 			if (rayHitInfoRight.transform.gameObject.GetComponent<IgnoreCollisions>()) 
 				collidableRight = !rayHitInfoRight.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreLeft();
 			if (collidableRight){
@@ -277,8 +293,14 @@ public class BleakController : MonoBehaviour {
 			obstructedRight = false;
 		
 		//raycast 3 rays from the left to check collisions
-		if (Physics.Raycast(topRayLeft,out rayHitInfoLeft, rayLengthSide) || Physics.Raycast(centerRayLeft,out rayHitInfoLeft, rayLengthSide) || Physics.Raycast(bottomRayLeft,out rayHitInfoLeft, rayLengthSide)){
+		RaycastHit2D rayHitInfoTLeft = Physics2D.Raycast(topRayLeft.origin,topRayLeft.direction,rayLengthSide);
+		RaycastHit2D rayHitInfoCLeft = Physics2D.Raycast(centerRayLeft.origin,centerRayLeft.direction,rayLengthSide);
+		RaycastHit2D rayHitInfoBLeft = Physics2D.Raycast(bottomRayLeft.origin,bottomRayLeft.direction,rayLengthSide);
+		if (rayHitInfoTLeft != null || rayHitInfoCLeft != null || rayHitInfoBLeft != null){
 			bool collidableLeft = true;
+			if (rayHitInfoTLeft != null){ rayHitInfoLeft = rayHitInfoTLeft; }
+			else if (rayHitInfoCLeft != null){ rayHitInfoLeft = rayHitInfoCLeft; }
+			else if (rayHitInfoBLeft != null) { rayHitInfoLeft = rayHitInfoBLeft; }
 			if (rayHitInfoLeft.transform.gameObject.GetComponent<IgnoreCollisions>())
 				collidableLeft = !rayHitInfoLeft.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreRight();
 			if (collidableLeft){
@@ -402,8 +424,7 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdatePositionChangeNormal(float dt){
-		velocity.z=0;
-		moveDelta = velocity * dt;
+		/*moveDelta = velocity * dt;
 		RaycastHit interpolateInfo;
 		
 		//== deal with interpolate collisions down ==
@@ -430,8 +451,8 @@ public class BleakController : MonoBehaviour {
 				moveDelta.x = interpolateInfo.distance;
 			else if ((Physics.Raycast(deltaXRayOriginLeftTop,Vector3.left,out interpolateInfo,Mathf.Abs(deltaX)) || Physics.Raycast(deltaXRayOriginLeftCenter,Vector3.left,out interpolateInfo,Mathf.Abs(deltaX)) || Physics.Raycast(deltaXRayOriginLeftBottom,Vector3.left,out interpolateInfo,Mathf.Abs(deltaX))) && deltaX < -1)
 				moveDelta.x = -interpolateInfo.distance;
-		}
-		controller.Move (moveDelta);
+		}*/ //all of this may be unnecessary if the rigid body velocity works ok
+		rigidBody.velocity = velocity;
 	}
 	
 	/// <summary>
@@ -441,32 +462,56 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame (in seconds).
 	/// </param>
 	void UpdatePositionChangeClimbing(float dt){
-		velocity.z = 0;
-		moveDelta = velocity * dt;
-		RaycastHit interpolateInfo;
-		Vector3 deltaXRayOriginRightTop = new Vector3(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y+boxCollider.size.y/2-sideOffsetPushIn,transform.position.z);
-		Vector3 deltaXRayOriginRightCenter = new Vector3(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y,transform.position.z);
-		Vector3 deltaXRayOriginRightBottom = new Vector3(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y-boxCollider.size.y/2+sideOffsetPushIn,transform.position.z);
-		Vector3 deltaXRayOriginLeftTop = new Vector3(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y+boxCollider.size.y/2-sideOffsetPushIn,transform.position.z);
-		Vector3 deltaXRayOriginLeftCenter = new Vector3(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y,transform.position.z);
-		Vector3 deltaXRayOriginLeftBottom = new Vector3(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y-boxCollider.size.y/2+sideOffsetPushIn,transform.position.z);
-		if (Physics.Raycast(deltaXRayOriginRightTop,Vector3.right,out interpolateInfo,1f) || Physics.Raycast(deltaXRayOriginRightCenter,Vector3.right,out interpolateInfo,1f) || Physics.Raycast(deltaXRayOriginRightBottom,Vector3.right,out interpolateInfo,1f))
-			if (interpolateInfo.transform.gameObject.GetComponent<KillZones>().HasKillLeft ())
+		Vector2 deltaXRayOriginRightTop = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y+boxCollider.size.y/2-sideOffsetPushIn);
+		Vector2 deltaXRayOriginRightCenter = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y);
+		Vector2 deltaXRayOriginRightBottom = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y-boxCollider.size.y/2+sideOffsetPushIn);
+		Vector2 deltaXRayOriginLeftTop = new Vector2(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y+boxCollider.size.y/2-sideOffsetPushIn);
+		Vector2 deltaXRayOriginLeftCenter = new Vector2(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y);
+		Vector2 deltaXRayOriginLeftBottom = new Vector2(transform.position.x-boxCollider.size.x/2+.1f,transform.position.y-boxCollider.size.y/2+sideOffsetPushIn);
+
+
+		//check to the right
+		RaycastHit2D interpolateInfoR;
+		RaycastHit2D hitTRight = Physics2D.Raycast(deltaXRayOriginRightTop,Vector2.right,1f);
+		RaycastHit2D hitCRight = Physics2D.Raycast(deltaXRayOriginRightCenter,Vector2.right,1f);
+		RaycastHit2D hitBRight = Physics2D.Raycast(deltaXRayOriginRightBottom,Vector2.right,1f);
+
+		if (hitTRight!=null){interpolateInfoR = hitTRight; }
+		else if (hitCRight!=null){interpolateInfoR = hitCRight;}
+		else if (hitBRight!=null){interpolateInfoR = hitBRight;}
+
+		if (interpolateInfoR!=null){
+			if (interpolateInfoR.transform.gameObject.GetComponent<KillZones>().HasKillLeft ())
 				Damage();
-			else if (interpolateInfo.transform.gameObject.GetComponent<Climbable>() == null)
+			else if (interpolateInfoR.transform.gameObject.GetComponent<Climbable>() == null)
 				SetState(STATE_NORMAL);
-		else if (Physics.Raycast(deltaXRayOriginLeftTop,Vector3.left,out interpolateInfo,1f) || Physics.Raycast(deltaXRayOriginLeftCenter,Vector3.left,out interpolateInfo,1f) || Physics.Raycast(deltaXRayOriginLeftBottom,Vector3.left,out interpolateInfo,1f))
-			if (interpolateInfo.transform.gameObject.GetComponent<KillZones>().HasKillRight ())
+		}
+
+
+		//check to the left
+		RaycastHit2D interpolateInfoL;
+		RaycastHit2D hitTLeft = Physics2D.Raycast(deltaXRayOriginLeftTop,-Vector2.right,1f);
+		RaycastHit2D hitCLeft = Physics2D.Raycast(deltaXRayOriginLeftCenter,-Vector2.right,1f);
+		RaycastHit2D hitBLeft = Physics2D.Raycast(deltaXRayOriginLeftBottom,-Vector2.right,1f);
+
+		if (hitTLeft!=null){interpolateInfoL = hitTLeft; }
+		else if (hitCLeft!=null){interpolateInfoL = hitCLeft;}
+		else if (hitBLeft!=null){interpolateInfoL = hitBLeft;}
+
+		if (interpolateInfoL!=null){
+			if (interpolateInfoL.transform.gameObject.GetComponent<KillZones>().HasKillRight ())
 				Damage();
-			else if (interpolateInfo.transform.gameObject.GetComponent<Climbable>() == null)
+			else if (interpolateInfoL.transform.gameObject.GetComponent<Climbable>() == null)
 				SetState(STATE_NORMAL);
-		else{
-			moveDelta.x *=2;
-			moveDelta.y += 5f;
+		}
+
+		if (interpolateInfoL == null && interpolateInfoR == null) {
+			velocity.x *= 2;
+			velocity.y += 5f;
 			SetState(STATE_NORMAL);
 		}
 		
-		controller.Move (moveDelta);
+		rigidBody.velocity = velocity;
 	}
 	
 	/// <summary>
@@ -476,17 +521,17 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateRays(float dt){
-		leftRayBottom.origin=transform.position - bottomOffset + boxCollider.center;
-		centerRayBottom.origin=transform.position + boxCollider.center;
-		rightRayBottom.origin=transform.position + bottomOffset + boxCollider.center;
+		leftRayBottom.origin=position2d - bottomOffset + boxCollider.center;
+		centerRayBottom.origin=position2d + boxCollider.center;
+		rightRayBottom.origin=position2d + bottomOffset + boxCollider.center;
 		
-		topRayRight.origin=transform.position+sideOffset+boxCollider.center;
-		centerRayRight.origin=transform.position+boxCollider.center;
-		bottomRayRight.origin=transform.position-sideOffset+boxCollider.center;
+		topRayRight.origin=position2d+sideOffset+boxCollider.center;
+		centerRayRight.origin=position2d+boxCollider.center;
+		bottomRayRight.origin=position2d-sideOffset+boxCollider.center;
 		
-		topRayLeft.origin=transform.position+sideOffset+boxCollider.center;
-		centerRayLeft.origin=transform.position+boxCollider.center;
-		bottomRayLeft.origin=transform.position-sideOffset+boxCollider.center;
+		topRayLeft.origin=position2d+sideOffset+boxCollider.center;
+		centerRayLeft.origin=position2d+boxCollider.center;
+		bottomRayLeft.origin=position2d-sideOffset+boxCollider.center;
 	}
 	
 	
@@ -497,9 +542,9 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateDebug(float dt){
-		Debug.DrawRay(transform.position - bottomOffset + boxCollider.center,Vector3.down*rayLengthBottom);
-		Debug.DrawRay(transform.position + boxCollider.center,Vector3.down*rayLengthBottom);
-		Debug.DrawRay(transform.position + bottomOffset + boxCollider.center, Vector3.down*rayLengthBottom);
+		Debug.DrawRay(position2d - bottomOffset + boxCollider.center,Vector3.down*rayLengthBottom);
+		Debug.DrawRay(position2d + boxCollider.center,Vector3.down*rayLengthBottom);
+		Debug.DrawRay(position2d + bottomOffset + boxCollider.center, Vector3.down*rayLengthBottom);
 		if (Input.GetKeyDown (KeyCode.Q))
 			Debug.Break();
 	}
@@ -514,18 +559,11 @@ public class BleakController : MonoBehaviour {
 	/// <param name='dt'>
 	/// time since last frame was called (in seconds)
 	/// </param>
-	void HandleBottomCollision(RaycastHit hitInfo, float dt){
-		if (velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage ();
+	void HandleBottomCollision(RaycastHit2D hitInfo, float dt){
+		if (-velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage (); //for right now, no fall damage when slamming. We may need to change this though
 		else if (velocity.y < 0) velocity.y = 0;
-		/*if (hitInfo.distance < (rayLengthBottom - 1f) && jumping == 0 && hitInfo.collider!=controller.collider){
-			Vector3 correctionDelta = Vector3.zero;
-			correctionDelta.y = rayLengthBottom - hitInfo.distance;
-			if (correctionDelta.y > .5f){
-				Debug.Log ("sitting under ground, correcting! distance: "+hitInfo.distance+" desired distance: "+rayLengthBottom+" correcting by: "+correctionDelta.y);
-				controller.Move(correctionDelta);
-			}
-		}*/
 		isGrounded = true;
+
 		//kill zones component check, to see if bleak should die touching this
 		KillZones killZones = hitInfo.transform.gameObject.GetComponent<KillZones>();
 		if (killZones){
@@ -547,10 +585,10 @@ public class BleakController : MonoBehaviour {
 		}
 	}
 	
-	void HandleSideCollision(RaycastHit hitInfo, float dt){
+	void HandleSideCollision(RaycastHit2D hitInfo, float dt){
 	}
 	
-	void HandleRightCollision(RaycastHit hitInfo, float dt){
+	void HandleRightCollision(RaycastHit2D hitInfo, float dt){
 		KillZones killZones = hitInfo.transform.gameObject.GetComponent<KillZones>();
 		if (killZones){
 			if (killZones.HasKillLeft())
@@ -563,7 +601,7 @@ public class BleakController : MonoBehaviour {
 		}
 	}
 	
-	void HandleLeftCollision(RaycastHit hitInfo, float dt){
+	void HandleLeftCollision(RaycastHit2D hitInfo, float dt){
 		KillZones killZones = hitInfo.transform.gameObject.GetComponent<KillZones>();
 		if (killZones){
 			if (killZones.HasKillRight())

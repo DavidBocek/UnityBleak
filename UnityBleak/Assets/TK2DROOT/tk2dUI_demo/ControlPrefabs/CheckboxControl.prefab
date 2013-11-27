@@ -332,11 +332,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 6
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,11 +351,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 5
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,9 +379,26 @@ MonoBehaviour:
   _inlineStyling: 0
   _formatting: 0
   _wordWrapWidth: 0
-  pixelPerfect: 0
   spacing: 0
   lineSpacing: 0
+  data:
+    version: 0
+    font: {fileID: 0}
+    text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
+    color2: {r: 1, g: 1, b: 1, a: 1}
+    useGradient: 0
+    textureGradient: 0
+    anchor: 6
+    renderLayer: 0
+    scale: {x: 1, y: 1, z: 1}
+    kerning: 0
+    maxChars: 16
+    inlineStyling: 0
+    formatting: 0
+    wordWrapWidth: 0
+    spacing: 0
+    lineSpacing: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -411,11 +428,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 7
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,6 +448,7 @@ MonoBehaviour:
   downStateGO: {fileID: 100002}
   hoverOverStateGO: {fileID: 100002}
   useOnReleaseInsteadOfOnUp: 0
+  SendMessageOnToggleOverMethodName: 
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,6 +484,8 @@ MonoBehaviour:
   offStateGO: {fileID: 0}
   onStateGO: {fileID: 100000}
   activateOnPress: 0
+  isOn: 1
+  SendMessageOnToggleMethodName: 
   descriptionTextMesh: {fileID: 11400004}
 --- !u!114 &11400022
 MonoBehaviour:

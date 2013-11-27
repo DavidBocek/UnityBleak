@@ -14,6 +14,10 @@ public class tk2dUIHoverItemEditor : tk2dUIBaseItemControlEditor
         hoverBtn.overStateGO = tk2dUICustomEditorGUILayout.SceneObjectField("Over State GameObject", hoverBtn.overStateGO,target);
         hoverBtn.outStateGO = tk2dUICustomEditorGUILayout.SceneObjectField("Out State GameObject", hoverBtn.outStateGO,target);
 
+        BeginMessageGUI();
+        methodBindingUtil.MethodBinding( "On Toggle Hover", typeof(tk2dUIHoverItem), hoverBtn.SendMessageTarget, ref hoverBtn.SendMessageOnToggleHoverMethodName );
+        EndMessageGUI();
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(hoverBtn);

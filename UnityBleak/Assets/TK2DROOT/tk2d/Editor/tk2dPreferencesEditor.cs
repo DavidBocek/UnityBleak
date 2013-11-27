@@ -33,7 +33,7 @@ public class tk2dPreferences {
 		set { if (_animListWidth != value) _animListWidth = value; Save(); }
 	}
 	public int animInspectorWidth {
-		get { return _animInspectorWidth; }
+		get { return Mathf.Max(_animInspectorWidth, _minSpriteCollectionInspectorWidth); }
 		set { if (_animInspectorWidth != value) _animInspectorWidth = value; Save(); }
 	}
 	public int animFrameWidth {
@@ -47,7 +47,7 @@ public class tk2dPreferences {
 
 	int _spriteCollectionListWidth = 200;
 	int _spriteCollectionInspectorWidth = 260;
-	int _minSpriteCollectionInspectorWidth = 190;
+	const int _minSpriteCollectionInspectorWidth = 190;
 	int _animListWidth = 200;
 	int _animInspectorWidth = 260;
 	int _animFrameWidth = -1;
@@ -118,7 +118,7 @@ public class tk2dPreferences {
 			try {
 				string s = EditorPrefs.GetString(keyName, "");
 				if (s.Length > 0) {
-					System.IO.MemoryStream ms = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(s));
+						System.IO.MemoryStream ms = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(s));
 					System.Xml.XmlReader reader = new System.Xml.XmlTextReader(ms);
 					System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(tk2dPreferences));
 					returnValue = (tk2dPreferences)x.Deserialize(reader);
@@ -167,10 +167,6 @@ public class tk2dPreferencesEditor : EditorWindow
 
 	GUIContent label_enableSpriteHandles = new GUIContent("Enable Sprite Controls", "Enable controls for sprite resizing, rotation etc.");
 	GUIContent label_enableMoveHandles = new GUIContent("Drag sprite to move", "Allow dragging sprite in all modes. When turned off, this is only available when the Unity move/rotate/scale is not visible.");
-	
-#if (UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4)
-	GUIContent label_proSkin = new GUIContent("Pro Skin", "Select this to use the Dark skin.");
-#endif	
 
 	Vector2 scroll = Vector2.zero;
 
@@ -182,7 +178,7 @@ public class tk2dPreferencesEditor : EditorWindow
 	{
 		tk2dPreferences prefs = tk2dPreferences.inst;
 		scroll = GUILayout.BeginScrollView(scroll, GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
-		EditorGUIUtility.LookLikeControls(150.0f);
+		tk2dGuiUtility.LookLikeControls(150.0f);
 		
 		prefs.displayTextureThumbs = EditorGUILayout.Toggle(label_spriteThumbnails, prefs.displayTextureThumbs);
 

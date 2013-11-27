@@ -516,3 +516,4 @@ MonoBehaviour:
     unityLayer: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
+    physicsMaterial2D: {fileID: 0}

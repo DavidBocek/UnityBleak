@@ -13,6 +13,7 @@ public class tk2dTextMeshData
 	public bool useGradient = false; 
 	public int textureGradient = 0;
 	public TextAnchor anchor = TextAnchor.LowerLeft; 
+	public int renderLayer = 0;
 	public Vector3 scale = Vector3.one; 
 	public bool kerning = false; 
 	public int maxChars = 16; 
@@ -244,6 +245,17 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 	Mesh mesh;
 	MeshFilter meshFilter;
 
+	void SetNeedUpdate(UpdateFlags uf) {
+		if (updateFlags == UpdateFlags.UpdateNone) {
+			updateFlags |= uf;
+			tk2dUpdateManager.QueueCommit(this);
+		}
+		else {
+			// Already queued
+			updateFlags |= uf;
+		}
+	}
+
 	// accessors
 	/// <summary>Gets or sets the font. Call <see cref="Commit"/> to commit changes.</summary>
 	public tk2dFontData font 
@@ -254,7 +266,7 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 			UpgradeData();
 			data.font = value; 
 			_fontInst = data.font.inst;
-			updateFlags |= UpdateFlags.UpdateText;
+			SetNeedUpdate( UpdateFlags.UpdateText );
 
 			UpdateMaterial();
 		} 
@@ -270,7 +282,7 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 			if (data.formatting != value)
 			{
 				data.formatting = value;
-				updateFlags |= UpdateFlags.UpdateText;
+				SetNeedUpdate( UpdateFlags.UpdateText );
 			}
 		}
 	}
@@ -280,7 +292,7 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 	public int wordWrapWidth
 	{
 		get { UpgradeData(); return data.wordWrapWidth; }
-		set { UpgradeData(); if (data.wordWrapWidth != value) { data.wordWrapWidth = value; updateFlags |= UpdateFlags.UpdateText; } }
+		set { UpgradeData(); if (data.wordWrapWidth != value) { data.wordWrapWidth = value; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	}
 
 	/// <summary>Gets or sets the text. Call <see cref="Commit"/> to commit changes.</summary>
@@ -291,47 +303,86 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 		{
 			UpgradeData();
 			data.text = value;
-			updateFlags |= UpdateFlags.UpdateText;
+			SetNeedUpdate(UpdateFlags.UpdateText);
 		}
 	}
 
 	/// <summary>Gets or sets the color. Call <see cref="Commit"/> to commit changes.</summary>
-	public Color color { get { UpgradeData(); return data.color; } set { UpgradeData(); data.color = value; updateFlags |= UpdateFlags.UpdateColors; } }
+	public Color color { get { UpgradeData(); return data.color; } set { UpgradeData(); data.color = value; SetNeedUpdate(UpdateFlags.UpdateColors); } }
 	/// <summary>Gets or sets the secondary color (used in the gradient). Call <see cref="Commit"/> to commit changes.</summary>
-	public Color color2 { get { UpgradeData(); return data.color2; } set { UpgradeData(); data.color2 = value; updateFlags |= UpdateFlags.UpdateColors; } }
+	public Color color2 { get { UpgradeData(); return data.color2; } set { UpgradeData(); data.color2 = value; SetNeedUpdate(UpdateFlags.UpdateColors); } }
 	/// <summary>Use vertex vertical gradient. Call <see cref="Commit"/> to commit changes.</summary>
-	public bool useGradient { get { UpgradeData(); return data.useGradient; } set { UpgradeData(); data.useGradient = value; updateFlags |= UpdateFlags.UpdateColors; } }
+	public bool useGradient { get { UpgradeData(); return data.useGradient; } set { UpgradeData(); data.useGradient = value; SetNeedUpdate(UpdateFlags.UpdateColors); } }
 	/// <summary>Gets or sets the text anchor. Call <see cref="Commit"/> to commit changes.</summary>
-	public TextAnchor anchor { get { UpgradeData(); return data.anchor; } set { UpgradeData(); data.anchor = value; updateFlags |= UpdateFlags.UpdateText; } }
+	public TextAnchor anchor { get { UpgradeData(); return data.anchor; } set { UpgradeData(); data.anchor = value; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	/// <summary>Gets or sets the scale. Call <see cref="Commit"/> to commit changes.</summary>
-	public Vector3 scale { get { UpgradeData(); return data.scale; } set { UpgradeData(); data.scale = value; updateFlags |= UpdateFlags.UpdateText; } }
+	public Vector3 scale { get { UpgradeData(); return data.scale; } set { UpgradeData(); data.scale = value; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	/// <summary>Gets or sets kerning state. Call <see cref="Commit"/> to commit changes.</summary>
-	public bool kerning { get { UpgradeData(); return data.kerning; } set { UpgradeData(); data.kerning = value; updateFlags |= UpdateFlags.UpdateText; } }
+	public bool kerning { get { UpgradeData(); return data.kerning; } set { UpgradeData(); data.kerning = value; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	/// <summary>Gets or sets maxChars. Call <see cref="Commit"/> to commit changes.
 	/// NOTE: This will free & allocate memory, avoid using at runtime.
 	/// </summary>
-	public int maxChars { get { UpgradeData(); return data.maxChars; } set { UpgradeData(); data.maxChars = value; updateFlags |= UpdateFlags.UpdateBuffers; } }
+	public int maxChars { get { UpgradeData(); return data.maxChars; } set { UpgradeData(); data.maxChars = value; SetNeedUpdate(UpdateFlags.UpdateBuffers); } }
 	/// <summary>Gets or sets the default texture gradient. 
 	/// You can also change texture gradient inline by using ^1 - ^9 sequences within your text.
 	/// Call <see cref="Commit"/> to commit changes.</summary>
-	public int textureGradient { get { UpgradeData(); return data.textureGradient; } set { UpgradeData(); data.textureGradient = value % font.gradientCount; updateFlags |= UpdateFlags.UpdateText; } }
+	public int textureGradient { get { UpgradeData(); return data.textureGradient; } set { UpgradeData(); data.textureGradient = value % font.gradientCount; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	/// <summary>Enables or disables inline styling (texture gradient). Call <see cref="Commit"/> to commit changes.</summary>
-	public bool inlineStyling { get { UpgradeData(); return data.inlineStyling; } set { UpgradeData(); data.inlineStyling = value; updateFlags |= tk2dTextMesh.UpdateFlags.UpdateText; } }
+	public bool inlineStyling { get { UpgradeData(); return data.inlineStyling; } set { UpgradeData(); data.inlineStyling = value; SetNeedUpdate(UpdateFlags.UpdateText); } }
 	/// <summary>Additional spacing between characters. 
 	/// This can be negative to bring characters closer together.
 	/// Call <see cref="Commit"/> to commit changes.</summary>
-	public float Spacing { get { UpgradeData(); return data.spacing; } set { UpgradeData(); if (data.spacing != value) { data.spacing = value; updateFlags |= UpdateFlags.UpdateText; } } }
+	public float Spacing { get { UpgradeData(); return data.spacing; } set { UpgradeData(); if (data.spacing != value) { data.spacing = value; SetNeedUpdate(UpdateFlags.UpdateText); } } }
 	/// <summary>Additional line spacing for multieline text. 
 	/// This can be negative to bring lines closer together.
 	/// Call <see cref="Commit"/> to commit changes.</summary>
-	public float LineSpacing { get { UpgradeData(); return data.lineSpacing; } set { UpgradeData(); if (data.lineSpacing != value) { data.lineSpacing = value; updateFlags |= UpdateFlags.UpdateText; } } }
+	public float LineSpacing { get { UpgradeData(); return data.lineSpacing; } set { UpgradeData(); if (data.lineSpacing != value) { data.lineSpacing = value; SetNeedUpdate(UpdateFlags.UpdateText); } } }
 
-	
+	/// <summary>
+	/// Gets or sets the sorting order
+	/// The sorting order lets you override draw order for sprites which are at the same z position
+	/// It is similar to offsetting in z - the sprite stays at the original position
+	/// This corresponds to the renderer.sortingOrder property in Unity 4.3
+	/// </summary>
+	public int SortingOrder { 
+		get { 
+#if (UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2)
+			return data.renderLayer; 
+#else
+			return CachedRenderer.sortingOrder;
+#endif
+		}
+		set { 
+#if (UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2)
+			if (data.renderLayer != value) { 
+				data.renderLayer = value; SetNeedUpdate(UpdateFlags.UpdateText);
+			} 
+#else
+			if (CachedRenderer.sortingOrder != value) {
+				data.renderLayer = value; // for awake
+				CachedRenderer.sortingOrder = value;
+#if UNITY_EDITOR
+				UnityEditor.EditorUtility.SetDirty(CachedRenderer);
+#endif
+			}
+#endif
+		} 
+	}
 
 	void InitInstance()
 	{
 		if (_fontInst == null && data.font != null)
 			_fontInst = data.font.inst;
+	}
+
+	Renderer _cachedRenderer = null;
+	Renderer CachedRenderer {
+		get {
+			if (_cachedRenderer == null) {
+				_cachedRenderer = renderer;
+			}
+			return _cachedRenderer;
+		}
 	}
 
 	// Use this for initialization
@@ -350,6 +401,9 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 			Init();
 			UpdateMaterial();
 		}
+
+		// Sensibly reset, so tk2dUpdateManager can deal with this properly
+		updateFlags = UpdateFlags.UpdateNone;
 	}
 
 	protected void OnDestroy()
@@ -435,15 +489,30 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 		return numChars;
 	}
 
+	[System.Obsolete("Use GetEstimatedMeshBoundsForString().size instead")]
 	public Vector2 GetMeshDimensionsForString(string str) {
 		return tk2dTextGeomGen.GetMeshDimensionsForString(str, tk2dTextGeomGen.Data( data, _fontInst, _formattedText ));
+	}
+
+	/// <summary>
+	/// Calculates an estimated bounds for the given string if it were rendered
+	/// using the current settings.
+	/// This expects an unformatted string and will wrap the string if required.
+	/// </summary>
+	public Bounds GetEstimatedMeshBoundsForString( string str ) {
+		tk2dTextGeomGen.GeomData geomData = tk2dTextGeomGen.Data( data, _fontInst, _formattedText );
+		Vector2 dims = tk2dTextGeomGen.GetMeshDimensionsForString( FormatText( str ), geomData);
+		float offsetY = tk2dTextGeomGen.GetYAnchorForHeight(dims.y, geomData);
+		float offsetX = tk2dTextGeomGen.GetXAnchorForWidth(dims.x, geomData);
+		float lineHeight = (_fontInst.lineHeight + data.lineSpacing) * data.scale.y;
+		return new Bounds( new Vector3(offsetX + dims.x * 0.5f, offsetY + dims.y * 0.5f + lineHeight, 0), Vector3.Scale(dims, new Vector3(1, -1, 1)) );
 	}
 	
 	public void Init(bool force)
 	{
 		if (force)
 		{
-			updateFlags |= UpdateFlags.UpdateBuffers;
+			SetNeedUpdate(UpdateFlags.UpdateBuffers);
 		}
 		Init();
 	}
@@ -521,22 +590,30 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 			mesh.triangles = triangles;
 			mesh.colors32 = colors;
 			mesh.RecalculateBounds();
+			mesh.bounds = tk2dBaseSprite.AdjustedMeshBounds( mesh.bounds, data.renderLayer );
 
 			updateFlags = UpdateFlags.UpdateNone;
 		}
 	}
 	
 	/// <summary>
-	/// Call commit after changing properties to commit the changes.
-	/// This is deffered to a commit call as more than one operation may require rebuilding the buffers, eg. scaling and changing text.
-	/// This will be wasteful if performed multiple times.
+	/// Calling commit is no longer required on text meshes.
+	/// You can still call commit to manually commit all changes so far in the frame.
 	/// </summary>
-	public void Commit()
+	public void Commit() {
+		tk2dUpdateManager.FlushQueues();
+	}
+
+	// Do not call this, its meant fo internal use
+	public void DoNotUse__CommitInternal()
 	{
 		// Make sure instance is set up, might not be when calling from Awake.
 		InitInstance();
 
 		// make sure fonts dictionary is initialized properly before proceeding
+		if (_fontInst == null) {
+			return;
+		}
 		_fontInst.InitDictionary();
 		
 		// Can come in here without anything initalized when
@@ -571,10 +648,11 @@ public class tk2dTextMesh : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBui
 					mesh.colors32 = colors;
 				}
 				if (data.inlineStyling) {
-					updateFlags |= UpdateFlags.UpdateColors;
+					SetNeedUpdate(UpdateFlags.UpdateColors);
 				}
 
 				mesh.RecalculateBounds();
+				mesh.bounds = tk2dBaseSprite.AdjustedMeshBounds( mesh.bounds, data.renderLayer );
 			}
 	
 			if (!font.isPacked && (updateFlags & UpdateFlags.UpdateColors) != 0) // packed fonts don't support tinting

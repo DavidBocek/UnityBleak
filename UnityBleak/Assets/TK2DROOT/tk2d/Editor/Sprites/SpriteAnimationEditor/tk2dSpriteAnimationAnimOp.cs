@@ -156,7 +156,7 @@ namespace tk2dEditor.SpriteAnimationEditor
 
 			if (textToggle)
 			{
-				textNames = GUILayout.TextArea(textNames, GUILayout.ExpandWidth(true));
+				textNames = EditorGUILayout.TextArea(textNames, GUILayout.ExpandWidth(true));
 				GUILayout.BeginHorizontal();
 				GUILayout.FlexibleSpace();
 				if (GUILayout.Button("Process"))
@@ -218,7 +218,7 @@ namespace tk2dEditor.SpriteAnimationEditor
 			List<int> frameCounts = new List<int>();
 
 			int lineNumber = 1;
-			string[] lines = spriteNames.Split('\n');
+			string[] lines = spriteNames.Replace("\r\n", "\n").Split('\n');
 			foreach (string line in lines)
 			{
 				if (line.Trim().Length != 0)

@@ -56,6 +56,8 @@ public class tk2dUIToggleButton : tk2dUIBaseItemControl
         set { isInToggleGroup = value; }
     }
 
+    public string SendMessageOnToggleMethodName = "";
+
     void Start()
     {
         SetState();
@@ -102,6 +104,8 @@ public class tk2dUIToggleButton : tk2dUIBaseItemControl
             isOn = !isOn;
             SetState();
             if (OnToggle != null) { OnToggle(this); }
+
+            base.DoSendMessage( SendMessageOnToggleMethodName, this );
         }
     }
 

@@ -110,7 +110,7 @@ public static class tk2dTextGeomGen
 		return new Vector2(maxWidth, cursorY);
 	}
 
-	static float GetYAnchorForHeight(float textHeight, GeomData geomData)
+	public static float GetYAnchorForHeight(float textHeight, GeomData geomData)
 	{
 		tk2dTextMeshData data = geomData.textMeshData;
 		tk2dFontData _fontInst = geomData.fontInst;
@@ -135,7 +135,7 @@ public static class tk2dTextGeomGen
 		return -lineHeight;
 	}
 	
-	static float GetXAnchorForWidth(float lineWidth, GeomData geomData)
+	public static float GetXAnchorForWidth(float lineWidth, GeomData geomData)
 	{
 		tk2dTextMeshData data = geomData.textMeshData;
 		tk2dFontData _fontInst = geomData.fontInst;

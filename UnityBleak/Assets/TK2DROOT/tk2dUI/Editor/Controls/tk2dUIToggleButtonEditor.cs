@@ -17,8 +17,13 @@ public class tk2dUIToggleButtonEditor : tk2dUIBaseItemControlEditor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+        tk2dUIToggleButton toggleBtn = (tk2dUIToggleButton)target;
 
         DrawGUI();
+
+        BeginMessageGUI();
+        methodBindingUtil.MethodBinding( "On Toggle", typeof(tk2dUIToggleButton), toggleBtn.SendMessageTarget, ref toggleBtn.SendMessageOnToggleMethodName );
+        EndMessageGUI();
 
         if (GUI.changed)
         {

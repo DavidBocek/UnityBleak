@@ -36,6 +36,8 @@ public class tk2dUIUpDownHoverButton : tk2dUIBaseItemControl
     private bool isDown = false;
     private bool isHover = false;
 
+    public string SendMessageOnToggleOverMethodName = "";
+
     /// <summary>
     /// Is mouse currently over
     /// </summary>
@@ -74,6 +76,7 @@ public class tk2dUIUpDownHoverButton : tk2dUIBaseItemControl
                         if (OnToggleOver != null) { OnToggleOver(this); }
                     }
                 }
+                base.DoSendMessage( SendMessageOnToggleOverMethodName, this );
             }
         }
     }

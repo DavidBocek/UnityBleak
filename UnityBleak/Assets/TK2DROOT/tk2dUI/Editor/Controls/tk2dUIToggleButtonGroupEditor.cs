@@ -16,7 +16,7 @@ public class tk2dUIToggleButtonGroupEditor : Editor
 
     public override void  OnInspectorGUI()
     {
-        EditorGUIUtility.LookLikeInspector();
+        tk2dGuiUtility.LookLikeInspector();
         tk2dUIToggleButtonGroup toggleBtnGroup = (tk2dUIToggleButtonGroup)target;
 
         serializedObj.Update();
@@ -24,6 +24,11 @@ public class tk2dUIToggleButtonGroupEditor : Editor
         serializedObj.ApplyModifiedProperties();
 
         toggleBtnGroup.SelectedIndex = EditorGUILayout.IntField("Selected Index", toggleBtnGroup.SelectedIndex);
+
+        tk2dUIMethodBindingHelper methodBindingUtil = new tk2dUIMethodBindingHelper();
+        toggleBtnGroup.sendMessageTarget = methodBindingUtil.BeginMessageGUI(toggleBtnGroup.sendMessageTarget);
+        methodBindingUtil.MethodBinding( "On Change", typeof(tk2dUIToggleButtonGroup), toggleBtnGroup.sendMessageTarget, ref toggleBtnGroup.SendMessageOnChangeMethodName );
+        methodBindingUtil.EndMessageGUI();
 
         if (GUI.changed)
         {

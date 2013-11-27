@@ -16,6 +16,11 @@ public class tk2dUIToggleButtonGroup : MonoBehaviour
     }
 
     /// <summary>
+    /// Target GameObject to SendMessage to. Use only if you want to use SendMessage, recommend using events instead if possble
+    /// </summary>
+    public GameObject sendMessageTarget = null;
+
+    /// <summary>
     /// Which toggle button is to be on first (index)
     /// </summary>
     [SerializeField]
@@ -52,6 +57,8 @@ public class tk2dUIToggleButtonGroup : MonoBehaviour
     /// Event, on toggle button change
     /// </summary>
     public event System.Action<tk2dUIToggleButtonGroup> OnChange;
+
+    public string SendMessageOnChangeMethodName = "";
 
     protected virtual void Awake()
     {
@@ -128,7 +135,16 @@ public class tk2dUIToggleButtonGroup : MonoBehaviour
             {
                 selectedToggleButton = toggleButton;
                 SetSelectedIndexFromSelectedToggleButton();
-                if (OnChange != null) { OnChange(this); }
+
+                if (OnChange != null)
+                {
+                    OnChange(this);
+                }
+
+                if (sendMessageTarget != null && SendMessageOnChangeMethodName.Length > 0)
+                {
+                    sendMessageTarget.SendMessage( SendMessageOnChangeMethodName, this, SendMessageOptions.RequireReceiver );
+                }       
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Collections;
 /// <summary>
 /// Scrollbar/Slider Control
 /// </summary>
+[ExecuteInEditMode]
 [AddComponentMenu("2D Toolkit/UI/tk2dUIScrollbar")]
 public class tk2dUIScrollbar : MonoBehaviour
 {
@@ -73,6 +74,25 @@ public class tk2dUIScrollbar : MonoBehaviour
     /// </summary>
     public tk2dUIProgressBar highlightProgressBar;
 
+	[SerializeField]
+	[HideInInspector]
+	private tk2dUILayout barLayoutItem = null;
+
+	public tk2dUILayout BarLayoutItem {
+		get { return barLayoutItem; }
+		set {
+			if (barLayoutItem != value) {
+				if (barLayoutItem != null) {
+					barLayoutItem.OnReshape -= LayoutReshaped;
+				}
+				barLayoutItem = value;
+				if (barLayoutItem != null) {
+					barLayoutItem.OnReshape += LayoutReshaped;
+				}
+			}
+		}
+	}
+
     private bool isScrollThumbButtonDown = false;
     private bool isTrackHoverOver = false;
 
@@ -95,6 +115,31 @@ public class tk2dUIScrollbar : MonoBehaviour
     /// </summary>
     public event System.Action<tk2dUIScrollbar> OnScroll;
 
+    public string SendMessageOnScrollMethodName = "";
+
+    public GameObject SendMessageTarget
+    {
+        get
+        {
+            if (barUIItem != null)
+            {
+                return barUIItem.sendMessageTarget;
+            }
+            else return null;
+        }
+        set
+        {
+            if (barUIItem != null && barUIItem.sendMessageTarget != value)
+            {
+                barUIItem.sendMessageTarget = value;
+            
+                #if UNITY_EDITOR
+                    UnityEditor.EditorUtility.SetDirty(barUIItem);
+                #endif
+            }
+        }
+    }
+
     /// <summary>
     /// Percent scrolled. 0-1
     /// </summary>
@@ -106,6 +151,11 @@ public class tk2dUIScrollbar : MonoBehaviour
             percent = Mathf.Clamp(value, 0f, 1f);
             if (OnScroll != null) { OnScroll(this); }
             SetScrollThumbPosition();
+
+            if (SendMessageTarget != null && SendMessageOnScrollMethodName.Length > 0)
+            {
+                SendMessageTarget.SendMessage( SendMessageOnScrollMethodName, this, SendMessageOptions.RequireReceiver );
+            }     
         }
     }
 
@@ -143,6 +193,11 @@ public class tk2dUIScrollbar : MonoBehaviour
             downButton.OnDown += ScrollDownButtonDown;
             downButton.OnUp += ScrollDownButtonUp;
         }
+
+		if (barLayoutItem != null)
+		{
+			barLayoutItem.OnReshape += LayoutReshaped;
+		}
     }
 
     void OnDisable()
@@ -173,7 +228,7 @@ public class tk2dUIScrollbar : MonoBehaviour
 
         if (isScrollThumbButtonDown)
         {
-            if (tk2dUIManager.Instance != null)
+            if (tk2dUIManager.Instance__NoCreate != null)
             {
                 tk2dUIManager.Instance.OnInputUpdate -= MoveScrollThumbButton;
             }
@@ -182,7 +237,7 @@ public class tk2dUIScrollbar : MonoBehaviour
 
         if (isTrackHoverOver)
         {
-            if (tk2dUIManager.Instance != null)
+            if (tk2dUIManager.Instance__NoCreate != null)
             {
                 tk2dUIManager.Instance.OnScrollWheelChange -= TrackHoverScrollWheelChange;
             }
@@ -194,6 +249,11 @@ public class tk2dUIScrollbar : MonoBehaviour
             tk2dUIManager.Instance.OnInputUpdate -= CheckRepeatScrollUpDownButton;
             scrollUpDownButtonState = 0;
         }
+
+		if (barLayoutItem != null)
+		{
+			barLayoutItem.OnReshape -= LayoutReshaped;
+		}
     }
 
     void Awake()
@@ -256,8 +316,9 @@ public class tk2dUIScrollbar : MonoBehaviour
 
     private Vector3 CalculateClickWorldPos(tk2dUIItem btn)
     {
+        Camera viewingCamera = tk2dUIManager.Instance.GetUICameraForControl( gameObject );
         Vector2 pos = btn.Touch.position;
-        Vector3 worldPos = tk2dUIManager.Instance.UICamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, btn.transform.position.z - tk2dUIManager.Instance.UICamera.transform.position.z));
+        Vector3 worldPos = viewingCamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, btn.transform.position.z - viewingCamera.transform.position.z));
         worldPos.z = btn.transform.position.z;
         return worldPos;
     }
@@ -431,11 +492,11 @@ public class tk2dUIScrollbar : MonoBehaviour
     {
         if (scrollAxes == Axes.XAxis)
         {
-            Value = Value - CalcScrollPercentOffsetButtonScrollDistance()*dir;
+            Value = Value - CalcScrollPercentOffsetButtonScrollDistance() * dir * buttonUpDownScrollDistance;
         }
         else
         {
-            Value = Value + CalcScrollPercentOffsetButtonScrollDistance()*dir;
+            Value = Value + CalcScrollPercentOffsetButtonScrollDistance() * dir * buttonUpDownScrollDistance;
         }
     }
 
@@ -443,4 +504,9 @@ public class tk2dUIScrollbar : MonoBehaviour
     {
         return WITHOUT_SCROLLBAR_FIXED_SCROLL_WHEEL_PERCENT;
     }
+
+	private void LayoutReshaped(Vector3 dMin, Vector3 dMax)
+	{
+		scrollBarLength += (scrollAxes == Axes.XAxis) ? (dMax.x - dMin.x) : (dMax.y - dMin.y);
+	}
 }

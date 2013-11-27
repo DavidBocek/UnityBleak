@@ -14,6 +14,8 @@ public class tk2dTiledSprite : tk2dBaseSprite
 	Vector2[] meshUvs;
 	Vector3[] meshVertices;
 	Color32[] meshColors;
+	Vector3[] meshNormals = null;
+	Vector4[] meshTangents = null;
 	int[] meshIndices;
 	
 	[SerializeField]
@@ -102,6 +104,11 @@ public class tk2dTiledSprite : tk2dBaseSprite
 			
 			if (boxCollider == null)
 				boxCollider = GetComponent<BoxCollider>();
+#if !(UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2)
+			if (boxCollider2D == null) {
+				boxCollider2D = GetComponent<BoxCollider2D>();
+			}
+#endif
 		}
 	}
 	
@@ -146,10 +153,25 @@ public class tk2dTiledSprite : tk2dBaseSprite
 			meshIndices = new int[numIndices];
 		}
 
+		meshNormals = new Vector3[0];
+		meshTangents = new Vector4[0];
+		if (spriteDef.normals != null && spriteDef.normals.Length > 0) {
+			meshNormals = new Vector3[numVertices];
+		}
+		if (spriteDef.tangents != null && spriteDef.tangents.Length > 0) {
+			meshTangents = new Vector4[numVertices];
+		}
+
 		float colliderOffsetZ = ( boxCollider != null ) ? ( boxCollider.center.z ) : 0.0f;
 		float colliderExtentZ = ( boxCollider != null ) ? ( boxCollider.size.z * 0.5f ) : 0.5f;
 		tk2dSpriteGeomGen.SetTiledSpriteGeom(meshVertices, meshUvs, 0, out boundsCenter, out boundsExtents, spriteDef, _scale, dimensions, anchor, colliderOffsetZ, colliderExtentZ);
 		tk2dSpriteGeomGen.SetTiledSpriteIndices(meshIndices, 0, 0, spriteDef, dimensions);
+
+		if (meshNormals.Length > 0 || meshTangents.Length > 0) {
+			Vector3 meshVertexMin = new Vector3(spriteDef.positions[0].x * dimensions.x * spriteDef.texelSize.x * scale.x, spriteDef.positions[0].y * dimensions.y * spriteDef.texelSize.y * scale.y);
+			Vector3 meshVertexMax = new Vector3(spriteDef.positions[3].x * dimensions.x * spriteDef.texelSize.x * scale.x, spriteDef.positions[3].y * dimensions.y * spriteDef.texelSize.y * scale.y);
+			tk2dSpriteGeomGen.SetSpriteVertexNormals(meshVertices, meshVertexMin, meshVertexMax, spriteDef.normals, spriteDef.tangents, meshNormals, meshTangents);
+		}
 		
 		SetColors(meshColors);
 		
@@ -165,8 +187,11 @@ public class tk2dTiledSprite : tk2dBaseSprite
 		mesh.vertices = meshVertices;
 		mesh.colors32 = meshColors;
 		mesh.uv = meshUvs;
+		mesh.normals = meshNormals;
+		mesh.tangents = meshTangents;
 		mesh.triangles = meshIndices;
 		mesh.RecalculateBounds();
+		mesh.bounds = AdjustedMeshBounds( mesh.bounds, renderLayer );
 		
 		GetComponent<MeshFilter>().mesh = mesh;
 		
@@ -209,25 +234,20 @@ public class tk2dTiledSprite : tk2dBaseSprite
 	protected override void UpdateCollider()
 	{
 		if (CreateBoxCollider) {
-			if (boxCollider == null) {
-				boxCollider = GetComponent<BoxCollider>();
-				if (boxCollider == null) {
-					boxCollider = gameObject.AddComponent<BoxCollider>();
+			if (CurrentSprite.physicsEngine == tk2dSpriteDefinition.PhysicsEngine.Physics3D) {
+				if (boxCollider != null) {
+					boxCollider.size = 2 * boundsExtents;
+					boxCollider.center = boundsCenter;
 				}
 			}
-			boxCollider.size = 2 * boundsExtents;
-			boxCollider.center = boundsCenter;
-		} else {
-#if UNITY_EDITOR
-			boxCollider = GetComponent<BoxCollider>();
-			if (boxCollider != null) {
-				DestroyImmediate(boxCollider);
-			}
-#else
-			if (boxCollider != null) {
-				Destroy(boxCollider);
-			}
+			else if (CurrentSprite.physicsEngine == tk2dSpriteDefinition.PhysicsEngine.Physics2D) {
+#if !(UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2)
+				if (boxCollider2D != null) {
+					boxCollider2D.size = 2 * boundsExtents;
+					boxCollider2D.center = boundsCenter;
+				}
 #endif
+			}
 		}
 	}
 
@@ -250,6 +270,10 @@ public class tk2dTiledSprite : tk2dBaseSprite
 
 #if UNITY_EDITOR
 	public override void EditMode__CreateCollider() {
+		if (CreateBoxCollider) {
+			base.CreateSimpleBoxCollider();
+		}
+
 		UpdateCollider();
 	}
 #endif
@@ -268,5 +292,32 @@ public class tk2dTiledSprite : tk2dBaseSprite
 			return 0;
 #endif
 		return 16;
+	}
+
+	public override void ReshapeBounds(Vector3 dMin, Vector3 dMax) {
+		var sprite = CurrentSprite;
+		Vector3 oldSize = new Vector3(_dimensions.x * sprite.texelSize.x * _scale.x, _dimensions.y * sprite.texelSize.y * _scale.y);
+		Vector3 oldMin = Vector3.zero;
+		switch (_anchor) {
+			case Anchor.LowerLeft: oldMin.Set(0,0,0); break;
+			case Anchor.LowerCenter: oldMin.Set(0.5f,0,0); break;
+			case Anchor.LowerRight: oldMin.Set(1,0,0); break;
+			case Anchor.MiddleLeft: oldMin.Set(0,0.5f,0); break;
+			case Anchor.MiddleCenter: oldMin.Set(0.5f,0.5f,0); break;
+			case Anchor.MiddleRight: oldMin.Set(1,0.5f,0); break;
+			case Anchor.UpperLeft: oldMin.Set(0,1,0); break;
+			case Anchor.UpperCenter: oldMin.Set(0.5f,1,0); break;
+			case Anchor.UpperRight: oldMin.Set(1,1,0); break;
+		}
+		oldMin = Vector3.Scale(oldMin, oldSize) * -1;
+		Vector3 newDimensions = oldSize + dMax - dMin;
+		newDimensions.x /= sprite.texelSize.x * _scale.x;
+		newDimensions.y /= sprite.texelSize.y * _scale.y;
+		Vector3 scaledMin = new Vector3(Mathf.Approximately(_dimensions.x, 0) ? 0 : (oldMin.x * newDimensions.x / _dimensions.x),
+			Mathf.Approximately(_dimensions.y, 0) ? 0 : (oldMin.y * newDimensions.y / _dimensions.y));
+		Vector3 offset = oldMin + dMin - scaledMin;
+		offset.z = 0;
+		transform.position = transform.TransformPoint(offset);
+		dimensions = new Vector2(newDimensions.x, newDimensions.y);
 	}
 }

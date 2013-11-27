@@ -11,7 +11,7 @@ public class tk2dUIBaseItemControlEditor : Editor
     protected bool hasBtnCheckBeenDone = false;
     public override void OnInspectorGUI()
     {
-        EditorGUIUtility.LookLikeInspector();
+        tk2dGuiUtility.LookLikeInspector();
         tk2dUIBaseItemControl baseButtonControl = (tk2dUIBaseItemControl)target;
 
         baseButtonControl.uiItem = tk2dUICustomEditorGUILayout.SceneObjectField("UIItem", baseButtonControl.uiItem,target);
@@ -35,4 +35,20 @@ public class tk2dUIBaseItemControlEditor : Editor
             EditorUtility.SetDirty(baseButtonControl);
         }
     }
+
+    // Convenient non-essential wrappers
+    protected void BeginMessageGUI() {
+        tk2dUIBaseItemControl baseButtonControl = (tk2dUIBaseItemControl)target;
+        GameObject newSendMessageTarget = methodBindingUtil.BeginMessageGUI( baseButtonControl.SendMessageTarget );
+        if (newSendMessageTarget != baseButtonControl.SendMessageTarget) {
+            baseButtonControl.SendMessageTarget = newSendMessageTarget;
+            EditorUtility.SetDirty( baseButtonControl.uiItem );
+        }
+    }
+
+    protected void EndMessageGUI() {
+        methodBindingUtil.EndMessageGUI();
+    }
+
+    protected tk2dUIMethodBindingHelper methodBindingUtil = new tk2dUIMethodBindingHelper();
 }

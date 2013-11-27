@@ -16,60 +16,14 @@ public class tk2dUIItemEditor : Editor
         ignoreBoundsProp = serializedObject.FindProperty("editorIgnoreBounds");
     }
 
-    GameObject cachedMethodBinding = null;
-    List<string> cachedMethods = new List<string>();
-
-    void MethodBinding( string name, GameObject target, ref string methodName ) {
-        if (target != cachedMethodBinding) {
-            cachedMethods.Clear();
-
-            List<System.Type> addedTypes = new List<System.Type>();
-
-            MonoBehaviour[] behaviours = target.GetComponents<MonoBehaviour>();
-            foreach (MonoBehaviour beh in behaviours) {
-                System.Type type = beh.GetType();
-                if (addedTypes.IndexOf(type) == -1) {
-                    System.Reflection.MethodInfo[] methods = type.GetMethods(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic);
-                    foreach (System.Reflection.MethodInfo method in methods) {
-                        // Only add variables added by user, i.e. we don't want functions from the base UnityEngine baseclasses or lower
-                        string moduleName = method.DeclaringType.Assembly.ManifestModule.Name;
-                        if (!moduleName.Contains("UnityEngine") && !moduleName.Contains("mscorlib") &&
-                            !method.ContainsGenericParameters && 
-                            method.Name != "Start" && method.Name != "Awake" && method.Name != "OnEnable" && method.Name != "OnDisable") {
-                            System.Reflection.ParameterInfo[] paramInfo = method.GetParameters();
-                            if (paramInfo.Length == 0) {
-                                cachedMethods.Add(method.Name);
-                            }
-                            else if (paramInfo.Length == 1 && paramInfo[0].ParameterType == typeof(tk2dUIItem)) {
-                                cachedMethods.Add(method.Name);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        int idx = cachedMethods.IndexOf(methodName);
-        GUILayout.BeginHorizontal();
-        int nidx = EditorGUILayout.Popup( name, idx, cachedMethods.ToArray() );
-        if (nidx != idx) {
-            methodName = cachedMethods[nidx];
-        }
-        if (methodName.Length != 0) {
-            if (GUILayout.Button("Clear", EditorStyles.miniButton, GUILayout.ExpandWidth(false))) {
-                methodName = "";
-                Repaint();
-            }
-        }
-        GUILayout.EndHorizontal();
-    }
+    tk2dUIMethodBindingHelper methodBindingUtil = new tk2dUIMethodBindingHelper();
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
         bool changeOccurred = false;
-        EditorGUIUtility.LookLikeControls(180);
+        tk2dGuiUtility.LookLikeControls(180);
         tk2dUIItem btn = (tk2dUIItem)target;
 
         bool newIsChildOfAnotherMenuBtn = EditorGUILayout.Toggle("Child of Another UIItem?", btn.InternalGetIsChildOfAnotherUIItem());
@@ -84,30 +38,12 @@ public class tk2dUIItemEditor : Editor
 
         btn.isHoverEnabled = EditorGUILayout.Toggle("Is Hover Events Enabled?", btn.isHoverEnabled);
 
-        GUILayout.Label("Send Message", EditorStyles.boldLabel);
-        EditorGUI.indentLevel++;
-
-        GameObject newSendMessageTarget = EditorGUILayout.ObjectField("Target", btn.sendMessageTarget, typeof(GameObject), true, null) as GameObject;
-        if (newSendMessageTarget != btn.sendMessageTarget)
-        {
-            changeOccurred = true;
-            btn.sendMessageTarget = newSendMessageTarget;
-        }
-        if (btn.sendMessageTarget != null && EditorUtility.IsPersistent(btn.sendMessageTarget))
-        {
-            changeOccurred = true;
-            btn.sendMessageTarget = null;
-        }
-        if (btn.sendMessageTarget != null)
-        {
-            EditorGUI.indentLevel++;
-            MethodBinding( "On Down", btn.sendMessageTarget, ref btn.SendMessageOnDownMethodName );
-            MethodBinding( "On Up", btn.sendMessageTarget, ref btn.SendMessageOnUpMethodName );
-            MethodBinding( "On Click", btn.sendMessageTarget, ref btn.SendMessageOnClickMethodName );
-            MethodBinding( "On Release", btn.sendMessageTarget, ref btn.SendMessageOnReleaseMethodName );
-            EditorGUI.indentLevel--;
-        }
-        EditorGUI.indentLevel--;
+        btn.sendMessageTarget = methodBindingUtil.BeginMessageGUI(btn.sendMessageTarget);
+        methodBindingUtil.MethodBinding( "On Down", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnDownMethodName );
+        methodBindingUtil.MethodBinding( "On Up", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnUpMethodName );
+        methodBindingUtil.MethodBinding( "On Click", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnClickMethodName );
+        methodBindingUtil.MethodBinding( "On Release", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnReleaseMethodName );
+        methodBindingUtil.EndMessageGUI();
 
         if (btn.collider != null) {
             GUILayout.Label("Collider", EditorStyles.boldLabel);
@@ -135,7 +71,7 @@ public class tk2dUIItemEditor : Editor
 
     public static void ArrayProperty(string name, SerializedProperty prop) {
         SerializedProperty localProp = prop.Copy();
-        EditorGUIUtility.LookLikeInspector();
+        tk2dGuiUtility.LookLikeInspector();
         if ( EditorGUILayout.PropertyField(localProp, new GUIContent(name)) ) {
             EditorGUI.indentLevel++;
             bool expanded = true;

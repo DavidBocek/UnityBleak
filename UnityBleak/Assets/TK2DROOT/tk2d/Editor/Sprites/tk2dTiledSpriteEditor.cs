@@ -25,14 +25,17 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 		EditorGUILayout.BeginVertical();
 		
 		var spriteData = sprite.GetCurrentSpriteDef();
+
+		if (spriteData != null)
+			WarnSpriteRenderType(spriteData);
 		
 		// need raw extents (excluding scale)
 		Vector3 extents = spriteData.boundsData[1];
 
-		bool newCreateBoxCollider = EditorGUILayout.Toggle("Create Box Collider", sprite.CreateBoxCollider);
+		bool newCreateBoxCollider = base.DrawCreateBoxColliderCheckbox(sprite.CreateBoxCollider);
 		if (newCreateBoxCollider != sprite.CreateBoxCollider) {
-			Undo.RegisterUndo(targetTiledSprites, "Create Box Collider");
 			sprite.CreateBoxCollider = newCreateBoxCollider;
+			if (sprite.CreateBoxCollider) { sprite.EditMode__CreateCollider(); }
 		}
 		
 		// if either of these are zero, the division to rescale to pixels will result in a
@@ -46,7 +49,7 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 		{
 			Vector2 newDimensions = EditorGUILayout.Vector2Field("Dimensions (Pixel Units)", sprite.dimensions);
 			if (newDimensions != sprite.dimensions) {
-				Undo.RegisterUndo(targetTiledSprites, "Tiled Sprite Dimensions");
+				tk2dUndo.RecordObjects(targetTiledSprites, "Tiled Sprite Dimensions");
 				foreach (tk2dTiledSprite spr in targetTiledSprites) {
 					spr.dimensions = newDimensions;
 				}
@@ -54,7 +57,7 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 			
 			tk2dTiledSprite.Anchor newAnchor = (tk2dTiledSprite.Anchor)EditorGUILayout.EnumPopup("Anchor", sprite.anchor);
 			if (newAnchor != sprite.anchor) {
-				Undo.RegisterUndo(targetTiledSprites, "Tiled Sprite Anchor");
+				tk2dUndo.RecordObjects(targetTiledSprites, "Tiled Sprite Anchor");
 				foreach (tk2dTiledSprite spr in targetTiledSprites) {
 					spr.anchor = newAnchor;
 				}
@@ -110,22 +113,11 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 			if (tk2dSceneHelper.RectControlsToggle ()) {
 				EditorGUI.BeginChangeCheck();
 				Rect resizeRect = tk2dSceneHelper.RectControl( 123192, rect0, t );
-				if (EditorGUI.EndChangeCheck()) {
-					Vector2 dim = new Vector2(resizeRect.width / (sprite.texelSize.x * spr.scale.x), resizeRect.height / (sprite.texelSize.y * spr.scale.y));
-					dim.x = Mathf.Abs (dim.x);
-					dim.y = Mathf.Abs (dim.y);
-					Undo.RegisterUndo( new Object[] { t, spr }, "Resize" );
-					
-					if (dim != spr.dimensions) {
-						spr.dimensions = dim;
-					}
-
-					Vector2 newAnchorOffset = tk2dSceneHelper.GetAnchorOffset( new Vector2(resizeRect.width, resizeRect.height), spr.anchor );
-					Vector3 newLocalPos = new Vector3(resizeRect.xMin - newAnchorOffset.x, resizeRect.yMin - newAnchorOffset.y, 0.0f);
-					Vector3 newPosition = t.TransformPoint(newLocalPos);
-					if (newPosition != t.position) {
-						t.position = newPosition;
-					}
+				if (EditorGUI.EndChangeCheck ()) {
+					tk2dUndo.RecordObjects (new Object[] {t, spr}, "Resize");
+					spr.ReshapeBounds(new Vector3(resizeRect.xMin, resizeRect.yMin) - new Vector3(rect0.xMin, rect0.yMin),
+						new Vector3(resizeRect.xMax, resizeRect.yMax) - new Vector3(rect0.xMax, rect0.yMax));
+					EditorUtility.SetDirty(spr);
 				}
 			}
 
@@ -135,8 +127,8 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 				List<int> hidePts = tk2dSceneHelper.getAnchorHidePtList(spr.anchor, rect0, t);
 				float theta = tk2dSceneHelper.RectRotateControl( 456384, rect0, t, hidePts );
 				if (EditorGUI.EndChangeCheck()) {
-					Undo.RegisterUndo(t, "Rotate");
 					if (Mathf.Abs(theta) > Mathf.Epsilon) {
+						tk2dUndo.RecordObject(t, "Rotate");
 						t.Rotate(t.forward, theta, Space.World);
 					}
 				}
@@ -150,6 +142,10 @@ class tk2dTiledSpriteEditor : tk2dSpriteEditor
 			// Sprite moving (translation)
 			tk2dSceneHelper.HandleMoveSprites(t, new Rect(v.x, v.y, d.x, d.y));
 		}
+
+    	if (GUI.changed) {
+    		EditorUtility.SetDirty(target);
+    	}
 	}
 
     [MenuItem("GameObject/Create Other/tk2d/Tiled Sprite", false, 12901)]

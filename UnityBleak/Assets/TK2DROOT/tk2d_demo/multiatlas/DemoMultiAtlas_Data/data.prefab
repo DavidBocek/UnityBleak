@@ -5,7 +5,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 3
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1002 &100001
 EditorExtensionImpl:
   serializedVersion: 6
@@ -41,9 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 1}
   m_Name: 
-  m_EditorClassIdentifier: 
   version: 3
   materialIdsValid: 1
   needMaterialInstance: 0
@@ -79,12 +78,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/1
     boundsData:
@@ -117,12 +119,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/2
     boundsData:
@@ -155,12 +160,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/3
     boundsData:
@@ -193,12 +201,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/4
     boundsData:
@@ -231,12 +242,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/5
     boundsData:
@@ -269,12 +283,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/6
     boundsData:
@@ -307,12 +324,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/7
     boundsData:
@@ -345,12 +365,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/8
     boundsData:
@@ -383,12 +406,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/9
     boundsData:
@@ -421,12 +447,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/10
     boundsData:
@@ -459,12 +488,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/11
     boundsData:
@@ -497,12 +529,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/12
     boundsData:
@@ -535,12 +570,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/13
     boundsData:
@@ -573,12 +611,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/14
     boundsData:
@@ -611,12 +652,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/15
     boundsData:
@@ -649,12 +693,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/16
     boundsData:
@@ -687,12 +734,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/17
     boundsData:
@@ -725,12 +775,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/18
     boundsData:
@@ -763,12 +816,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/19
     boundsData:
@@ -801,12 +857,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/20
     boundsData:
@@ -839,12 +898,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/21
     boundsData:
@@ -877,12 +939,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/22
     boundsData:
@@ -915,12 +980,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/23
     boundsData:
@@ -953,12 +1021,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/24
     boundsData:
@@ -991,12 +1062,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/25
     boundsData:
@@ -1029,12 +1103,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/26
     boundsData:
@@ -1067,12 +1144,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/27
     boundsData:
@@ -1105,12 +1185,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/28
     boundsData:
@@ -1143,12 +1226,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/29
     boundsData:
@@ -1181,12 +1267,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/30
     boundsData:
@@ -1219,12 +1308,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/31
     boundsData:
@@ -1257,12 +1349,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/32
     boundsData:
@@ -1295,12 +1390,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/33
     boundsData:
@@ -1333,12 +1431,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/34
     boundsData:
@@ -1371,12 +1472,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/35
     boundsData:
@@ -1409,12 +1513,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/36
     boundsData:
@@ -1447,12 +1554,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/37
     boundsData:
@@ -1485,12 +1595,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/38
     boundsData:
@@ -1523,12 +1636,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/39
     boundsData:
@@ -1561,12 +1677,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/40
     boundsData:
@@ -1599,12 +1718,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 1
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/41
     boundsData:
@@ -1637,12 +1759,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/42
     boundsData:
@@ -1675,12 +1800,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   - name: explosion_44FR/43
     boundsData:
@@ -1713,12 +1841,15 @@ MonoBehaviour:
     regionH: 110
     flipped: 0
     complexGeometry: 0
+    physicsEngine: 0
     colliderType: 0
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
     attachPoints: []
   premultipliedAlpha: 1
   material: {fileID: 0}
@@ -1728,10 +1859,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 896eb8962d2295b4d939ad2d9e277a3f, type: 2}
   - {fileID: 2100000, guid: 5a9c40ea0fae93a4cb80d38f4c2a684e, type: 2}
   textures:
-  - {fileID: 2800000, guid: cd6fbfbe8894ff04f9643675be26a573, type: 3}
-  - {fileID: 2800000, guid: 781c2c74baf34e643bf7fdc51b2276ea, type: 3}
-  - {fileID: 2800000, guid: a57fd406b36fc6d44b38c2a82b620ccc, type: 3}
-  - {fileID: 2800000, guid: 83ed0f7a30dec5040bc629f357183e4a, type: 3}
+  - {fileID: 2800000, guid: cd6fbfbe8894ff04f9643675be26a573, type: 1}
+  - {fileID: 2800000, guid: 781c2c74baf34e643bf7fdc51b2276ea, type: 1}
+  - {fileID: 2800000, guid: a57fd406b36fc6d44b38c2a82b620ccc, type: 1}
+  - {fileID: 2800000, guid: 83ed0f7a30dec5040bc629f357183e4a, type: 1}
+  pngTextures: []
+  textureFilterMode: 1
+  textureMipMaps: 0
   allowMultipleAtlases: 1
   spriteCollectionGUID: 6abdf3241ce81204293a7d50f971e3d7
   spriteCollectionName: DemoMultiAtlas
@@ -1739,7 +1873,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 1
   halfTargetHeight: 320
-  buildKey: 1918569081
+  buildKey: 1664031444
   dataGuid: e40f26e01721f87448061d44beed20dd
   managedSpriteCollection: 0
   hasPlatformData: 0

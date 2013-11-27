@@ -341,11 +341,11 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _dimensions: {x: 28, y: 56.7000008}
   _anchor: 4
   _borderOnly: 0
@@ -396,6 +396,7 @@ MonoBehaviour:
   allowScrollWheel: 1
   scrollAxes: 0
   highlightProgressBar: {fileID: 11400012}
+  barLayoutItem: {fileID: 0}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,11 +425,11 @@ MonoBehaviour:
   _color: {r: .0117647061, g: .101960786, b: .0941176489, a: 1}
   _scale: {x: 19.6000004, y: 1.89999998, z: 1}
   _spriteId: 19
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -443,13 +444,13 @@ MonoBehaviour:
   _color: {r: .180392161, g: .894117653, b: .941176474, a: 1}
   _scale: {x: 19.0499992, y: 1.39999998, z: 1}
   _spriteId: 19
-  pixelPerfect: 0
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
+  renderLayer: 0
   _clipBottomLeft: {x: 0, y: 0}
-  _clipTopRight: {x: 1, y: 1}
+  _clipTopRight: {x: 0, y: 1}
   _createBoxCollider: 0
 --- !u!1001 &100100000
 Prefab:

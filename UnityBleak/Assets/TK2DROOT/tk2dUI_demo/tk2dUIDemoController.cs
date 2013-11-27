@@ -5,7 +5,7 @@ using System.Collections;
 /// Demo for UI
 /// </summary>
 [AddComponentMenu("2D Toolkit/Demo/tk2dUIDemoController")]
-public class tk2dUIDemoController : MonoBehaviour
+public class tk2dUIDemoController : tk2dUIBaseDemoController
 {
     /// <summary>
     /// Button that will change to next page
@@ -38,19 +38,10 @@ public class tk2dUIDemoController : MonoBehaviour
 
     private GameObject currWindow;
 
-    private bool startOnPage1 = true;
-
     void Awake()
     {
-        // Page1 is already visible.
-        if (!startOnPage1)
-        {
-            GoToPage2();
-        }
-        // else
-        // {
-        //     GoToPage2();
-        // }
+        ShowWindow(window1.transform);
+        HideWindow(window2.transform);
     }
 
     void OnEnable()
@@ -69,8 +60,8 @@ public class tk2dUIDemoController : MonoBehaviour
     private void GoToPage1()
     {
         timeSincePageStart = 0;
-        HideWindow(window2);
-        ShowWindow(window1);
+        AnimateHideWindow(window2.transform);
+        AnimateShowWindow(window1.transform);
         currWindow = window1;
     }
 
@@ -83,50 +74,8 @@ public class tk2dUIDemoController : MonoBehaviour
             currWindow = window2;
             StartCoroutine(MoveProgressBar());
         }
-        HideWindow(window1);
-        ShowWindow(window2);
-
-        
-    }
-
-    // Sample tween - use your favourite tween library here.
-    IEnumerator coTweenTransformTo( Transform transform, float time, Vector3 toPos, Vector3 toScale, float toRotation) 
-    {
-        Vector3 fromPos = transform.localPosition;
-        Vector3 fromScale = transform.localScale;
-        Vector3 euler = transform.localEulerAngles;
-        float fromRotation = euler.z;
-
-        for (float t = 0; t < time; t += tk2dUITime.deltaTime) {
-            float nt = Mathf.Clamp01( t / time );
-            nt = Mathf.Sin(nt * Mathf.PI * 0.5f);
-
-            transform.localPosition = Vector3.Lerp( fromPos, toPos, nt );
-            transform.localScale = Vector3.Lerp( fromScale, toScale, nt );
-            euler.z = Mathf.Lerp( fromRotation, toRotation, nt );
-            transform.localEulerAngles = euler;
-            yield return 0;
-        }
-
-        euler.z = toRotation;
-        transform.localPosition = toPos;
-        transform.localScale = toScale;
-        transform.localEulerAngles = euler;
-    }
-
-    private void ShowWindow(GameObject window)
-    {
-        Transform t = window.transform;
-        t.localPosition = new Vector3(-5, 0, 0);
-        t.localScale = Vector3.zero;
-        t.localEulerAngles = new Vector3(0, 0, 10);
-        StartCoroutine( coTweenTransformTo( t, 0.3f, Vector3.zero, Vector3.one, 0 ) );
-    }
-
-    private void HideWindow(GameObject window)
-    {
-        Transform t = window.transform;
-        StartCoroutine( coTweenTransformTo( t, 0.3f, new Vector3(5, 0, 0), Vector3.zero, -10 ) );
+        AnimateHideWindow(window1.transform);
+        AnimateShowWindow(window2.transform);
     }
 
     private IEnumerator MoveProgressBar()

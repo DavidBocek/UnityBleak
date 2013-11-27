@@ -19,3 +19,6 @@ http://manfred-klein.ina-mar.com/
 
 MV Platformer Male by MoikMellah (CC0)
 http://opengameart.org/content/mv-platformer-male-32x64
+
+Nunito font by Vernon Adams (SIL Open Font License)
+http://www.google.com/fonts/specimen/Nunito

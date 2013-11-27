@@ -304,10 +304,17 @@ public class tk2dCameraEditor : Editor
 		bool oldGuiEnabled = GUI.enabled;
 
 		SerializedObject so = this.serializedObject;
-		SerializedProperty m_ClearFlags = so.FindProperty("cameraSettings.clearFlags");
-		SerializedProperty m_BackGroundColor = so.FindProperty("cameraSettings.backgroundColor");
-		SerializedProperty m_CullingMask = so.FindProperty("cameraSettings.cullingMask");
-		SerializedProperty m_TargetTexture = so.FindProperty("cameraSettings.targetTexture");
+		SerializedObject cam = new SerializedObject( target.camera );
+
+		SerializedProperty m_ClearFlags = cam.FindProperty("m_ClearFlags");
+		SerializedProperty m_BackGroundColor = cam.FindProperty("m_BackGroundColor");
+		SerializedProperty m_CullingMask = cam.FindProperty("m_CullingMask");
+		SerializedProperty m_TargetTexture = cam.FindProperty("m_TargetTexture");
+		SerializedProperty m_Near = cam.FindProperty("near clip plane");
+		SerializedProperty m_Far = cam.FindProperty("far clip plane");
+		SerializedProperty m_Depth = cam.FindProperty("m_Depth");
+		SerializedProperty m_RenderingPath = cam.FindProperty("m_RenderingPath");
+		SerializedProperty m_HDR = cam.FindProperty("m_HDR");
 
 		if (complete) {
 			EditorGUILayout.PropertyField( m_ClearFlags );
@@ -318,6 +325,7 @@ public class tk2dCameraEditor : Editor
 
 		tk2dCameraSettings cameraSettings = target.CameraSettings;
 		tk2dCameraSettings inheritedSettings = target.SettingsRoot.CameraSettings;
+		TransparencySortMode transparencySortMode = inheritedSettings.transparencySortMode;
 
 		GUI.enabled &= allowProjectionParameters;
 		inheritedSettings.projection = (tk2dCameraSettings.ProjectionType)EditorGUILayout.EnumPopup("Projection", inheritedSettings.projection);
@@ -336,7 +344,7 @@ public class tk2dCameraEditor : Editor
 		}
 		else if (inheritedSettings.projection == tk2dCameraSettings.ProjectionType.Perspective) {
 			inheritedSettings.fieldOfView = EditorGUILayout.Slider("Field of View", inheritedSettings.fieldOfView, 1, 179);
-			inheritedSettings.transparencySortMode = (TransparencySortMode)EditorGUILayout.EnumPopup("Sort mode", inheritedSettings.transparencySortMode);
+			transparencySortMode = (TransparencySortMode)EditorGUILayout.EnumPopup("Sort mode", transparencySortMode);
 		}
 		EditorGUI.indentLevel--;
 		GUI.enabled = oldGuiEnabled;
@@ -347,20 +355,28 @@ public class tk2dCameraEditor : Editor
 			GUILayout.BeginHorizontal();
 			GUILayout.Space(14);
 			GUILayout.Label("Near");
-			cameraSettings.nearClipPlane = Mathf.Min(EditorGUILayout.FloatField(cameraSettings.nearClipPlane), cameraSettings.farClipPlane - 0.01f);
+			if (m_Near != null) EditorGUILayout.PropertyField(m_Near, GUIContent.none, GUILayout.Width(60) );
 			GUILayout.Label("Far");
-			cameraSettings.farClipPlane = Mathf.Max(EditorGUILayout.FloatField(cameraSettings.farClipPlane), cameraSettings.nearClipPlane + 0.01f);
+			if (m_Far != null) EditorGUILayout.PropertyField(m_Far, GUIContent.none, GUILayout.Width(60) );
 			GUILayout.EndHorizontal();
 			cameraSettings.rect = EditorGUILayout.RectField("Normalized View Port Rect", cameraSettings.rect);
 
 			EditorGUILayout.Space();
-			cameraSettings.depth = EditorGUILayout.FloatField("Depth", cameraSettings.depth);
-			cameraSettings.renderingPath = (RenderingPath)EditorGUILayout.EnumPopup("Rendering Path", cameraSettings.renderingPath);
+			if (m_Depth != null) EditorGUILayout.PropertyField(m_Depth);
+			if (m_RenderingPath != null) EditorGUILayout.PropertyField(m_RenderingPath);
 			if (m_TargetTexture != null) EditorGUILayout.PropertyField(m_TargetTexture);
-			cameraSettings.hdr = EditorGUILayout.Toggle("HDR", cameraSettings.hdr);
+			if (m_HDR != null) EditorGUILayout.PropertyField(m_HDR);
 		}
 
+		cam.ApplyModifiedProperties();
 		so.ApplyModifiedProperties();
+
+		if (transparencySortMode != inheritedSettings.transparencySortMode) {
+			inheritedSettings.transparencySortMode = transparencySortMode;
+			target.camera.transparencySortMode = transparencySortMode; // Change immediately in the editor
+			EditorUtility.SetDirty(target);
+			EditorUtility.SetDirty(target.camera);
+		}
 	}
 
 	void DrawToolsGUI() {
@@ -384,7 +400,7 @@ public class tk2dCameraEditor : Editor
 	void DrawOverrideGUI(tk2dCamera _camera) {
 		var frameBorderStyle = EditorStyles.textField;
 
-		EditorGUIUtility.LookLikeControls(64);
+		tk2dGuiUtility.LookLikeControls(64);
 
 		tk2dCamera _target = _camera.SettingsRoot;
 		if (_target.CameraSettings.projection == tk2dCameraSettings.ProjectionType.Perspective) {
@@ -550,6 +566,8 @@ public class tk2dCameraEditor : Editor
 			sceneGUIHandler.Destroy();
 			sceneGUIHandler = null;
 		}
+
+		tk2dEditorSkin.Done();
 	}
 
 	static Vector3[] viewportBoxPoints = new Vector3[] {
@@ -615,7 +633,7 @@ public class tk2dCameraEditor : Editor
 		}
 
 		GameObject go = tk2dEditorUtility.CreateGameObjectInScene("tk2dCamera");
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+#if UNITY_3_5
 		go.active = false;
 #else
 		go.SetActive(false);
@@ -634,7 +652,7 @@ public class tk2dCameraEditor : Editor
 			go.AddComponent<AudioListener>();
 		}
 
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+#if UNITY_3_5
 		go.active = true;
 #else
 		go.SetActive(true);
@@ -682,7 +700,6 @@ namespace tk2dEditor
 					Vector2 v = new Vector2(previewWindowRect.x + rs.x, (Camera.current.pixelHeight - previewWindowRect.y - rs.height - heightTweak) + rs.y);
 					previewCamera.CopyFrom(target.camera);
 					previewCamera.projectionMatrix = target.Editor__GetFinalProjectionMatrix(); // Work around a Unity bug
-					previewCamera.transparencySortMode = target.SettingsRoot.CameraSettings.transparencySortMode;
 					previewCamera.pixelRect = new Rect(v.x, v.y, r.width, r.height);
 					previewCamera.Render();
 					break;

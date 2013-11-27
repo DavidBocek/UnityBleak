@@ -8,8 +8,24 @@ public class tk2dUIDropDownMenuEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        EditorGUIUtility.LookLikeInspector();
+        tk2dGuiUtility.LookLikeInspector();
         base.OnInspectorGUI();
+
+		tk2dUIDropDownMenu dropdownMenu = (tk2dUIDropDownMenu)target;
+		dropdownMenu.MenuLayoutItem = EditorGUILayout.ObjectField("Menu LayoutItem", dropdownMenu.MenuLayoutItem, typeof(tk2dUILayout), true) as tk2dUILayout;
+		dropdownMenu.TemplateLayoutItem = EditorGUILayout.ObjectField("Template LayoutItem", dropdownMenu.TemplateLayoutItem, typeof(tk2dUILayout), true) as tk2dUILayout;
+
+		if (dropdownMenu.MenuLayoutItem == null)
+			dropdownMenu.height = EditorGUILayout.FloatField("Height", dropdownMenu.height, GUILayout.ExpandWidth(false));
+
+        tk2dUIMethodBindingHelper methodBindingUtil = new tk2dUIMethodBindingHelper();
+        dropdownMenu.SendMessageTarget = methodBindingUtil.BeginMessageGUI(dropdownMenu.SendMessageTarget);
+        methodBindingUtil.MethodBinding( "On Selected Item Change", typeof(tk2dUIDropDownMenu), dropdownMenu.SendMessageTarget, ref dropdownMenu.SendMessageOnSelectedItemChangeMethodName );
+        methodBindingUtil.EndMessageGUI();
+
+		if (GUI.changed) {
+			EditorUtility.SetDirty(target);
+		}
     }
 
     public void OnSceneGUI()
@@ -23,32 +39,35 @@ public class tk2dUIDropDownMenuEditor : Editor
 		Vector3 up = m.MultiplyVector(Vector3.up);
 		// Vector3 right = m.MultiplyVector(Vector3.right);
 
-        float newDropDownButtonHeight = tk2dUIControlsHelperEditor.DrawLengthHandles("Dropdown Button Height", dropdownMenu.height, dropdownMenu.transform.position+(up*(dropdownMenu.height/2)), -up, Color.red,.15f, .3f, .05f);
-        if (newDropDownButtonHeight != dropdownMenu.height)
-        {
-            Undo.RegisterUndo(dropdownMenu, "Dropdown Button Height Changed");
-            dropdownMenu.height = newDropDownButtonHeight;
-            wasChange = true;
-        }
+		if (dropdownMenu.MenuLayoutItem == null) {
+			float newDropDownButtonHeight = tk2dUIControlsHelperEditor.DrawLengthHandles("Dropdown Button Height", dropdownMenu.height, dropdownMenu.transform.position+(up*(dropdownMenu.height/2)), -up, Color.red,.15f, .3f, .05f);
+			if (newDropDownButtonHeight != dropdownMenu.height)
+			{
+				tk2dUndo.RecordObject(dropdownMenu, "Dropdown Button Height Changed");
+				dropdownMenu.height = newDropDownButtonHeight;
+				wasChange = true;
+			}
+		}
 
         if (dropdownItemTemplate != null)
         {
-            float yPosDropdownItemTemplate = -dropdownMenu.height;
+			float yPosDropdownItemTemplate = (dropdownMenu.MenuLayoutItem != null) ? dropdownMenu.MenuLayoutItem.bMin.y : (-dropdownMenu.height);
 
-            if (dropdownItemTemplate.transform.localPosition.y != yPosDropdownItemTemplate)
-            {
-                dropdownItemTemplate.transform.localPosition = new Vector3(dropdownItemTemplate.transform.localPosition.x, yPosDropdownItemTemplate, dropdownItemTemplate.transform.localPosition.z);
-                EditorUtility.SetDirty(dropdownItemTemplate.transform);
-            }
+			if (dropdownItemTemplate.transform.localPosition.y != yPosDropdownItemTemplate)
+			{
+				dropdownItemTemplate.transform.localPosition = new Vector3(dropdownItemTemplate.transform.localPosition.x, yPosDropdownItemTemplate, dropdownItemTemplate.transform.localPosition.z);
+				EditorUtility.SetDirty(dropdownItemTemplate.transform);
+			}
 
-
-            float newDropDownItemTemplateHeight = tk2dUIControlsHelperEditor.DrawLengthHandles("Dropdown Item Template Height", dropdownItemTemplate.height, dropdownMenu.transform.position - (up * (dropdownMenu.height/2)), -up, Color.blue, .15f, .4f, .05f);
-            if (newDropDownItemTemplateHeight != dropdownItemTemplate.height)
-            {
-                Undo.RegisterUndo(dropdownItemTemplate, "Dropdown Template Height Changed");
-                dropdownItemTemplate.height = newDropDownItemTemplateHeight;
-                EditorUtility.SetDirty(dropdownItemTemplate);
-            }
+			if (dropdownMenu.TemplateLayoutItem == null) {
+				float newDropDownItemTemplateHeight = tk2dUIControlsHelperEditor.DrawLengthHandles("Dropdown Item Template Height", dropdownItemTemplate.height, dropdownMenu.transform.position - (up * (dropdownMenu.height/2)), -up, Color.blue, .15f, .4f, .05f);
+				if (newDropDownItemTemplateHeight != dropdownItemTemplate.height)
+				{
+					tk2dUndo.RecordObject(dropdownItemTemplate, "Dropdown Template Height Changed");
+					dropdownItemTemplate.height = newDropDownItemTemplateHeight;
+					EditorUtility.SetDirty(dropdownItemTemplate);
+				}
+			}
         }
 
         if (wasChange)

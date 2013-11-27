@@ -21,23 +21,14 @@ public class tk2dCameraSettings {
 		Center
 	}
 
-	public CameraClearFlags clearFlags = CameraClearFlags.Color;
-	public Color backgroundColor = new Color32( 49, 77, 121, 255 );
-	public LayerMask cullingMask = -1;
 	public ProjectionType projection = ProjectionType.Orthographic;
-	public TransparencySortMode transparencySortMode = TransparencySortMode.Orthographic;
 	public float orthographicSize = 10.0f;
-	public float orthographicPixelsPerMeter = 20;
+	public float orthographicPixelsPerMeter = 100;
 	public OrthographicOrigin orthographicOrigin = OrthographicOrigin.Center;
 	public OrthographicType orthographicType = OrthographicType.PixelsPerMeter;
+	public TransparencySortMode transparencySortMode = TransparencySortMode.Default;
 	public float fieldOfView = 60.0f;
-	public float nearClipPlane = 0.3f;
-	public float farClipPlane = 50.0f;
 	public Rect rect = new Rect( 0, 0, 1, 1 );
-	public float depth = 0;
-	public RenderingPath renderingPath = RenderingPath.UsePlayerSettings;
-	public RenderTexture targetTexture = null;
-	public bool hdr = false;
 }
 
 [System.Serializable]

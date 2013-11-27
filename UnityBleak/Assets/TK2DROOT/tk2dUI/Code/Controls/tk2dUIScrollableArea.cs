@@ -4,6 +4,7 @@ using System.Collections;
 /// <summary>
 /// Scrollable Area Control. Can be actually by changing Value, external scrollbar or swipe gesture
 /// </summary>
+[ExecuteInEditMode]
 [AddComponentMenu("2D Toolkit/UI/tk2dUIScrollableArea")]
 public class tk2dUIScrollableArea : MonoBehaviour
 {
@@ -72,6 +73,44 @@ public class tk2dUIScrollableArea : MonoBehaviour
     /// </summary>
     public bool allowScrollWheel = true;
 
+	[SerializeField]
+	[HideInInspector]
+	private tk2dUILayout backgroundLayoutItem = null;
+
+	public tk2dUILayout BackgroundLayoutItem {
+		get { return backgroundLayoutItem; }
+		set {
+			if (backgroundLayoutItem != value) {
+				if (backgroundLayoutItem != null) {
+					backgroundLayoutItem.OnReshape -= LayoutReshaped;
+				}
+				backgroundLayoutItem = value;
+				if (backgroundLayoutItem != null) {
+					backgroundLayoutItem.OnReshape += LayoutReshaped;
+				}
+			}
+		}
+	}
+
+	[SerializeField]
+	[HideInInspector]
+	private tk2dUILayoutContainer contentLayoutContainer = null;
+
+	public tk2dUILayoutContainer ContentLayoutContainer {
+		get { return contentLayoutContainer; }
+		set {
+			if (contentLayoutContainer != value) {
+				if (contentLayoutContainer != null) {
+					contentLayoutContainer.OnChangeContent -= ContentLayoutChangeCallback;
+				}
+				contentLayoutContainer = value;
+				if (contentLayoutContainer != null) {
+					contentLayoutContainer.OnChangeContent += ContentLayoutChangeCallback;
+				}
+			}
+		}
+	}
+
     private bool isBackgroundButtonDown = false;
     private bool isBackgroundButtonOver = false;
 
@@ -85,10 +124,35 @@ public class tk2dUIScrollableArea : MonoBehaviour
     private float swipeCurrVelocity = 0; //velocity of current frame (used for inertia swipe scrolling)
     private float snapBackVelocity = 0;
 
+    public GameObject SendMessageTarget
+    {
+        get
+        {
+            if (backgroundUIItem != null)
+            {
+                return backgroundUIItem.sendMessageTarget;
+            }
+            else return null;
+        }
+        set
+        {
+            if (backgroundUIItem != null && backgroundUIItem.sendMessageTarget != value)
+            {
+                backgroundUIItem.sendMessageTarget = value;
+            
+                #if UNITY_EDITOR
+                    UnityEditor.EditorUtility.SetDirty(backgroundUIItem);
+                #endif
+            }
+        }
+    }
+
     /// <summary>
     /// If scrollable area is being scrolled
     /// </summary>
     public event System.Action<tk2dUIScrollableArea> OnScroll;
+
+    public string SendMessageOnScrollMethodName = "";
 
     private float percent = 0; //0-1
 
@@ -106,6 +170,16 @@ public class tk2dUIScrollableArea : MonoBehaviour
                 UnpressAllUIItemChildren();
                 percent = value;
                 if (OnScroll != null) { OnScroll(this); }
+
+                if (isBackgroundButtonDown || isSwipeScrollingInProgress) {
+                    if (tk2dUIManager.Instance__NoCreate != null) {
+                        tk2dUIManager.Instance.OnInputUpdate -= BackgroundOverUpdate;
+                    }
+                    isBackgroundButtonDown = false;
+                    isSwipeScrollingInProgress = false;
+                }
+
+                TargetOnScrollCallback();
             }
             if (scrollBar != null) { scrollBar.SetScrollPercentWithoutEvent(percent); }
             SetContentPosition();
@@ -138,7 +212,9 @@ public class tk2dUIScrollableArea : MonoBehaviour
         Transform t = contentContainer.transform;
         GetRendererBoundsInChildren(t.worldToLocalMatrix, minMax, t);
         if (minMax[0] != vector3Max && minMax[1] != vector3Min) {
-            return minMax[1].y - minMax[0].y;
+            minMax[0] = Vector3.Min(minMax[0], Vector3.zero);
+            minMax[1] = Vector3.Max(minMax[1], Vector3.zero);
+            return (scrollAxes == Axes.YAxis) ? (minMax[1].y - minMax[0].y) : (minMax[1].x - minMax[0].x);
         }
         else {
             Debug.LogError("Unable to measure content length");
@@ -160,6 +236,15 @@ public class tk2dUIScrollableArea : MonoBehaviour
             backgroundUIItem.OnHoverOver += BackgroundButtonHoverOver;
             backgroundUIItem.OnHoverOut += BackgroundButtonHoverOut;
         }
+
+		if (backgroundLayoutItem != null)
+		{
+			backgroundLayoutItem.OnReshape += LayoutReshaped;
+		}
+		if (contentLayoutContainer != null)
+		{
+			contentLayoutContainer.OnChangeContent += ContentLayoutChangeCallback;
+		}
     }
 
     void OnDisable()
@@ -179,7 +264,7 @@ public class tk2dUIScrollableArea : MonoBehaviour
 
         if (isBackgroundButtonOver)
         {
-            if (tk2dUIManager.Instance != null)
+            if (tk2dUIManager.Instance__NoCreate != null)
             {
                 tk2dUIManager.Instance.OnScrollWheelChange -= BackgroundHoverOverScrollWheelChange;
             }
@@ -188,13 +273,22 @@ public class tk2dUIScrollableArea : MonoBehaviour
 
         if (isBackgroundButtonDown || isSwipeScrollingInProgress)
         {
-            if (tk2dUIManager.Instance != null)
+            if (tk2dUIManager.Instance__NoCreate != null)
             {
                 tk2dUIManager.Instance.OnInputUpdate -= BackgroundOverUpdate;
             }
             isBackgroundButtonDown = false;
             isSwipeScrollingInProgress = false;
         }
+
+		if (backgroundLayoutItem != null)
+		{
+			backgroundLayoutItem.OnReshape -= LayoutReshaped;
+		}
+		if (contentLayoutContainer != null)
+		{
+			contentLayoutContainer.OnChangeContent -= ContentLayoutChangeCallback;
+		}
 
         swipeCurrVelocity = 0;
     }
@@ -384,6 +478,7 @@ public class tk2dUIScrollableArea : MonoBehaviour
                 percent = newPercent;
                 ContentContainerOffset = swipeScrollingContentDestLocalPos;
                 if (OnScroll != null) OnScroll(this);
+                TargetOnScrollCallback();
             }
 
             if (scrollBar != null)
@@ -494,7 +589,8 @@ public class tk2dUIScrollableArea : MonoBehaviour
     private Vector3 CalculateClickWorldPos(tk2dUIItem btn)
     {
         Vector2 pos = btn.Touch.position;
-        Vector3 worldPos = tk2dUIManager.Instance.UICamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, btn.transform.position.z - tk2dUIManager.Instance.UICamera.transform.position.z));
+        Camera viewingCamera = tk2dUIManager.Instance.GetUICameraForControl( gameObject );
+        Vector3 worldPos = viewingCamera.ScreenToWorldPoint(new Vector3(pos.x, pos.y, btn.transform.position.z - viewingCamera.transform.position.z));
         worldPos.z = btn.transform.position.z;
         return worldPos;
     }
@@ -504,7 +600,7 @@ public class tk2dUIScrollableArea : MonoBehaviour
         bool scrollBarVisible = (contentLength > visibleAreaLength);
         if (scrollBar != null)
         {
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+#if UNITY_3_5
             if (scrollBar.gameObject.active != scrollBarVisible)
 #else
             if (scrollBar.gameObject.activeSelf != scrollBarVisible)
@@ -537,6 +633,14 @@ public class tk2dUIScrollableArea : MonoBehaviour
     {
     }
 
+    private void TargetOnScrollCallback()
+    {
+        if (SendMessageTarget != null && SendMessageOnScrollMethodName.Length > 0)
+        {
+            SendMessageTarget.SendMessage( SendMessageOnScrollMethodName, this, SendMessageOptions.RequireReceiver );
+        }   
+    }
+
 
     private static readonly Vector3[] boxExtents = new Vector3[] {
         new Vector3(-1, -1, -1), new Vector3( 1, -1, -1), new Vector3(-1,  1, -1), new Vector3( 1,  1, -1), new Vector3(-1, -1,  1), new Vector3( 1, -1,  1), new Vector3(-1,  1,  1), new Vector3( 1,  1,  1)
@@ -557,7 +661,7 @@ public class tk2dUIScrollableArea : MonoBehaviour
         int childCount = t.childCount;
         for (int i = 0; i < childCount; ++i) {
             Transform child = t.GetChild(i);
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+#if UNITY_3_5
             if (t.gameObject.active) {
 #else
             if (t.gameObject.activeSelf) {
@@ -566,4 +670,17 @@ public class tk2dUIScrollableArea : MonoBehaviour
             }
         }
     }   
+
+	private void LayoutReshaped(Vector3 dMin, Vector3 dMax)
+	{
+		VisibleAreaLength += (scrollAxes == Axes.XAxis) ? (dMax.x - dMin.x) : (dMax.y - dMin.y);
+	}
+
+	private void ContentLayoutChangeCallback()
+	{
+		if (contentLayoutContainer != null) {
+			Vector2 contentSize = contentLayoutContainer.GetInnerSize();
+			ContentLength = (scrollAxes == Axes.XAxis) ? contentSize.x : contentSize.y;
+		}
+	}
 }

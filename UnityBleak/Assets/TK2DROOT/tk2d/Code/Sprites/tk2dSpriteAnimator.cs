@@ -126,6 +126,9 @@ public class tk2dSpriteAnimator : MonoBehaviour
 	}
 	
 	protected tk2dBaseSprite _sprite = null;
+	/// <summary>
+	/// Gets the sprite the animator is currently animating
+	/// </summary>
 	virtual public tk2dBaseSprite Sprite {
 		get {
 			if (_sprite == null) {
