@@ -5,7 +5,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	
 	public Transform startPos;
 	public Transform destPos;
-	public int moveSpeed;
+	public float moveSpeed;
 	public int numberOfBounces;
 	public float downDelay = 1.5f;
 	public bool canBeKnockedDown = false;

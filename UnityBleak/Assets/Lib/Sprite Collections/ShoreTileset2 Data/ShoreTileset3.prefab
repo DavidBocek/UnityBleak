@@ -44,17 +44,17 @@ MonoBehaviour:
   spriteDefinitions:
   - name: tilesFINALmergedUSEFINISHED13012/0
     boundsData:
-    - {x: 37, y: 20, z: 0}
-    - {x: 14, y: 40, z: 0}
+    - {x: .840909123, y: .454545468, z: 0}
+    - {x: .318181813, y: .909090936, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
-    - {x: 30, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 30, y: 40, z: 0}
-    - {x: 44, y: 40, z: 0}
+    - {x: .681818187, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: .681818187, y: .909090936, z: 0}
+    - {x: 1, y: .909090936, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -74,8 +74,10 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .840909123, y: .454545468, z: 0}
+    - {x: .159090906, y: .454545468, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -85,17 +87,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/1
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -115,8 +117,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -126,17 +130,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/2
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -156,8 +160,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -167,17 +173,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/3
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -197,8 +203,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -208,17 +216,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/4
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -238,8 +246,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -249,17 +259,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/5
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -279,8 +289,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -290,17 +302,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/6
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -320,8 +332,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -331,17 +345,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/7
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -361,8 +375,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -372,17 +388,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/8
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -402,8 +418,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -413,17 +431,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/9
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -443,8 +461,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -454,17 +474,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/10
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -484,8 +504,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -495,17 +517,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/11
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -525,8 +547,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -536,17 +560,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/12
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -566,8 +590,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -577,17 +603,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/13
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -607,8 +633,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -618,17 +646,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/14
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -648,8 +676,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -659,17 +689,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/15
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -689,8 +719,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -700,17 +732,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/16
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -730,8 +762,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -741,17 +775,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/17
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -771,8 +805,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -782,17 +818,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/18
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -812,8 +848,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -823,17 +861,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/19
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -853,8 +891,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -864,17 +904,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/20
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -894,8 +934,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -905,17 +947,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/21
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -935,8 +977,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -946,17 +990,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/22
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -976,8 +1020,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -987,17 +1033,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/23
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1017,8 +1063,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1028,17 +1076,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/24
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1058,8 +1106,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1069,17 +1119,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/25
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1099,8 +1149,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1110,17 +1162,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/26
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1140,8 +1192,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1151,17 +1205,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/27
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1181,8 +1235,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1192,17 +1248,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/28
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1222,8 +1278,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1233,17 +1291,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/29
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1263,8 +1321,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1274,17 +1334,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/30
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1304,8 +1364,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1315,17 +1377,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/31
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1345,8 +1407,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1356,17 +1420,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/32
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1386,8 +1450,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1397,17 +1463,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/33
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1427,8 +1493,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1438,17 +1506,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/34
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1468,8 +1536,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1479,17 +1549,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/35
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1509,8 +1579,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1520,17 +1592,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/36
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1550,8 +1622,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1561,17 +1635,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/37
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1591,8 +1665,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1602,17 +1678,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/38
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1632,8 +1708,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1643,17 +1721,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/39
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1673,8 +1751,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1684,17 +1764,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/40
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1714,8 +1794,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1725,17 +1807,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/41
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1755,8 +1837,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1766,17 +1850,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/42
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1796,8 +1880,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1807,17 +1893,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/43
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1837,8 +1923,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1848,17 +1936,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/44
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1878,8 +1966,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1889,17 +1979,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/45
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1919,8 +2009,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1930,17 +2022,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/46
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -1960,8 +2052,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -1971,17 +2065,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/47
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2001,8 +2095,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2012,17 +2108,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/48
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2042,8 +2138,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2053,17 +2151,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/49
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2083,8 +2181,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2094,17 +2194,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/50
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2124,8 +2224,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2135,17 +2237,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/51
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2165,8 +2267,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2176,17 +2280,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/52
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2206,8 +2310,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2217,17 +2323,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/53
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2247,8 +2353,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2258,17 +2366,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/54
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2288,8 +2396,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2299,17 +2409,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/55
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2329,8 +2439,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2340,17 +2452,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/56
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2370,8 +2482,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2381,17 +2495,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/57
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2411,8 +2525,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2422,17 +2538,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/58
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2452,8 +2568,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2463,17 +2581,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/59
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2493,8 +2611,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2504,17 +2624,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/60
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2534,8 +2654,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2545,17 +2667,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/61
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2575,8 +2697,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2586,17 +2710,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/62
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2616,8 +2740,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2627,17 +2753,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/63
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2657,8 +2783,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2668,17 +2796,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/64
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2698,8 +2826,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2709,17 +2839,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/65
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2739,8 +2869,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2750,17 +2882,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/66
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2780,8 +2912,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2791,17 +2925,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/67
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2821,8 +2955,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2832,17 +2968,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/68
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2862,8 +2998,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2873,17 +3011,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/69
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2903,8 +3041,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2914,17 +3054,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/70
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2944,8 +3084,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2955,17 +3097,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/71
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -2985,8 +3127,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -2996,17 +3140,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/72
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3026,8 +3170,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3037,17 +3183,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/73
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3067,8 +3213,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3078,17 +3226,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/74
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3108,8 +3256,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3119,17 +3269,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/75
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3149,8 +3299,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3160,17 +3312,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/76
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3190,8 +3342,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3201,17 +3355,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/77
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3231,8 +3385,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3242,17 +3398,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/78
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3272,8 +3428,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3283,17 +3441,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/79
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3313,8 +3471,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3324,17 +3484,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/80
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3354,8 +3514,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3365,17 +3527,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/81
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3395,8 +3557,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3406,17 +3570,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/82
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3436,8 +3600,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3447,17 +3613,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/83
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3477,8 +3643,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3488,17 +3656,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/84
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3518,8 +3686,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3529,17 +3699,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/85
     boundsData:
-    - {x: 22.5, y: 22.5, z: 0}
-    - {x: 1, y: 1, z: 0}
+    - {x: .511363626, y: .511363626, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
-    - {x: 22, y: 22, z: 0}
-    - {x: 23, y: 22, z: 0}
-    - {x: 22, y: 23, z: 0}
-    - {x: 23, y: 23, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: .522727251, y: .5, z: 0}
+    - {x: .5, y: .522727251, z: 0}
+    - {x: .522727251, y: .522727251, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3559,8 +3729,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .511363626, y: .511363626, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3570,17 +3742,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/86
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3600,8 +3772,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3611,17 +3785,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/87
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3641,8 +3815,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3652,17 +3828,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/88
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3682,8 +3858,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3693,17 +3871,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/89
     boundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
     untrimmedBoundsData:
-    - {x: 22, y: 22, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: .5, y: .5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 0, z: 0}
-    - {x: 0, y: 44, z: 0}
-    - {x: 44, y: 44, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3723,8 +3901,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .5, y: .5, z: 0}
+    - {x: .5, y: .5, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3734,17 +3914,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/90
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3764,8 +3944,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3775,17 +3957,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/91
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3805,8 +3987,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3816,17 +4000,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/92
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3846,8 +4030,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3857,17 +4043,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/93
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3887,8 +4073,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3898,17 +4086,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/94
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3928,8 +4116,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3939,17 +4129,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/95
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -3969,8 +4159,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -3980,17 +4172,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/96
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4010,8 +4202,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4021,17 +4215,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/97
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4051,8 +4245,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4062,17 +4258,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/98
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4092,8 +4288,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4103,17 +4301,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/99
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4133,8 +4331,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4144,17 +4344,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/100
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4174,8 +4374,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4185,17 +4387,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/101
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4215,8 +4417,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4226,17 +4430,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/102
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4256,8 +4460,10 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 0
-    colliderVertices: []
+    colliderType: 2
+    colliderVertices:
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 10}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -4267,17 +4473,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/103
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4308,17 +4514,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/104
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4349,17 +4555,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/105
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4390,17 +4596,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/106
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4431,17 +4637,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/107
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4472,17 +4678,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/108
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4513,17 +4719,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/109
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4554,17 +4760,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/110
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4595,17 +4801,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/111
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4636,17 +4842,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/112
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4677,17 +4883,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/113
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4718,17 +4924,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/114
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4759,17 +4965,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/115
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4800,17 +5006,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/116
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4841,17 +5047,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/117
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4882,17 +5088,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/118
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4923,17 +5129,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/119
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -4964,17 +5170,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/120
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5005,17 +5211,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/121
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5046,17 +5252,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/122
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5087,17 +5293,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/123
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5128,17 +5334,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/124
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5169,17 +5375,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/125
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5210,17 +5416,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/126
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5251,17 +5457,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/127
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5292,17 +5498,17 @@ MonoBehaviour:
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/128
     boundsData:
-    - {x: .499999523, y: .499999523, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0113636255, y: .0113636255, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     untrimmedBoundsData:
     - {x: 0, y: 0, z: 0}
-    - {x: 44, y: 44, z: 0}
-    texelSize: {x: 1, y: 1}
+    - {x: 1, y: 1, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
     positions:
     - {x: 0, y: 0, z: 0}
-    - {x: .999999046, y: 0, z: 0}
-    - {x: 0, y: .999999046, z: 0}
-    - {x: .999999046, y: .999999046, z: 0}
+    - {x: .0227272511, y: 0, z: 0}
+    - {x: 0, y: .0227272511, z: 0}
+    - {x: .0227272511, y: .0227272511, z: 0}
     normals: []
     tangents: []
     uvs:
@@ -5346,8 +5552,8 @@ MonoBehaviour:
   assetName: 
   loadable: 0
   invOrthoSize: 2
-  halfTargetHeight: .5
-  buildKey: 1662178637
+  halfTargetHeight: 22
+  buildKey: 278249193
   dataGuid: d51123e0698e0c74da73c1f90ce52253
   managedSpriteCollection: 0
   hasPlatformData: 0
