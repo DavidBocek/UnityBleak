@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!1 &143379529
 GameObject:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &402657891
 MonoBehaviour:
@@ -2859,7 +2859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!61 &714578077
 BoxCollider2D:
@@ -3089,7 +3089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &793328240
 MonoBehaviour:
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!61 &861304437
 BoxCollider2D:
@@ -4367,7 +4367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &1296531563
 MonoBehaviour:
@@ -4616,7 +4616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &1324727604
 MonoBehaviour:
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &1420917211
 MonoBehaviour:
@@ -5762,14 +5762,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 141985546}
-  - {fileID: 861304435}
   - {fileID: 714578075}
-  - {fileID: 1296531561}
-  - {fileID: 793328238}
-  - {fileID: 1324727602}
+  - {fileID: 861304435}
+  - {fileID: 141985546}
   - {fileID: 402657889}
   - {fileID: 1420917209}
+  - {fileID: 1324727602}
+  - {fileID: 1296531561}
+  - {fileID: 793328238}
   - {fileID: 1639743979}
   - {fileID: 554970812}
   - {fileID: 625505926}
@@ -6305,7 +6305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!114 &1639743981
 MonoBehaviour:

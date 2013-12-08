@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7100172d2258f4419504ef79bc5fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springPower: 18
+  springPower: 25
   springResetDelay: 1.25
 --- !u!1001 &100100000
 Prefab:
