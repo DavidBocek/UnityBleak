@@ -487,6 +487,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 18
   springResetDelay: 1.25
+--- !u!1 &143379529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 143379532}
+  - 132: {fileID: 143379531}
+  - 114: {fileID: 143379530}
+  m_Layer: 0
+  m_Name: GUI Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &143379530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143379529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47de6b3fd9f3f1e41afcfc42a62c19f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 2
+--- !u!132 &143379531
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143379529}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Gui Text
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &143379532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143379529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1001 &163494882
 Prefab:
   m_ObjectHideFlags: 0
@@ -587,7 +650,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168947445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 2.43807936, y: 3.53752899, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1320308434}
@@ -1060,7 +1123,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 349727404}
@@ -1079,7 +1142,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 349727403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1091,7 +1154,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 349727403}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1115,7 +1178,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 349727403}
   m_Mesh: {fileID: 0}
 --- !u!23 &349727407
@@ -1123,7 +1186,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 349727403}
   m_Enabled: 1
   m_CastShadows: 1
@@ -1145,39 +1208,13 @@ BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100002, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 349727403}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 1.00512528, y: 1.99366117}
   m_Center: {x: .007731725, y: 0}
---- !u!1 &369884081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 369884082}
-  m_Layer: 0
-  m_Name: Prefabs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &369884082
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 369884081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 396248599}
 --- !u!1 &376790037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1669,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 695900373}
-  - {fileID: 369884082}
   m_Father: {fileID: 1630557383}
 --- !u!1 &402657888
 GameObject:
@@ -2557,6 +2593,58 @@ Prefab:
   m_RootGameObject: {fileID: 1324727601}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &670356888
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 1277662586}
+    - target: {fileID: 5000000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+  m_RootGameObject: {fileID: 794780532}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &674500618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3142,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 794780533}
@@ -3072,7 +3160,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 794780532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 20, z: 0}
@@ -3085,7 +3173,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 794780532}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3094,38 +3182,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 794780536}
   boxCollider: {fileID: 794780535}
-  runSpeed: 7
+  runSpeed: 13
   joggingMultiplier: .699999988
-  jumpSpeed: 7.0999999
-  maxFallSpeed: 35
-  gravityAcceleration: 21
+  jumpSpeed: 15.8000002
+  maxFallSpeed: 70
+  gravityAcceleration: 42
   slamMultiplayer: 3
   canControl: 1
   startPoint: {fileID: 1277662586}
-  fallKillSpeed: 30
+  fallKillSpeed: 70
   timeUntilRun: 1.5
   bottomOffsetPushIn: .100000001
   sideOffsetPushIn: 1.5
   forceMoveDestination: {fileID: 0}
-  forceMoveSpeed: 1.10000002
+  forceMoveSpeed: 8
 --- !u!61 &794780535
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100000, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 794780532}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 1, y: 2}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: .0051500001, y: -.00319999992}
 --- !u!50 &794780536
 Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000000, guid: 7b24c714ab804084fbed44bc7cfd2eee,
     type: 2}
-  m_PrefabInternal: {fileID: 1679131568}
+  m_PrefabInternal: {fileID: 670356888}
   m_GameObject: {fileID: 794780532}
   m_Mass: 1
   m_LinearDrag: 0
@@ -3583,6 +3671,9 @@ GameObject:
   - 4: {fileID: 1010364791}
   - 33: {fileID: 1010364796}
   - 23: {fileID: 1010364795}
+  - 68: {fileID: 1010364794}
+  - 68: {fileID: 1010364793}
+  - 68: {fileID: 1010364792}
   m_Layer: 0
   m_Name: Chunk 0 5
   m_TagString: Untagged
@@ -3601,6 +3692,82 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &1010364792
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010364790}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 5, y: 1}
+  - {x: 5, y: 0}
+  - {x: 16, y: 0}
+  - {x: 16, y: 8}
+  - {x: 14, y: 8}
+  - {x: 14, y: 7}
+  - {x: 10, y: 7}
+  - {x: 10, y: 6}
+  - {x: 5, y: 6}
+  - {x: 5, y: 1}
+--- !u!68 &1010364793
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010364790}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 10}
+  - {x: 0, y: 9}
+  - {x: 1, y: 9}
+  - {x: 1, y: 10}
+  - {x: 5, y: 10}
+  - {x: 5, y: 9}
+  - {x: 7, y: 9}
+  - {x: 7, y: 8}
+  - {x: 8, y: 8}
+  - {x: 8, y: 10}
+  - {x: 9, y: 10}
+  - {x: 9, y: 9}
+  - {x: 13, y: 9}
+  - {x: 13, y: 10}
+  - {x: 16, y: 10}
+  - {x: 16, y: 19}
+  - {x: 10, y: 19}
+  - {x: 10, y: 20}
+  - {x: 8, y: 20}
+  - {x: 8, y: 21}
+  - {x: 5, y: 21}
+  - {x: 5, y: 13}
+  - {x: 4, y: 13}
+  - {x: 4, y: 11}
+  - {x: 3, y: 11}
+  - {x: 3, y: 13}
+  - {x: 2, y: 13}
+  - {x: 2, y: 21}
+  - {x: 0, y: 21}
+  - {x: 0, y: 10}
+--- !u!68 &1010364794
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010364790}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 1}
+  - {x: 0, y: 0}
+  - {x: 2, y: 0}
+  - {x: 2, y: 7}
+  - {x: 0, y: 7}
+  - {x: 0, y: 1}
 --- !u!23 &1010364795
 Renderer:
   m_ObjectHideFlags: 0
@@ -4385,7 +4552,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1320308433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.6404419, y: 19.5737, z: 0}
+  m_LocalPosition: {x: 1.51218224, y: 17.9170609, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 168947446}
@@ -5225,37 +5392,53 @@ MonoBehaviour:
         mesh: {fileID: 1863263158}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 1536293913}
       - spriteIds: 23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         gameObject: {fileID: 1500531593}
         mesh: {fileID: 1441243996}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 1500531596}
+        - {fileID: 1500531595}
       - spriteIds: ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000000800000007000000ffffffff23000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000004000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000004000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000004000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000004000000450000004500000045000000450000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000004000000240000002400000024000000240000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000020000000200000002000000020000000200000002000000020000000200000007000000ffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000ffffffffffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         gameObject: {fileID: 1715271081}
         mesh: {fileID: 1104110207}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 1715271086}
+        - {fileID: 1715271085}
+        - {fileID: 1715271084}
+        - {fileID: 1715271083}
       - spriteIds: 2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000ffffffffffffffff23000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000ffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000ffffffff230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000ffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000ffffffff230000002300000023000000230000002300000023000000ffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         gameObject: {fileID: 2066261665}
         mesh: {fileID: 1388463027}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 2066261669}
+        - {fileID: 2066261668}
+        - {fileID: 2066261667}
       - spriteIds: 23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000ffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000ffffffffffffffff23000000230000002300000023000000ffffffff230000002300000023000000ffffffffffffffff23000000ffffffffffffffffffffffff23000000ffffffff23000000230000002300000023000000ffffffffffffffffffffffff23000000ffffffffffffffff23000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000ffffffff2300000023000000230000002300000023000000ffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         gameObject: {fileID: 1677007251}
         mesh: {fileID: 1009553108}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 1677007255}
+        - {fileID: 1677007254}
+        - {fileID: 1677007253}
       - spriteIds: 2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000ffffffffffffffffffffffffffffffff230000002300000023000000ffffffff23000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff23000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff230000002300000023000000ffffffff230000002300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000230000002300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff2300000023000000230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2300000023000000ffffffffffffffffffffffff230000002300000023000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         gameObject: {fileID: 1010364790}
         mesh: {fileID: 1292002174}
         meshCollider: {fileID: 0}
         colliderMesh: {fileID: 0}
-        edgeColliders: []
+        edgeColliders:
+        - {fileID: 1010364794}
+        - {fileID: 1010364793}
+        - {fileID: 1010364792}
     width: 176
     height: 25
     numColumns: 6
@@ -5270,9 +5453,9 @@ MonoBehaviour:
     numRows: 1
     divX: 32
     divY: 32
-  prefabsRoot: {fileID: 369884081}
+  prefabsRoot: {fileID: 0}
   tilePrefabsList: []
-  _inEditMode: 1
+  _inEditMode: 0
   serializedMeshPath: 
 --- !u!4 &1456556487
 Transform:
@@ -5353,6 +5536,8 @@ GameObject:
   - 4: {fileID: 1500531594}
   - 33: {fileID: 1500531598}
   - 23: {fileID: 1500531597}
+  - 68: {fileID: 1500531596}
+  - 68: {fileID: 1500531595}
   m_Layer: 0
   m_Name: Chunk 0 1
   m_TagString: Untagged
@@ -5371,6 +5556,70 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &1500531595
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500531593}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 19, y: 15}
+  - {x: 19, y: 14}
+  - {x: 20, y: 14}
+  - {x: 20, y: 13}
+  - {x: 21, y: 13}
+  - {x: 21, y: 11}
+  - {x: 22, y: 11}
+  - {x: 22, y: 10}
+  - {x: 23, y: 10}
+  - {x: 23, y: 9}
+  - {x: 24, y: 9}
+  - {x: 24, y: 8}
+  - {x: 32, y: 8}
+  - {x: 32, y: 12}
+  - {x: 31, y: 12}
+  - {x: 31, y: 18}
+  - {x: 23, y: 18}
+  - {x: 23, y: 17}
+  - {x: 20, y: 17}
+  - {x: 20, y: 16}
+  - {x: 19, y: 16}
+  - {x: 19, y: 15}
+--- !u!68 &1500531596
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500531593}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 1}
+  - {x: 0, y: 0}
+  - {x: 31, y: 0}
+  - {x: 31, y: 5}
+  - {x: 25, y: 5}
+  - {x: 25, y: 6}
+  - {x: 23, y: 6}
+  - {x: 23, y: 7}
+  - {x: 22, y: 7}
+  - {x: 22, y: 8}
+  - {x: 19, y: 8}
+  - {x: 19, y: 11}
+  - {x: 17, y: 11}
+  - {x: 17, y: 15}
+  - {x: 16, y: 15}
+  - {x: 16, y: 16}
+  - {x: 9, y: 16}
+  - {x: 9, y: 15}
+  - {x: 5, y: 15}
+  - {x: 5, y: 19}
+  - {x: 0, y: 19}
+  - {x: 0, y: 1}
 --- !u!23 &1500531597
 Renderer:
   m_ObjectHideFlags: 0
@@ -5409,6 +5658,7 @@ GameObject:
   - 4: {fileID: 1536293912}
   - 33: {fileID: 1536293915}
   - 23: {fileID: 1536293914}
+  - 68: {fileID: 1536293913}
   m_Layer: 0
   m_Name: Chunk 0 0
   m_TagString: Untagged
@@ -5427,6 +5677,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &1536293913
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536293911}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 1}
+  - {x: 0, y: 0}
+  - {x: 32, y: 0}
+  - {x: 32, y: 18}
+  - {x: 31, y: 18}
+  - {x: 31, y: 17}
+  - {x: 28, y: 17}
+  - {x: 28, y: 16}
+  - {x: 24, y: 16}
+  - {x: 24, y: 15}
+  - {x: 23, y: 15}
+  - {x: 23, y: 14}
+  - {x: 18, y: 14}
+  - {x: 18, y: 16}
+  - {x: 17, y: 16}
+  - {x: 17, y: 17}
+  - {x: 4, y: 17}
+  - {x: 4, y: 18}
+  - {x: 3, y: 18}
+  - {x: 3, y: 17}
+  - {x: 0, y: 17}
+  - {x: 0, y: 1}
 --- !u!23 &1536293914
 Renderer:
   m_ObjectHideFlags: 0
@@ -6108,6 +6390,9 @@ GameObject:
   - 4: {fileID: 1677007252}
   - 33: {fileID: 1677007257}
   - 23: {fileID: 1677007256}
+  - 68: {fileID: 1677007255}
+  - 68: {fileID: 1677007254}
+  - 68: {fileID: 1677007253}
   m_Layer: 0
   m_Name: Chunk 0 4
   m_TagString: Untagged
@@ -6126,6 +6411,134 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &1677007253
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677007251}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 16, y: 11}
+  - {x: 16, y: 10}
+  - {x: 17, y: 10}
+  - {x: 17, y: 11}
+  - {x: 20, y: 11}
+  - {x: 20, y: 10}
+  - {x: 21, y: 10}
+  - {x: 21, y: 11}
+  - {x: 22, y: 11}
+  - {x: 22, y: 10}
+  - {x: 23, y: 10}
+  - {x: 23, y: 9}
+  - {x: 24, y: 9}
+  - {x: 24, y: 10}
+  - {x: 26, y: 10}
+  - {x: 26, y: 12}
+  - {x: 27, y: 12}
+  - {x: 27, y: 11}
+  - {x: 29, y: 11}
+  - {x: 29, y: 10}
+  - {x: 30, y: 10}
+  - {x: 30, y: 11}
+  - {x: 32, y: 11}
+  - {x: 32, y: 21}
+  - {x: 31, y: 21}
+  - {x: 31, y: 20}
+  - {x: 29, y: 20}
+  - {x: 29, y: 19}
+  - {x: 28, y: 19}
+  - {x: 28, y: 18}
+  - {x: 19, y: 18}
+  - {x: 19, y: 19}
+  - {x: 17, y: 19}
+  - {x: 17, y: 17}
+  - {x: 18, y: 17}
+  - {x: 18, y: 12}
+  - {x: 16, y: 12}
+  - {x: 16, y: 11}
+--- !u!68 &1677007254
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677007251}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 11}
+  - {x: 0, y: 10}
+  - {x: 4, y: 10}
+  - {x: 4, y: 12}
+  - {x: 5, y: 12}
+  - {x: 5, y: 11}
+  - {x: 6, y: 11}
+  - {x: 6, y: 9}
+  - {x: 7, y: 9}
+  - {x: 7, y: 10}
+  - {x: 10, y: 10}
+  - {x: 10, y: 11}
+  - {x: 11, y: 11}
+  - {x: 11, y: 9}
+  - {x: 13, y: 9}
+  - {x: 13, y: 10}
+  - {x: 14, y: 10}
+  - {x: 14, y: 11}
+  - {x: 15, y: 11}
+  - {x: 15, y: 13}
+  - {x: 14, y: 13}
+  - {x: 14, y: 14}
+  - {x: 17, y: 14}
+  - {x: 17, y: 15}
+  - {x: 16, y: 15}
+  - {x: 16, y: 19}
+  - {x: 11, y: 19}
+  - {x: 11, y: 18}
+  - {x: 10, y: 18}
+  - {x: 10, y: 19}
+  - {x: 5, y: 19}
+  - {x: 5, y: 18}
+  - {x: 1, y: 18}
+  - {x: 1, y: 22}
+  - {x: 0, y: 22}
+  - {x: 0, y: 11}
+--- !u!68 &1677007255
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677007251}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 1}
+  - {x: 0, y: 0}
+  - {x: 32, y: 0}
+  - {x: 32, y: 6}
+  - {x: 31, y: 6}
+  - {x: 31, y: 7}
+  - {x: 26, y: 7}
+  - {x: 26, y: 8}
+  - {x: 25, y: 8}
+  - {x: 25, y: 7}
+  - {x: 19, y: 7}
+  - {x: 19, y: 8}
+  - {x: 14, y: 8}
+  - {x: 14, y: 6}
+  - {x: 12, y: 6}
+  - {x: 12, y: 7}
+  - {x: 5, y: 7}
+  - {x: 5, y: 6}
+  - {x: 4, y: 6}
+  - {x: 4, y: 7}
+  - {x: 2, y: 7}
+  - {x: 2, y: 8}
+  - {x: 0, y: 8}
+  - {x: 0, y: 1}
 --- !u!23 &1677007256
 Renderer:
   m_ObjectHideFlags: 0
@@ -6272,58 +6685,6 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!1001 &1679131568
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: boxCollider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 1277662586}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
-  m_RootGameObject: {fileID: 794780532}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1697442161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,6 +6813,10 @@ GameObject:
   - 4: {fileID: 1715271082}
   - 33: {fileID: 1715271088}
   - 23: {fileID: 1715271087}
+  - 68: {fileID: 1715271086}
+  - 68: {fileID: 1715271085}
+  - 68: {fileID: 1715271084}
+  - 68: {fileID: 1715271083}
   m_Layer: 0
   m_Name: Chunk 0 2
   m_TagString: Untagged
@@ -6470,6 +6835,93 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &1715271083
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715271081}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 29, y: 1}
+  - {x: 29, y: 0}
+  - {x: 32, y: 0}
+  - {x: 32, y: 5}
+  - {x: 29, y: 5}
+  - {x: 29, y: 1}
+--- !u!68 &1715271084
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715271081}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 26, y: 12}
+  - {x: 26, y: 15}
+  - {x: 29, y: 15}
+  - {x: 29, y: 12}
+  - {x: 28, y: 12}
+  - {x: 28, y: 10}
+  - {x: 27, y: 10}
+  - {x: 27, y: 12}
+  - {x: 26, y: 12}
+--- !u!68 &1715271085
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715271081}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 2, y: 1}
+  - {x: 2, y: 0}
+  - {x: 26, y: 0}
+  - {x: 26, y: 5}
+  - {x: 2, y: 5}
+  - {x: 2, y: 1}
+--- !u!68 &1715271086
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715271081}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 9}
+  - {x: 0, y: 8}
+  - {x: 32, y: 8}
+  - {x: 32, y: 18}
+  - {x: 30, y: 18}
+  - {x: 30, y: 17}
+  - {x: 26, y: 17}
+  - {x: 26, y: 18}
+  - {x: 17, y: 18}
+  - {x: 17, y: 19}
+  - {x: 16, y: 19}
+  - {x: 16, y: 20}
+  - {x: 11, y: 20}
+  - {x: 11, y: 19}
+  - {x: 9, y: 19}
+  - {x: 9, y: 20}
+  - {x: 5, y: 20}
+  - {x: 5, y: 19}
+  - {x: 4, y: 19}
+  - {x: 4, y: 18}
+  - {x: 2, y: 18}
+  - {x: 2, y: 12}
+  - {x: 1, y: 12}
+  - {x: 1, y: 10}
+  - {x: 0, y: 10}
+  - {x: 0, y: 9}
 --- !u!23 &1715271087
 Renderer:
   m_ObjectHideFlags: 0
@@ -7158,6 +7610,9 @@ GameObject:
   - 4: {fileID: 2066261666}
   - 33: {fileID: 2066261671}
   - 23: {fileID: 2066261670}
+  - 68: {fileID: 2066261669}
+  - 68: {fileID: 2066261668}
+  - 68: {fileID: 2066261667}
   m_Layer: 0
   m_Name: Chunk 0 3
   m_TagString: Untagged
@@ -7176,6 +7631,122 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 695900373}
+--- !u!68 &2066261667
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066261665}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 5, y: 8}
+  - {x: 5, y: 7}
+  - {x: 6, y: 7}
+  - {x: 6, y: 8}
+  - {x: 13, y: 8}
+  - {x: 13, y: 9}
+  - {x: 14, y: 9}
+  - {x: 14, y: 11}
+  - {x: 15, y: 11}
+  - {x: 15, y: 9}
+  - {x: 21, y: 9}
+  - {x: 21, y: 11}
+  - {x: 22, y: 11}
+  - {x: 22, y: 10}
+  - {x: 24, y: 10}
+  - {x: 24, y: 13}
+  - {x: 26, y: 13}
+  - {x: 26, y: 11}
+  - {x: 29, y: 11}
+  - {x: 29, y: 10}
+  - {x: 32, y: 10}
+  - {x: 32, y: 22}
+  - {x: 31, y: 22}
+  - {x: 31, y: 23}
+  - {x: 26, y: 23}
+  - {x: 26, y: 24}
+  - {x: 23, y: 24}
+  - {x: 23, y: 25}
+  - {x: 20, y: 25}
+  - {x: 20, y: 24}
+  - {x: 12, y: 24}
+  - {x: 12, y: 20}
+  - {x: 15, y: 20}
+  - {x: 15, y: 21}
+  - {x: 18, y: 21}
+  - {x: 18, y: 20}
+  - {x: 19, y: 20}
+  - {x: 19, y: 18}
+  - {x: 6, y: 18}
+  - {x: 6, y: 17}
+  - {x: 7, y: 17}
+  - {x: 7, y: 9}
+  - {x: 5, y: 9}
+  - {x: 5, y: 8}
+--- !u!68 &2066261668
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066261665}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 9}
+  - {x: 0, y: 8}
+  - {x: 1, y: 8}
+  - {x: 1, y: 7}
+  - {x: 3, y: 7}
+  - {x: 3, y: 10}
+  - {x: 4, y: 10}
+  - {x: 4, y: 12}
+  - {x: 6, y: 12}
+  - {x: 6, y: 15}
+  - {x: 5, y: 15}
+  - {x: 5, y: 17}
+  - {x: 4, y: 17}
+  - {x: 4, y: 18}
+  - {x: 0, y: 18}
+  - {x: 0, y: 9}
+--- !u!68 &2066261669
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066261665}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: 0, y: 1}
+  - {x: 0, y: 0}
+  - {x: 32, y: 0}
+  - {x: 32, y: 8}
+  - {x: 31, y: 8}
+  - {x: 31, y: 7}
+  - {x: 25, y: 7}
+  - {x: 25, y: 8}
+  - {x: 24, y: 8}
+  - {x: 24, y: 7}
+  - {x: 17, y: 7}
+  - {x: 17, y: 6}
+  - {x: 16, y: 6}
+  - {x: 16, y: 5}
+  - {x: 18, y: 5}
+  - {x: 18, y: 4}
+  - {x: 17, y: 4}
+  - {x: 17, y: 3}
+  - {x: 14, y: 3}
+  - {x: 14, y: 4}
+  - {x: 13, y: 4}
+  - {x: 13, y: 6}
+  - {x: 10, y: 6}
+  - {x: 10, y: 5}
+  - {x: 0, y: 5}
+  - {x: 0, y: 1}
 --- !u!23 &2066261670
 Renderer:
   m_ObjectHideFlags: 0
