@@ -21,16 +21,1636 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
   alphaIsTransparency: 0
-  textureType: -1
+  textureType: 0
   buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bleak_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1429
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1429
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1429
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1429
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1429
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1429
+        width: 37
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1429
+        width: 38
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1429
+        width: 38
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1429
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1429
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1301
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1301
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1301
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1301
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1301
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1301
+        width: 37
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1301
+        width: 38
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1301
+        width: 38
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1301
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1301
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1296
+        width: 38
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1173
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1173
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1173
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1173
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1173
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1173
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1045
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1045
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1045
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1045
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1045
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1045
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1045
+        width: 36
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 1047
+        width: 47
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1047
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 1047
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 1048
+        width: 57
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 921
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 919
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 919
+        width: 58
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 919
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 919
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 919
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 919
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 917
+        width: 44
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 917
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 917
+        width: 41
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 917
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 917
+        width: 49
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 917
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 917
+        width: 52
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 919
+        width: 57
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 919
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 793
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 789
+        width: 61
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 789
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 789
+        width: 58
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 789
+        width: 54
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 791
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 791
+        width: 49
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 791
+        width: 44
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 791
+        width: 40
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 791
+        width: 44
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 789
+        width: 50
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 789
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 789
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 791
+        width: 63
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 791
+        width: 61
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 789
+        width: 66
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 663
+        width: 62
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 663
+        width: 60
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 663
+        width: 58
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 663
+        width: 59
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 663
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 663
+        width: 44
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 663
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 661
+        width: 41
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 661
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 661
+        width: 51
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 661
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 661
+        width: 59
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 663
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 663
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 663
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 661
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 533
+        width: 65
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 533
+        width: 58
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 533
+        width: 54
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 533
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 533
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 535
+        width: 44
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 535
+        width: 42
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 535
+        width: 46
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 533
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 533
+        width: 42
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 533
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 533
+        width: 42
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 533
+        width: 42
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 533
+        width: 42
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 533
+        width: 42
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 533
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 405
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 405
+        width: 48
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 407
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 407
+        width: 54
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 407
+        width: 53
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 407
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 407
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 407
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 405
+        width: 51
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 405
+        width: 55
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 405
+        width: 51
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 405
+        width: 52
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 405
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 405
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 405
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 405
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 277
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 277
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 277
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 277
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 272
+        width: 38
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 277
+        width: 41
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 281
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 279
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 279
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 277
+        width: 52
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 277
+        width: 52
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 277
+        width: 46
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 277
+        width: 48
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 277
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 277
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 277
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 149
+        width: 51
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 149
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 144
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 149
+        width: 46
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 149
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 144
+        width: 46
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 149
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 149
+        width: 45
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 149
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 149
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 149
+        width: 43
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 149
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 149
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 144
+        width: 42
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 149
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 144
+        width: 39
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 21
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 21
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: bleak_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 21
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
   userData: 

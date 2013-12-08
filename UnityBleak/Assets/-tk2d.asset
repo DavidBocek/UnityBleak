@@ -1885,3 +1885,16 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: BleakPlaceholder
+    spriteCollectionGUID: c95f7879e71f4a8408a7a970f607014e
+    spriteCollectionDataGUID: dd801f70a6cdfb74fb3704d80a96ec11
+    spriteNames:
+    - bleak-running-puppet
+    spriteTextureGUIDs:
+    - 3c16ae05156fad04888834b660e72517
+    spriteTextureTimeStamps:
+    - 1386463002
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
