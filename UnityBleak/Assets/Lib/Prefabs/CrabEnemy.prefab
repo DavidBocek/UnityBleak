@@ -197,10 +197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collection: {fileID: 11400000, guid: b5aec6ebd1a8ffc458a2e46a3236acab, type: 2}
   _color: {r: 1, g: 1, b: 1, a: 1}
-  _scale: {x: 108.259796, y: 108.259865, z: 100}
-  _spriteId: 3
+  _scale: {x: 300, y: 300, z: 1}
+  _spriteId: 2
   boxCollider2D: {fileID: 0}
-  polygonCollider2D: []
+  polygonCollider2D:
+  - {fileID: 0}
   edgeCollider2D: []
   boxCollider: {fileID: 0}
   meshCollider: {fileID: 6400000}
