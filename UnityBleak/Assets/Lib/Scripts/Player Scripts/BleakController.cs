@@ -401,7 +401,7 @@ public class BleakController : MonoBehaviour {
 	void UpdateInputNormal(float dt){
 		if (Input.GetKeyDown(actionButton)){
 			//send action message on the position, listeners will handle the action if the position is within their bounds
-			Messenger.Broadcast<Transform,BleakController>("BleakActionActivate",transform,this);
+			Messenger.Broadcast<Transform,BleakController>("BleakInteractionActivate",transform,this);
 		}
 	}
 	

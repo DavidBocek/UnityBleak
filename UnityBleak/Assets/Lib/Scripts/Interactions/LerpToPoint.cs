@@ -9,7 +9,7 @@ public class LerpToPoint : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Messenger.AddListener<Transform,BleakController>("BleakActionActivate",HandleBleakAction);
+		Messenger.AddListener<Transform,BleakController>("BleakInteractionActivate",HandleBleakAction);
 		Messenger.AddListener<Transform,BleakController>("CompletedForceMove",HandleFinishMove);
 	}
 	
