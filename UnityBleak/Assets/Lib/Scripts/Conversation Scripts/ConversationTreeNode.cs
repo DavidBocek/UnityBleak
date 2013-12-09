@@ -10,11 +10,11 @@ public class ConversationTreeNode {
 
 	private List<ConversationTreeNode> children;
 
-	ConversationTreeNode(int type, string value = ""){
+	public ConversationTreeNode(int type, string value = ""){
 		children = new List<ConversationTreeNode>();
 		sValue = value;
 	}
-	ConversationTreeNode(List<ConversationTreeNode> children, int type, string value = ""){
+	public ConversationTreeNode(List<ConversationTreeNode> children, int type, string value = ""){
 		this.children = children;
 		sValue = value;
 	}
