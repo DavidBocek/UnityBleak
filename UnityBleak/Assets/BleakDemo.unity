@@ -1803,6 +1803,7 @@ GameObject:
   - 114: {fileID: 402657891}
   - 114: {fileID: 402657890}
   - 61: {fileID: 402657892}
+  - 82: {fileID: 402657894}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -1885,6 +1886,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &402657894
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402657888}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .758000016
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.74380493
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.20020032
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.20020032
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &417880442
 Prefab:
   m_ObjectHideFlags: 0
@@ -3074,7 +3133,6 @@ GameObject:
   - 92: {fileID: 674500620}
   - 81: {fileID: 674500619}
   - 114: {fileID: 674500625}
-  - 82: {fileID: 674500626}
   m_Layer: 0
   m_Name: tk2dCamera
   m_TagString: MainCamera
@@ -3088,7 +3146,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 674500618}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &674500620
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3187,7 +3245,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 11.5630035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1608163630}
   m_Father: {fileID: 0}
 --- !u!114 &674500625
 MonoBehaviour:
@@ -3204,64 +3263,6 @@ MonoBehaviour:
   target: {fileID: 794780533}
   lowerLeft: {x: 0, y: 0}
   upperRight: {x: 152.762497, y: 43.5800018}
---- !u!82 &674500626
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674500618}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: e58a3598ce3828b46a0f2d036e2f3b25, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: .500999987
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &695900372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,6 +3661,7 @@ GameObject:
   - 114: {fileID: 793328240}
   - 114: {fileID: 793328239}
   - 61: {fileID: 793328241}
+  - 82: {fileID: 793328243}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -3742,6 +3744,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &793328243
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793328237}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .758000016
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.84889603
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.20020032
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.20020032
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &794780532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,6 +5037,7 @@ GameObject:
   - 114: {fileID: 1296531563}
   - 114: {fileID: 1296531562}
   - 61: {fileID: 1296531564}
+  - 82: {fileID: 1296531566}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -5059,6 +5120,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &1296531566
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296531560}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .758000016
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 4.06340408
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.20020032
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.20020032
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1298854263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,6 +5345,7 @@ GameObject:
   - 114: {fileID: 1324727604}
   - 114: {fileID: 1324727603}
   - 61: {fileID: 1324727605}
+  - 82: {fileID: 1324727607}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -5308,6 +5428,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &1324727607
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324727601}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .758000016
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.68186188
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.20020032
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.20020032
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1347279422
 Prefab:
   m_ObjectHideFlags: 0
@@ -5688,6 +5866,7 @@ GameObject:
   - 114: {fileID: 1420917211}
   - 114: {fileID: 1420917210}
   - 61: {fileID: 1420917212}
+  - 82: {fileID: 1420917214}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -5770,6 +5949,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &1420917214
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420917208}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .758000016
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.6661644
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.20020032
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.20020032
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: .899999976
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1424334281
 Prefab:
   m_ObjectHideFlags: 0
@@ -6688,6 +6925,40 @@ Prefab:
   m_RootGameObject: {fileID: 1298854263}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1608163629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1608163630}
+  - 81: {fileID: 1608163631}
+  m_Layer: 0
+  m_Name: Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608163630
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608163629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.9173555, y: 8.44949722, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 674500624}
+--- !u!81 &1608163631
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608163629}
+  m_Enabled: 1
 --- !u!1001 &1615038263
 Prefab:
   m_ObjectHideFlags: 0
@@ -6973,6 +7244,7 @@ GameObject:
   - 114: {fileID: 1639743981}
   - 114: {fileID: 1639743980}
   - 61: {fileID: 1639743982}
+  - 82: {fileID: 1639743984}
   m_Layer: 0
   m_Name: CrabEnemy
   m_TagString: Untagged
@@ -7055,6 +7327,64 @@ MonoBehaviour:
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
+--- !u!82 &1639743984
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639743978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .75
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.59951782
+  MaxDistance: 11
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.25
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.25
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1654407627
 GameObject:
   m_ObjectHideFlags: 0
@@ -8419,6 +8749,91 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 793328238}
+--- !u!1 &2133189442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2133189444}
+  - 82: {fileID: 2133189443}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2133189443
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133189442}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: e58a3598ce3828b46a0f2d036e2f3b25, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &2133189444
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133189442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 86.7295456, y: 23.9080353, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &2134315403
 GameObject:
   m_ObjectHideFlags: 0
