@@ -7,6 +7,7 @@ public class Breakable : MonoBehaviour {
 	public bool breakableUp;
 	public bool breakableDown;
 	private tk2dSpriteAnimator anim;
+	public AudioClip platform;
 	public float breakTime;
 	public bool isBreaking {get; set;}
 
@@ -22,6 +23,7 @@ public class Breakable : MonoBehaviour {
 			if (breakTimer < breakTime){
 				breakTimer += Time.deltaTime;
 				Debug.Log ("breaking...");
+				audio.PlayOneShot(platform);
 				anim.Play("Breaking");
 			} else {
 				transform.gameObject.SetActive(false);
