@@ -37,6 +37,14 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: d580d4904f5f7254195b40eb8bad3bb1
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 7ff11df1d3ca9c14f806813929b32689
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2474,6 +2482,67 @@ MonoBehaviour:
     - 1386444088.56825
     - 1386444088.56825
     - 1386444088.56825
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: BreakablePlatformPlaceholder
+    spriteCollectionGUID: 78a6f683a0ce14c458150b4d3efe216c
+    spriteCollectionDataGUID: 2dc21e8a31089274aa9cffa01a5af0c0
+    spriteNames:
+    - 
+    - platform01_sheet/0
+    - platform01_sheet/1
+    - platform01_sheet/2
+    - platform01_sheet/3
+    - platform01_sheet/4
+    - platform01_sheet/5
+    - platform01_sheet/6
+    - platform01_sheet/7
+    - platform01_sheet/8
+    - platform01_sheet/9
+    - platform01_sheet/10
+    - platform01_sheet/11
+    - platform01_sheet/12
+    - platform01_sheet/13
+    - platform01_sheet/14
+    - platform01_sheet/15
+    spriteTextureGUIDs:
+    - 
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    spriteTextureTimeStamps:
+    - 0
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
+    - 1362234893.11696
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

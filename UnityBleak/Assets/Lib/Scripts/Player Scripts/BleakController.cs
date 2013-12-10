@@ -615,6 +615,16 @@ public class BleakController : MonoBehaviour {
 		if (backAndForth){
 			backAndForth.KnockDown();
 		}
+		Breakable breakable = hitInfo.transform.gameObject.GetComponent<Breakable>();
+		if (breakable){
+			if (!breakable.isBreaking && breakable.breakableUp){
+				if (this.IsSlamming()){
+					breakable.Break();
+				} else if (!breakable.needsSlam){
+					breakable.Break();
+				}
+			}
+		}
 	}
 	
 	void HandleSideCollision(RaycastHit2D hitInfo, float dt){
