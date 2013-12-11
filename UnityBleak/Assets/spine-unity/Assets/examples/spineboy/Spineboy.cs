@@ -50,6 +50,6 @@ public class Spineboy : MonoBehaviour {
 
 	public void OnMouseDown () {
 		skeletonAnimation.state.SetAnimation(0, "jump", false);
-		skeletonAnimation.state.AddAnimation(0, "walk", true, 0);
+		skeletonAnimation.state.AddAnimation(0, "run", true, 0);
 	}
 }
