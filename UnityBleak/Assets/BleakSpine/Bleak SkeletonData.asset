@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: BleakSkeletonData
+  m_Name: Bleak SkeletonData
   m_EditorClassIdentifier: 
-  atlasAsset: {fileID: 11400000, guid: 3698a2907ab42194ead012669c474807, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: fe8444f6279744740888530e7ae87b30, type: 3}
-  scale: 1
+  atlasAsset: {fileID: 11400000, guid: 5b6b003737bce86439888d22e3fd6136, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: c1af2a7deac1e4247b40c1ba8cba43ae, type: 3}
+  scale: .200000003
   fromAnimation: []
   toAnimation: []
   duration: []

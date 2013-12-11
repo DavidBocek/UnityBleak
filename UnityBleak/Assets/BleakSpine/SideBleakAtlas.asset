@@ -9,8 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: BleakAtlas
+  m_Name: SideBleakAtlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 51ed0cf4a9caef841b46c6346d2397d3, type: 3}
+  atlasFile: {fileID: 4900000, guid: 926aae34d9161ea43acd98b0f1abda6d, type: 3}
   materials:
-  - {fileID: 2100000, guid: 2f5f47c3d4f0c3c439de8d11e755169b, type: 2}
+  - {fileID: 2100000, guid: 9ded3a2fa01245b429f0de789328fcce, type: 2}
+  - {fileID: 2100000, guid: 085647680ed2cc44cafdc86872130621, type: 2}
