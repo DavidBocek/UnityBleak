@@ -20,10 +20,10 @@ public class Breakable : MonoBehaviour {
 		if (isBreaking){
 			if (breakTimer < breakTime){
 				breakTimer += Time.deltaTime;
-				Debug.Log ("breaking...");
+				//Debug.Log ("breaking...");
 			} else {
 				transform.gameObject.SetActive(false);
-				Debug.Log ("broken!");
+				//Debug.Log ("broken!");
 			}
 		}
 	}
@@ -31,7 +31,7 @@ public class Breakable : MonoBehaviour {
 	public void Break(){
 		isBreaking = true;
 		//anim.Play("break");
-		Debug.Log("BREAK!");
+		//Debug.Log("BREAK!");
 	}
 
 }

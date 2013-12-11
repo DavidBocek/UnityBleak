@@ -8615,7 +8615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needsSlam: 0
-  breakableUp: 1
+  breakableUp: 0
   breakableDown: 0
   anim: {fileID: 0}
   breakTime: 1
