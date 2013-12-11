@@ -22,7 +22,7 @@ public class Breakable : MonoBehaviour {
 		if (isBreaking){
 			if (breakTimer < breakTime){
 				breakTimer += Time.deltaTime;
-				/Debug.Log ("breaking...");
+				//Debug.Log ("breaking...");
 				audio.PlayOneShot(platform);
 				anim.Play("Breaking");
 			} else {
