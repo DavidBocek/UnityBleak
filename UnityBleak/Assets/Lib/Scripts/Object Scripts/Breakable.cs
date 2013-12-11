@@ -6,7 +6,8 @@ public class Breakable : MonoBehaviour {
 	public bool needsSlam;
 	public bool breakableUp;
 	public bool breakableDown;
-	public tk2dAnimatedSprite anim;
+	private tk2dSpriteAnimator anim;
+	public AudioClip platform;
 	public float breakTime;
 	public bool isBreaking {get; set;}
 
@@ -14,13 +15,16 @@ public class Breakable : MonoBehaviour {
 
 	void Start(){
 		isBreaking = false;
+		anim = GetComponent<tk2dSpriteAnimator>();
 	}
 
 	void Update(){
 		if (isBreaking){
 			if (breakTimer < breakTime){
 				breakTimer += Time.deltaTime;
-				//Debug.Log ("breaking...");
+				/Debug.Log ("breaking...");
+				audio.PlayOneShot(platform);
+				anim.Play("Breaking");
 			} else {
 				transform.gameObject.SetActive(false);
 				//Debug.Log ("broken!");
@@ -30,7 +34,6 @@ public class Breakable : MonoBehaviour {
 
 	public void Break(){
 		isBreaking = true;
-		//anim.Play("break");
 		//Debug.Log("BREAK!");
 	}
 

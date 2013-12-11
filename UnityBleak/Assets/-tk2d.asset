@@ -37,11 +37,7 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
-  - assetGUID: d580d4904f5f7254195b40eb8bad3bb1
-    dataGUID: 
-    managed: 0
-    loadable: 0
-  - assetGUID: 7ff11df1d3ca9c14f806813929b32689
+  - assetGUID: 6f5aaf50f753c6b4ca5c2155021909df
     dataGUID: 
     managed: 0
     loadable: 0
@@ -2543,6 +2539,112 @@ MonoBehaviour:
     - 1362234893.11696
     - 1362234893.11696
     - 1362234893.11696
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: BreakablePlatform
+    spriteCollectionGUID: 242e7acedbba71e4da0e94de070f10e2
+    spriteCollectionDataGUID: 2011e5bf070647d44812ee911371faa0
+    spriteNames:
+    - platform01_sheet/0
+    - platform01_sheet/1
+    - platform01_sheet/2
+    - platform01_sheet/3
+    - platform01_sheet/4
+    - platform01_sheet/5
+    - platform01_sheet/6
+    - platform01_sheet/7
+    - platform01_sheet/8
+    - platform01_sheet/9
+    - platform01_sheet/10
+    - platform01_sheet/11
+    - platform01_sheet/12
+    - platform01_sheet/13
+    - platform01_sheet/14
+    - platform01_sheet/15
+    - platform01_sheet/16
+    - platform01_sheet/17
+    - platform01_sheet/18
+    - platform01_sheet/19
+    - platform01_sheet/20
+    - platform01_sheet/21
+    - platform01_sheet/22
+    - platform01_sheet/23
+    - platform01_sheet/24
+    - platform01_sheet/25
+    - platform01_sheet/26
+    - platform01_sheet/27
+    - platform01_sheet/28
+    - platform01_sheet/29
+    - platform01_sheet/30
+    - platform01_sheet/31
+    spriteTextureGUIDs:
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    - 0cbaf333a4e46354ca2c93a61c82e3a6
+    spriteTextureTimeStamps:
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
+    - 1386444088.80626
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
