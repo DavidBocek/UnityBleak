@@ -23,6 +23,9 @@ MonoBehaviour:
   - jump-slam
   - jump
   - idle
+  - sprint
+  - skid
+  - run
   toAnimation:
   - jump
   - run
@@ -32,12 +35,18 @@ MonoBehaviour:
   - idle
   - idle
   - jump
+  - skid
+  - idle
+  - sprint
   duration:
   - .300000012
   - .400000006
   - .300000012
+  - .200000003
   - .00999999978
-  - .00999999978
+  - .800000012
   - .300000012
   - .300000012
-  - .300000012
+  - .0500000007
+  - .100000001
+  - 0

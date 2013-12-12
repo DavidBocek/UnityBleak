@@ -19,6 +19,7 @@ public class BleakController : MonoBehaviour {
 	public float timeUntilRun = 1.75f;
 	public float bottomOffsetPushIn;
 	public float sideOffsetPushIn;
+	public GameObject skelAnimObj;
 	
 	public const float SMALL_JUMP_TIME = .06f;
 	public const float MED_JUMP_TIME = .08f;
@@ -38,6 +39,7 @@ public class BleakController : MonoBehaviour {
 	private bool isGrounded;
 	private Climbable attachedClimbObject;
 	private KeyCode actionButton = KeyCode.E;
+	private SkeletonAnimation skelAnim;
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
@@ -94,6 +96,7 @@ public class BleakController : MonoBehaviour {
 		position2d = new Vector2(transform.position[0],transform.position[1]);
 		boxCollider = transform.gameObject.GetComponent<BoxCollider2D>();
 		rigidBody = transform.gameObject.GetComponent<Rigidbody2D>();
+		skelAnim = skelAnimObj.GetComponent<SkeletonAnimation>();
 
 		rayLengthBottom = (boxCollider.size.y / 2f)+.05f;
 		rayLengthSide = (boxCollider.size.x / 2f)+.05f;
@@ -228,7 +231,16 @@ public class BleakController : MonoBehaviour {
 				idleDelay = 0;
 			else{
 				if (Input.GetAxisRaw("Horizontal") == 0 && !Input.GetKey(KeyCode.Space) && idleDelay <=6){
-					//play idle1
+					if (skelAnim.state.ToString()=="sprint"){
+						skelAnim.state.ClearTrack(0);
+						skelAnim.state.AddAnimation(0,"skid",false,0.0f);
+						//skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+					} else if (skelAnim.state.ToString()=="run"){
+						skelAnim.state.ClearTrack(0);
+						skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+					} else {
+						skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+					}
 					idleDelay += dt;
 					runDelay = 0;
 				} else if (Input.GetAxisRaw("Horizontal") == 0 && !Input.GetKey(KeyCode.Space)){
@@ -316,8 +328,7 @@ public class BleakController : MonoBehaviour {
 			} else { obstructedLeft = false; }
 		} else
 			obstructedLeft = false;
-		
-		
+
 		//player is hitting direction
 		if (directionInt != 0){
 			idleDelay = 0;
@@ -325,12 +336,18 @@ public class BleakController : MonoBehaviour {
 				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * joggingMultiplier * directionInt;
 				if (jumping != -1){
 					//play jogging anim
+					if (skelAnim.state.ToString()!="run"){
+						skelAnim.state.SetAnimation(0,"run",true);
+					}
 				}
 				runDelay += dt;
 			} else {
 				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * directionInt;
 				if (jumping != -1){
 					//play running anim
+					if (skelAnim.state.ToString()!="sprint"){
+						skelAnim.state.SetAnimation(0,"sprint",true);
+					}
 				}
 			}
 		} else {	//otherwise horizontal direction isn't being applied
@@ -367,6 +384,7 @@ public class BleakController : MonoBehaviour {
 			else{
 				velocity.y = jumpSpeed;
 			}
+			skelAnim.state.SetAnimation(0,"jump",false);
 		}
 		//reset jump component, this should only run in the frame after bleak hits the ground.
 		if (isGrounded && jumping == -1){
@@ -381,6 +399,7 @@ public class BleakController : MonoBehaviour {
 			velocity.y = -jumpSpeed * slamMultiplayer;
 			slamming = true;
 			//play slamming animation and sound
+			skelAnim.state.SetAnimation(0,"jump-slam",false);
 		}
 		
 		//landing from a slam (not used right now)
@@ -414,11 +433,18 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateRotationNormal(float dt){
-		if (!facing && transform.rotation.y <= 0.1f){
+		/*if (!facing && transform.rotation.y <= 0.1f){
 			transform.Rotate(0,180,0);
 		}
 		if (facing && transform.rotation.y >= .9f){
 			transform.Rotate (0,180,0);
+		}*/
+
+		if (!facing && skelAnimObj.transform.localScale.x!=-1.0f){
+			skelAnimObj.transform.localScale = new Vector3(-1.0f,skelAnimObj.transform.localScale.y,skelAnimObj.transform.localScale.z);
+		}
+		if (facing && skelAnimObj.transform.localScale.x!=1.0f){
+			skelAnimObj.transform.localScale = new Vector3(1.0f,skelAnimObj.transform.localScale.y,skelAnimObj.transform.localScale.z);
 		}
 	}
 	
@@ -481,10 +507,7 @@ public class BleakController : MonoBehaviour {
 			}
 		} //all of this may be unnecessary if the rigid body velocity works ok, but it seems to be too choppy
 
-		if (moveDelta.x > 0)
-			transform.Translate(new Vector3(moveDelta.x, moveDelta.y, 0.0f));
-		else
-			transform.Translate(new Vector3(-moveDelta.x, moveDelta.y, 0.0f));
+		transform.Translate(new Vector3(moveDelta.x, moveDelta.y, 0.0f));
 	}
 	
 	/// <summary>
