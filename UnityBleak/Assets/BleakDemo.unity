@@ -806,7 +806,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 7.28178406
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -1030,7 +1030,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 6.61468124
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -1228,7 +1228,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 7.32527161
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -1493,7 +1493,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 7.28820801
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -1883,7 +1883,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 7.34286499
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -2063,8 +2063,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 6.54057312
-  MaxDistance: 11
+  MinDistance: 12.2354584
+  MaxDistance: 19.1355591
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -2620,8 +2620,8 @@ AudioSource:
   Mute: 0
   Priority: 94
   DopplerLevel: 1
-  MinDistance: 4.06340408
-  MaxDistance: 11
+  MinDistance: 8.52452087
+  MaxDistance: 16.5370064
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -3086,8 +3086,8 @@ AudioSource:
   Mute: 0
   Priority: 90
   DopplerLevel: 1
-  MinDistance: 4.06340408
-  MaxDistance: 11
+  MinDistance: 8.84318542
+  MaxDistance: 16.0984421
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -3428,7 +3428,7 @@ MonoBehaviour:
   viewportRegion: {x: 0, y: 0, z: 100, w: 100}
   zoomFactor: 1
   forceResolutionInEditor: 1
-  forceResolution: {x: 10, y: 10}
+  forceResolution: {x: 640, y: 480}
 --- !u!20 &674500623
 Camera:
   m_ObjectHideFlags: 3
@@ -3906,7 +3906,7 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.06340408
+  MinDistance: 7.01751328
   MaxDistance: 11
   Pan2D: 0
   rolloffMode: 2
@@ -4181,8 +4181,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 6.83211708
-  MaxDistance: 11
+  MinDistance: 11.5385876
+  MaxDistance: 17.9212494
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -4719,8 +4719,8 @@ AudioSource:
   Mute: 0
   Priority: 90
   DopplerLevel: 1
-  MinDistance: 4.06340408
-  MaxDistance: 11
+  MinDistance: 6.66177368
+  MaxDistance: 10.4613342
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -5838,8 +5838,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 6.78056335
-  MaxDistance: 11
+  MinDistance: 12.4754562
+  MaxDistance: 18.7287827
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -6146,8 +6146,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 6.08571625
-  MaxDistance: 11
+  MinDistance: 10.9700546
+  MaxDistance: 18.7287827
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -7161,6 +7161,74 @@ Transform:
   m_LocalScale: {x: 2.3463757, y: 2.3463757, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &1465763616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1465763620}
+  - 33: {fileID: 1465763619}
+  - 23: {fileID: 1465763618}
+  - 61: {fileID: 1465763617}
+  m_Layer: 0
+  m_Name: LeftWallBarrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1465763617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465763616}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!23 &1465763618
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465763616}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &1465763619
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465763616}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1465763620
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465763616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.5, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1630557383}
 --- !u!1001 &1469429019
 Prefab:
   m_ObjectHideFlags: 0
@@ -7924,6 +7992,7 @@ Transform:
   - {fileID: 1456556487}
   - {fileID: 396248599}
   - {fileID: 53677132}
+  - {fileID: 1465763620}
   - {fileID: 1277662586}
   m_Father: {fileID: 0}
 --- !u!1 &1636537233
@@ -8171,8 +8240,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 6.51009941
-  MaxDistance: 12.0308304
+  MinDistance: 10.577879
+  MaxDistance: 16.9121666
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -10289,7 +10358,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: e58a3598ce3828b46a0f2d036e2f3b25, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: .25
   m_Pitch: 1
   Loop: 1
