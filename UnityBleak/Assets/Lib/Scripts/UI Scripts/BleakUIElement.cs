@@ -13,7 +13,7 @@ public class BleakUIElement : MonoBehaviour {
 
 	void Start(){
 		if (hasAnimation){
-			animation = GetComponent<tk2dSpriteAnimation;
+			animation = GetComponent<tk2dSpriteAnimation>();
 		}
 	}
 	
@@ -40,7 +40,7 @@ public class BleakUIElement : MonoBehaviour {
 
 	//close the tree under and including this element
 	public void CloseTree(){
-		SendMessage("Close")
+		SendMessage("Close");
 	}
 
 

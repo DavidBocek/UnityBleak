@@ -3517,6 +3517,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5243b38c96290cc4c851c7f8c49111cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  quests: {fileID: 0}
+  key: {fileID: 0}
+  map: {fileID: 0}
+  conversation: {fileID: 0}
 --- !u!1 &679941976
 GameObject:
   m_ObjectHideFlags: 0

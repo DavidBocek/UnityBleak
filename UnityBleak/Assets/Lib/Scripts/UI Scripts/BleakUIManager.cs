@@ -4,12 +4,12 @@ using System.Collections;
 public class BleakUIManager : MonoBehaviour {
 
 	private uint state {get; set;}
-	public static uint STATE_NONE = 0;
-	public static uint STATE_INVENTORY = 1;
-	public static uint STATE_QUESTS = 2;
-	public static uint STATE_MAP = 3;
-	public static uint STATE_KEY = 4;
-	public static uint STATE_CONVERSATION = 5;
+	public const uint STATE_NONE = 0;
+	public const uint STATE_INVENTORY = 1;
+	public const uint STATE_QUESTS = 2;
+	public const uint STATE_MAP = 3;
+	public const uint STATE_KEY = 4;
+	public const uint STATE_CONVERSATION = 5;
 
 	public BleakUIElement inventory;
 	public BleakUIElement quests;
@@ -27,7 +27,7 @@ public class BleakUIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currentInput = null;
+		currentInput = KeyCode.None;
 		if (Input.GetKeyDown(KeyCode.RightArrow)){
 			currentInput = KeyCode.RightArrow;
 		} else if (Input.GetKeyDown(KeyCode.LeftArrow)){
@@ -46,10 +46,12 @@ public class BleakUIManager : MonoBehaviour {
 			currentInput = KeyCode.U;
 		} else if (Input.GetKeyDown(KeyCode.O)){
 			currentInput = KeyCode.O;
+		} else if (Input.GetKeyDown (KeyCode.Escape)){
+			currentInput = KeyCode.Escape;
 		}
 
 		switch(currentInput){
-		case null:
+		case KeyCode.None:
 			return;
 		case KeyCode.RightArrow:
 			ActionRight();
