@@ -1,0 +1,164 @@
+
+crabbots.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+crab01/body
+  rotate: false
+  xy: 2, 375
+  size: 492, 646
+  orig: 783, 679
+  offset: 147, 28
+  index: -1
+crab01/body02
+  rotate: true
+  xy: 496, 439
+  size: 582, 490
+  orig: 786, 508
+  offset: 164, 18
+  index: -1
+crab01/cap
+  rotate: false
+  xy: 2, 170
+  size: 480, 203
+  orig: 549, 298
+  offset: 39, 65
+  index: -1
+crab01/legL2
+  rotate: true
+  xy: 631, 304
+  size: 133, 391
+  orig: 133, 399
+  offset: 0, 0
+  index: -1
+crab01/legL3
+  rotate: true
+  xy: 725, 216
+  size: 86, 263
+  orig: 86, 263
+  offset: 0, 0
+  index: -1
+crab01/legR2
+  rotate: true
+  xy: 2, 32
+  size: 136, 393
+  orig: 151, 393
+  offset: 0, 0
+  index: -1
+crab01/legR3
+  rotate: false
+  xy: 631, 27
+  size: 92, 275
+  orig: 104, 277
+  offset: 0, 2
+  index: -1
+crab01/pipeL
+  rotate: true
+  xy: 725, 85
+  size: 129, 120
+  orig: 138, 136
+  offset: 6, 3
+  index: -1
+crab01/pipeR
+  rotate: true
+  xy: 847, 98
+  size: 116, 125
+  orig: 116, 127
+  offset: 0, 2
+  index: -1
+crab01/pipebackL1
+  rotate: true
+  xy: 397, 55
+  size: 113, 94
+  orig: 129, 125
+  offset: 10, 6
+  index: -1
+crab01/pipebackR1
+  rotate: false
+  xy: 847, 2
+  size: 113, 94
+  orig: 137, 130
+  offset: 13, 14
+  index: -1
+crab01/pipelowerL
+  rotate: true
+  xy: 397, 14
+  size: 39, 56
+  orig: 50, 58
+  offset: 6, 2
+  index: -1
+crab01/pipelowerR
+  rotate: false
+  xy: 725, 27
+  size: 39, 56
+  orig: 56, 56
+  offset: 11, 0
+  index: -1
+crab01/spring
+  rotate: false
+  xy: 496, 2
+  size: 133, 435
+  orig: 191, 507
+  offset: 58, 34
+  index: -1
+
+crabbots2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+crab01/bodyL
+  rotate: false
+  xy: 593, 684
+  size: 313, 249
+  orig: 353, 311
+  offset: 22, 34
+  index: -1
+crab01/bodyR
+  rotate: true
+  xy: 2, 2
+  size: 319, 247
+  orig: 366, 294
+  offset: 20, 24
+  index: -1
+crab01/legL1
+  rotate: false
+  xy: 316, 334
+  size: 275, 599
+  orig: 297, 599
+  offset: 13, 0
+  index: -1
+crab01/legR1
+  rotate: false
+  xy: 2, 323
+  size: 312, 610
+  orig: 331, 610
+  offset: 0, 0
+  index: -1
+crab01/legbackL
+  rotate: false
+  xy: 593, 290
+  size: 132, 392
+  orig: 193, 466
+  offset: 43, 38
+  index: -1
+crab01/legbackR
+  rotate: false
+  xy: 727, 272
+  size: 131, 410
+  orig: 230, 456
+  offset: 45, 21
+  index: -1
+crab01/pipebackL2
+  rotate: false
+  xy: 908, 817
+  size: 99, 116
+  orig: 128, 126
+  offset: 15, 9
+  index: -1
+crab01/pipebackR2
+  rotate: false
+  xy: 908, 699
+  size: 99, 116
+  orig: 117, 131
+  offset: 12, 11
+  index: -1
