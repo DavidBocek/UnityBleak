@@ -2649,3 +2649,16 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: UICollection
+    spriteCollectionGUID: 5a7dbee508ea96443b86ff6939abb7f3
+    spriteCollectionDataGUID: 4e3640620002b27448c80115d49050b3
+    spriteNames:
+    - UIBorderBlank
+    spriteTextureGUIDs:
+    - 056420396cf46f340a05a696797401bd
+    spriteTextureTimeStamps:
+    - 1374428253
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3

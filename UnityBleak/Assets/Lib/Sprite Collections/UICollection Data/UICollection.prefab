@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: UICollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  materialIdsValid: 1
+  needMaterialInstance: 0
+  spriteDefinitions:
+  - name: UIBorderBlank
+    boundsData:
+    - {x: 0, y: -.0113639832, z: 0}
+    - {x: 23.272728, y: 17.568182, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113639832, z: 0}
+    - {x: 23.272728, y: 17.568182, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -11.636364, y: -8.79545498, z: 0}
+    - {x: 11.636364, y: -8.79545498, z: 0}
+    - {x: -11.636364, y: 8.77272701, z: 0}
+    - {x: 11.636364, y: 8.77272701, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00195410149, y: .000977050746}
+    - {x: .00195410149, y: .500976086}
+    - {x: .756834984, y: .000977050746}
+    - {x: .756834984, y: .500976086}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 8e5d3826ef8965c4d93328086ccec4e1, type: 2}
+    materialId: 0
+    sourceTextureGUID: 056420396cf46f340a05a696797401bd
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 8e5d3826ef8965c4d93328086ccec4e1, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 677101d2c033d9846a77c96ceb1cca6e, type: 3}
+  pngTextures: []
+  textureFilterMode: 1
+  textureMipMaps: 0
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 5a7dbee508ea96443b86ff6939abb7f3
+  spriteCollectionName: UICollection
+  assetName: 
+  loadable: 0
+  invOrthoSize: 2
+  halfTargetHeight: 22
+  buildKey: 528994965
+  dataGuid: 4e3640620002b27448c80115d49050b3
+  managedSpriteCollection: 0
+  hasPlatformData: 0
+  spriteCollectionPlatforms: []
+  spriteCollectionPlatformGUIDs: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
