@@ -9,11 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Jellyfish SkeletonData
+  m_Name: squiddles3 SkeletonData
   m_EditorClassIdentifier: 
-  atlasAsset: {fileID: 11400000, guid: 04a624b15940bf248b9e32c0e3d7d46c, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: 46c207e5ea4cec747ab3ab80c67ff32e, type: 3}
-  scale: .00159999996
-  fromAnimation: []
-  toAnimation: []
-  duration: []
+  atlasAsset: {fileID: 11400000, guid: 46353d31c6be66a498f59b5db2c2d8d3, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: a164cd6fc22eb3c41bad56fbd2be8c4e, type: 3}
+  scale: .00899999961
+  fromAnimation:
+  - moving
+  toAnimation:
+  - moving
+  duration:
+  - 0

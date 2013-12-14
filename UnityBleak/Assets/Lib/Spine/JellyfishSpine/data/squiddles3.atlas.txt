@@ -1,0 +1,180 @@
+
+squiddles3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body/airbagL
+  rotate: true
+  xy: 145, 14
+  size: 41, 73
+  orig: 62, 86
+  offset: 12, 8
+  index: -1
+body/airbagR
+  rotate: true
+  xy: 325, 107
+  size: 41, 86
+  orig: 60, 98
+  offset: 12, 6
+  index: -1
+body/armL
+  rotate: false
+  xy: 413, 90
+  size: 59, 58
+  orig: 71, 72
+  offset: 6, 9
+  index: -1
+body/armR
+  rotate: false
+  xy: 220, 11
+  size: 56, 55
+  orig: 70, 58
+  offset: 9, 0
+  index: -1
+body/bottom01
+  rotate: true
+  xy: 205, 150
+  size: 104, 275
+  orig: 117, 303
+  offset: 4, 10
+  index: -1
+body/clawL
+  rotate: true
+  xy: 474, 95
+  size: 42, 84
+  orig: 61, 89
+  offset: 12, 5
+  index: -1
+body/clawR
+  rotate: true
+  xy: 2, 2
+  size: 53, 141
+  orig: 86, 159
+  offset: 17, 11
+  index: -1
+body/top
+  rotate: false
+  xy: 2, 57
+  size: 201, 197
+  orig: 228, 228
+  offset: 16, 31
+  index: -1
+spikes/spike
+  rotate: true
+  xy: 602, 240
+  size: 14, 128
+  orig: 19, 128
+  offset: 3, 0
+  index: -1
+spikes/spike01
+  rotate: false
+  xy: 205, 104
+  size: 118, 44
+  orig: 131, 52
+  offset: 7, 5
+  index: -1
+spikes/spike02
+  rotate: true
+  xy: 602, 208
+  size: 30, 94
+  orig: 43, 108
+  offset: 8, 6
+  index: -1
+spikes/spike03
+  rotate: true
+  xy: 205, 68
+  size: 34, 106
+  orig: 52, 118
+  offset: 10, 7
+  index: -1
+spikes/spike04
+  rotate: false
+  xy: 482, 212
+  size: 118, 42
+  orig: 130, 52
+  offset: 7, 5
+  index: -1
+spikes/spike05
+  rotate: false
+  xy: 482, 139
+  size: 89, 71
+  orig: 103, 81
+  offset: 9, 5
+  index: -1
+spikes/spike06
+  rotate: false
+  xy: 573, 139
+  size: 24, 71
+  orig: 33, 73
+  offset: 7, 2
+  index: -1
+spikes/spike07
+  rotate: true
+  xy: 732, 231
+  size: 23, 85
+  orig: 29, 94
+  offset: 6, 6
+  index: -1
+spikes/spike08
+  rotate: false
+  xy: 599, 165
+  size: 42, 41
+  orig: 49, 49
+  offset: 2, 5
+  index: -1
+tentacles/tentacle01
+  rotate: true
+  xy: 895, 234
+  size: 20, 61
+  orig: 28, 61
+  offset: 7, 0
+  index: -1
+tentacles/tentacle02
+  rotate: true
+  xy: 599, 146
+  size: 17, 34
+  orig: 23, 39
+  offset: 1, 4
+  index: -1
+tentacles/tentacle03
+  rotate: false
+  xy: 560, 96
+  size: 17, 41
+  orig: 20, 43
+  offset: 3, 1
+  index: -1
+tentacles/tentacle04
+  rotate: true
+  xy: 643, 169
+  size: 17, 45
+  orig: 22, 52
+  offset: 5, 4
+  index: -1
+tentacles/tentacle05
+  rotate: true
+  xy: 643, 188
+  size: 18, 46
+  orig: 25, 54
+  offset: 6, 5
+  index: -1
+tentacles/tentacle06
+  rotate: true
+  xy: 958, 234
+  size: 20, 61
+  orig: 23, 68
+  offset: 0, 4
+  index: -1
+tentacles/tentacle07
+  rotate: false
+  xy: 278, 6
+  size: 19, 60
+  orig: 24, 69
+  offset: 3, 3
+  index: -1
+tentacles/tentacle08
+  rotate: true
+  xy: 819, 226
+  size: 28, 74
+  orig: 31, 83
+  offset: 2, 3
+  index: -1

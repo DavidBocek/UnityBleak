@@ -3430,7 +3430,7 @@ MonoBehaviour:
   viewportRegion: {x: 0, y: 0, z: 100, w: 100}
   zoomFactor: 1
   forceResolutionInEditor: 1
-  forceResolution: {x: 10, y: 10}
+  forceResolution: {x: 640, y: 480}
 --- !u!20 &674500623
 Camera:
   m_ObjectHideFlags: 3
@@ -9388,13 +9388,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 144ce91dfa2eb06409fc47f79b8273df, type: 2}
-  initialSkinName: 
+  skeletonDataAsset: {fileID: 11400000, guid: cc3e3edb463fc4443a59941e2a2b315e, type: 2}
+  initialSkinName: default
   timeScale: 1
   calculateNormals: 0
   calculateTangents: 0
   loop: 1
-  _animationName: 
+  _animationName: moving
 --- !u!23 &1791582499
 Renderer:
   m_ObjectHideFlags: 0
@@ -9407,9 +9407,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ebd719d9a6df4e54fbcdc9ec1caf94bf, type: 2}
-  - {fileID: 2100000, guid: 5512b4a47340e104a9a25b8244b67b9c, type: 2}
-  - {fileID: 2100000, guid: 06e536e963d56bd4c993f8d2308468b4, type: 2}
+  - {fileID: 2100000, guid: 978b71a98a635124d9a6898595335c7d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9432,7 +9430,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791582497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.0940332, y: 19.5646477, z: 0}
+  m_LocalPosition: {x: 55.0836143, y: 25.2789593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
