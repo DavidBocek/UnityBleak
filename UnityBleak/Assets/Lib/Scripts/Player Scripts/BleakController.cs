@@ -194,12 +194,23 @@ public class BleakController : MonoBehaviour {
 			break;
 		case STATE_HURT:
 			transform.position = startPoint.position;
+			switch (numLives){
+			case 1:
+				skelAnim.skeleton.SetSkin("damaged01");
+				break;
+			case 0:
+				skelAnim.skeleton.SetSkin("damaged02");
+				break;
+			default:
+				throw new UnityException("bleak was hurt, and his number of lives was not 0 or 1");
+			}
 			SetState(STATE_NORMAL);
 			break;
 		case STATE_DEAD:
 			if (Input.GetKeyDown(KeyCode.R)){
 				transform.position = startPoint.position;
-				numLives = 3;
+				numLives = 2;
+				skelAnim.skeleton.SetSkin("damaged00");
 				SetState(STATE_NORMAL);
 			}
 			break;
@@ -237,9 +248,11 @@ public class BleakController : MonoBehaviour {
 						//skelAnim.state.AddAnimation(0,"idle",true,0.0f);
 					} else if (skelAnim.state.ToString()=="run"){
 						skelAnim.state.ClearTrack(0);
-						skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+						if (numLives > 0) skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+						else skelAnim.state.AddAnimation(0,"idle-injured",true,0.0f);
 					} else {
-						skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+						if (numLives > 0) skelAnim.state.AddAnimation(0,"idle",true,0.0f);
+						else skelAnim.state.AddAnimation(0,"idle-injured",true,0.0f);
 					}
 					idleDelay += dt;
 					runDelay = 0;
@@ -336,8 +349,9 @@ public class BleakController : MonoBehaviour {
 				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * joggingMultiplier * directionInt;
 				if (jumping != -1){
 					//play jogging anim
-					if (skelAnim.state.ToString()!="run"){
-						skelAnim.state.SetAnimation(0,"run",true);
+					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured"){
+						if (numLives > 0) skelAnim.state.SetAnimation(0,"run",true);
+						else skelAnim.state.SetAnimation(0,"run-injured",true);
 					}
 				}
 				runDelay += dt;
@@ -679,7 +693,7 @@ public class BleakController : MonoBehaviour {
 		}
 	}
 	
-	static public int numLives = 3;
+	static public int numLives = 2;
 	void Damage(){
 		Debug.Log ("apply damage!");
 		if (numLives > 0){

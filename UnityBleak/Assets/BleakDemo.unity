@@ -4353,8 +4353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 55987c63edab0f14da7e3c307a2f9b33, type: 2}
-  initialSkinName: default
+  skeletonDataAsset: {fileID: 11400000, guid: 8da131d051fc05a49bfed43fc2cab792, type: 2}
+  initialSkinName: damaged00
   timeScale: 1
   calculateNormals: 0
   calculateTangents: 0
@@ -4373,9 +4373,14 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 9ded3a2fa01245b429f0de789328fcce, type: 2}
-  - {fileID: 2100000, guid: 085647680ed2cc44cafdc86872130621, type: 2}
-  - {fileID: 2100000, guid: 9ded3a2fa01245b429f0de789328fcce, type: 2}
+  - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}
+  - {fileID: 2100000, guid: 0bb9fc084fddf3447a768f57e9038399, type: 2}
+  - {fileID: 2100000, guid: 9f263db6047cc2542a8d83ab00199740, type: 2}
+  - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}
+  - {fileID: 2100000, guid: 0bb9fc084fddf3447a768f57e9038399, type: 2}
+  - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}
+  - {fileID: 2100000, guid: 0bb9fc084fddf3447a768f57e9038399, type: 2}
+  - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
