@@ -1,0 +1,372 @@
+
+skeleton.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+damaged00/arms/armUpperL
+  rotate: false
+  xy: 781, 131
+  size: 233, 104
+  orig: 282, 172
+  offset: 26, 41
+  index: -1
+damaged00/head/head
+  rotate: false
+  xy: 2, 40
+  size: 449, 487
+  orig: 456, 566
+  offset: 0, 44
+  index: -1
+damaged00/head/neck
+  rotate: true
+  xy: 751, 2
+  size: 127, 157
+  orig: 180, 175
+  offset: 25, 18
+  index: -1
+damaged00/head/pupilL
+  rotate: false
+  xy: 907, 574
+  size: 56, 108
+  orig: 123, 160
+  offset: 40, 25
+  index: -1
+damaged01/head/pupilL
+  rotate: false
+  xy: 907, 574
+  size: 56, 108
+  orig: 123, 160
+  offset: 40, 25
+  index: -1
+damaged00/head/pupilR
+  rotate: false
+  xy: 910, 32
+  size: 42, 97
+  orig: 69, 126
+  offset: 14, 17
+  index: -1
+damaged01/head/pupilR
+  rotate: false
+  xy: 910, 32
+  size: 42, 97
+  orig: 69, 126
+  offset: 14, 17
+  index: -1
+damaged00/legs/legLowerL
+  rotate: true
+  xy: 907, 854
+  size: 168, 115
+  orig: 185, 137
+  offset: 14, 9
+  index: -1
+damaged01/head/head
+  rotate: false
+  xy: 460, 533
+  size: 445, 489
+  orig: 456, 566
+  offset: 2, 42
+  index: -1
+damaged01/legs/legLowerL
+  rotate: true
+  xy: 907, 684
+  size: 168, 115
+  orig: 185, 137
+  offset: 14, 9
+  index: -1
+damaged02/head/head
+  rotate: false
+  xy: 2, 529
+  size: 456, 493
+  orig: 456, 566
+  offset: 0, 40
+  index: -1
+damaged02/head/neck
+  rotate: false
+  xy: 781, 237
+  size: 232, 294
+  orig: 251, 294
+  offset: 19, 0
+  index: -1
+damaged02/head/pupilL
+  rotate: true
+  xy: 2, 7
+  size: 31, 59
+  orig: 123, 160
+  offset: 57, 48
+  index: -1
+damaged02/head/pupilR
+  rotate: true
+  xy: 907, 543
+  size: 29, 55
+  orig: 69, 126
+  offset: 24, 33
+  index: -1
+damaged02/legs/legUpperL
+  rotate: true
+  xy: 453, 2
+  size: 143, 296
+  orig: 193, 326
+  offset: 50, 21
+  index: -1
+damaged02/torso/torsoUpper
+  rotate: false
+  xy: 453, 147
+  size: 326, 380
+  orig: 354, 381
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+damaged00/arms/armLowerL
+  rotate: false
+  xy: 696, 330
+  size: 72, 185
+  orig: 115, 207
+  offset: 22, 13
+  index: -1
+damaged00/arms/armLowerR
+  rotate: true
+  xy: 565, 323
+  size: 177, 129
+  orig: 209, 180
+  offset: 23, 24
+  index: -1
+damaged00/arms/armUpperR
+  rotate: true
+  xy: 259, 27
+  size: 118, 225
+  orig: 155, 267
+  offset: 23, 24
+  index: -1
+damaged00/arms/handL
+  rotate: true
+  xy: 486, 24
+  size: 141, 130
+  orig: 172, 158
+  offset: 16, 15
+  index: -1
+damaged00/arms/handR
+  rotate: true
+  xy: 467, 167
+  size: 143, 137
+  orig: 163, 186
+  offset: 13, 25
+  index: -1
+damaged00/legs/footR
+  rotate: false
+  xy: 770, 571
+  size: 200, 164
+  orig: 247, 209
+  offset: 30, 11
+  index: -1
+damaged00/legs/legUpperL
+  rotate: true
+  xy: 288, 312
+  size: 149, 275
+  orig: 193, 326
+  offset: 25, 31
+  index: -1
+damaged00/legs/legUpperR
+  rotate: false
+  xy: 288, 739
+  size: 261, 276
+  orig: 284, 291
+  offset: 11, 15
+  index: -1
+damaged02/legs/legUpperR
+  rotate: false
+  xy: 288, 739
+  size: 261, 276
+  orig: 284, 291
+  offset: 11, 15
+  index: -1
+damaged01/legs/legUpperR
+  rotate: false
+  xy: 288, 739
+  size: 261, 276
+  orig: 284, 291
+  offset: 11, 15
+  index: -1
+damaged00/torso/torsoLower
+  rotate: false
+  xy: 551, 745
+  size: 247, 270
+  orig: 270, 308
+  offset: 11, 32
+  index: -1
+damaged00/torso/torsoUpper
+  rotate: false
+  xy: 2, 680
+  size: 284, 335
+  orig: 354, 381
+  offset: 39, 27
+  index: -1
+damaged01/arms/armLowerL
+  rotate: false
+  xy: 929, 106
+  size: 69, 191
+  orig: 115, 207
+  offset: 23, 16
+  index: -1
+damaged01/arms/armLowerR
+  rotate: true
+  xy: 794, 2
+  size: 174, 126
+  orig: 209, 180
+  offset: 23, 25
+  index: -1
+damaged01/arms/armUpperL
+  rotate: true
+  xy: 544, 502
+  size: 235, 103
+  orig: 282, 172
+  offset: 26, 42
+  index: -1
+damaged01/arms/armUpperR
+  rotate: false
+  xy: 649, 517
+  size: 119, 226
+  orig: 155, 267
+  offset: 22, 24
+  index: -1
+damaged01/head/neck
+  rotate: true
+  xy: 618, 5
+  size: 171, 174
+  orig: 180, 175
+  offset: 9, 0
+  index: -1
+damaged01/legs/footR
+  rotate: false
+  xy: 259, 147
+  size: 206, 163
+  orig: 247, 209
+  offset: 23, 11
+  index: -1
+damaged02/legs/footR
+  rotate: false
+  xy: 259, 147
+  size: 206, 163
+  orig: 247, 209
+  offset: 23, 11
+  index: -1
+damaged01/legs/legUpperL
+  rotate: false
+  xy: 800, 737
+  size: 174, 278
+  orig: 193, 326
+  offset: 19, 31
+  index: -1
+damaged01/torso/torsoLower
+  rotate: false
+  xy: 288, 463
+  size: 254, 274
+  orig: 270, 308
+  offset: 7, 25
+  index: -1
+damaged01/torso/torsoUpper
+  rotate: false
+  xy: 2, 343
+  size: 284, 335
+  orig: 354, 381
+  offset: 39, 27
+  index: -1
+damaged02/arms/armLowerL
+  rotate: true
+  xy: 770, 299
+  size: 71, 194
+  orig: 115, 207
+  offset: 23, 13
+  index: -1
+damaged02/arms/armLowerR
+  rotate: false
+  xy: 750, 178
+  size: 177, 119
+  orig: 209, 180
+  offset: 25, 27
+  index: -1
+damaged02/arms/armUpperL
+  rotate: false
+  xy: 770, 466
+  size: 233, 103
+  orig: 282, 172
+  offset: 25, 42
+  index: -1
+damaged02/arms/armUpperR
+  rotate: true
+  xy: 770, 372
+  size: 92, 229
+  orig: 155, 267
+  offset: 29, 25
+  index: -1
+damaged02/arms/handL
+  rotate: true
+  xy: 606, 178
+  size: 143, 142
+  orig: 172, 158
+  offset: 15, 14
+  index: -1
+damaged02/torso/torsoLower
+  rotate: false
+  xy: 2, 62
+  size: 255, 279
+  orig: 270, 308
+  offset: 15, 25
+  index: -1
+
+skeleton3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+damaged00/legs/legLowerR
+  rotate: false
+  xy: 2, 2
+  size: 123, 166
+  orig: 149, 190
+  offset: 16, 15
+  index: -1
+damaged01/arms/handL
+  rotate: false
+  xy: 710, 29
+  size: 140, 139
+  orig: 172, 158
+  offset: 17, 16
+  index: -1
+damaged01/arms/handR
+  rotate: false
+  xy: 423, 33
+  size: 142, 135
+  orig: 163, 186
+  offset: 14, 26
+  index: -1
+damaged01/legs/legLowerR
+  rotate: false
+  xy: 127, 2
+  size: 123, 166
+  orig: 149, 190
+  offset: 15, 16
+  index: -1
+damaged02/legs/legLowerR
+  rotate: false
+  xy: 127, 2
+  size: 123, 166
+  orig: 149, 190
+  offset: 15, 16
+  index: -1
+damaged02/arms/handR
+  rotate: false
+  xy: 567, 33
+  size: 141, 135
+  orig: 163, 186
+  offset: 14, 26
+  index: -1
+damaged02/legs/legLowerL
+  rotate: false
+  xy: 252, 51
+  size: 169, 117
+  orig: 185, 137
+  offset: 16, 9
+  index: -1
