@@ -92,7 +92,7 @@ public class BackAndForthMovement : MonoBehaviour {
 			if (downTimer <= 0){
 				state = STATE_NORMAL;
 				downTimer = downDelay;
-				if (hasKnockDownAnimation) skeletonAnimation.state.SetAnimation(0,"stand up",false);
+				//if (hasKnockDownAnimation) skeletonAnimation.state.SetAnimation(0,"stand up",false);
 				skeletonAnimation.state.AddAnimation(0,"walking",true,0.0f);
 			} else {
 				downTimer -= Time.deltaTime;

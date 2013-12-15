@@ -86,7 +86,7 @@ public class BleakUIManager : MonoBehaviour {
 		default:
 			throw new UnityException("UI current input invald.");
 		}
-
+		Debug.Log (state);
 	}
 
 
