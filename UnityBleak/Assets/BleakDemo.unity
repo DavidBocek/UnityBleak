@@ -2751,6 +2751,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &402657894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3122,6 +3123,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1639743978}
@@ -3420,6 +3425,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!82 &554970816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3757,6 +3763,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!114 &625505928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3887,6 +3894,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 793328237}
@@ -5108,6 +5119,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &793328244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5882,6 +5894,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!114 &1005417353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6686,6 +6699,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1324727601}
@@ -6957,6 +6974,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1296531566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7268,6 +7286,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1324727608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8566,6 +8585,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 402657888}
@@ -9674,6 +9697,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1639743984
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10944,6 +10968,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1296531560}
@@ -12041,7 +12069,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: e58a3598ce3828b46a0f2d036e2f3b25, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .25
   m_Pitch: 1
   Loop: 1
