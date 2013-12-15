@@ -94,6 +94,7 @@ public class BackAndForthMovement : MonoBehaviour {
 				downTimer = downDelay;
 				//if (hasKnockDownAnimation) skeletonAnimation.state.SetAnimation(0,"stand up",false);
 				skeletonAnimation.state.AddAnimation(0,"walking",true,0.0f);
+				audio.Play();
 			} else {
 				downTimer -= Time.deltaTime;
 			}
@@ -106,6 +107,7 @@ public class BackAndForthMovement : MonoBehaviour {
 		if (canBeKnockedDown){
 			if (hasKnockDownAnimation && state == STATE_NORMAL){
 				skeletonAnimation.state.SetAnimation(0,"sit down",false);
+				audio.Stop();
 			}
 			state = STATE_STOPPED;
 			downTimer = downDelay;
