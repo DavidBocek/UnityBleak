@@ -9,6 +9,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	public int numberOfBounces;
 	public float downDelay = 1.5f;
 	public bool canBeKnockedDown = false;
+	SkeletonAnimation skeletonAnimation;
 	
 	private bool movingLeft;
 	private bool movingRight;
@@ -37,6 +38,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		skeletonAnimation = GetComponent<SkeletonAnimation>();
 		transform.position = startPos.position;
 		if (destPos.position.x >= startPos.position.x){
 			movingRight = true;

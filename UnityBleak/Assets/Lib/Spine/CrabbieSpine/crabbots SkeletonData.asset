@@ -15,8 +15,23 @@ MonoBehaviour:
   skeletonJSON: {fileID: 4900000, guid: d844869308cc7be4494efdbfd743bfb2, type: 3}
   scale: .00200000009
   fromAnimation:
+  - walking
+  - spring
+  - walking
   - animation
+  - walking
+  - sit down
   toAnimation:
+  - spring
+  - walking
+  - animation
+  - walking
+  - sit down
   - animation
   duration:
-  - 0
+  - .400000006
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012

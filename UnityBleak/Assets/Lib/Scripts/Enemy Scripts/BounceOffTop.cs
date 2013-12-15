@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Spine;
+using System;
 
 public class BounceOffTop : MonoBehaviour {
 	
 	public int springPower;
 	public float springResetDelay;
-	
+
+	SkeletonAnimation skeletonAnimation;
+
 	private float springResetTimer;
 	private bool isSprung;
 	private float dt;
 	
 	void Start(){
 		springResetTimer = springResetDelay;
+		skeletonAnimation = GetComponent<SkeletonAnimation>();
 	}
 	
 	public bool IsSprung(){
