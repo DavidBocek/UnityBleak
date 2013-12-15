@@ -16,22 +16,22 @@ MonoBehaviour:
   scale: .00200000009
   fromAnimation:
   - walking
-  - spring
-  - walking
   - animation
   - walking
   - sit down
+  - sit down
+  - spring
   toAnimation:
-  - spring
-  - walking
   - animation
   - walking
   - sit down
   - animation
+  - spring
+  - walking
   duration:
-  - .400000006
   - .300000012
   - .300000012
-  - .300000012
-  - .300000012
-  - .300000012
+  - .100000001
+  - 1.20000005
+  - .100000001
+  - .600000024

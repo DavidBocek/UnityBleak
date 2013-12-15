@@ -9,6 +9,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	public int numberOfBounces;
 	public float downDelay = 1.5f;
 	public bool canBeKnockedDown = false;
+	public bool hasKnockDownAnimation = false;
 	SkeletonAnimation skeletonAnimation;
 	
 	private bool movingLeft;
@@ -38,7 +39,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		skeletonAnimation = GetComponent<SkeletonAnimation>();
+		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
 		transform.position = startPos.position;
 		if (destPos.position.x >= startPos.position.x){
 			movingRight = true;
@@ -91,6 +92,8 @@ public class BackAndForthMovement : MonoBehaviour {
 			if (downTimer <= 0){
 				state = STATE_NORMAL;
 				downTimer = downDelay;
+				if (hasKnockDownAnimation) skeletonAnimation.state.SetAnimation(0,"stand up",false);
+				skeletonAnimation.state.AddAnimation(0,"walking",true,0.0f);
 			} else {
 				downTimer -= Time.deltaTime;
 			}
@@ -101,6 +104,9 @@ public class BackAndForthMovement : MonoBehaviour {
 	
 	public void KnockDown(){
 		if (canBeKnockedDown){
+			if (hasKnockDownAnimation && state == STATE_NORMAL){
+				skeletonAnimation.state.SetAnimation(0,"sit down",false);
+			}
 			state = STATE_STOPPED;
 			downTimer = downDelay;
 		}

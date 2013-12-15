@@ -640,18 +640,21 @@ public class BleakController : MonoBehaviour {
 				Damage();
 			}
 		}
-		//bounce off component check, to see if bleak should spring off this
-		BounceOffTop bounceOff = hitInfo.transform.gameObject.GetComponent<BounceOffTop>();
-		if (bounceOff && IsSlamming() && !bounceOff.IsSprung()){
-			SpringJump(bounceOff);
-			bounceOff.SetSprung(true);
-			//spring animation message
-		}
+
 		//back and forth knock over, to see if bleak should knock this down by jumping on it
 		BackAndForthMovement backAndForth = hitInfo.transform.gameObject.GetComponent<BackAndForthMovement>();
 		if (backAndForth){
 			backAndForth.KnockDown();
 		}
+
+		//bounce off component check, to see if bleak should spring off this
+		BounceOffTop bounceOff = hitInfo.transform.gameObject.GetComponent<BounceOffTop>();
+		if (bounceOff && IsSlamming() && !bounceOff.IsSprung()){
+			SpringJump(bounceOff);
+			bounceOff.SetSprung(true);
+			bounceOff.PlaySpringAnimation();
+		}
+
 		Breakable breakable = hitInfo.transform.gameObject.GetComponent<Breakable>();
 		if (breakable){
 			if (!breakable.isBreaking && breakable.breakableUp){

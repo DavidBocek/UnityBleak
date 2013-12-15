@@ -16,7 +16,7 @@ public class BounceOffTop : MonoBehaviour {
 	
 	void Start(){
 		springResetTimer = springResetDelay;
-		skeletonAnimation = GetComponent<SkeletonAnimation>();
+		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
 	}
 	
 	public bool IsSprung(){
@@ -25,6 +25,10 @@ public class BounceOffTop : MonoBehaviour {
 	
 	public void SetSprung(bool b){
 		isSprung = b;
+	}
+
+	public void PlaySpringAnimation(){
+		skeletonAnimation.state.AddAnimation(0,"spring",false,0.1f);
 	}
 	
 	void Update(){
