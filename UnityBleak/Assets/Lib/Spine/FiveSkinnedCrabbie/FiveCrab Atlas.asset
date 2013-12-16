@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: FiveCrab Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: c26b8ecfc87fa434aba6b91c1516c192, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 863d9e3d970ef8f45aecbcd9f0145d36, type: 2}
+  - {fileID: 2100000, guid: 12cb43a7b23fe5445b0720274cd4466c, type: 2}
+  - {fileID: 2100000, guid: 9b30c648f9647e4479ea6dec72af5bd7, type: 2}
+  - {fileID: 2100000, guid: f1f5059bc48169644ad76d29800461d9, type: 2}
+  - {fileID: 2100000, guid: 73b2b82edab4700478d533909b6b1e76, type: 2}
+  - {fileID: 2100000, guid: 9827db62e584856408265ab115900911, type: 2}
+  - {fileID: 2100000, guid: ce6631a44a6b6d24ca3ea8682792e026, type: 2}
+  - {fileID: 2100000, guid: 530f892ea18f91743b1c4297085177aa, type: 2}
