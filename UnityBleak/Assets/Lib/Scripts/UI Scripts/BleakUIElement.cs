@@ -4,32 +4,18 @@ using System.Collections;
 public class BleakUIElement : MonoBehaviour {
 
 	public bool hasAnimation;
+	public bool hasSubElements = false;
 	public int selectionMax;
 
+	private UIBasicAnimation basicAnimator;
 	private tk2dSpriteAnimation animation;
-	private bool isOpening;
-	private bool isClosing;
+	//private bool isOpening = false;
+	//private bool isClosing = false;
 	private int selectionIndex = 0;
 
 	void Start(){
 		if (hasAnimation){
-			animation = GetComponent<tk2dSpriteAnimation>();
-		}
-	}
-	
-	void Update () {
-		if (isOpening){
-			//move object to open spot
-			SendMessage("OpenSubAnimation");
-			if (hasAnimation){
-				//play opening animation
-			}
-		} else if (isClosing){
-			//move object to close spot
-			SendMessage("CloseSubAnimation");
-			if (hasAnimation){
-				//play closing animation
-			}
+			basicAnimator = GetComponent<UIBasicAnimation>();
 		}
 	}
 
@@ -58,10 +44,17 @@ public class BleakUIElement : MonoBehaviour {
 
 
 	void Open(){
-		if (!isOpening){ isOpening = true;}
+		if (hasAnimation) {basicAnimator.Show();}
 	}
 	void Close(){
-		if(!isClosing){ isClosing = true;}
 		ResetSelection();
+		if (hasAnimation) {basicAnimator.Hide();}
+	}
+
+	public void StartWorking(){
+		transform.gameObject.SendMessageUpwards("StartWorkingManager");
+	}
+	public void FinishWorking(){
+		transform.gameObject.SendMessageUpwards("FinishWorkingManager");
 	}
 }

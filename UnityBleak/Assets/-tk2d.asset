@@ -2654,10 +2654,22 @@ MonoBehaviour:
     spriteCollectionDataGUID: 4e3640620002b27448c80115d49050b3
     spriteNames:
     - UIBorderBlank
+    - WestInterfaceInventory
+    - SouthInterfaceConversationAdviser
+    - NorthInterfaceQuestTracker
+    - EastInterfaceMapKeyBlinds
     spriteTextureGUIDs:
     - 056420396cf46f340a05a696797401bd
+    - b745ecf952282e14aac23ec5112ac0fb
+    - 73a46171cf71ae14b81dc78661d2c9d6
+    - 963544f54305c0c4da54f3855229a19a
+    - fa78ed74df0b0394abb2d1b1d1d7e0ac
     spriteTextureTimeStamps:
     - 1387045190.90596
+    - 1386960181.73225
+    - 1386960181.81425
+    - 1386960181.46123
+    - 1386960182.37428
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

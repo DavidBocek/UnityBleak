@@ -17,16 +17,19 @@ public class BleakUIManager : MonoBehaviour {
 	public BleakUIElement map;
 	public BleakUIElement conversation;
 
+	public bool working {get; set;}
 
 	private KeyCode currentInput;
 
 	// Use this for initialization
 	void Start () {
 		state = STATE_NONE;
+		working = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (working) return;
 		currentInput = KeyCode.None;
 		if (Input.GetKeyDown(KeyCode.RightArrow)){
 			currentInput = KeyCode.RightArrow;
@@ -385,5 +388,12 @@ public class BleakUIManager : MonoBehaviour {
 			SetState(STATE_NONE);
 			break;
 		}
-	}	
+	}
+
+	public void StartWorkingManager(){
+		working = true;
+	}
+	public void FinishWorkingManager(){
+		working = false;
+	}
 }
