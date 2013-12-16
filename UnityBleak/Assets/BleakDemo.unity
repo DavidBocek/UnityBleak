@@ -2773,7 +2773,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -3216,6 +3216,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 736fce58530dec44099c79819e559ce9, type: 2}
       propertyPath: initialSkinName
       value: 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
@@ -4090,6 +4094,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 736fce58530dec44099c79819e559ce9, type: 2}
       propertyPath: initialSkinName
       value: 02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
@@ -5334,7 +5342,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -7070,6 +7078,10 @@ Prefab:
       propertyPath: initialSkinName
       value: 05
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1324727601}
@@ -7354,7 +7366,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -7666,7 +7678,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -9055,6 +9067,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[15]
       value: 
       objectReference: {fileID: 2100000, guid: 863d9e3d970ef8f45aecbcd9f0145d36, type: 2}
+    - target: {fileID: 8200000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 402657888}
@@ -10176,7 +10192,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -11542,6 +11558,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 736fce58530dec44099c79819e559ce9, type: 2}
       propertyPath: initialSkinName
       value: 02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
