@@ -1,0 +1,362 @@
+
+skeleton.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/cap
+  rotate: false
+  xy: 2, 2
+  size: 549, 298
+  orig: 549, 298
+  offset: 0, 0
+  index: -1
+crab01/legR3
+  rotate: false
+  xy: 671, 23
+  size: 104, 277
+  orig: 104, 277
+  offset: 0, 0
+  index: -1
+crab01/legbackR
+  rotate: false
+  xy: 787, 552
+  size: 230, 456
+  orig: 230, 456
+  offset: 0, 0
+  index: -1
+crab02/body
+  rotate: false
+  xy: 2, 302
+  size: 783, 706
+  orig: 783, 706
+  offset: 0, 0
+  index: -1
+crab02/legR3
+  rotate: false
+  xy: 553, 2
+  size: 116, 298
+  orig: 116, 298
+  offset: 0, 0
+  index: -1
+crab02/legbackR
+  rotate: false
+  xy: 787, 94
+  size: 230, 456
+  orig: 230, 456
+  offset: 0, 0
+  index: -1
+pipes/pipelowerL
+  rotate: false
+  xy: 835, 34
+  size: 50, 58
+  orig: 50, 58
+  offset: 0, 0
+  index: -1
+pipes/pipelowerR
+  rotate: false
+  xy: 777, 36
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/legbackL
+  rotate: false
+  xy: 246, 2
+  size: 193, 466
+  orig: 193, 466
+  offset: 0, 0
+  index: -1
+crab02/body02
+  rotate: false
+  xy: 2, 470
+  size: 786, 522
+  orig: 786, 522
+  offset: 0, 0
+  index: -1
+crab02/legbackL
+  rotate: false
+  xy: 441, 2
+  size: 193, 466
+  orig: 193, 466
+  offset: 0, 0
+  index: -1
+crab05/legbackL
+  rotate: false
+  xy: 2, 2
+  size: 242, 466
+  orig: 242, 466
+  offset: 0, 0
+  index: -1
+crab05/legbackR
+  rotate: false
+  xy: 790, 536
+  size: 230, 456
+  orig: 230, 456
+  offset: 0, 0
+  index: -1
+pipes/bodyR
+  rotate: false
+  xy: 636, 174
+  size: 366, 294
+  orig: 366, 294
+  offset: 0, 0
+  index: -1
+pipes/pipeL
+  rotate: false
+  xy: 636, 36
+  size: 138, 136
+  orig: 138, 136
+  offset: 0, 0
+  index: -1
+pipes/pipeR
+  rotate: false
+  xy: 895, 45
+  size: 116, 127
+  orig: 116, 127
+  offset: 0, 0
+  index: -1
+pipes/pipebackR2
+  rotate: false
+  xy: 776, 41
+  size: 117, 131
+  orig: 117, 131
+  offset: 0, 0
+  index: -1
+
+skeleton3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/body02
+  rotate: false
+  xy: 2, 512
+  size: 786, 508
+  orig: 786, 508
+  offset: 0, 0
+  index: -1
+crab01/spring
+  rotate: false
+  xy: 790, 513
+  size: 191, 507
+  orig: 191, 507
+  offset: 0, 0
+  index: -1
+crab02/spring
+  rotate: false
+  xy: 790, 4
+  size: 191, 507
+  orig: 191, 507
+  offset: 0, 0
+  index: -1
+crab05/body02
+  rotate: false
+  xy: 2, 2
+  size: 786, 508
+  orig: 786, 508
+  offset: 0, 0
+  index: -1
+
+skeleton4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/body
+  rotate: false
+  xy: 2, 315
+  size: 783, 679
+  orig: 783, 679
+  offset: 0, 0
+  index: -1
+crab01/legL2
+  rotate: false
+  xy: 787, 316
+  size: 133, 399
+  orig: 133, 399
+  offset: 0, 0
+  index: -1
+crab01/legL3
+  rotate: false
+  xy: 787, 731
+  size: 86, 263
+  orig: 86, 263
+  offset: 0, 0
+  index: -1
+crab02/cap
+  rotate: false
+  xy: 357, 15
+  size: 549, 298
+  orig: 549, 298
+  offset: 0, 0
+  index: -1
+crab02/legL3
+  rotate: false
+  xy: 922, 435
+  size: 86, 280
+  orig: 86, 280
+  offset: 0, 0
+  index: -1
+crab05/legL3
+  rotate: false
+  xy: 922, 170
+  size: 86, 263
+  orig: 86, 263
+  offset: 0, 0
+  index: -1
+crab05/legR3
+  rotate: false
+  xy: 908, 717
+  size: 104, 277
+  orig: 104, 277
+  offset: 0, 0
+  index: -1
+pipes/bodyL
+  rotate: false
+  xy: 2, 2
+  size: 353, 311
+  orig: 353, 311
+  offset: 0, 0
+  index: -1
+
+skeleton5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/legR2
+  rotate: false
+  xy: 787, 79
+  size: 151, 393
+  orig: 151, 393
+  offset: 0, 0
+  index: -1
+crab05/body
+  rotate: false
+  xy: 2, 302
+  size: 783, 679
+  orig: 783, 679
+  offset: 0, 0
+  index: -1
+crab05/cap
+  rotate: false
+  xy: 2, 2
+  size: 549, 298
+  orig: 549, 298
+  offset: 0, 0
+  index: -1
+crab05/spring
+  rotate: false
+  xy: 787, 474
+  size: 191, 507
+  orig: 191, 507
+  offset: 0, 0
+  index: -1
+pipes/pipebackL2
+  rotate: false
+  xy: 553, 42
+  size: 128, 126
+  orig: 128, 126
+  offset: 0, 0
+  index: -1
+pipes/pipebackR1
+  rotate: false
+  xy: 553, 170
+  size: 137, 130
+  orig: 137, 130
+  offset: 0, 0
+  index: -1
+
+skeleton6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab02/legL1
+  rotate: false
+  xy: 708, 374
+  size: 297, 639
+  orig: 297, 639
+  offset: 0, 0
+  index: -1
+crab02/legR1
+  rotate: false
+  xy: 2, 403
+  size: 363, 610
+  orig: 363, 610
+  offset: 0, 0
+  index: -1
+crab02/legR2
+  rotate: false
+  xy: 2, 8
+  size: 151, 393
+  orig: 151, 393
+  offset: 0, 0
+  index: -1
+crab05/legL1
+  rotate: false
+  xy: 367, 412
+  size: 339, 601
+  orig: 339, 601
+  offset: 0, 0
+  index: -1
+crab05/legL2
+  rotate: false
+  xy: 308, 2
+  size: 133, 399
+  orig: 133, 399
+  offset: 0, 0
+  index: -1
+crab05/legR2
+  rotate: false
+  xy: 155, 8
+  size: 151, 393
+  orig: 151, 393
+  offset: 0, 0
+  index: -1
+pipes/pipebackL1
+  rotate: false
+  xy: 443, 285
+  size: 129, 125
+  orig: 129, 125
+  offset: 0, 0
+  index: -1
+
+skeleton7.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/legL1
+  rotate: false
+  xy: 668, 13
+  size: 297, 599
+  orig: 297, 599
+  offset: 0, 0
+  index: -1
+crab01/legR1
+  rotate: false
+  xy: 2, 2
+  size: 331, 610
+  orig: 331, 610
+  offset: 0, 0
+  index: -1
+crab05/legR1
+  rotate: false
+  xy: 335, 2
+  size: 331, 610
+  orig: 331, 610
+  offset: 0, 0
+  index: -1
+
+skeleton8.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab02/legL2
+  rotate: false
+  xy: 2, 2
+  size: 133, 426
+  orig: 133, 426
+  offset: 0, 0
+  index: -1
