@@ -11,6 +11,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	public bool canBeKnockedDown = false;
 	public bool hasKnockDownAnimation = false;
 	SkeletonAnimation skeletonAnimation;
+	public AudioClip bash;
 	
 	private bool movingLeft;
 	private bool movingRight;
@@ -108,6 +109,7 @@ public class BackAndForthMovement : MonoBehaviour {
 			if (hasKnockDownAnimation && state == STATE_NORMAL){
 				skeletonAnimation.state.SetAnimation(0,"sit down",false);
 				audio.Stop();
+				audio.PlayOneShot(bash);
 			}
 			state = STATE_STOPPED;
 			downTimer = downDelay;

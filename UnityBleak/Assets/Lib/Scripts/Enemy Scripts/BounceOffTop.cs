@@ -13,7 +13,7 @@ public class BounceOffTop : MonoBehaviour {
 	private float springResetTimer;
 	private bool isSprung;
 	private float dt;
-	
+
 	void Start(){
 		springResetTimer = springResetDelay;
 		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();

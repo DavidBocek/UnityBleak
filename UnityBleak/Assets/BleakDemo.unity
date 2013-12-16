@@ -2752,6 +2752,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &402657894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3123,6 +3124,14 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
+    - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1639743978}
@@ -3216,6 +3225,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005417351}
+--- !u!1 &530459449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 530459450}
+  m_Layer: 0
+  m_Name: endMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530459450
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530459449}
+  m_LocalRotation: {x: 0, y: 0, z: .0348994955, w: .999390841}
+  m_LocalPosition: {x: 10.8787518, y: -.0389782526, z: -4.19999981}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1791582501}
 --- !u!1 &535730695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,6 +3456,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!82 &554970816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3758,6 +3794,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!114 &625505928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3888,6 +3925,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 793328237}
@@ -5110,6 +5151,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &793328244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5885,6 +5927,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 0
   hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!114 &1005417353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6760,6 +6803,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1324727601}
@@ -7031,6 +7078,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1296531566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7342,6 +7390,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1324727608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7851,6 +7900,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296531561}
+--- !u!1 &1411627168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1411627169}
+  m_Layer: 0
+  m_Name: startMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411627169
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411627168}
+  m_LocalRotation: {x: 0, y: 0, z: .0348994955, w: .999390841}
+  m_LocalPosition: {x: .0985463187, y: -.792803645, z: -4.20000029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1791582501}
 --- !u!1001 &1420762779
 Prefab:
   m_ObjectHideFlags: 0
@@ -8640,6 +8715,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 402657888}
@@ -9748,6 +9827,7 @@ MonoBehaviour:
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!82 &1639743984
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10695,6 +10775,7 @@ GameObject:
   - 33: {fileID: 1791582500}
   - 23: {fileID: 1791582499}
   - 114: {fileID: 1791582498}
+  - 114: {fileID: 1791582502}
   m_Layer: 0
   m_Name: Jellyfish SkeletonData
   m_TagString: Untagged
@@ -10754,11 +10835,32 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791582497}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.0836143, y: 25.2789593, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -.0348994955, w: .999390841}
+  m_LocalPosition: {x: 55.0525055, y: 24.8340759, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1411627169}
+  - {fileID: 530459450}
   m_Father: {fileID: 0}
+--- !u!114 &1791582502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791582497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1b40694a27c294da1531eb052b23dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 1411627169}
+  destPos: {fileID: 530459450}
+  moveSpeed: 3
+  numberOfBounces: -1
+  downDelay: 1.5
+  canBeKnockedDown: 0
+  hasKnockDownAnimation: 0
+  bash: {fileID: 0}
 --- !u!1 &1794436725
 GameObject:
   m_ObjectHideFlags: 0
@@ -11018,6 +11120,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: bash
+      value: 
+      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1296531560}
