@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: BrokenCrab SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAsset: {fileID: 11400000, guid: 8a26f73c483d784468703e5e2fd2f7f8, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: 5ffb9f7d819f2714b987420bba4865b5, type: 3}
+  scale: .00249999994
+  fromAnimation:
+  - spring
+  toAnimation:
+  - spring
+  duration:
+  - .400000006

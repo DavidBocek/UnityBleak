@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: FourCrab Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: e8cdcf86e7f19ca4ea220e3db6d62f62, type: 3}
+  materials:
+  - {fileID: 2100000, guid: a192e3089a5d1974ca2e663f974a5979, type: 2}
+  - {fileID: 2100000, guid: fea6c34da60cd9d4b815eb6e0e343af0, type: 2}
+  - {fileID: 2100000, guid: 45dfe117bdd2aa5408ba68d123d33462, type: 2}
+  - {fileID: 2100000, guid: 464a89bd49f48904ba4adfc83f52fb3d, type: 2}
+  - {fileID: 2100000, guid: d65fb5524f549eb41a5b6710cfa7a734, type: 2}
+  - {fileID: 2100000, guid: f8209d794c5dc2540a3998120d0d66fe, type: 2}
+  - {fileID: 2100000, guid: d0627b31758c8294397604d2852ec221, type: 2}
+  - {fileID: 2100000, guid: 8adc4d18fe5636d4bbbe9d231ed6cbc1, type: 2}
+  - {fileID: 2100000, guid: 4fc4f79d28b323a429046dd4b221a655, type: 2}
+  - {fileID: 2100000, guid: 558b5a211dce7fd4f8ff90045f7e4414, type: 2}

@@ -7,6 +7,7 @@ public class BounceOffTop : MonoBehaviour {
 	
 	public int springPower;
 	public float springResetDelay;
+	public AudioClip boing;
 
 	SkeletonAnimation skeletonAnimation;
 
@@ -25,6 +26,7 @@ public class BounceOffTop : MonoBehaviour {
 	
 	public void SetSprung(bool b){
 		isSprung = b;
+		audio.PlayOneShot(boing);
 	}
 
 	public void PlaySpringAnimation(){
