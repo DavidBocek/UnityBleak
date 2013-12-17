@@ -915,6 +915,7 @@ GameObject:
   - 4: {fileID: 141985546}
   - 114: {fileID: 141985548}
   - 61: {fileID: 141985547}
+  - 82: {fileID: 141985549}
   m_Layer: 0
   m_Name: BrokenCrabEnemy
   m_TagString: Untagged
@@ -960,6 +961,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
+--- !u!82 &141985549
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141985545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10.577879
+  MaxDistance: 16.9121666
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.25
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.25
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &163494882
 Prefab:
   m_ObjectHideFlags: 0
@@ -2758,6 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &402657891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,7 +3250,7 @@ Prefab:
     - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
       propertyPath: boing
       value: 
-      objectReference: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     - target: {fileID: 11400008, guid: 736fce58530dec44099c79819e559ce9, type: 2}
       propertyPath: skeletonDataAsset
       value: 
@@ -4004,6 +4065,10 @@ Prefab:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 793328237}
@@ -4048,6 +4113,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 33d0c4437db25824db6e5e9a5477ba0b, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33d0c4437db25824db6e5e9a5477ba0b, type: 2}
   m_RootGameObject: {fileID: 714578074}
@@ -4623,6 +4692,7 @@ GameObject:
   - 4: {fileID: 714578075}
   - 114: {fileID: 714578076}
   - 61: {fileID: 714578077}
+  - 82: {fileID: 714578078}
   m_Layer: 0
   m_Name: BrokenCrabEnemy
   m_TagString: Untagged
@@ -4656,6 +4726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!61 &714578077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4668,6 +4739,64 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: .819999993}
   m_Center: {x: .0500000007, y: -.270000011}
+--- !u!82 &714578078
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714578074}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10.577879
+  MaxDistance: 16.9121666
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.25
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.25
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &736837179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,6 +5357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &793328240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,6 +5626,7 @@ GameObject:
   - 4: {fileID: 861304435}
   - 114: {fileID: 861304436}
   - 61: {fileID: 861304437}
+  - 82: {fileID: 861304438}
   m_Layer: 0
   m_Name: BrokenCrabEnemy
   m_TagString: Untagged
@@ -5529,6 +5660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!61 &861304437
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5541,6 +5673,64 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: .819999993}
   m_Center: {x: .0500000007, y: -.270000011}
+--- !u!82 &861304438
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861304434}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10.577879
+  MaxDistance: 16.9121666
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.25
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.25
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &884646215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6917,6 +7107,10 @@ Prefab:
       propertyPath: moveSpeed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1324727601}
@@ -6932,6 +7126,7 @@ GameObject:
   - 4: {fileID: 1241289579}
   - 114: {fileID: 1241289580}
   - 61: {fileID: 1241289581}
+  - 82: {fileID: 1241289582}
   m_Layer: 0
   m_Name: BrokenCrabEnemy
   m_TagString: Untagged
@@ -6965,6 +7160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 35
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!61 &1241289581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6977,6 +7173,64 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: .819999993}
   m_Center: {x: .0500000007, y: -.270000011}
+--- !u!82 &1241289582
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241289578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10.577879
+  MaxDistance: 16.9121666
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1.25
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1.25
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1277662585
 GameObject:
   m_ObjectHideFlags: 0
@@ -7195,6 +7449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &1296531563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7507,6 +7762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &1324727604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8847,6 +9103,10 @@ Prefab:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 402657888}
@@ -9765,6 +10025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &1639743981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11164,6 +11425,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 4.6098671
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 736fce58530dec44099c79819e559ce9, type: 2}
+      propertyPath: boing
+      value: 
+      objectReference: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 736fce58530dec44099c79819e559ce9, type: 2}
   m_RootGameObject: {fileID: 1296531560}
