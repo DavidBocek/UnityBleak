@@ -1,0 +1,110 @@
+
+skeleton.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+crab01/backlegL
+  rotate: false
+  xy: 911, 756
+  size: 108, 233
+  orig: 108, 233
+  offset: 0, 0
+  index: -1
+crab01/backlegLwires
+  rotate: false
+  xy: 787, 620
+  size: 139, 117
+  orig: 139, 117
+  offset: 0, 0
+  index: -1
+crab01/backlegR
+  rotate: false
+  xy: 787, 739
+  size: 122, 250
+  orig: 122, 250
+  offset: 0, 0
+  index: -1
+crab01/backlegRwires
+  rotate: false
+  xy: 362, 169
+  size: 144, 131
+  orig: 144, 131
+  offset: 0, 0
+  index: -1
+crab01/body
+  rotate: false
+  xy: 2, 482
+  size: 450, 507
+  orig: 450, 507
+  offset: 0, 0
+  index: -1
+crab01/forelegL
+  rotate: false
+  xy: 2, 126
+  size: 209, 354
+  orig: 209, 354
+  offset: 0, 0
+  index: -1
+crab01/forelegLwires
+  rotate: false
+  xy: 523, 346
+  size: 131, 128
+  orig: 131, 128
+  offset: 0, 0
+  index: -1
+crab01/forelegR
+  rotate: false
+  xy: 454, 650
+  size: 189, 339
+  orig: 189, 339
+  offset: 0, 0
+  index: -1
+crab01/forelegRwires
+  rotate: false
+  xy: 2, 5
+  size: 179, 119
+  orig: 179, 119
+  offset: 0, 0
+  index: -1
+crab01/legL
+  rotate: false
+  xy: 213, 168
+  size: 147, 312
+  orig: 147, 312
+  offset: 0, 0
+  index: -1
+crab01/legLmech
+  rotate: false
+  xy: 362, 302
+  size: 159, 172
+  orig: 159, 172
+  offset: 0, 0
+  index: -1
+crab01/legLwires
+  rotate: false
+  xy: 523, 219
+  size: 107, 125
+  orig: 107, 125
+  offset: 0, 0
+  index: -1
+crab01/legR
+  rotate: false
+  xy: 645, 674
+  size: 140, 315
+  orig: 140, 315
+  offset: 0, 0
+  index: -1
+crab01/legRmech
+  rotate: false
+  xy: 454, 476
+  size: 185, 172
+  orig: 185, 172
+  offset: 0, 0
+  index: -1
+crab01/legRwires
+  rotate: false
+  xy: 183, 2
+  size: 97, 122
+  orig: 97, 122
+  offset: 0, 0
+  index: -1

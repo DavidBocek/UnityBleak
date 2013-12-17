@@ -30,6 +30,8 @@ MonoBehaviour:
   - run-injured
   - idle-injured
   - run-injured
+  - jump-slam
+  - jump-slam
   toAnimation:
   - jump
   - run
@@ -46,6 +48,8 @@ MonoBehaviour:
   - idle-injured
   - run-injured
   - sprint
+  - run-injured
+  - run
   duration:
   - .300000012
   - .400000006
@@ -62,3 +66,5 @@ MonoBehaviour:
   - .400000006
   - .200000003
   - .100000001
+  - .300000012
+  - .300000012

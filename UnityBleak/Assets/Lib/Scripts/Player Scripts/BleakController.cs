@@ -20,6 +20,8 @@ public class BleakController : MonoBehaviour {
 	public float bottomOffsetPushIn;
 	public float sideOffsetPushIn;
 	public GameObject skelAnimObj;
+	public AudioClip noooo;
+	public AudioSource cammie;
 	
 	public const float SMALL_JUMP_TIME = .06f;
 	public const float MED_JUMP_TIME = .08f;
@@ -699,6 +701,8 @@ public class BleakController : MonoBehaviour {
 	static public int numLives = 2;
 	void Damage(){
 		Debug.Log ("apply damage!");
+		//audio.PlayOneShot(noooo);
+		cammie.audio.PlayOneShot(noooo);
 		if (numLives > 0){
 			//hurt should reset to a checkpoint and graphically change bleak to look more battered
 			SetState (STATE_HURT);
