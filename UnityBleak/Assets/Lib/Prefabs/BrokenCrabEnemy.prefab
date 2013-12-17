@@ -8,12 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 23: {fileID: 2300000}
   - 33: {fileID: 3300000}
+  - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  - 64: {fileID: 6400000}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: BrokenCrab SkeletonAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .0981407166, y: -.733100891, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -54,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 51.865696, y: 8.69999981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -71,7 +70,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 32286741c6a400a44a969d7d318b1ca5, type: 2}
+  - {fileID: 2100000, guid: 2f64eff65ea124d4798a4b726e058160, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -96,21 +95,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
---- !u!64 &6400000
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 0}
+  m_Size: {x: 1, y: .819999993}
+  m_Center: {x: .0500000007, y: -.270000011}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,41 +105,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: b5aec6ebd1a8ffc458a2e46a3236acab, type: 2}
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _scale: {x: 435, y: 435, z: 100}
-  _spriteId: 2
-  boxCollider2D: {fileID: 0}
-  polygonCollider2D: []
-  edgeCollider2D: []
-  boxCollider: {fileID: 0}
-  meshCollider: {fileID: 6400000}
-  meshColliderPositions:
-  - {x: .00312499702, y: .015625, z: -.100000001}
-  - {x: .00312499702, y: .015625, z: .100000001}
-  - {x: -.015625, y: .140625015, z: -.100000001}
-  - {x: -.015625, y: .140625015, z: .100000001}
-  - {x: -.015625, y: -.00624999404, z: -.100000001}
-  - {x: -.015625, y: -.00624999404, z: .100000001}
-  - {x: -.137500003, y: .015625, z: -.100000001}
-  - {x: -.137500003, y: .015625, z: .100000001}
-  - {x: -.00312499702, y: -.0312499925, z: -.100000001}
-  - {x: -.00312499702, y: -.0312499925, z: .100000001}
-  - {x: -.0562499985, y: -.140625, z: -.100000001}
-  - {x: -.0562499985, y: -.140625, z: .100000001}
-  - {x: .028125003, y: -.0249999985, z: -.100000001}
-  - {x: .028125003, y: -.0249999985, z: .100000001}
-  - {x: .118750006, y: -.115624994, z: -.100000001}
-  - {x: .118750006, y: -.115624994, z: .100000001}
-  - {x: .03125, y: .00312501192, z: -.100000001}
-  - {x: .03125, y: .00312501192, z: .100000001}
-  - {x: .143750012, y: .059375003, z: -.100000001}
-  - {x: .143750012, y: .059375003, z: .100000001}
-  meshColliderMesh: {fileID: 0}
-  renderLayer: 0
+  skeletonDataAsset: {fileID: 11400000, guid: c818da7b1be3aaf468ffcb578cbc87bb, type: 2}
+  initialSkinName: default
+  timeScale: 2
+  calculateNormals: 0
+  calculateTangents: 0
+  loop: 1
+  _animationName: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
