@@ -23,7 +23,7 @@
 	}
 },
 "animations": {
-	"animation": {
+	"spring": {
 		"bones": {
 			"cap": {
 				"translate": [
