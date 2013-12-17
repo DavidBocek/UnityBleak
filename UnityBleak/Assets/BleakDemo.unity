@@ -1032,6 +1032,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7a8c375804d45e14b8954b0cf76e4433, type: 2}
+    - target: {fileID: 11400002, guid: 8fbb345396adf39429e2df31b28b479a, type: 2}
+      propertyPath: boxCollider2D
+      value: 
+      objectReference: {fileID: 736837182}
     m_RemovedComponents:
     - {fileID: 6100000, guid: 8fbb345396adf39429e2df31b28b479a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8fbb345396adf39429e2df31b28b479a, type: 2}
@@ -1229,14 +1233,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 8.50445557
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -1681,14 +1685,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 9.07826233
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -1879,14 +1883,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 8.39511108
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -2232,14 +2236,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 8.46469116
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -2629,14 +2633,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 8.47403717
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -4676,8 +4680,8 @@ GameObject:
   - 33: {fileID: 736837184}
   - 114: {fileID: 736837183}
   - 114: {fileID: 736837181}
-  - 61: {fileID: 736837182}
   - 82: {fileID: 736837186}
+  - 61: {fileID: 736837182}
   m_Layer: 0
   m_Name: GrimmPrefab
   m_TagString: Untagged
@@ -4788,14 +4792,14 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 900f8a2cb2f49cf468a5623b6126d782, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .758000016
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 100
+  Priority: 81
   DopplerLevel: 1
-  MinDistance: 8.65990448
-  MaxDistance: 11
+  MinDistance: 9.65298843
+  MaxDistance: 13.1667137
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -6085,8 +6089,8 @@ AudioSource:
   Mute: 0
   Priority: 90
   DopplerLevel: 1
-  MinDistance: 6.66177368
-  MaxDistance: 10.4613342
+  MinDistance: 9.71592712
+  MaxDistance: 13.7504272
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -10642,7 +10646,7 @@ MonoBehaviour:
   needsSlam: 0
   breakableUp: 1
   breakableDown: 0
-  platform: {fileID: 0}
+  platform: {fileID: 8300000, guid: b6c7e7ad10ed339449e8ae7cc4a0cfb1, type: 3}
   breakTime: 1
 --- !u!4 &1742655796
 Transform:
@@ -10670,19 +10674,19 @@ AudioSource:
   m_GameObject: {fileID: 1742655790}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: b6c7e7ad10ed339449e8ae7cc4a0cfb1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 13.9680767
+  MaxDistance: 16.9121666
   Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
+  rolloffMode: 2
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -10691,11 +10695,11 @@ AudioSource:
     - time: 0
       value: 1
       inSlope: 0
-      outSlope: 0
+      outSlope: -1.25
       tangentMode: 0
     - time: 1
       value: 0
-      inSlope: 0
+      inSlope: -1.25
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2

@@ -23,7 +23,6 @@ public class Breakable : MonoBehaviour {
 			if (breakTimer < breakTime){
 				breakTimer += Time.deltaTime;
 				//Debug.Log ("breaking...");
-				audio.PlayOneShot(platform);
 				anim.Play("Breaking");
 			} else {
 				transform.gameObject.SetActive(false);
@@ -34,6 +33,7 @@ public class Breakable : MonoBehaviour {
 
 	public void Break(){
 		isBreaking = true;
+		audio.PlayOneShot(platform);
 		//Debug.Log("BREAK!");
 	}
 
