@@ -156,6 +156,123 @@ MonoBehaviour:
     fps: 10
     loopStart: 0
     wrapMode: 2
+  - name: Smashing
+    frames:
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 48
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 49
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 50
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 51
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 52
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 53
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 54
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 55
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 56
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 57
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 58
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 59
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 60
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 61
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 62
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 2011e5bf070647d44812ee911371faa0,
+        type: 2}
+      spriteId: 63
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 30
+    loopStart: 0
+    wrapMode: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
