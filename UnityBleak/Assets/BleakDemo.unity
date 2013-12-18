@@ -684,6 +684,18 @@ Prefab:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
   m_RootGameObject: {fileID: 554970811}
@@ -3710,9 +3722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killAny: 1
-  killUp: 0
-  killLeft: 0
-  killRight: 0
+  killUp: 1
+  killLeft: 1
+  killRight: 1
   killDown: 0
 --- !u!114 &554970815
 MonoBehaviour:
@@ -3858,9 +3870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killAny: 1
-  killUp: 0
-  killLeft: 0
-  killRight: 0
+  killUp: 1
+  killLeft: 1
+  killRight: 1
   killDown: 0
 --- !u!61 &625505929
 BoxCollider2D:
@@ -6307,9 +6319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killAny: 1
-  killUp: 0
-  killLeft: 0
-  killRight: 0
+  killUp: 1
+  killLeft: 1
+  killRight: 1
   killDown: 0
 --- !u!61 &1005417354
 BoxCollider2D:
@@ -8184,6 +8196,18 @@ Prefab:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
   m_RootGameObject: {fileID: 625505925}
@@ -8743,6 +8767,18 @@ Prefab:
     - target: {fileID: 11400002, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
       propertyPath: moveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}
+      propertyPath: killRight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88fe3f31cc8147e42a470367d4af747f, type: 2}

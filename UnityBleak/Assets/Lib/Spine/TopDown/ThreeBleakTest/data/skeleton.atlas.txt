@@ -1,0 +1,1789 @@
+
+skeleton.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bleak damaged 01/back/armUpperR
+  rotate: false
+  xy: 482, 2
+  size: 91, 131
+  orig: 91, 131
+  offset: 0, 0
+  index: -1
+bleak/back/armUpperR
+  rotate: false
+  xy: 482, 2
+  size: 91, 131
+  orig: 91, 131
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/footR
+  rotate: false
+  xy: 960, 563
+  size: 57, 94
+  orig: 57, 94
+  offset: 0, 0
+  index: -1
+bleak/back/footR
+  rotate: false
+  xy: 960, 563
+  size: 57, 94
+  orig: 57, 94
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/footR
+  rotate: false
+  xy: 960, 563
+  size: 57, 94
+  orig: 57, 94
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/handR
+  rotate: false
+  xy: 946, 923
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+bleak/back/handR
+  rotate: false
+  xy: 946, 923
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/head
+  rotate: false
+  xy: 2, 341
+  size: 316, 306
+  orig: 316, 306
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/legL
+  rotate: false
+  xy: 482, 135
+  size: 130, 138
+  orig: 130, 138
+  offset: 0, 0
+  index: -1
+bleak/back/legL
+  rotate: false
+  xy: 482, 135
+  size: 130, 138
+  orig: 130, 138
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/legL
+  rotate: false
+  xy: 482, 135
+  size: 130, 138
+  orig: 130, 138
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/footR
+  rotate: false
+  xy: 960, 317
+  size: 53, 98
+  orig: 53, 98
+  offset: 0, 0
+  index: -1
+bleak/front/footR
+  rotate: false
+  xy: 960, 317
+  size: 53, 98
+  orig: 53, 98
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/footR
+  rotate: false
+  xy: 960, 317
+  size: 53, 98
+  orig: 53, 98
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/head
+  rotate: false
+  xy: 2, 649
+  size: 302, 372
+  orig: 302, 372
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/armLowerR
+  rotate: false
+  xy: 946, 659
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/armLowerR
+  rotate: false
+  xy: 946, 659
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/torso
+  rotate: false
+  xy: 786, 51
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/armLowerR
+  rotate: false
+  xy: 960, 490
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/armLowerR
+  rotate: false
+  xy: 960, 490
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/armLowerR
+  rotate: false
+  xy: 960, 490
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/handR
+  rotate: false
+  xy: 946, 732
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/head
+  rotate: false
+  xy: 610, 658
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/torso
+  rotate: false
+  xy: 624, 49
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/head
+  rotate: false
+  xy: 624, 293
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/torso
+  rotate: false
+  xy: 320, 31
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/handR
+  rotate: false
+  xy: 946, 823
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/head
+  rotate: false
+  xy: 2, 33
+  size: 316, 306
+  orig: 316, 306
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/head
+  rotate: false
+  xy: 306, 649
+  size: 302, 372
+  orig: 302, 372
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/armLowerR
+  rotate: false
+  xy: 960, 417
+  size: 57, 71
+  orig: 57, 71
+  offset: 0, 0
+  index: -1
+bleak/front/head
+  rotate: false
+  xy: 320, 275
+  size: 302, 372
+  orig: 302, 372
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bleak damaged 01/quarterBackR/torso
+  rotate: false
+  xy: 2, 48
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/head
+  rotate: false
+  xy: 674, 655
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/head
+  rotate: false
+  xy: 674, 290
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/arm
+  rotate: false
+  xy: 938, 146
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
+bleak/sideL/arm
+  rotate: false
+  xy: 938, 146
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/arm
+  rotate: false
+  xy: 938, 2
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/torso
+  rotate: false
+  xy: 236, 48
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/torso
+  rotate: false
+  xy: 470, 48
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/head
+  rotate: false
+  xy: 2, 655
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/head
+  rotate: false
+  xy: 2, 290
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/torso
+  rotate: false
+  xy: 704, 48
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+bleak/sideL/head
+  rotate: false
+  xy: 338, 655
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+bleak/sideR/head
+  rotate: false
+  xy: 338, 290
+  size: 334, 363
+  orig: 334, 363
+  offset: 0, 0
+  index: -1
+
+skeleton3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bleak damaged 01/front/armUpperR
+  rotate: false
+  xy: 762, 2
+  size: 83, 118
+  orig: 83, 118
+  offset: 0, 0
+  index: -1
+bleak/front/armUpperR
+  rotate: false
+  xy: 762, 2
+  size: 83, 118
+  orig: 83, 118
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/armUpperR
+  rotate: false
+  xy: 762, 2
+  size: 83, 118
+  orig: 83, 118
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/legR
+  rotate: false
+  xy: 650, 2
+  size: 110, 118
+  orig: 110, 118
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/legR
+  rotate: false
+  xy: 650, 2
+  size: 110, 118
+  orig: 110, 118
+  offset: 0, 0
+  index: -1
+bleak/front/legR
+  rotate: false
+  xy: 650, 2
+  size: 110, 118
+  orig: 110, 118
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/torso
+  rotate: false
+  xy: 823, 828
+  size: 197, 193
+  orig: 197, 193
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/armLowerL
+  rotate: false
+  xy: 959, 93
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/armUpperL
+  rotate: false
+  xy: 337, 874
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak/quarterL/armUpperL
+  rotate: false
+  xy: 337, 874
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/armUpperL
+  rotate: false
+  xy: 337, 874
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/armUpperR
+  rotate: false
+  xy: 847, 31
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/armUpperR
+  rotate: false
+  xy: 847, 31
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak/quarterL/armUpperR
+  rotate: false
+  xy: 847, 31
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/legL
+  rotate: false
+  xy: 672, 521
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak/quarterL/legL
+  rotate: false
+  xy: 672, 521
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/legL
+  rotate: false
+  xy: 672, 521
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/legR
+  rotate: false
+  xy: 672, 253
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak/quarterL/legR
+  rotate: false
+  xy: 672, 253
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/legR
+  rotate: false
+  xy: 672, 253
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/torso
+  rotate: false
+  xy: 798, 407
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/armLowerR
+  rotate: false
+  xy: 959, 5
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak/quarterR/armLowerR
+  rotate: false
+  xy: 959, 5
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/armUpperR
+  rotate: false
+  xy: 337, 725
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/armUpperR
+  rotate: false
+  xy: 337, 725
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak/quarterR/armUpperR
+  rotate: false
+  xy: 337, 725
+  size: 145, 147
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/legL
+  rotate: false
+  xy: 650, 122
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak/quarterR/legL
+  rotate: false
+  xy: 650, 122
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/legL
+  rotate: false
+  xy: 650, 122
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/legR
+  rotate: false
+  xy: 672, 384
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/legR
+  rotate: false
+  xy: 672, 384
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak/quarterR/legR
+  rotate: false
+  xy: 672, 384
+  size: 124, 135
+  orig: 124, 135
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/torso
+  rotate: false
+  xy: 798, 181
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/torso
+  rotate: false
+  xy: 823, 633
+  size: 197, 193
+  orig: 197, 193
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/head
+  rotate: false
+  xy: 2, 658
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/head
+  rotate: false
+  xy: 2, 293
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/torso
+  rotate: false
+  xy: 2, 49
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/torso
+  rotate: false
+  xy: 164, 49
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+bleak/quarterL/head
+  rotate: false
+  xy: 488, 658
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak/quarterR/head
+  rotate: false
+  xy: 337, 293
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+bleak/sideL/torso
+  rotate: false
+  xy: 326, 49
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+bleak/sideR/torso
+  rotate: false
+  xy: 488, 9
+  size: 160, 242
+  orig: 160, 242
+  offset: 0, 0
+  index: -1
+
+skeleton4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bleak damaged 01/back/armLowerL
+  rotate: false
+  xy: 940, 768
+  size: 79, 137
+  orig: 79, 137
+  offset: 0, 0
+  index: -1
+bleak/back/armLowerL
+  rotate: false
+  xy: 940, 768
+  size: 79, 137
+  orig: 79, 137
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/handL
+  rotate: false
+  xy: 932, 448
+  size: 85, 96
+  orig: 85, 96
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/armLowerR
+  rotate: false
+  xy: 312, 252
+  size: 77, 114
+  orig: 77, 114
+  offset: 0, 0
+  index: -1
+bleak/front/armLowerR
+  rotate: false
+  xy: 312, 252
+  size: 77, 114
+  orig: 77, 114
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/armUpperL
+  rotate: false
+  xy: 470, 252
+  size: 73, 114
+  orig: 73, 114
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/armUpperL
+  rotate: false
+  xy: 470, 252
+  size: 73, 114
+  orig: 73, 114
+  offset: 0, 0
+  index: -1
+bleak/front/armUpperL
+  rotate: false
+  xy: 470, 252
+  size: 73, 114
+  orig: 73, 114
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/footL
+  rotate: false
+  xy: 622, 254
+  size: 77, 83
+  orig: 77, 83
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/footL
+  rotate: false
+  xy: 622, 254
+  size: 77, 83
+  orig: 77, 83
+  offset: 0, 0
+  index: -1
+bleak/front/footL
+  rotate: false
+  xy: 622, 254
+  size: 77, 83
+  orig: 77, 83
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/legL
+  rotate: false
+  xy: 940, 907
+  size: 81, 104
+  orig: 81, 104
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/legL
+  rotate: false
+  xy: 940, 907
+  size: 81, 104
+  orig: 81, 104
+  offset: 0, 0
+  index: -1
+bleak/front/legL
+  rotate: false
+  xy: 940, 907
+  size: 81, 104
+  orig: 81, 104
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/footR
+  rotate: false
+  xy: 932, 546
+  size: 89, 81
+  orig: 89, 81
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/footR
+  rotate: false
+  xy: 932, 546
+  size: 89, 81
+  orig: 89, 81
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/footR
+  rotate: false
+  xy: 932, 546
+  size: 89, 81
+  orig: 89, 81
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/head
+  rotate: false
+  xy: 2, 676
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/head
+  rotate: false
+  xy: 2, 339
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/armLowerR
+  rotate: false
+  xy: 701, 255
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak/quarterL/armLowerR
+  rotate: false
+  xy: 701, 255
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/handL
+  rotate: false
+  xy: 863, 261
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak/quarterL/handL
+  rotate: false
+  xy: 863, 261
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/handL
+  rotate: false
+  xy: 863, 261
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/armLowerL
+  rotate: false
+  xy: 782, 255
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak/quarterR/armLowerL
+  rotate: false
+  xy: 782, 255
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/handL
+  rotate: false
+  xy: 546, 277
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak/quarterR/handL
+  rotate: false
+  xy: 546, 277
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/armLowerL
+  rotate: false
+  xy: 940, 629
+  size: 79, 137
+  orig: 79, 137
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/handL
+  rotate: false
+  xy: 932, 350
+  size: 85, 96
+  orig: 85, 96
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/armLowerR
+  rotate: false
+  xy: 391, 252
+  size: 77, 114
+  orig: 77, 114
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/head
+  rotate: false
+  xy: 2, 2
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/head
+  rotate: false
+  xy: 630, 676
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/torso
+  rotate: false
+  xy: 546, 26
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/torso
+  rotate: false
+  xy: 764, 26
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak/back/handL
+  rotate: false
+  xy: 932, 252
+  size: 85, 96
+  orig: 85, 96
+  offset: 0, 0
+  index: -1
+bleak/back/head
+  rotate: false
+  xy: 312, 705
+  size: 316, 306
+  orig: 316, 306
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/head
+  rotate: false
+  xy: 312, 368
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/head
+  rotate: false
+  xy: 622, 339
+  size: 308, 335
+  orig: 308, 335
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/torso
+  rotate: false
+  xy: 312, 10
+  size: 232, 240
+  orig: 232, 240
+  offset: 0, 0
+  index: -1
+
+skeleton5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bleak damaged 01/back/armLowerR
+  rotate: false
+  xy: 730, 755
+  size: 68, 123
+  orig: 68, 123
+  offset: 0, 0
+  index: -1
+bleak/back/armLowerR
+  rotate: false
+  xy: 730, 755
+  size: 68, 123
+  orig: 68, 123
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/armUpperL
+  rotate: false
+  xy: 88, 105
+  size: 71, 126
+  orig: 71, 126
+  offset: 0, 0
+  index: -1
+bleak/back/armUpperL
+  rotate: false
+  xy: 88, 105
+  size: 71, 126
+  orig: 71, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/footL
+  rotate: false
+  xy: 650, 379
+  size: 66, 95
+  orig: 66, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/footL
+  rotate: false
+  xy: 650, 379
+  size: 66, 95
+  orig: 66, 95
+  offset: 0, 0
+  index: -1
+bleak/back/footL
+  rotate: false
+  xy: 650, 379
+  size: 66, 95
+  orig: 66, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/legR
+  rotate: false
+  xy: 234, 166
+  size: 77, 125
+  orig: 77, 125
+  offset: 0, 0
+  index: -1
+bleak/back/legR
+  rotate: false
+  xy: 234, 166
+  size: 77, 125
+  orig: 77, 125
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/legR
+  rotate: false
+  xy: 234, 166
+  size: 77, 125
+  orig: 77, 125
+  offset: 0, 0
+  index: -1
+bleak damaged 01/back/torso
+  rotate: false
+  xy: 2, 383
+  size: 194, 187
+  orig: 194, 187
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/armLowerL
+  rotate: false
+  xy: 335, 515
+  size: 92, 123
+  orig: 92, 123
+  offset: 0, 0
+  index: -1
+bleak/front/armLowerL
+  rotate: false
+  xy: 335, 515
+  size: 92, 123
+  orig: 92, 123
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/handL
+  rotate: false
+  xy: 480, 103
+  size: 73, 99
+  orig: 73, 99
+  offset: 0, 0
+  index: -1
+bleak/front/handL
+  rotate: false
+  xy: 480, 103
+  size: 73, 99
+  orig: 73, 99
+  offset: 0, 0
+  index: -1
+bleak damaged 01/front/handR
+  rotate: false
+  xy: 418, 413
+  size: 65, 100
+  orig: 65, 100
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/armLowerL
+  rotate: false
+  xy: 545, 312
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/armLowerL
+  rotate: false
+  xy: 545, 312
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/armUpperL
+  rotate: false
+  xy: 429, 525
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/armUpperL
+  rotate: false
+  xy: 429, 525
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/armUpperL
+  rotate: false
+  xy: 429, 525
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/armUpperR
+  rotate: false
+  xy: 207, 293
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/armUpperR
+  rotate: false
+  xy: 207, 293
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/armUpperR
+  rotate: false
+  xy: 207, 293
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/footL
+  rotate: false
+  xy: 220, 537
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/footL
+  rotate: false
+  xy: 220, 537
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/footL
+  rotate: false
+  xy: 220, 537
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/handL
+  rotate: false
+  xy: 661, 496
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/handR
+  rotate: false
+  xy: 234, 97
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/handR
+  rotate: false
+  xy: 234, 97
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/handR
+  rotate: false
+  xy: 234, 97
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/legL
+  rotate: false
+  xy: 313, 181
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/legL
+  rotate: false
+  xy: 313, 181
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/legL
+  rotate: false
+  xy: 313, 181
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackL/legR
+  rotate: false
+  xy: 198, 419
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/legR
+  rotate: false
+  xy: 198, 419
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/legR
+  rotate: false
+  xy: 198, 419
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/armLowerL
+  rotate: false
+  xy: 799, 522
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/armLowerL
+  rotate: false
+  xy: 799, 522
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/armUpperL
+  rotate: false
+  xy: 588, 476
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/armUpperL
+  rotate: false
+  xy: 588, 476
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/armUpperL
+  rotate: false
+  xy: 588, 476
+  size: 71, 122
+  orig: 71, 122
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/armUpperR
+  rotate: false
+  xy: 800, 770
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/armUpperR
+  rotate: false
+  xy: 800, 770
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/armUpperR
+  rotate: false
+  xy: 800, 770
+  size: 93, 124
+  orig: 93, 124
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/footL
+  rotate: false
+  xy: 303, 412
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/footL
+  rotate: false
+  xy: 303, 412
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/footL
+  rotate: false
+  xy: 303, 412
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/footR
+  rotate: false
+  xy: 615, 777
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/footR
+  rotate: false
+  xy: 615, 777
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/footR
+  rotate: false
+  xy: 615, 777
+  size: 113, 101
+  orig: 113, 101
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/handL
+  rotate: false
+  xy: 681, 600
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/handR
+  rotate: false
+  xy: 502, 580
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/handR
+  rotate: false
+  xy: 502, 580
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/handR
+  rotate: false
+  xy: 502, 580
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/legL
+  rotate: false
+  xy: 486, 722
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/legL
+  rotate: false
+  xy: 486, 722
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/legL
+  rotate: false
+  xy: 486, 722
+  size: 103, 111
+  orig: 103, 111
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterBackR/legR
+  rotate: false
+  xy: 302, 294
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/legR
+  rotate: false
+  xy: 302, 294
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/legR
+  rotate: false
+  xy: 302, 294
+  size: 103, 116
+  orig: 103, 116
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/footL
+  rotate: false
+  xy: 319, 77
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak/quarterL/footL
+  rotate: false
+  xy: 319, 77
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/footL
+  rotate: false
+  xy: 319, 77
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterL/footR
+  rotate: false
+  xy: 502, 483
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak/quarterL/footR
+  rotate: false
+  xy: 502, 483
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/footR
+  rotate: false
+  xy: 502, 483
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/armUpperL
+  rotate: false
+  xy: 2, 233
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak/quarterR/armUpperL
+  rotate: false
+  xy: 2, 233
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/armUpperL
+  rotate: false
+  xy: 2, 233
+  size: 110, 148
+  orig: 110, 148
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/footL
+  rotate: false
+  xy: 485, 386
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/footL
+  rotate: false
+  xy: 485, 386
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak/quarterR/footL
+  rotate: false
+  xy: 485, 386
+  size: 84, 95
+  orig: 84, 95
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/footR
+  rotate: false
+  xy: 587, 600
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/footR
+  rotate: false
+  xy: 587, 600
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak/quarterR/footR
+  rotate: false
+  xy: 587, 600
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 01/quarterR/handR
+  rotate: false
+  xy: 476, 308
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak/quarterR/handR
+  rotate: false
+  xy: 476, 308
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/foot
+  rotate: false
+  xy: 591, 704
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/foot
+  rotate: false
+  xy: 591, 704
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak/sideL/foot
+  rotate: false
+  xy: 591, 704
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/hand
+  rotate: false
+  xy: 571, 381
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideL/leg
+  rotate: false
+  xy: 787, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/leg
+  rotate: false
+  xy: 787, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak/sideL/leg
+  rotate: false
+  xy: 787, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/foot
+  rotate: false
+  xy: 486, 649
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/foot
+  rotate: false
+  xy: 486, 649
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak/sideR/foot
+  rotate: false
+  xy: 486, 649
+  size: 99, 71
+  orig: 99, 71
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/hand
+  rotate: false
+  xy: 718, 401
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak/sideR/hand
+  rotate: false
+  xy: 718, 401
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak damaged 01/sideR/leg
+  rotate: false
+  xy: 886, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/leg
+  rotate: false
+  xy: 886, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak/sideR/leg
+  rotate: false
+  xy: 886, 896
+  size: 97, 126
+  orig: 97, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/armLowerR
+  rotate: false
+  xy: 416, 704
+  size: 68, 123
+  orig: 68, 123
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/armUpperL
+  rotate: false
+  xy: 161, 122
+  size: 71, 126
+  orig: 71, 126
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/armUpperR
+  rotate: false
+  xy: 114, 250
+  size: 91, 131
+  orig: 91, 131
+  offset: 0, 0
+  index: -1
+bleak damaged 02/back/torso
+  rotate: false
+  xy: 220, 640
+  size: 194, 187
+  orig: 194, 187
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/armLowerL
+  rotate: false
+  xy: 895, 771
+  size: 92, 123
+  orig: 92, 123
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/handL
+  rotate: false
+  xy: 480, 2
+  size: 73, 99
+  orig: 73, 99
+  offset: 0, 0
+  index: -1
+bleak damaged 02/front/handR
+  rotate: false
+  xy: 413, 79
+  size: 65, 100
+  orig: 65, 100
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/armLowerL
+  rotate: false
+  xy: 853, 522
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackL/handL
+  rotate: false
+  xy: 730, 496
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/armLowerL
+  rotate: false
+  xy: 907, 522
+  size: 52, 67
+  orig: 52, 67
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterBackR/handL
+  rotate: false
+  xy: 407, 308
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/armLowerL
+  rotate: false
+  xy: 952, 683
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/armLowerR
+  rotate: false
+  xy: 2, 5
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterL/handR
+  rotate: false
+  xy: 556, 221
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/armLowerL
+  rotate: false
+  xy: 718, 317
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/armLowerR
+  rotate: false
+  xy: 819, 591
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/handL
+  rotate: false
+  xy: 800, 679
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak damaged 02/quarterR/handR
+  rotate: false
+  xy: 750, 601
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/arm
+  rotate: false
+  xy: 615, 880
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideL/hand
+  rotate: false
+  xy: 555, 7
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/arm
+  rotate: false
+  xy: 2, 89
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
+bleak damaged 02/sideR/hand
+  rotate: false
+  xy: 797, 401
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak/back/torso
+  rotate: false
+  xy: 419, 835
+  size: 194, 187
+  orig: 194, 187
+  offset: 0, 0
+  index: -1
+bleak/front/handR
+  rotate: false
+  xy: 555, 102
+  size: 65, 100
+  orig: 65, 100
+  offset: 0, 0
+  index: -1
+bleak/front/torso
+  rotate: false
+  xy: 220, 829
+  size: 197, 193
+  orig: 197, 193
+  offset: 0, 0
+  index: -1
+bleak/quarterBackL/handL
+  rotate: false
+  xy: 418, 204
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak/quarterBackR/handL
+  rotate: false
+  xy: 487, 204
+  size: 67, 102
+  orig: 67, 102
+  offset: 0, 0
+  index: -1
+bleak/quarterL/armLowerL
+  rotate: false
+  xy: 884, 591
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+bleak/quarterL/handR
+  rotate: false
+  xy: 876, 679
+  size: 74, 89
+  orig: 74, 89
+  offset: 0, 0
+  index: -1
+bleak/quarterL/torso
+  rotate: false
+  xy: 2, 798
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak/quarterR/torso
+  rotate: false
+  xy: 2, 572
+  size: 216, 224
+  orig: 216, 224
+  offset: 0, 0
+  index: -1
+bleak/sideL/hand
+  rotate: false
+  xy: 799, 306
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+bleak/sideR/arm
+  rotate: false
+  xy: 701, 880
+  size: 84, 142
+  orig: 84, 142
+  offset: 0, 0
+  index: -1
