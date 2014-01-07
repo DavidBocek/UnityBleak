@@ -91,26 +91,38 @@ public class BleakControllerTopDown : MonoBehaviour {
 					skelAnim.state.SetAnimation(0,"walkingDown-right",true);
 				}
 			}
+		} else {
+			switch (skelAnim.state.ToString()){
+			case "walkingRight":
+				skelAnim.state.SetAnimation(0,"idleRight",true);
+				break;
+			case "walkingUp-right":
+				skelAnim.state.SetAnimation(0,"idleUp-right",true);
+				break;
+			case "walkingUp":
+				skelAnim.state.SetAnimation(0,"idleUp",true);
+				break;
+			case "walkingUp-left":
+				skelAnim.state.SetAnimation(0,"idleUp-left",true);
+				break;
+			case "walkingLeft":
+				skelAnim.state.SetAnimation(0,"idleLeft",true);
+				break;
+			case "walkingDown-left":
+				skelAnim.state.SetAnimation(0,"idleDown-left",true);
+				break;
+			case "walkingDown":
+				skelAnim.state.SetAnimation(0,"idleDown",true);
+				break;
+			case "walkingDown-right":
+				skelAnim.state.SetAnimation(0,"idleDown-right",true);
+				break;
+			}
 		}
-
 		UpdatePositionChangeNormal(dt);
 	}
 
 	void UpdatePositionChangeNormal(float dt){
-
-		/*RaycastHit2D rayHit0 = Physics2D.Raycast(position+collider.center+Vector2.right*collider.radius);
-		RaycastHit2D rayHit45 = Physics2D.Raycast(position+collider.center+(new Vector2(1f,1f)).normalized*collider.radius);
-		RaycastHit2D rayHit90 = Physics2D.Raycast(position+collider.center+Vector2.up*collider.radius);
-		RaycastHit2D rayHit135 = Physics2D.Raycast(position+collider.center+(new Vector2(-1f,1f)).normalized*collider.radius);
-		RaycastHit2D rayHit180 = Physics2D.Raycast(position+collider.center+-Vector2.right*collider.radius);
-		RaycastHit2D rayHit225 = Physics2D.Raycast(position+collider.center+(new Vector2(-1f,-1f)).normalized*collider.radius);
-		RaycastHit2D rayHit270 = Physics2D.Raycast(position+collider.center+-Vector2.up*collider.radius);
-		RaycastHit2D rayHit315 = Physics2D.Raycast(position+collider.center+(new Vector2(1f,-1f)).normalized*collider.radius);
-
-
-		if (rayHit0 || rayHit45 || rayHit90 || rayHit135 || rayHit180 || rayHit225 || rayHit270 || rayHit315){
-
-		}*/
 
 		rigidBody.velocity = velocity;
 	}

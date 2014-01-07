@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda80dea5ef927041bab95c3d2d7b0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkSpeed: 5.5
   skelAnimObj: {fileID: 1205936024}
   changeSpeed: .0199999996
   lagSpeed: .699999988
@@ -1566,6 +1566,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 557955149}
+  - 114: {fileID: 557955150}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -1598,6 +1599,19 @@ Transform:
   - {fileID: 293940465}
   - {fileID: 383598800}
   m_Father: {fileID: 0}
+--- !u!114 &557955150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557955148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1ba41f5fbb8e44f8a3587ad7712824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollAmountX: 0
+  scrollAmountY: 0
 --- !u!1 &674334844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1865,7 @@ MonoBehaviour:
   calculateNormals: 0
   calculateTangents: 0
   loop: 1
-  _animationName: idleDown
+  _animationName: walkingUp-right
 --- !u!23 &1205936026
 Renderer:
   m_ObjectHideFlags: 0
@@ -1864,16 +1878,12 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 6560c373e8394234bafb870ede973fd1, type: 2}
+  - {fileID: 2100000, guid: d9f5e6fa0e95c534aa7d89d4e34d383a, type: 2}
   - {fileID: 2100000, guid: 736aceede758977458f9046749b6f145, type: 2}
-  - {fileID: 2100000, guid: 6560c373e8394234bafb870ede973fd1, type: 2}
-  - {fileID: 2100000, guid: 15429894f164ace458ade22af8e779a9, type: 2}
   - {fileID: 2100000, guid: d9f5e6fa0e95c534aa7d89d4e34d383a, type: 2}
   - {fileID: 2100000, guid: 6560c373e8394234bafb870ede973fd1, type: 2}
   - {fileID: 2100000, guid: d9f5e6fa0e95c534aa7d89d4e34d383a, type: 2}
   - {fileID: 2100000, guid: 6560c373e8394234bafb870ede973fd1, type: 2}
-  - {fileID: 2100000, guid: 15429894f164ace458ade22af8e779a9, type: 2}
-  - {fileID: 2100000, guid: 736aceede758977458f9046749b6f145, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
