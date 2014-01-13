@@ -41,6 +41,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: be3ced8186b741e4ea3cab3f5a3ce189
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -2958,6 +2962,166 @@ MonoBehaviour:
     - 1386960181.81425
     - 1386960181.46123
     - 1386960182.37428
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: UICounter
+    spriteCollectionGUID: fffd2caab333d2944a72d4d0cdd9b70d
+    spriteCollectionDataGUID: d52988f4acbbb7149b81c0ba2b02e1b7
+    spriteNames:
+    - ui-counter/0
+    - ui-counter/1
+    - ui-counter/2
+    - ui-counter/3
+    - ui-counter/4
+    - ui-counter/5
+    - ui-counter/6
+    - ui-counter/7
+    - ui-counter/8
+    - ui-counter/9
+    - ui-counter/10
+    - ui-counter/11
+    - ui-counter/12
+    - ui-counter/13
+    - ui-counter/14
+    - ui-counter/15
+    - ui-counter/16
+    - ui-counter/17
+    - ui-counter/18
+    - ui-counter/19
+    - ui-counter/20
+    - ui-counter/21
+    - ui-counter/22
+    - ui-counter/23
+    - ui-counter/24
+    - ui-counter/25
+    - ui-counter/26
+    - ui-counter/27
+    - ui-counter/28
+    - ui-counter/29
+    - ui-counter/30
+    - ui-counter/31
+    - ui-counter/32
+    - ui-counter/33
+    - ui-counter/34
+    - ui-counter/35
+    - ui-counter/36
+    - ui-counter/37
+    - ui-counter/38
+    - ui-counter/39
+    - ui-counter/40
+    - ui-counter/41
+    - ui-counter/42
+    - ui-counter/43
+    - ui-counter/44
+    - ui-counter/45
+    - ui-counter/46
+    - ui-counter/47
+    - ui-counter/48
+    - ui-counter/49
+    spriteTextureGUIDs:
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    - 7d6ddc70abe7e124c93ddc4b8bc71a80
+    spriteTextureTimeStamps:
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
+    - 1387842494
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
