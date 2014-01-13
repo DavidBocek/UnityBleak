@@ -130,49 +130,11 @@ public class BleakController : MonoBehaviour {
 			velocity.x = 0;
 			dt = Time.smoothDeltaTime;
 			UpdateRays(dt);
+			UpdateGravity(dt);
 			if (canControl){
-				//enable gravity if no raycasts return true from the three downward rays
-				//RaycastHit2D rayHitInfoLBottom; RaycastHit2D rayHitInfoCBottom; RaycastHit2D rayHitInfoRBottom;
-				rayHitInfoLBottom = Physics2D.Raycast(leftRayBottom.origin, leftRayBottom.direction,rayLengthBottom);
-				rayHitInfoCBottom = Physics2D.Raycast(centerRayBottom.origin,centerRayBottom.direction,rayLengthBottom);
-				rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
-				if (!rayHitInfoLBottom && !rayHitInfoCBottom && !rayHitInfoRBottom ){
-				    tempVelVert = velocity.y - gravityAcceleration * dt;
-					velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
-					isGrounded = false;
-				//otherwise deal with collisions from the top if the object is not ignoring them
-				} else if (rayHitInfoLBottom || rayHitInfoCBottom|| rayHitInfoRBottom){
-					bool collidableDown = true;
-					bool collidableUp = true;
-					bool aboveCollider = true;
-					if (rayHitInfoLBottom){ rayHitInfoBottom = rayHitInfoLBottom;}
-					else if (rayHitInfoCBottom){ rayHitInfoBottom = rayHitInfoCBottom;}
-					else if (rayHitInfoRBottom){ rayHitInfoBottom = rayHitInfoRBottom;}
-					/*if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
-						collidableDown = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreUp();
-						collidableUp = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreDown();
-						//have to check that the object is below bleak, or it will catch the raycasts which start from the center y line of bleak's collider
-						aboveCollider = (rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2 + rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().center.y) <= (transform.position.y - boxCollider.size.y/2 + boxCollider.center.y);
-						Debug.Log ("above collider: "+aboveCollider+" object: "+(rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2-5)+" player: "+(transform.position.y - boxCollider.size.y/2));
-						//Debug.Log("object collider y/2: "+(rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2)+" player collider y/2: "+(boxCollider.size.y/2));
-					}*/
-					Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-					Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-					Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-					//falling
-					if (/*collidableDown && aboveCollider && */velocity.y <= 0){
-						HandleBottomCollision(rayHitInfoBottom,dt);	
-					} else {
-						tempVelVert = velocity.y - gravityAcceleration * dt;
-						velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
-					}
-				}
 				UpdateInputNormal(dt);
 				UpdateIdle(dt);
 				UpdateLeftRight(dt);
-			} else {
-				//accel y is 0, so velocity.y shouldn't change. walking up stairs and such
-				//DEPRECATED canControl? using FORCE_MOVE and death states should replace this i think?
 			}
 			UpdatePositionChangeNormal(fdt);
 			UpdateRotationNormal(dt);
@@ -221,12 +183,22 @@ public class BleakController : MonoBehaviour {
 			}
 			break;
 		case STATE_PUSH_LEFT:
+			if (skelAnim.state.ToString() != "push")
+				skelAnim.state.SetAnimation(0,"push",true);
+			Debug.Log(skelAnim.state.ToString());
+			UpdateRays(dt);
 			UpdatePushing(dt,LEFT);
+			UpdateGravity(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
 		case STATE_PUSH_RIGHT:
+			if (skelAnim.state.ToString() != "push")
+				skelAnim.state.SetAnimation(0,"push",true);
+			Debug.Log(skelAnim.state.ToString());
+			UpdateRays(dt);
 			UpdatePushing(dt,RIGHT);
+			UpdateGravity(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
@@ -243,7 +215,55 @@ public class BleakController : MonoBehaviour {
 			break;
 		}
 	}
-		
+
+	/// <summary>
+	/// Updates the gravity.
+	/// </summary>
+	/// <param name="dt">Dt.</param>
+	void UpdateGravity(float dt){
+		if (canControl){
+			//enable gravity if no raycasts return true from the three downward rays
+			//RaycastHit2D rayHitInfoLBottom; RaycastHit2D rayHitInfoCBottom; RaycastHit2D rayHitInfoRBottom;
+			rayHitInfoLBottom = Physics2D.Raycast(leftRayBottom.origin, leftRayBottom.direction,rayLengthBottom);
+			rayHitInfoCBottom = Physics2D.Raycast(centerRayBottom.origin,centerRayBottom.direction,rayLengthBottom);
+			rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
+			if (!rayHitInfoLBottom && !rayHitInfoCBottom && !rayHitInfoRBottom ){
+				tempVelVert = velocity.y - gravityAcceleration * dt;
+				velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
+				isGrounded = false;
+				//otherwise deal with collisions from the top if the object is not ignoring them
+			} else if (rayHitInfoLBottom || rayHitInfoCBottom|| rayHitInfoRBottom){
+				bool collidableDown = true;
+				bool collidableUp = true;
+				bool aboveCollider = true;
+				if (rayHitInfoLBottom){ rayHitInfoBottom = rayHitInfoLBottom;}
+				else if (rayHitInfoCBottom){ rayHitInfoBottom = rayHitInfoCBottom;}
+				else if (rayHitInfoRBottom){ rayHitInfoBottom = rayHitInfoRBottom;}
+				/*if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
+						collidableDown = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreUp();
+						collidableUp = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreDown();
+						//have to check that the object is below bleak, or it will catch the raycasts which start from the center y line of bleak's collider
+						aboveCollider = (rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2 + rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().center.y) <= (transform.position.y - boxCollider.size.y/2 + boxCollider.center.y);
+						Debug.Log ("above collider: "+aboveCollider+" object: "+(rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2-5)+" player: "+(transform.position.y - boxCollider.size.y/2));
+						//Debug.Log("object collider y/2: "+(rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2)+" player collider y/2: "+(boxCollider.size.y/2));
+					}*/
+				Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+				Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+				Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+				//falling
+				if (/*collidableDown && aboveCollider && */velocity.y <= 0){
+					HandleBottomCollision(rayHitInfoBottom,dt);	
+				} else {
+					tempVelVert = velocity.y - gravityAcceleration * dt;
+					velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
+				}
+			}
+		} else {
+			//accel y is 0, so velocity.y shouldn't change. walking up stairs and such
+			//DEPRECATED canControl? using FORCE_MOVE and death states should replace this i think?
+		}
+	}
+
 
 	/// <summary>
 	/// Updates the idle animations.
@@ -308,11 +328,17 @@ public class BleakController : MonoBehaviour {
 	private Pushable attachedPushObj;
 	private float pushLag = .4f;
 	void UpdatePushing(float dt, bool direction){
+		bool stillTouching = false;
+
 		if (direction == LEFT){
-			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
+			RaycastHit2D rayHitInfoTLeft = Physics2D.Raycast(topRayLeft.origin,topRayLeft.direction,rayLengthSide+.5f);
+			RaycastHit2D rayHitInfoCLeft = Physics2D.Raycast(centerRayLeft.origin,centerRayLeft.direction,rayLengthSide+.5f);
+			RaycastHit2D rayHitInfoBLeft = Physics2D.Raycast(bottomRayLeft.origin,bottomRayLeft.direction,rayLengthSide+.5f);
+			if (rayHitInfoTLeft || rayHitInfoCLeft || rayHitInfoBLeft) stillTouching = true;
+			if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && stillTouching){
 				if (pushLag <= 0f){
 					if (!attachedPushObj.isLocked){
-						Vector2 newVel = new Vector2(-pushSpeed,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+						Vector2 newVel = new Vector2(-pushSpeed-1f,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
 						attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity = newVel;
 						velocity.x = -pushSpeed;
 					}
@@ -323,12 +349,17 @@ public class BleakController : MonoBehaviour {
 				attachedPushObj = null;
 				pushLag = .4f;
 				SetState(STATE_NORMAL);
+				skelAnim.state.SetAnimation(0,"idle",true);
 			}
 		} else if (direction == RIGHT){
-			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
+			RaycastHit2D rayHitInfoTRight = Physics2D.Raycast(topRayRight.origin,topRayRight.direction,rayLengthSide+.5f);
+			RaycastHit2D rayHitInfoCRight = Physics2D.Raycast(centerRayRight.origin,centerRayRight.direction,rayLengthSide+.5f);
+			RaycastHit2D rayHitInfoBRight = Physics2D.Raycast(bottomRayRight.origin,bottomRayRight.direction,rayLengthSide+.5f);
+			if (rayHitInfoTRight || rayHitInfoCRight || rayHitInfoBRight) stillTouching = true;
+			if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && stillTouching){
 				if (pushLag <= 0f){
 					if (!attachedPushObj.isLocked){
-						Vector2 newVel = new Vector2(pushSpeed,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+						Vector2 newVel = new Vector2(pushSpeed+1f,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
 						attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity = newVel;
 						velocity.x = pushSpeed;
 					}
@@ -339,6 +370,7 @@ public class BleakController : MonoBehaviour {
 				attachedPushObj = null;
 				pushLag = .4f;
 				SetState(STATE_NORMAL);
+				skelAnim.state.SetAnimation(0,"idle",true);
 			}
 		}
 	}
