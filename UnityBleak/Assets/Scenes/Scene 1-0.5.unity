@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda80dea5ef927041bab95c3d2d7b0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5.5
+  walkSpeed: 3
   skelAnimObj: {fileID: 1205936024}
   changeSpeed: .0199999996
   lagSpeed: .699999988
