@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: ThreeBleak Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 8c35e7d968935524a87f55fad4c611fa, type: 3}
+  atlasFile: {fileID: 4900000, guid: d8c905161e0ae934e910e8705403287a, type: 3}
   materials:
   - {fileID: 2100000, guid: 0bb9fc084fddf3447a768f57e9038399, type: 2}
   - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}

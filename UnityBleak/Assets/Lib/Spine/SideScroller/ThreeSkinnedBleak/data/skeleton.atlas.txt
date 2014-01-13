@@ -176,14 +176,14 @@ damaged00/legs/legUpperR
   orig: 284, 291
   offset: 11, 15
   index: -1
-damaged02/legs/legUpperR
+damaged01/legs/legUpperR
   rotate: false
   xy: 288, 739
   size: 261, 276
   orig: 284, 291
   offset: 11, 15
   index: -1
-damaged01/legs/legUpperR
+damaged02/legs/legUpperR
   rotate: false
   xy: 288, 739
   size: 261, 276
