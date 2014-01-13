@@ -11,6 +11,7 @@ public class BleakController : MonoBehaviour {
 	public float joggingMultiplier;
 	public float jumpSpeed;
 	public float maxFallSpeed;
+	public float pushSpeed;
 	public float gravityAcceleration;
 	public float slamMultiplayer;
 	public bool canControl = true;
@@ -39,6 +40,7 @@ public class BleakController : MonoBehaviour {
 	private Vector2 moveDelta = new Vector2 (0,0);
 	private bool facing = true;
 	private bool isGrounded;
+	private bool isPushing = false;
 	private Climbable attachedClimbObject;
 	private KeyCode actionButton = KeyCode.E;
 	private SkeletonAnimation skelAnim;
@@ -59,6 +61,8 @@ public class BleakController : MonoBehaviour {
 	public const short STATE_HURTING = 5;
 	public const short STATE_HURT = 6;
 	public const short STATE_FORCE_MOVE = 7;	public Transform forceMoveDestination;	public float forceMoveSpeed;
+	public const short STATE_PUSH_LEFT = 8;
+	public const short STATE_PUSH_RIGHT = 9;
 	
 	
 	//=========== rays ===========
@@ -216,6 +220,16 @@ public class BleakController : MonoBehaviour {
 				SetState(STATE_NORMAL);
 			}
 			break;
+		case STATE_PUSH_LEFT:
+			UpdatePushing(dt,LEFT);
+			UpdatePositionChangeNormal(dt);
+			UpdateRotationNormal(dt);
+			break;
+		case STATE_PUSH_RIGHT:
+			UpdatePushing(dt,RIGHT);
+			UpdatePositionChangeNormal(dt);
+			UpdateRotationNormal(dt);
+			break;
 		}
 		if (Debug.isDebugBuild)
 			UpdateDebug(dt);
@@ -288,6 +302,44 @@ public class BleakController : MonoBehaviour {
 			rigidBody.velocity = velocity;
 		} else {
 			Messenger.Broadcast<Transform,BleakController>("CompletedForceMove",forceMoveDestination,this);
+		}
+	}
+
+	private Pushable attachedPushObj;
+	private float pushLag = .4f;
+	void UpdatePushing(float dt, bool direction){
+		if (direction == LEFT){
+			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
+				if (pushLag <= 0f){
+					if (!attachedPushObj.isLocked){
+						Vector2 newVel = new Vector2(-pushSpeed,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+						attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity = newVel;
+						velocity.x = -pushSpeed;
+					}
+				} else {
+					pushLag -= dt;
+				}
+			} else {
+				attachedPushObj = null;
+				pushLag = .4f;
+				SetState(STATE_NORMAL);
+			}
+		} else if (direction == RIGHT){
+			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
+				if (pushLag <= 0f){
+					if (!attachedPushObj.isLocked){
+						Vector2 newVel = new Vector2(pushSpeed,attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+						attachedPushObj.gameObject.GetComponent<Rigidbody2D>().velocity = newVel;
+						velocity.x = pushSpeed;
+					}
+				} else {
+					pushLag -= dt;
+				}
+			} else {
+				attachedPushObj = null;
+				pushLag = .4f;
+				SetState(STATE_NORMAL);
+			}
 		}
 	}
 	
@@ -683,6 +735,11 @@ public class BleakController : MonoBehaviour {
 			SetState (STATE_CLIMBING_RIGHT);
 			attachedClimbObject = climbable;
 		}
+		Pushable pushable = hitInfo.transform.gameObject.GetComponent<Pushable>();
+		if (pushable){
+			SetState(STATE_PUSH_RIGHT);
+			attachedPushObj = pushable;
+		}
 	}
 	
 	void HandleLeftCollision(RaycastHit2D hitInfo, float dt){
@@ -695,6 +752,11 @@ public class BleakController : MonoBehaviour {
 		if (climbable){
 			SetState (STATE_CLIMBING_LEFT);
 			attachedClimbObject = climbable;
+		}
+		Pushable pushable = hitInfo.transform.gameObject.GetComponent<Pushable>();
+		if (pushable){
+			SetState(STATE_PUSH_LEFT);
+			attachedPushObj = pushable;
 		}
 	}
 	
