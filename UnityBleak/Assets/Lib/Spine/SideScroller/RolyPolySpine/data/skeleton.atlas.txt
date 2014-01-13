@@ -1,0 +1,148 @@
+
+skeleton.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+center
+  rotate: false
+  xy: 281, 490
+  size: 401, 347
+  orig: 401, 347
+  offset: 0, 0
+  index: -1
+glob01
+  rotate: true
+  xy: 2, 719
+  size: 205, 277
+  orig: 205, 277
+  offset: 0, 0
+  index: -1
+glob02
+  rotate: true
+  xy: 589, 839
+  size: 136, 224
+  orig: 136, 224
+  offset: 0, 0
+  index: -1
+glob03
+  rotate: true
+  xy: 25, 942
+  size: 33, 37
+  orig: 33, 37
+  offset: 0, 0
+  index: -1
+glob04
+  rotate: false
+  xy: 146, 926
+  size: 73, 49
+  orig: 73, 49
+  offset: 0, 0
+  index: -1
+glob05
+  rotate: true
+  xy: 64, 941
+  size: 34, 38
+  orig: 34, 38
+  offset: 0, 0
+  index: -1
+glob06
+  rotate: false
+  xy: 104, 938
+  size: 40, 37
+  orig: 40, 37
+  offset: 0, 0
+  index: -1
+glob07
+  rotate: false
+  xy: 221, 926
+  size: 78, 49
+  orig: 78, 49
+  offset: 0, 0
+  index: -1
+glob08
+  rotate: false
+  xy: 301, 918
+  size: 100, 57
+  orig: 100, 57
+  offset: 0, 0
+  index: -1
+glob09
+  rotate: false
+  xy: 403, 911
+  size: 74, 64
+  orig: 74, 64
+  offset: 0, 0
+  index: -1
+glob10
+  rotate: false
+  xy: 2, 954
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+nodes
+  rotate: true
+  xy: 504, 2
+  size: 486, 500
+  orig: 500, 500
+  offset: 7, 0
+  index: -1
+pupil
+  rotate: false
+  xy: 479, 869
+  size: 108, 106
+  orig: 108, 106
+  offset: 0, 0
+  index: -1
+slime
+  rotate: true
+  xy: 2, 10
+  size: 478, 500
+  orig: 500, 500
+  offset: 11, 0
+  index: -1
+
+skeleton2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 504, 2
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+gel
+  rotate: true
+  xy: 504, 504
+  size: 495, 498
+  orig: 500, 500
+  offset: 3, 1
+  index: -1
+legs
+  rotate: true
+  xy: 2, 505
+  size: 494, 500
+  orig: 500, 500
+  offset: 3, 0
+  index: -1
+midsection
+  rotate: true
+  xy: 2, 7
+  size: 496, 500
+  orig: 500, 500
+  offset: 2, 0
+  index: -1
+
+skeleton3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+nucleus
+  rotate: false
+  xy: 2, 2
+  size: 634, 670
+  orig: 634, 670
+  offset: 0, 0
+  index: -1
