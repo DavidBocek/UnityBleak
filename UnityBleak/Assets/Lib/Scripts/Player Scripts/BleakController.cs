@@ -185,7 +185,6 @@ public class BleakController : MonoBehaviour {
 		case STATE_PUSH_LEFT:
 			if (skelAnim.state.ToString() != "push")
 				skelAnim.state.SetAnimation(0,"push",true);
-			Debug.Log(skelAnim.state.ToString());
 			UpdateRays(dt);
 			UpdatePushing(dt,LEFT);
 			UpdateGravity(dt);
@@ -195,7 +194,6 @@ public class BleakController : MonoBehaviour {
 		case STATE_PUSH_RIGHT:
 			if (skelAnim.state.ToString() != "push")
 				skelAnim.state.SetAnimation(0,"push",true);
-			Debug.Log(skelAnim.state.ToString());
 			UpdateRays(dt);
 			UpdatePushing(dt,RIGHT);
 			UpdateGravity(dt);
