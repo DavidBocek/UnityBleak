@@ -4069,7 +4069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1ba41f5fbb8e44f8a3587ad7712824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollAmountX: -.200000003
+  scrollAmountX: -.119999997
   scrollAmountY: 0
 --- !u!212 &1532837831
 SpriteRenderer:
