@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Pickup : MonoBehaviour {
-
-	public short type;
+	
+	public int type;
 
 	public void Grab(GameObject obj){
 		gameObject.SetActive(false);

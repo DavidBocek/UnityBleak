@@ -25,6 +25,9 @@ public class PickupCounter : MonoBehaviour {
 			count = LevelLoaderUtil.screwCount;
 		if (isGear)
 			count = LevelLoaderUtil.gearCount;*/
+	}
+
+	void Start(){
 		UpdateAnimators();
 	}
 	
@@ -60,9 +63,11 @@ public class PickupCounter : MonoBehaviour {
 	/// Updates the animators for the counter to display the correct number on the UI.
 	/// </summary>
 	void UpdateAnimators(){
-		string s_count = count.ToString();
-		onesCounter.ChangeCounterToValue(System.Convert.ToInt32(s_count[2]));
-		tensCounter.ChangeCounterToValue(System.Convert.ToInt32(s_count[1]));
-		hundredsCounter.ChangeCounterToValue(System.Convert.ToInt32(s_count[0]));
+		int countCopy = count;
+		onesCounter.ChangeCounterToValue(countCopy % 10);
+		countCopy /= 10;
+		tensCounter.ChangeCounterToValue(countCopy % 10);
+		countCopy /= 10;
+		hundredsCounter.ChangeCounterToValue(countCopy % 10);
 	}
 }

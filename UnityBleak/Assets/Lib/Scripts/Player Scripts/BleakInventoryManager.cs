@@ -18,7 +18,7 @@ public class BleakInventoryManager : MonoBehaviour {
 		
 	}
 
-	public void GetPickup(short type){
+	public void GetPickup(int type){
 		switch (type){
 		case 0:
 			scrapCounter.GetComponent<PickupCounter>().Add(1);
