@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PickupCounterAnimator : MonoBehaviour {
 
-	private int curValue;
+	private int curValue = 0;
+	private bool playingAnimation = false;
 	private tk2dSpriteAnimator sprite;
 
 	// Use this for initialization
@@ -12,17 +13,18 @@ public class PickupCounterAnimator : MonoBehaviour {
 	}
 	
 	public void ChangeCounterToValue(int newValue){
-		//set up the transition array which we will iterate through to get the counter to animate through numbers to the correct number
-		int[] transitions;
-		transitions = new int[Mathf.Abs(newValue-curValue)];
-		for (int i=0; i<Mathf.Abs(newValue-curValue); i++){
-			transitions[i] = curValue+i+1;
-		}
-
-		//now we iterate through the transitions
-		foreach (int i in transitions){
-			StartCoroutine(PlayAnimation(curValue,i));
-			curValue = i;
+		if (newValue != curValue){
+			//set up the transition array which we will iterate through to get the counter to animate through numbers to the correct number
+			int[] transitions;
+			transitions = new int[Mathf.Abs(newValue-curValue)];
+			for (int i=0; i<Mathf.Abs(newValue-curValue); i++){
+				transitions[i] = curValue+i+1;
+			}
+			foreach (int i in transitions){
+				Debug.Log ("playing animation");
+				StartCoroutine(PlayAnimation(curValue,i));
+				curValue = i;
+			}
 		}
 	}
 
