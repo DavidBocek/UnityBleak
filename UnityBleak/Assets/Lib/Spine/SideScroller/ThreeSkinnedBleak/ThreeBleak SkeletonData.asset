@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: ThreeBleak SkeletonData
   m_EditorClassIdentifier: 
   atlasAsset: {fileID: 11400000, guid: d2d66cec7b0b4444ba45a498cd8cd2f2, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: bbfe68d903a332045ab69e846ff7235b, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 023bbf8e9ab8f1c49854ebd1bc7d5801, type: 3}
   scale: .00159999996
   fromAnimation:
   - run
@@ -35,6 +35,8 @@ MonoBehaviour:
   - run
   - run-injured
   - sprint
+  - jump
+  - falling
   toAnimation:
   - jump
   - run
@@ -56,6 +58,8 @@ MonoBehaviour:
   - push
   - push
   - push
+  - falling
+  - idle
   duration:
   - .300000012
   - .400000006
@@ -77,3 +81,5 @@ MonoBehaviour:
   - .100000001
   - .100000001
   - .100000001
+  - .300000012
+  - .300000012
