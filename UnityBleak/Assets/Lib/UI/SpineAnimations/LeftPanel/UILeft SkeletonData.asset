@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Name: UILeft SkeletonData
   m_EditorClassIdentifier: 
   atlasAsset: {fileID: 11400000, guid: a5fead868fc3caa4c8ed9f7153225348, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: 33693ea5abad09248aa2db64c78c9daf, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: ddaf13f5d689ce848a6d20d07b30d276, type: 3}
   scale: .0209999997
-  fromAnimation:
-  - openLeftPanel
-  toAnimation:
-  - openLeftPanel
-  duration:
-  - 0
+  fromAnimation: []
+  toAnimation: []
+  duration: []

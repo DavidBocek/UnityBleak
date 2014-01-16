@@ -5,42 +5,42 @@ filter: Linear,Linear
 repeat: none
 01
   rotate: false
-  xy: 807, 358
+  xy: 807, 218
   size: 96, 148
   orig: 96, 148
   offset: 0, 0
   index: -1
 02
   rotate: true
-  xy: 807, 260
+  xy: 299, 2
   size: 96, 147
   orig: 96, 148
   offset: 0, 0
   index: -1
 03
   rotate: true
-  xy: 807, 162
+  xy: 448, 2
   size: 96, 147
   orig: 96, 148
   offset: 0, 0
   index: -1
 04
   rotate: false
-  xy: 905, 358
+  xy: 905, 218
   size: 96, 148
   orig: 96, 148
   offset: 0, 0
   index: -1
 05
   rotate: true
-  xy: 299, 2
+  xy: 597, 2
   size: 96, 146
   orig: 96, 148
   offset: 0, 1
   index: -1
 06
-  rotate: false
-  xy: 447, 20
+  rotate: true
+  xy: 777, 102
   size: 108, 78
   orig: 108, 78
   offset: 0, 0
@@ -60,11 +60,25 @@ arm1up
   offset: 0, 0
   index: -1
 arm2
-  rotate: false
-  xy: 956, 272
+  rotate: true
+  xy: 2, 40
   size: 26, 84
   orig: 26, 84
   offset: 0, 0
+  index: -1
+extension01
+  rotate: false
+  xy: 807, 368
+  size: 159, 138
+  orig: 167, 138
+  offset: 0, 0
+  index: -1
+extension02
+  rotate: true
+  xy: 968, 437
+  size: 69, 48
+  orig: 96, 58
+  offset: 15, 5
   index: -1
 frame
   rotate: false
