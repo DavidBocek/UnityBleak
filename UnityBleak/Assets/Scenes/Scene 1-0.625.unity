@@ -2188,6 +2188,14 @@ Prefab:
       propertyPath: dampTime
       value: .150000006
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: orthographic size
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: zoomFactor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
   m_RootGameObject: {fileID: 43919214}

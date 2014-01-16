@@ -36,7 +36,6 @@ MonoBehaviour:
   - run-injured
   - sprint
   - jump
-  - falling
   toAnimation:
   - jump
   - run
@@ -59,7 +58,6 @@ MonoBehaviour:
   - push
   - push
   - falling
-  - idle
   duration:
   - .300000012
   - .400000006
@@ -81,5 +79,4 @@ MonoBehaviour:
   - .100000001
   - .100000001
   - .100000001
-  - .300000012
   - .300000012
