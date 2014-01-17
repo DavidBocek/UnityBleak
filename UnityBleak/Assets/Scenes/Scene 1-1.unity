@@ -7866,7 +7866,7 @@ MonoBehaviour:
   calculateNormals: 0
   calculateTangents: 0
   loop: 1
-  _animationName: openLeftPanel
+  _animationName: 
 --- !u!23 &954099669
 Renderer:
   m_ObjectHideFlags: 0

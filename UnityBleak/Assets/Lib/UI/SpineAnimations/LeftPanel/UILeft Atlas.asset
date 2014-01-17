@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: UILeft Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 76e779d4e7a574b47bee6ea12270353f, type: 3}
+  atlasFile: {fileID: 4900000, guid: 2f4b6510f5ab53944bc744eed2560585, type: 3}
   materials:
   - {fileID: 2100000, guid: 5ad932aa76fa2a248b6e51fec6f1ff38, type: 2}

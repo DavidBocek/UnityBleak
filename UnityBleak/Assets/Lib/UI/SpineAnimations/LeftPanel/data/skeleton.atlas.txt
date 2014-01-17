@@ -5,85 +5,134 @@ filter: Linear,Linear
 repeat: none
 01
   rotate: false
-  xy: 807, 218
+  xy: 441, 322
   size: 96, 148
   orig: 96, 148
   offset: 0, 0
   index: -1
 02
   rotate: true
-  xy: 299, 2
+  xy: 236, 234
   size: 96, 147
   orig: 96, 148
   offset: 0, 0
   index: -1
 03
   rotate: true
-  xy: 448, 2
+  xy: 34, 2
   size: 96, 147
   orig: 96, 148
   offset: 0, 0
   index: -1
 04
-  rotate: false
-  xy: 905, 218
+  rotate: true
+  xy: 539, 370
   size: 96, 148
   orig: 96, 148
   offset: 0, 0
   index: -1
 05
   rotate: true
-  xy: 597, 2
+  xy: 539, 272
   size: 96, 146
   orig: 96, 148
   offset: 0, 1
   index: -1
 06
-  rotate: true
-  xy: 777, 102
+  rotate: false
+  xy: 885, 422
   size: 108, 78
   orig: 108, 78
   offset: 0, 0
   index: -1
+R
+  rotate: true
+  xy: 885, 391
+  size: 29, 119
+  orig: 29, 119
+  offset: 0, 0
+  index: -1
 arm1
-  rotate: false
-  xy: 2, 68
+  rotate: true
+  xy: 2, 52
   size: 295, 30
   orig: 295, 30
   offset: 0, 0
   index: -1
 arm1up
-  rotate: true
-  xy: 777, 212
+  rotate: false
+  xy: 280, 472
   size: 294, 28
   orig: 294, 28
   offset: 0, 0
   index: -1
 arm2
-  rotate: true
-  xy: 2, 40
+  rotate: false
+  xy: 183, 14
   size: 26, 84
   orig: 26, 84
   offset: 0, 0
   index: -1
+bottomL
+  rotate: false
+  xy: 34, 232
+  size: 200, 115
+  orig: 200, 115
+  offset: 0, 0
+  index: -1
+bottomM
+  rotate: false
+  xy: 576, 468
+  size: 206, 32
+  orig: 206, 32
+  offset: 0, 0
+  index: -1
+bottomR
+  rotate: false
+  xy: 689, 354
+  size: 100, 112
+  orig: 100, 112
+  offset: 0, 0
+  index: -1
 extension01
   rotate: false
-  xy: 807, 368
+  xy: 280, 332
   size: 159, 138
   orig: 167, 138
   offset: 0, 0
   index: -1
 extension02
-  rotate: true
-  xy: 968, 437
+  rotate: false
+  xy: 687, 304
   size: 69, 48
   orig: 96, 58
   offset: 15, 5
   index: -1
-frame
+extension03
   rotate: false
-  xy: 2, 100
-  size: 773, 406
-  orig: 773, 406
+  xy: 791, 360
+  size: 92, 140
+  orig: 92, 151
+  offset: 0, 6
+  index: -1
+topL
+  rotate: false
+  xy: 2, 349
+  size: 276, 151
+  orig: 276, 151
   offset: 0, 0
+  index: -1
+topM
+  rotate: true
+  xy: 385, 234
+  size: 96, 32
+  orig: 96, 32
+  offset: 0, 0
+  index: -1
+topR
+  rotate: false
+  xy: 34, 100
+  size: 185, 130
+  orig: 189, 139
+  offset: 4, 6
   index: -1
