@@ -141,19 +141,30 @@ public class BleakController : MonoBehaviour {
 			break;
 		case STATE_CLIMBING_LEFT:
 			UpdateRays (dt);
-			if (Input.GetKey (KeyCode.W)){
+			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A)){
+				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S)){
+			} else if (Input.GetKey(KeyCode.S) || Input.GetKey (KeyCode.D)){
+				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
 				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+			} else {
+				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+				velocity.y = 0;
 			}
 			UpdatePositionChangeClimbing(dt);
 			break;
 		case STATE_CLIMBING_RIGHT:
 			UpdateRays (dt);
-			if (Input.GetKey (KeyCode.W)){
+
+			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D)){
+				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S)){
+			} else if (Input.GetKey(KeyCode.S) || Input.GetKey (KeyCode.A)){
+				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
 				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+			} else {
+				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+				velocity.y = 0;
 			}
 			UpdatePositionChangeClimbing(dt);
 			break;
@@ -634,10 +645,15 @@ public class BleakController : MonoBehaviour {
 		else if (hitBRight){interpolateInfoR = hitBRight;}
 
 		if (hitTRight || hitCRight || hitBRight){
-			if (interpolateInfoR.transform.gameObject.GetComponent<KillZones>().HasKillLeft ())
-				Damage();
-			else if (interpolateInfoR.transform.gameObject.GetComponent<Climbable>() == null)
+			KillZones killZone = interpolateInfoR.transform.gameObject.GetComponent<KillZones>();
+			if (killZone){
+				if (killZone.HasKillLeft()){
+					Damage();
+				}
+			}
+			else if (!interpolateInfoR.transform.gameObject.GetComponent<Climbable>()){
 				SetState(STATE_NORMAL);
+			}
 		}
 
 
@@ -652,15 +668,21 @@ public class BleakController : MonoBehaviour {
 		else if (hitBLeft){interpolateInfoL = hitBLeft;}
 
 		if (hitTLeft || hitCLeft || hitBLeft){
-			if (interpolateInfoL.transform.gameObject.GetComponent<KillZones>().HasKillRight ())
-				Damage();
-			else if (interpolateInfoL.transform.gameObject.GetComponent<Climbable>() == null)
+			KillZones killZone = interpolateInfoL.transform.gameObject.GetComponent<KillZones>();
+			if (killZone){
+				if (killZone.HasKillLeft()){
+					Damage();
+				}
+			}
+			else if (!interpolateInfoL.transform.gameObject.GetComponent<Climbable>()){
 				SetState(STATE_NORMAL);
+			}
 		}
 
 		if (!hitTLeft && !hitCLeft && !hitBLeft && !hitTRight && !hitCRight && !hitBRight) {
-			velocity.x *= 2;
-			velocity.y += 5f;
+			//velocity.x *= 2;
+			velocity.y += 3f;
+			isGrounded = true;
 			SetState(STATE_NORMAL);
 		}
 		
