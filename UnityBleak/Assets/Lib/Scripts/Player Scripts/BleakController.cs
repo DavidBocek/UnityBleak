@@ -144,9 +144,18 @@ public class BleakController : MonoBehaviour {
 			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A)){
 				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S) || Input.GetKey (KeyCode.D)){
+			} else if (Input.GetKey(KeyCode.S)){
 				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
 				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+			} /*else if (Input.GetKey(KeyCode.D)){
+				SetState(STATE_NORMAL);
+				velocity.x = 0;
+			}*/ else if (Input.GetKey (KeyCode.Space)){
+				SetState(STATE_NORMAL);
+				jumping = -1;
+				velocity.x = runSpeed*joggingMultiplier*.35f;
+				velocity.y = jumpSpeed * .35f;
+				skelAnim.state.SetAnimation(0,"jump",false);
 			} else {
 				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
 				velocity.y = 0;
@@ -155,13 +164,21 @@ public class BleakController : MonoBehaviour {
 			break;
 		case STATE_CLIMBING_RIGHT:
 			UpdateRays (dt);
-
 			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D)){
 				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S) || Input.GetKey (KeyCode.A)){
+			} else if (Input.GetKey(KeyCode.S)){
 				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
 				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+			} /*else if (Input.GetKey(KeyCode.A)){
+				SetState(STATE_NORMAL);
+				velocity.x = 0;
+			}*/ else if (Input.GetKey (KeyCode.Space)){
+				SetState(STATE_NORMAL);
+				jumping = -1;
+				velocity.x = -runSpeed*joggingMultiplier*.35f;
+				velocity.y = jumpSpeed * .35f;
+				skelAnim.state.SetAnimation(0,"jump",false);
 			} else {
 				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
 				velocity.y = 0;
@@ -680,7 +697,6 @@ public class BleakController : MonoBehaviour {
 		}
 
 		if (!hitTLeft && !hitCLeft && !hitBLeft && !hitTRight && !hitCRight && !hitBRight) {
-			//velocity.x *= 2;
 			velocity.y += 3f;
 			isGrounded = true;
 			SetState(STATE_NORMAL);
