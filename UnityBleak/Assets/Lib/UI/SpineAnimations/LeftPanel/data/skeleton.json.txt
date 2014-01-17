@@ -567,7 +567,7 @@
 			}
 		}
 	},
-	"openLeftPanel2": {
+	"openLeftPanel": {
 		"bones": {
 			"arm1": {
 				"translate": [
