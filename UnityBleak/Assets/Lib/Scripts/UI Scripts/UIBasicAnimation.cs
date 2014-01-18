@@ -8,6 +8,7 @@ public class UIBasicAnimation : MonoBehaviour {
 	public bool x;
 	public bool y;
 
+	SkeletonAnimation skeletonAnimation;
 	private bool isOpening = false;
 	private bool isClosing = false;
 	private BleakUIElement p_uiElement;
@@ -18,6 +19,8 @@ public class UIBasicAnimation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		p_uiElement = GetComponent<BleakUIElement>();
+		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
+		skeletonAnimation.state.SetAnimation(0,"animation",true);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +31,7 @@ public class UIBasicAnimation : MonoBehaviour {
 					isOpening = false;
 					p_uiElement.FinishWorking();
 					movedAmount = 0f;
+					skeletonAnimation.state.SetAnimation(0,"openLeftPanel",false);
 				} else {
 					transform.position= transform.position + new Vector3(offset*speed*Time.smoothDeltaTime,0f,0f);
 					movedAmount += offset*speed*Time.smoothDeltaTime;
@@ -74,6 +78,7 @@ public class UIBasicAnimation : MonoBehaviour {
 	}
 	public void Hide(){
 		if (!isClosing){ isClosing = true; isOpening = false;}
+		skeletonAnimation.state.SetAnimation(0,"closeLeftPanel",false);
 		p_uiElement.StartWorking();
 	}
 }

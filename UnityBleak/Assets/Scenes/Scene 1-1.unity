@@ -2490,6 +2490,14 @@ Prefab:
       propertyPath: forceResolution.y
       value: 768
       objectReference: {fileID: 0}
+    - target: {fileID: 11400018, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400056, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
@@ -7904,7 +7912,7 @@ Transform:
   m_PrefabInternal: {fileID: 298139219}
   m_GameObject: {fileID: 954099667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75973892, y: -2.55679226, z: 9}
+  m_LocalPosition: {x: -5.75973892, y: -2.55679226, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1163730486}
@@ -9189,7 +9197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 16.5
-  speed: 1
+  speed: 2
   x: 1
   y: 0
 --- !u!1 &1206081439
