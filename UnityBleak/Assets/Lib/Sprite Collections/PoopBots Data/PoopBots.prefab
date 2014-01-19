@@ -74,7 +74,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -115,7 +115,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -156,7 +156,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -197,7 +197,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -238,7 +238,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -279,7 +279,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -320,7 +320,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -402,7 +402,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -443,7 +443,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -484,7 +484,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -525,7 +525,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -607,7 +607,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -648,7 +648,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -689,7 +689,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -730,7 +730,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -771,7 +771,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -812,7 +812,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -853,7 +853,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -894,7 +894,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -935,7 +935,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -976,7 +976,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1017,7 +1017,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1058,7 +1058,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1099,7 +1099,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1181,7 +1181,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1222,7 +1222,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1263,7 +1263,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1304,7 +1304,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1345,7 +1345,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1386,7 +1386,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1427,7 +1427,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1468,7 +1468,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1509,7 +1509,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1550,7 +1550,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1591,7 +1591,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1632,7 +1632,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1673,7 +1673,7 @@ MonoBehaviour:
     flipped: 1
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1714,7 +1714,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1755,7 +1755,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1796,7 +1796,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1837,7 +1837,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1878,7 +1878,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1919,7 +1919,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -1960,7 +1960,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -2001,7 +2001,7 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 0
-    colliderType: 0
+    colliderType: 1
     colliderVertices: []
     colliderIndicesFwd: 
     colliderIndicesBack: 
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 22
-  buildKey: 1688154248
+  buildKey: 1647705616
   dataGuid: a4b795b209b268a4fbfa2beb3a55ae0e
   managedSpriteCollection: 0
   hasPlatformData: 0

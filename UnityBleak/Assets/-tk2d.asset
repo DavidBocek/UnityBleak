@@ -3130,11 +3130,23 @@ MonoBehaviour:
     spriteCollectionGUID: 9d0f532d28673f84eb00bf4ac9a9893f
     spriteCollectionDataGUID: ea483f5d22983054283566c7658bbe31
     spriteNames:
-    - GearPickup
+    - 
+    - 
+    - GearPickupSMALL
+    - scrapmetalSMALL
+    - screwSMALL
     spriteTextureGUIDs:
-    - bf6d70e3a6ab2f041a9c151f12c20dfb
+    - 
+    - 
+    - 0e530e9f7995ead4685d76b3fd2566e4
+    - d758baf7e6730c047961cd355a9d3a84
+    - fbd5f8756a2b9c64da73c8694d673aff
     spriteTextureTimeStamps:
-    - 1390070840
+    - 0
+    - 0
+    - 1390076559
+    - 1390076498
+    - 1390076546
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
