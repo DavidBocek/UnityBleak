@@ -20,7 +20,6 @@ public class UIBasicAnimation : MonoBehaviour {
 	void Start () {
 		p_uiElement = GetComponent<BleakUIElement>();
 		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
-		skeletonAnimation.state.SetAnimation(0,"animation",true);
 	}
 	
 	// Update is called once per frame

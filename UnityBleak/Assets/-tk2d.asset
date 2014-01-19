@@ -3126,3 +3126,16 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: PickupPics
+    spriteCollectionGUID: 9d0f532d28673f84eb00bf4ac9a9893f
+    spriteCollectionDataGUID: ea483f5d22983054283566c7658bbe31
+    spriteNames:
+    - GearPickup
+    spriteTextureGUIDs:
+    - bf6d70e3a6ab2f041a9c151f12c20dfb
+    spriteTextureTimeStamps:
+    - 1390070840
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
