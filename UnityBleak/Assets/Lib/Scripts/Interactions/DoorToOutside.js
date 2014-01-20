@@ -15,6 +15,6 @@ function Update ()
 {
 	if(OnDoor == true)
 	{
-		Application.LoadLevel("Scene 1-0.5");
+		Application.LoadLevel("Scene 1-1");
 	}
 }

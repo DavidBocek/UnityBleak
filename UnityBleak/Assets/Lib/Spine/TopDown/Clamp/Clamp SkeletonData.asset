@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: Clamp SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAsset: {fileID: 11400000, guid: 3253e7a406ff377458e0098c48e859bc, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: aa94e1e12f344ee419dca6f069071f9e, type: 3}
+  scale: .00499999989
+  fromAnimation:
+  - idleDown
+  - idleLeft
+  - idleRight
+  - idleUp
+  - walkingDown
+  - walkingLeft
+  - walkingRight
+  - walkingUp
+  toAnimation:
+  - walkingDown
+  - walkingLeft
+  - idleRight
+  - walkingUp
+  - idleDown
+  - idleLeft
+  - idleRight
+  - idleUp
+  duration:
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012

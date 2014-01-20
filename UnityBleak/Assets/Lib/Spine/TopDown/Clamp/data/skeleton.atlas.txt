@@ -1,0 +1,271 @@
+
+skeleton.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp/back/armLowerL
+  rotate: true
+  xy: 904, 957
+  size: 60, 109
+  orig: 79, 137
+  offset: 15, 0
+  index: -1
+clamp/back/armLowerR
+  rotate: true
+  xy: 593, 661
+  size: 42, 109
+  orig: 68, 123
+  offset: 17, 14
+  index: -1
+clamp/back/armUpperL
+  rotate: false
+  xy: 840, 857
+  size: 55, 100
+  orig: 71, 126
+  offset: 10, 0
+  index: -1
+clamp/back/armUpperR
+  rotate: false
+  xy: 114, 36
+  size: 50, 98
+  orig: 91, 131
+  offset: 23, 0
+  index: -1
+clamp/back/footL
+  rotate: false
+  xy: 642, 497
+  size: 54, 43
+  orig: 66, 95
+  offset: 8, 11
+  index: -1
+clamp/back/footR
+  rotate: false
+  xy: 642, 542
+  size: 54, 50
+  orig: 57, 94
+  offset: 3, 22
+  index: -1
+clamp/back/handL
+  rotate: false
+  xy: 596, 399
+  size: 43, 83
+  orig: 85, 96
+  offset: 32, 12
+  index: -1
+clamp/back/handR
+  rotate: false
+  xy: 738, 748
+  size: 39, 55
+  orig: 75, 98
+  offset: 12, 18
+  index: -1
+clamp/back/head
+  rotate: false
+  xy: 302, 358
+  size: 254, 306
+  orig: 316, 306
+  offset: 27, 0
+  index: -1
+clamp/back/legL
+  rotate: true
+  xy: 734, 874
+  size: 83, 104
+  orig: 130, 138
+  offset: 6, 17
+  index: -1
+clamp/back/legR
+  rotate: true
+  xy: 472, 279
+  size: 77, 88
+  orig: 77, 125
+  offset: 0, 16
+  index: -1
+clamp/back/torso
+  rotate: false
+  xy: 143, 164
+  size: 155, 123
+  orig: 194, 187
+  offset: 22, 43
+  index: -1
+clamp/front/armLowerL
+  rotate: false
+  xy: 706, 789
+  size: 26, 75
+  orig: 92, 123
+  offset: 33, 24
+  index: -1
+clamp/front/armLowerR
+  rotate: true
+  xy: 244, 35
+  size: 42, 79
+  orig: 77, 114
+  offset: 34, 0
+  index: -1
+clamp/front/armUpperL
+  rotate: false
+  xy: 977, 874
+  size: 45, 81
+  orig: 73, 114
+  offset: 13, 0
+  index: -1
+clamp/front/armUpperR
+  rotate: true
+  xy: 166, 36
+  size: 43, 76
+  orig: 83, 118
+  offset: 40, 0
+  index: -1
+clamp/front/footL
+  rotate: false
+  xy: 639, 594
+  size: 63, 65
+  orig: 77, 83
+  offset: 7, 2
+  index: -1
+clamp/front/footR
+  rotate: true
+  xy: 830, 804
+  size: 51, 57
+  orig: 53, 98
+  offset: 2, 4
+  index: -1
+clamp/front/handL
+  rotate: false
+  xy: 706, 717
+  size: 30, 70
+  orig: 73, 99
+  offset: 30, 13
+  index: -1
+clamp/front/handR
+  rotate: false
+  xy: 558, 487
+  size: 44, 91
+  orig: 65, 100
+  offset: 14, 9
+  index: -1
+clamp/front/head
+  rotate: false
+  xy: 302, 666
+  size: 289, 351
+  orig: 302, 372
+  offset: 2, 21
+  index: -1
+clamp/front/legL
+  rotate: false
+  xy: 246, 79
+  size: 70, 83
+  orig: 81, 104
+  offset: 0, 11
+  index: -1
+clamp/front/legR
+  rotate: false
+  xy: 558, 580
+  size: 79, 79
+  orig: 110, 118
+  offset: 31, 18
+  index: -1
+clamp/front/torso
+  rotate: true
+  xy: 593, 705
+  size: 159, 111
+  orig: 197, 193
+  offset: 20, 9
+  index: -1
+clamp/sideL/arm
+  rotate: false
+  xy: 60, 10
+  size: 52, 124
+  orig: 84, 142
+  offset: 13, 7
+  index: -1
+clamp/sideL/arm2
+  rotate: true
+  xy: 302, 298
+  size: 58, 168
+  orig: 188, 251
+  offset: 65, 40
+  index: -1
+clamp/sideL/foot
+  rotate: true
+  xy: 558, 391
+  size: 94, 36
+  orig: 99, 71
+  offset: 2, 15
+  index: -1
+clamp/sideL/hand
+  rotate: false
+  xy: 734, 805
+  size: 46, 67
+  orig: 77, 93
+  offset: 17, 5
+  index: -1
+clamp/sideL/head
+  rotate: false
+  xy: 2, 654
+  size: 298, 363
+  orig: 334, 363
+  offset: 21, 0
+  index: -1
+clamp/sideL/leg
+  rotate: false
+  xy: 897, 874
+  size: 78, 81
+  orig: 97, 126
+  offset: 9, 24
+  index: -1
+clamp/sideL/torso
+  rotate: false
+  xy: 2, 136
+  size: 139, 151
+  orig: 160, 242
+  offset: 11, 31
+  index: -1
+clamp/sideR/arm
+  rotate: false
+  xy: 2, 2
+  size: 56, 132
+  orig: 84, 142
+  offset: 15, 0
+  index: -1
+clamp/sideR/arm2
+  rotate: true
+  xy: 734, 959
+  size: 58, 168
+  orig: 188, 251
+  offset: 65, 40
+  index: -1
+clamp/sideR/foot
+  rotate: true
+  xy: 604, 484
+  size: 94, 36
+  orig: 99, 71
+  offset: 2, 15
+  index: -1
+clamp/sideR/hand
+  rotate: false
+  xy: 782, 805
+  size: 46, 67
+  orig: 77, 93
+  offset: 20, 5
+  index: -1
+clamp/sideR/head
+  rotate: false
+  xy: 2, 289
+  size: 298, 363
+  orig: 334, 363
+  offset: 23, 0
+  index: -1
+clamp/sideR/leg
+  rotate: false
+  xy: 166, 81
+  size: 78, 81
+  orig: 97, 126
+  offset: 9, 24
+  index: -1
+clamp/sideR/torso
+  rotate: false
+  xy: 593, 866
+  size: 139, 151
+  orig: 160, 242
+  offset: 17, 31
+  index: -1
