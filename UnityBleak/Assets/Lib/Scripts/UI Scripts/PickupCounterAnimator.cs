@@ -16,14 +16,18 @@ public class PickupCounterAnimator : MonoBehaviour {
 		if (newValue != curValue){
 			//set up the transition array which we will iterate through to get the counter to animate through numbers to the correct number
 			int[] transitions;
-			transitions = new int[Mathf.Abs(newValue-curValue)];
-			for (int i=0; i<Mathf.Abs(newValue-curValue); i++){
-				transitions[i] = curValue+i+1;
-			}
-			foreach (int i in transitions){
-				Debug.Log ("playing animation");
-				StartCoroutine(PlayAnimation(curValue,i));
-				curValue = i;
+			if (newValue != 0 || curValue != 9){
+				transitions = new int[Mathf.Abs(newValue-curValue)];
+				for (int i=0; i<Mathf.Abs(newValue-curValue); i++){
+					transitions[i] = curValue+i+1;
+				}
+				foreach (int i in transitions){
+					StartCoroutine(PlayAnimation(curValue,i));
+					curValue = i;
+				}
+			} else {
+				StartCoroutine(PlayAnimation(9,0));
+				curValue = 0;          
 			}
 		}
 	}
