@@ -7,6 +7,8 @@ public class UIBasicAnimation : MonoBehaviour {
 	public float speed = 1f;
 	public bool x;
 	public bool y;
+	public string openAnimationName;
+	public string closeAnimationName;
 
 	SkeletonAnimation skeletonAnimation;
 	private bool isOpening = false;
@@ -30,7 +32,7 @@ public class UIBasicAnimation : MonoBehaviour {
 					isOpening = false;
 					p_uiElement.FinishWorking();
 					movedAmount = 0f;
-					skeletonAnimation.state.SetAnimation(0,"openLeftPanel",false);
+					skeletonAnimation.state.SetAnimation(0,openAnimationName,false);
 				} else {
 					transform.position= transform.position + new Vector3(offset*speed*Time.smoothDeltaTime,0f,0f);
 					movedAmount += offset*speed*Time.smoothDeltaTime;
@@ -53,6 +55,7 @@ public class UIBasicAnimation : MonoBehaviour {
 					isOpening = false;
 					p_uiElement.FinishWorking();
 					movedAmount = 0f;
+					skeletonAnimation.state.SetAnimation(0,openAnimationName,false);
 				} else {
 					transform.position = transform.position + new Vector3(0f,offset*speed*Time.smoothDeltaTime,0f);
 					movedAmount += offset*speed*Time.smoothDeltaTime;
@@ -77,7 +80,7 @@ public class UIBasicAnimation : MonoBehaviour {
 	}
 	public void Hide(){
 		if (!isClosing){ isClosing = true; isOpening = false;}
-		skeletonAnimation.state.SetAnimation(0,"closeLeftPanel",false);
+		skeletonAnimation.state.SetAnimation(0,closeAnimationName,false);
 		p_uiElement.StartWorking();
 	}
 }

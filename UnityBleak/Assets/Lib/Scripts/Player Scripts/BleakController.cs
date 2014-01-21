@@ -23,7 +23,8 @@ public class BleakController : MonoBehaviour {
 	public GameObject skelAnimObj;
 	public AudioClip noooo;
 	public AudioSource cammie;
-	
+	public Aperture aperture;
+
 	public const float SMALL_JUMP_TIME = .06f;
 	public const float MED_JUMP_TIME = .08f;
 	public const float LARGE_JUMP_TIME = .12f;
@@ -189,7 +190,6 @@ public class BleakController : MonoBehaviour {
 			UpdateForceMove(dt);
 			break;
 		case STATE_HURT:
-			transform.position = startPoint.position;
 			switch (numLives){
 			case 1:
 				skelAnim.skeleton.SetSkin("damaged01");
@@ -200,7 +200,9 @@ public class BleakController : MonoBehaviour {
 			default:
 				throw new UnityException("bleak was hurt, and his number of lives was not 0 or 1");
 			}
-			SetState(STATE_NORMAL);
+			if (canControl){
+				StartCoroutine("CloseAndOpenApertureRespawn",startPoint);
+			}
 			break;
 		case STATE_DEAD:
 			if (Input.GetKeyDown(KeyCode.R)){
@@ -808,6 +810,10 @@ public class BleakController : MonoBehaviour {
 			SetState(STATE_PUSH_RIGHT);
 			attachedPushObj = pushable;
 		}
+		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
+		if (pickup){
+			pickup.Grab(gameObject);
+		}
 	}
 	
 	void HandleLeftCollision(RaycastHit2D hitInfo, float dt){
@@ -825,6 +831,10 @@ public class BleakController : MonoBehaviour {
 		if (pushable){
 			SetState(STATE_PUSH_LEFT);
 			attachedPushObj = pushable;
+		}
+		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
+		if (pickup){
+			pickup.Grab(gameObject);
 		}
 	}
 	
@@ -846,7 +856,20 @@ public class BleakController : MonoBehaviour {
 	void SpringJump(BounceOffTop bounceOffInfo){
 		velocity.y = bounceOffInfo.springPower;
 	}
-	
+
+
+
+	IEnumerator CloseAndOpenApertureRespawn(Transform respawnLocation){
+		canControl = false;
+		aperture.Close();
+		yield return new WaitForSeconds(.5f);
+		transform.position = respawnLocation.position;
+		aperture.Open();
+		canControl = true;
+		SetState(STATE_NORMAL);
+		yield return null;
+	}
+
 	
 	//============== Accessor Methods ==================
 	public bool IsSlamming(){
