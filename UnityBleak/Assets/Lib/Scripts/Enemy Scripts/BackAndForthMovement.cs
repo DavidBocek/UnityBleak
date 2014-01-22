@@ -37,7 +37,7 @@ public class BackAndForthMovement : MonoBehaviour {
 	private const uint STATE_STOPPED = 1;
 	
 	private float epsilon = .1f;
-	
+
 	// Use this for initialization
 	void Start () {
 		skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
@@ -67,6 +67,7 @@ public class BackAndForthMovement : MonoBehaviour {
 					if (transform.position.x >= rightPoint.x - epsilon){
 						movingRight = false;
 						movingLeft = true;
+						//gameObject.transform.localScale = new Vector3(1.0f,gameObject.transform.localScale.y,gameObject.transform.localScale.z);
 						lastTouchTime = Time.time;
 						if (numberOfBounces != -1) bounceCounter++;
 					} else {
@@ -78,6 +79,7 @@ public class BackAndForthMovement : MonoBehaviour {
 					if (transform.position.x <= leftPoint.x + epsilon){
 						movingRight = true;
 						movingLeft = false;
+						//gameObject.transform.localScale = new Vector3(-1.0f,gameObject.transform.localScale.y,gameObject.transform.localScale.z);
 						lastTouchTime = Time.time;
 						if (numberOfBounces != -1) bounceCounter++;
 					} else {

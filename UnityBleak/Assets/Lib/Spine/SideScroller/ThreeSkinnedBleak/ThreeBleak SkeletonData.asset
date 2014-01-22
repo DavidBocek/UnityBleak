@@ -38,6 +38,8 @@ MonoBehaviour:
   - jump
   - idle
   - pick up
+  - climb down
+  - climb up
   toAnimation:
   - jump
   - run
@@ -62,6 +64,8 @@ MonoBehaviour:
   - falling
   - pick up
   - idle
+  - climb idle
+  - climb idle
   duration:
   - .300000012
   - .400000006
@@ -83,6 +87,8 @@ MonoBehaviour:
   - .100000001
   - .100000001
   - .100000001
+  - .300000012
+  - .300000012
   - .300000012
   - .300000012
   - .300000012
