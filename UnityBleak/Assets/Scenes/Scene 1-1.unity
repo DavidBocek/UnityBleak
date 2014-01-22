@@ -6821,6 +6821,7 @@ GameObject:
   - 33: {fileID: 728144795}
   - 23: {fileID: 728144794}
   - 114: {fileID: 728144793}
+  - 61: {fileID: 728144796}
   m_Layer: 0
   m_Name: DisplayLocation4
   m_TagString: Untagged
@@ -6854,7 +6855,7 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  boxCollider2D: {fileID: 0}
+  boxCollider2D: {fileID: 728144796}
   polygonCollider2D: []
   edgeCollider2D: []
   boxCollider: {fileID: 0}
@@ -6890,6 +6891,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728144791}
   m_Mesh: {fileID: 0}
+--- !u!61 &728144796
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728144791}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .318181813, y: .909090936}
+  m_Center: {x: .840909123, y: .454545468}
 --- !u!1 &736837179
 GameObject:
   m_ObjectHideFlags: 0
@@ -11696,11 +11708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adef6748b452ef14d9c0cdbafc9d939b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayLocation0: {fileID: 0}
-  displayLocation1: {fileID: 0}
-  displayLocation2: {fileID: 0}
-  displayLocation3: {fileID: 0}
-  displayLocation4: {fileID: 0}
+  displayLocation0: {fileID: 2123724407}
+  displayLocation1: {fileID: 1944766700}
+  displayLocation2: {fileID: 1794071898}
+  displayLocation3: {fileID: 1196083667}
+  displayLocation4: {fileID: 728144793}
 --- !u!1 &1190069086
 GameObject:
   m_ObjectHideFlags: 0
