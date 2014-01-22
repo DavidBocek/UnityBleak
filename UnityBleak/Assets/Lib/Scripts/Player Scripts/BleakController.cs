@@ -142,47 +142,51 @@ public class BleakController : MonoBehaviour {
 			break;
 		case STATE_CLIMBING_LEFT:
 			UpdateRays (dt);
-			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A)){
-				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
-				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S)){
-				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
-				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
-			} /*else if (Input.GetKey(KeyCode.D)){
-				SetState(STATE_NORMAL);
-				velocity.x = 0;
-			}*/ else if (Input.GetKey (KeyCode.Space)){
-				SetState(STATE_NORMAL);
-				jumping = -1;
-				velocity.x = runSpeed*joggingMultiplier*.35f;
-				velocity.y = jumpSpeed * .35f;
-				skelAnim.state.SetAnimation(0,"jump",false);
-			} else {
-				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
-				velocity.y = 0;
+			if (canControl){
+				if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A)){
+					if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
+					velocity.y = attachedClimbObject.climbSpeed;
+				} else if (Input.GetKey(KeyCode.S)){
+					if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
+					velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+				} /*else if (Input.GetKey(KeyCode.D)){
+					SetState(STATE_NORMAL);
+					velocity.x = 0;
+				}*/ else if (Input.GetKey (KeyCode.Space)){
+					SetState(STATE_NORMAL);
+					jumping = -1;
+					velocity.x = runSpeed*joggingMultiplier*.35f;
+					velocity.y = jumpSpeed * .35f;
+					skelAnim.state.SetAnimation(0,"jump",false);
+				} else {
+					//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					velocity.y = 0;
+				}
 			}
 			UpdatePositionChangeClimbing(dt);
 			break;
 		case STATE_CLIMBING_RIGHT:
 			UpdateRays (dt);
-			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D)){
-				if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
-				velocity.y = attachedClimbObject.climbSpeed;
-			} else if (Input.GetKey(KeyCode.S)){
-				if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
-				velocity.y = -attachedClimbObject.climbSpeed * 2/3;
-			} /*else if (Input.GetKey(KeyCode.A)){
-				SetState(STATE_NORMAL);
-				velocity.x = 0;
-			}*/ else if (Input.GetKey (KeyCode.Space)){
-				SetState(STATE_NORMAL);
-				jumping = -1;
-				velocity.x = -runSpeed*joggingMultiplier*.35f;
-				velocity.y = jumpSpeed * .35f;
-				skelAnim.state.SetAnimation(0,"jump",false);
-			} else {
-				//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
-				velocity.y = 0;
+			if (canControl){
+				if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D)){
+					if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
+					velocity.y = attachedClimbObject.climbSpeed;
+				} else if (Input.GetKey(KeyCode.S)){
+					if (skelAnim.state.ToString() != "climb down") skelAnim.state.SetAnimation(0,"climb down",true);
+					velocity.y = -attachedClimbObject.climbSpeed * 2/3;
+				} /*else if (Input.GetKey(KeyCode.A)){
+					SetState(STATE_NORMAL);
+					velocity.x = 0;
+				}*/ else if (Input.GetKey (KeyCode.Space)){
+					SetState(STATE_NORMAL);
+					jumping = -1;
+					velocity.x = -runSpeed*joggingMultiplier*.35f;
+					velocity.y = jumpSpeed * .35f;
+					skelAnim.state.SetAnimation(0,"jump",false);
+				} else {
+					//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					velocity.y = 0;
+				}
 			}
 			UpdatePositionChangeClimbing(dt);
 			break;
@@ -216,7 +220,7 @@ public class BleakController : MonoBehaviour {
 			if (skelAnim.state.ToString() != "push")
 				skelAnim.state.SetAnimation(0,"push",true);
 			UpdateRays(dt);
-			UpdatePushing(dt,LEFT);
+			if (canControl) UpdatePushing(dt,LEFT);
 			UpdateGravity(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
@@ -225,7 +229,7 @@ public class BleakController : MonoBehaviour {
 			if (skelAnim.state.ToString() != "push")
 				skelAnim.state.SetAnimation(0,"push",true);
 			UpdateRays(dt);
-			UpdatePushing(dt,RIGHT);
+			if (canControl) UpdatePushing(dt,RIGHT);
 			UpdateGravity(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
@@ -463,7 +467,7 @@ public class BleakController : MonoBehaviour {
 				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * joggingMultiplier * directionInt;
 				if (jumping != -1){
 					//play jogging anim
-					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured"){
+					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured" && skelAnim.state.ToString()!="pick up"){
 						if (numLives > 0) skelAnim.state.SetAnimation(0,"run",true);
 						else skelAnim.state.SetAnimation(0,"run-injured",true);
 					}
@@ -794,13 +798,11 @@ public class BleakController : MonoBehaviour {
 	void HandleSideCollision(RaycastHit2D hitInfo, float dt){
 		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
 		if (pickup){
-			skelAnim.state.SetAnimation(0,"pick up",false);
-			pickup.Grab(gameObject);
+			PickUpPickup(pickup);
 		}
 		Item item = hitInfo.transform.gameObject.GetComponent<Item>();
 		if (item){
-			skelAnim.state.SetAnimation(0,"pick up",false);
-			item.Grab(gameObject);
+			PickUpItem(item);
 		}
 	}
 	
@@ -858,7 +860,24 @@ public class BleakController : MonoBehaviour {
 		velocity.y = bounceOffInfo.springPower;
 	}
 
+	public void PickUpPickup(Pickup pickup){
+		StartCoroutine("RemoveControlForTime",1.5f);
+		skelAnim.state.SetAnimation(0,"pick up",false);
+		pickup.Grab(gameObject);
+	}
 
+	public void PickUpItem(Item item){
+		StartCoroutine("RemoveControlForTime",1.5f);
+		skelAnim.state.SetAnimation(0,"pick up",false);
+		item.Grab(gameObject);
+	}
+
+
+	IEnumerator RemoveControlForTime(float time){
+		canControl = false;
+		yield return new WaitForSeconds(time);
+		canControl = true;
+	}
 
 	IEnumerator CloseAndOpenApertureRespawn(Transform respawnLocation){
 		canControl = false;
