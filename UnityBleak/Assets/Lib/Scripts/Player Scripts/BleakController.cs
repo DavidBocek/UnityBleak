@@ -45,6 +45,7 @@ public class BleakController : MonoBehaviour {
 	private Climbable attachedClimbObject;
 	private KeyCode actionButton = KeyCode.E;
 	private SkeletonAnimation skelAnim;
+	private GameObject attachedRideObject;
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
@@ -126,6 +127,9 @@ public class BleakController : MonoBehaviour {
 	float tempVelVert;
 	void Update () {
 		position2d.x = transform.position[0]; position2d.y = transform.position[1];
+		if (state != STATE_NORMAL){
+			attachedRideObject = null;
+		}
 		switch (state){
 		case STATE_NORMAL:
 			velocity.x = 0;
@@ -209,6 +213,7 @@ public class BleakController : MonoBehaviour {
 			}
 			break;
 		case STATE_DEAD:
+			skelAnim.state.SetAnimation(0,"death",false);
 			if (Input.GetKeyDown(KeyCode.R)){
 				transform.position = startPoint.position;
 				numLives = 2;
@@ -498,6 +503,7 @@ public class BleakController : MonoBehaviour {
 		
 		//jumping is 0 when on the ground, >0 for a split second while the jump impulse is occuring, and -1 after that before he hits the ground (so that you can't jump again in air)
 		if (Input.GetKey(KeyCode.Space) && jumping >= 0){
+			if (attachedRideObject != null) attachedRideObject = null;
 			//play jump sound
 			jumping += dt;
 			if (jumping >= LARGE_JUMP_TIME)
@@ -589,6 +595,9 @@ public class BleakController : MonoBehaviour {
 	/// </param>
 	void UpdatePositionChangeNormal(float dt){
 		moveDelta = velocity * dt;
+		if (attachedRideObject != null){
+			moveDelta += attachedRideObject.GetComponent<MoveWithObject>().GetMoveDeltaLastFrame();
+		}
 		RaycastHit2D interpolateInfo;
 		
 		//== deal with interpolate collisions down ==
@@ -793,6 +802,13 @@ public class BleakController : MonoBehaviour {
 				}
 			}
 		}
+
+		MoveWithObject rideable = hitInfo.transform.gameObject.GetComponent<MoveWithObject>();
+		if (rideable){
+			if (rideable.moveWithTop){
+				attachedRideObject = rideable.gameObject;
+			}
+		}
 	}
 	
 	void HandleSideCollision(RaycastHit2D hitInfo, float dt){
@@ -882,6 +898,7 @@ public class BleakController : MonoBehaviour {
 	IEnumerator CloseAndOpenApertureRespawn(Transform respawnLocation){
 		canControl = false;
 		aperture.Close();
+		skelAnim.state.SetAnimation(0,"death",false);
 		yield return new WaitForSeconds(.5f);
 		transform.position = respawnLocation.position;
 		aperture.Open();
