@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GrabPickups : MonoBehaviour {
+public class GrabItems : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
-		Pickup pickup = other.gameObject.GetComponent<Pickup>();
-		if (pickup){
+		Item item = other.gameObject.GetComponent<Item>();
+		if (item){
 			GetComponentInChildren<SkeletonAnimation>().state.SetAnimation(0,"pick up",false);
-			pickup.Grab(gameObject);
+			item.Grab(gameObject);
 		}
 	}
 

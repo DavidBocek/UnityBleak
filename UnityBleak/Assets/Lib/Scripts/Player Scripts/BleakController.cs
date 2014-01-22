@@ -792,6 +792,16 @@ public class BleakController : MonoBehaviour {
 	}
 	
 	void HandleSideCollision(RaycastHit2D hitInfo, float dt){
+		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
+		if (pickup){
+			skelAnim.state.SetAnimation(0,"pick up",false);
+			pickup.Grab(gameObject);
+		}
+		Item item = hitInfo.transform.gameObject.GetComponent<Item>();
+		if (item){
+			skelAnim.state.SetAnimation(0,"pick up",false);
+			item.Grab(gameObject);
+		}
 	}
 	
 	void HandleRightCollision(RaycastHit2D hitInfo, float dt){
@@ -809,10 +819,6 @@ public class BleakController : MonoBehaviour {
 		if (pushable){
 			SetState(STATE_PUSH_RIGHT);
 			attachedPushObj = pushable;
-		}
-		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
-		if (pickup){
-			pickup.Grab(gameObject);
 		}
 	}
 	
@@ -832,15 +838,10 @@ public class BleakController : MonoBehaviour {
 			SetState(STATE_PUSH_LEFT);
 			attachedPushObj = pushable;
 		}
-		Pickup pickup = hitInfo.transform.gameObject.GetComponent<Pickup>();
-		if (pickup){
-			pickup.Grab(gameObject);
-		}
 	}
 	
 	static public int numLives = 2;
 	void Damage(){
-		Debug.Log ("apply damage!");
 		//audio.PlayOneShot(noooo);
 		cammie.audio.PlayOneShot(noooo);
 		if (numLives > 0){

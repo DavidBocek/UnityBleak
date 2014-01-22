@@ -31,6 +31,11 @@ public class BleakUIElement : MonoBehaviour {
 		SendMessage("Close");
 	}
 
+	//sends a select message under and including this element
+	public void Select(){
+		SendMessage("Select",selectionIndex);
+	}
+
 
 	//alter the selection index, which is used by the specific selection element on this object
 	public void IncrementSelection(){

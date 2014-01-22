@@ -51,6 +51,8 @@ public class BleakUIManager : MonoBehaviour {
 			currentInput = KeyCode.O;
 		} else if (Input.GetKeyDown (KeyCode.Escape)){
 			currentInput = KeyCode.Escape;
+		} else if (Input.GetKeyDown (KeyCode.Return)){
+			currentInput = KeyCode.Return;
 		}
 
 		switch(currentInput){
@@ -85,6 +87,9 @@ public class BleakUIManager : MonoBehaviour {
 			break;
 		case KeyCode.Escape:
 			ActionEscape();
+			break;
+		case KeyCode.Return:
+			ActionReturn();
 			break;
 		default:
 			throw new UnityException("UI current input invald.");
@@ -386,6 +391,26 @@ public class BleakUIManager : MonoBehaviour {
 		case STATE_CONVERSATION:
 			conversation.CloseTree();
 			SetState(STATE_NONE);
+			break;
+		}
+	}
+
+	void ActionReturn(){
+		switch (state){
+		case STATE_NONE:
+			break;
+		case STATE_INVENTORY:
+			inventory.Select();
+			break;
+		case STATE_QUESTS:
+			quests.Select();
+			break;
+		case STATE_MAP:
+			break;
+		case STATE_KEY:
+			break;
+		case STATE_CONVERSATION:
+			conversation.Select();
 			break;
 		}
 	}
