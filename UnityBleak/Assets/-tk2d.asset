@@ -1789,12 +1789,6 @@ MonoBehaviour:
     - crawling-death/39
     - crawling-death/40
     - crawling-death/41
-    - crawling-death/42
-    - crawling-death/43
-    - crawling-death/44
-    - crawling-death/45
-    - crawling-death/46
-    - crawling-death/47
     spriteTextureGUIDs:
     - 4c39b3432f795e249a570f778fc24670
     - 4c39b3432f795e249a570f778fc24670
@@ -1838,19 +1832,7 @@ MonoBehaviour:
     - 4c39b3432f795e249a570f778fc24670
     - 4c39b3432f795e249a570f778fc24670
     - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
-    - 4c39b3432f795e249a570f778fc24670
     spriteTextureTimeStamps:
-    - 1386444088.57925
-    - 1386444088.57925
-    - 1386444088.57925
-    - 1386444088.57925
-    - 1386444088.57925
-    - 1386444088.57925
     - 1386444088.57925
     - 1386444088.57925
     - 1386444088.57925
