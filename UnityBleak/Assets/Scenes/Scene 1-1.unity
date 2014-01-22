@@ -4046,7 +4046,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 530459449}
   m_LocalRotation: {x: 0, y: 0, z: .0348994955, w: .999390841}
-  m_LocalPosition: {x: 10.8787518, y: -.0389782526, z: -4.19999981}
+  m_LocalPosition: {x: 10.8787518, y: -.0389782526, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791582501}
@@ -10092,7 +10092,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1411627168}
   m_LocalRotation: {x: 0, y: 0, z: .0348994955, w: .999390841}
-  m_LocalPosition: {x: .0985463187, y: -.792803645, z: -4.20000029}
+  m_LocalPosition: {x: .0985463187, y: -.792803645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791582501}
@@ -14194,6 +14194,7 @@ GameObject:
   - 50: {fileID: 1791582503}
   - 61: {fileID: 1791582504}
   - 114: {fileID: 1791582505}
+  - 114: {fileID: 1791582506}
   m_Layer: 0
   m_Name: Jellyfish SkeletonData
   m_TagString: Untagged
@@ -14254,7 +14255,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791582497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.472435, y: 18.1719055, z: 10}
+  m_LocalPosition: {x: 14.472435, y: 18.1719055, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1411627169}
@@ -14320,6 +14321,22 @@ MonoBehaviour:
   moveWithRight: 0
   moveWithLeft: 0
   moveWithBottom: 0
+--- !u!114 &1791582506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791582497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05e0dced07136244a05b1f82a969720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killAny: 0
+  killUp: 0
+  killLeft: 1
+  killRight: 1
+  killDown: 1
 --- !u!1 &1794071895
 GameObject:
   m_ObjectHideFlags: 0
