@@ -45,6 +45,10 @@ MonoBehaviour:
     dataGUID: 
     managed: 0
     loadable: 0
+  - assetGUID: 2996a27e1ce32d84ca99f690b457e431
+    dataGUID: 
+    managed: 0
+    loadable: 0
   fontIndex:
   - assetGUID: 063b15d80dbb4604d890600a64c79cf8
     dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
@@ -3129,6 +3133,46 @@ MonoBehaviour:
     - 1390076559
     - 1390076498
     - 1390076546
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: AcidRock
+    spriteCollectionGUID: b066274142364994182e119661bedabf
+    spriteCollectionDataGUID: 11dd441da8698e646ac529ba415d0cde
+    spriteNames:
+    - davidsrock/0
+    - davidsrock/1
+    - davidsrock/2
+    - davidsrock/3
+    - davidsrock/4
+    - davidsrock/5
+    - davidsrock/6
+    - davidsrock/7
+    - davidsrock/8
+    - davidsrock/9
+    spriteTextureGUIDs:
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    - 26a71155aa1bf144a9427e5b7b272770
+    spriteTextureTimeStamps:
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
+    - 1390420980
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

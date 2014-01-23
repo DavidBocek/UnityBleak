@@ -1,0 +1,488 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: AcidRock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  materialIdsValid: 1
+  needMaterialInstance: 0
+  spriteDefinitions:
+  - name: davidsrock/0
+    boundsData:
+    - {x: 0, y: .0113636255, z: 0}
+    - {x: 1.59090912, y: 1.25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .636363626, z: 0}
+    - {x: .795454562, y: .636363626, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .00781640597}
+    - {x: .281246096, y: .00781640597}
+    - {x: .00781640597, y: .222652346}
+    - {x: .281246096, y: .222652346}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/1
+    boundsData:
+    - {x: 0, y: .0113636255, z: 0}
+    - {x: 1.59090912, y: 1.25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .636363626, z: 0}
+    - {x: .795454562, y: .636363626, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .296878904, y: .00781640597}
+    - {x: .570308566, y: .00781640597}
+    - {x: .296878904, y: .222652346}
+    - {x: .570308566, y: .222652346}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 70
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/2
+    boundsData:
+    - {x: 0, y: -.0340909064, z: 0}
+    - {x: 1.59090912, y: 1.159091, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .545454562, z: 0}
+    - {x: .795454562, y: .545454562, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .234378904, y: .527347684}
+    - {x: .234378904, y: .800777316}
+    - {x: .433589846, y: .527347684}
+    - {x: .433589846, y: .800777316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 140
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/3
+    boundsData:
+    - {x: 0, y: .0113636255, z: 0}
+    - {x: 1.59090912, y: 1.25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .636363626, z: 0}
+    - {x: .795454562, y: .636363626, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .585941434, y: .00781640597}
+    - {x: .859371066, y: .00781640597}
+    - {x: .585941434, y: .222652346}
+    - {x: .859371066, y: .222652346}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 210
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/4
+    boundsData:
+    - {x: 0, y: 2.98023224e-08, z: 0}
+    - {x: 1.59090912, y: 1.22727275, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .613636434, z: 0}
+    - {x: .795454562, y: .613636434, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .527347684}
+    - {x: .00781640597, y: .800777316}
+    - {x: .218746096, y: .527347684}
+    - {x: .218746096, y: .800777316}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 280
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/5
+    boundsData:
+    - {x: 0, y: -.0454545617, z: 0}
+    - {x: 1.59090912, y: 1.13636363, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.613636374, z: 0}
+    - {x: .795454562, y: -.613636374, z: 0}
+    - {x: -.795454562, y: .522727251, z: 0}
+    - {x: .795454562, y: .522727251, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .238285154, y: .238285154}
+    - {x: .238285154, y: .511714816}
+    - {x: .433589846, y: .238285154}
+    - {x: .433589846, y: .511714816}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 350
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/6
+    boundsData:
+    - {x: 0, y: -.0568181574, z: 0}
+    - {x: 1.59090912, y: 1.25, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.681818187, z: 0}
+    - {x: .795454562, y: -.681818187, z: 0}
+    - {x: -.795454562, y: .568181872, z: 0}
+    - {x: .795454562, y: .568181872, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .238285154}
+    - {x: .00781640597, y: .511714816}
+    - {x: .222652346, y: .238285154}
+    - {x: .222652346, y: .511714816}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 420
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/7
+    boundsData:
+    - {x: 0, y: -.238636374, z: 0}
+    - {x: 1.59090912, y: .886363626, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.681818187, z: 0}
+    - {x: .795454562, y: -.681818187, z: 0}
+    - {x: -.795454562, y: .204545453, z: 0}
+    - {x: .795454562, y: .204545453, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .00781640597, y: .816410184}
+    - {x: .281246096, y: .816410184}
+    - {x: .00781640597, y: .968746066}
+    - {x: .281246096, y: .968746066}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 490
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/8
+    boundsData:
+    - {x: -.147727296, y: -.443181813, z: 0}
+    - {x: 1.2954545, y: .477272749, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: -.795454562, y: -.681818187, z: 0}
+    - {x: .49999997, y: -.681818187, z: 0}
+    - {x: -.795454562, y: -.204545438, z: 0}
+    - {x: .49999997, y: -.204545438, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .875003934, y: .00781640597}
+    - {x: .875003934, y: .230464846}
+    - {x: .957027316, y: .00781640597}
+    - {x: .957027316, y: .230464846}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 560
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  - name: davidsrock/9
+    boundsData:
+    - {x: .01136366, y: -.0113636255, z: 0}
+    - {x: .02272732, y: .0227273069, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: -.0113636255, z: 0}
+    - {x: 1.59090912, y: 1.34090912, z: 0}
+    texelSize: {x: .0227272734, y: .0227272734}
+    positions:
+    - {x: 0, y: -.022727279, z: 0}
+    - {x: .02272732, y: -.022727279, z: 0}
+    - {x: 0, y: 2.7368543e-08, z: 0}
+    - {x: .02272732, y: 2.7368543e-08, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: .972660184, y: .00781640597}
+    - {x: .960933566, y: .00781640597}
+    - {x: .972660184, y: -.00391015643}
+    - {x: .960933566, y: -.00391015643}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+    materialId: 0
+    sourceTextureGUID: 26a71155aa1bf144a9427e5b7b272770
+    extractRegion: 1
+    regionX: 630
+    regionY: 0
+    regionW: 70
+    regionH: 59
+    flipped: 0
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd: 
+    colliderIndicesBack: 
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: b1770c3bf5718f14696816025cf4f720, type: 2}
+  textures:
+  - {fileID: 2800000, guid: d4bfbfa5682ca5a44b0f2a292a264ea2, type: 3}
+  pngTextures: []
+  textureFilterMode: 1
+  textureMipMaps: 0
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: b066274142364994182e119661bedabf
+  spriteCollectionName: AcidRock
+  assetName: 
+  loadable: 0
+  invOrthoSize: 2
+  halfTargetHeight: 22
+  buildKey: 1009783344
+  dataGuid: 11dd441da8698e646ac529ba415d0cde
+  managedSpriteCollection: 0
+  hasPlatformData: 0
+  spriteCollectionPlatforms: []
+  spriteCollectionPlatformGUIDs: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
