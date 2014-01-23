@@ -163,7 +163,7 @@ public class BleakController : MonoBehaviour {
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
 				} else {
-					//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
 					velocity.y = 0;
 				}
 			}
@@ -188,7 +188,7 @@ public class BleakController : MonoBehaviour {
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
 				} else {
-					//if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
 					velocity.y = 0;
 				}
 			}
