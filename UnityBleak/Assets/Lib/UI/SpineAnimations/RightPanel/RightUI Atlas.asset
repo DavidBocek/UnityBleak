@@ -9,10 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: ThreeBleak Atlas
+  m_Name: RightUI Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 40b91cf89b98de841837a9854d915c4c, type: 3}
+  atlasFile: {fileID: 4900000, guid: 712a4ac940bd7704981ed05164b0bc13, type: 3}
   materials:
-  - {fileID: 2100000, guid: 0bb9fc084fddf3447a768f57e9038399, type: 2}
-  - {fileID: 2100000, guid: a0d58b94862d7a94ab965fe12c359e47, type: 2}
-  - {fileID: 2100000, guid: 9f263db6047cc2542a8d83ab00199740, type: 2}
+  - {fileID: 2100000, guid: 3efc05913d555754ebe55d9e9d7ed6f8, type: 2}
