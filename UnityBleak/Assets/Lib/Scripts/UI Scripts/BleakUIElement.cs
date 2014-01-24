@@ -6,6 +6,8 @@ public class BleakUIElement : MonoBehaviour {
 	public bool hasAnimation;
 	public bool hasSubElements = false;
 	public int selectionMax;
+	public bool isMapOrKey;
+	public SkeletonAnimation mapKeySkelAnim;
 
 	private SkeletonAnimation skelAnim;
 	private UIBasicAnimation basicAnimator;
@@ -38,6 +40,14 @@ public class BleakUIElement : MonoBehaviour {
 		}
 	}
 
+	public void MapToKey(){
+		mapKeySkelAnim.state.SetAnimation(0,"switchTab2",false);
+	}
+
+	public void KeyToMap(){
+		mapKeySkelAnim.state.SetAnimation(0,"switchTab",false);
+	}
+
 
 	//alter the selection index, which is used by the specific selection element on this object
 	public void IncrementSelection(){
@@ -56,14 +66,16 @@ public class BleakUIElement : MonoBehaviour {
 		selectionIndex = 0;
 	}
 
-
-
 	void Open(){
-		if (hasAnimation) {basicAnimator.Show();}
+		if (hasAnimation) {
+			basicAnimator.Show();
+		}
 	}
 	void Close(){
 		ResetSelection();
-		if (hasAnimation) {basicAnimator.Hide();}
+		if (hasAnimation) {
+			basicAnimator.Hide();
+		}
 	}
 
 	public void StartWorking(){

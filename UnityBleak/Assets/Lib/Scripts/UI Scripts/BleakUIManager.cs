@@ -29,6 +29,7 @@ public class BleakUIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (state);
 		if (working) return;
 		currentInput = KeyCode.None;
 		if (Input.GetKeyDown(KeyCode.RightArrow)){
@@ -121,8 +122,9 @@ public class BleakUIManager : MonoBehaviour {
 			SetState(STATE_NONE);
 			break;
 		case STATE_KEY:
-			key.CloseTree();
-			map.OpenTree();
+			/*key.CloseTree();
+			map.OpenTree();*/
+			key.KeyToMap();
 			SetState(STATE_MAP);
 			break;
 		case STATE_CONVERSATION:
@@ -146,8 +148,9 @@ public class BleakUIManager : MonoBehaviour {
 			SetState(STATE_NONE);
 			break;
 		case STATE_MAP:
-			map.CloseTree();
-			key.OpenTree();
+			/*map.CloseTree();
+			key.OpenTree();*/
+			map.MapToKey();
 			SetState(STATE_KEY);
 			break;
 		case STATE_KEY:
@@ -323,8 +326,9 @@ public class BleakUIManager : MonoBehaviour {
 			SetState(STATE_KEY);
 			break;
 		case STATE_MAP:
-			map.CloseTree();
-			key.OpenTree();
+			/*map.CloseTree();
+			key.OpenTree();*/
+			map.MapToKey();
 			SetState(STATE_KEY);
 			break;
 		case STATE_KEY:
@@ -356,8 +360,9 @@ public class BleakUIManager : MonoBehaviour {
 		case STATE_MAP:
 			break;
 		case STATE_KEY:
-			key.CloseTree();
-			map.OpenTree();
+			/*key.CloseTree();
+			map.OpenTree();*/
+			key.KeyToMap();
 			SetState(STATE_MAP);
 			break;
 		case STATE_CONVERSATION:
