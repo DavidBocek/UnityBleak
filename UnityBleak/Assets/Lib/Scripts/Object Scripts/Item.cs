@@ -11,6 +11,7 @@ public class Item : MonoBehaviour {
 		//AudioSource.PlayClipAtPoint(taken, transform.position,1);
 		gameObject.GetComponent<MeshRenderer>().enabled = false;
 		gameObject.GetComponent<Collider2D>().enabled = false;
+		AudioSource.PlayClipAtPoint(taken, transform.position,1);
 		if (!obj.GetComponent<BleakInventoryManager>().IsInventoryFull()){
 			obj.GetComponent<BleakInventoryManager>().GetItem(gameObject);
 		}

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Aperture Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: e9f829525fb53cf4e9b8766f02c4ced9, type: 3}
+  atlasFile: {fileID: 4900000, guid: 9d487c9964b886c44a67ae630bed9dbe, type: 3}
   materials:
-  - {fileID: 2100000, guid: 88e96cf4813eb8341bd9ef127440fbd0, type: 2}
-  - {fileID: 2100000, guid: 1606d8022a9e54645952d7ec79197983, type: 2}
+  - {fileID: 2100000, guid: 25c3f929423c03a4da314431abc74624, type: 2}
+  - {fileID: 2100000, guid: 0d8ba22e0524fc54f98e4e617a084b34, type: 2}

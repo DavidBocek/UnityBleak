@@ -899,8 +899,9 @@ public class BleakController : MonoBehaviour {
 		canControl = false;
 		aperture.Close();
 		skelAnim.state.SetAnimation(0,"death",false);
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(1f);
 		transform.position = respawnLocation.position;
+		yield return new WaitForSeconds(1f);
 		aperture.Open();
 		canControl = true;
 		SetState(STATE_NORMAL);
