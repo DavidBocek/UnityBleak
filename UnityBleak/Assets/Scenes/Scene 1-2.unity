@@ -5773,7 +5773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampTime: .25
   target: {fileID: 1973003754}
-  lowerLeft: {x: 0, y: .76322943}
+  lowerLeft: {x: -.0382995605, y: .76322943}
   upperRight: {x: 152.674393, y: 43.1343803}
 --- !u!114 &674500626
 MonoBehaviour:
@@ -8947,8 +8947,8 @@ Transform:
   m_PrefabInternal: {fileID: 571662624}
   m_GameObject: {fileID: 1034493154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 9, z: 6}
-  m_LocalScale: {x: .649999976, y: .649999976, z: .649999976}
+  m_LocalPosition: {x: 12, y: 8, z: 6}
+  m_LocalScale: {x: .75, y: .75, z: 1}
   m_Children:
   - {fileID: 1872896460}
   m_Father: {fileID: 674500624}
@@ -9586,8 +9586,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 1163730486}
   - 114: {fileID: 1163730487}
+  - 33: {fileID: 1163730495}
+  - 23: {fileID: 1163730494}
+  - 114: {fileID: 1163730493}
   - 114: {fileID: 1163730491}
   - 114: {fileID: 1163730492}
+  - 23: {fileID: 1163730489}
+  - 33: {fileID: 1163730490}
+  - 114: {fileID: 1163730488}
   m_Layer: 0
   m_Name: UI Inventory
   m_TagString: Untagged
@@ -9629,7 +9635,6 @@ MonoBehaviour:
   selectionMax: 4
   isMapOrKey: 0
   mapKeySkelAnim: {fileID: 0}
-<<<<<<< HEAD
 --- !u!114 &1163730488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9684,8 +9689,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 571662624}
   m_GameObject: {fileID: 1163730485}
   m_Mesh: {fileID: 0}
-=======
->>>>>>> fe38ac1c04d83bf8f943a8f8557deabc9d862fd9
 --- !u!114 &1163730491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9721,6 +9724,60 @@ MonoBehaviour:
   displayLocation2: {fileID: 1794071898}
   displayLocation3: {fileID: 1196083667}
   displayLocation4: {fileID: 728144793}
+--- !u!114 &1163730493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400016, guid: f1d114cba01552d46a3dee473ee68cda,
+    type: 2}
+  m_PrefabInternal: {fileID: 571662624}
+  m_GameObject: {fileID: 1163730485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection: {fileID: 11400000, guid: 4e3640620002b27448c80115d49050b3, type: 2}
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _scale: {x: 1, y: 1, z: 1}
+  _spriteId: 1
+  boxCollider2D: {fileID: 0}
+  polygonCollider2D: []
+  edgeCollider2D: []
+  boxCollider: {fileID: 0}
+  meshCollider: {fileID: 0}
+  meshColliderPositions: []
+  meshColliderMesh: {fileID: 0}
+  renderLayer: 0
+--- !u!23 &1163730494
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300002, guid: f1d114cba01552d46a3dee473ee68cda,
+    type: 2}
+  m_PrefabInternal: {fileID: 571662624}
+  m_GameObject: {fileID: 1163730485}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 8e5d3826ef8965c4d93328086ccec4e1, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &1163730495
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300002, guid: f1d114cba01552d46a3dee473ee68cda,
+    type: 2}
+  m_PrefabInternal: {fileID: 571662624}
+  m_GameObject: {fileID: 1163730485}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1196083664
 GameObject:
   m_ObjectHideFlags: 0
@@ -11792,7 +11849,7 @@ Transform:
   m_PrefabInternal: {fileID: 571662624}
   m_GameObject: {fileID: 1471735227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6300001, y: 8.67000008, z: 5}
+  m_LocalPosition: {x: 11.6499996, y: 8.67000008, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 674500624}
@@ -15966,9 +16023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 22cdecb2a3954a448b61f511929261aa, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: default
-  timeScale: .699999988
+  timeScale: 1
   calculateNormals: 0
   calculateTangents: 0
   loop: 0
@@ -15986,9 +16043,9 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 0d8ba22e0524fc54f98e4e617a084b34, type: 2}
-  - {fileID: 2100000, guid: 25c3f929423c03a4da314431abc74624, type: 2}
-  - {fileID: 2100000, guid: 0d8ba22e0524fc54f98e4e617a084b34, type: 2}
+  - {fileID: 2100000, guid: 1606d8022a9e54645952d7ec79197983, type: 2}
+  - {fileID: 2100000, guid: 88e96cf4813eb8341bd9ef127440fbd0, type: 2}
+  - {fileID: 2100000, guid: 1606d8022a9e54645952d7ec79197983, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
