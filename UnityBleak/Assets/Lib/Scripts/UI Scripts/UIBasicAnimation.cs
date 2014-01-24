@@ -16,7 +16,7 @@ public class UIBasicAnimation : MonoBehaviour {
 	private BleakUIElement p_uiElement;
 	private float movedAmount = 0f;
 
-	private const float epsilon = .1f;
+	private const float epsilon = .75f;
 
 	// Use this for initialization
 	void Start () {

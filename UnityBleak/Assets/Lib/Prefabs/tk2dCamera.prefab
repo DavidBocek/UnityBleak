@@ -131,6 +131,7 @@ GameObject:
   - 4: {fileID: 400012}
   - 81: {fileID: 8100002}
   - 82: {fileID: 8200000}
+  - 82: {fileID: 8200002}
   m_Layer: 0
   m_Name: Listener
   m_TagString: Untagged
@@ -1362,9 +1363,9 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 1606d8022a9e54645952d7ec79197983, type: 2}
-  - {fileID: 2100000, guid: 88e96cf4813eb8341bd9ef127440fbd0, type: 2}
-  - {fileID: 2100000, guid: 1606d8022a9e54645952d7ec79197983, type: 2}
+  - {fileID: 2100000, guid: 0d8ba22e0524fc54f98e4e617a084b34, type: 2}
+  - {fileID: 2100000, guid: 25c3f929423c03a4da314431abc74624, type: 2}
+  - {fileID: 2100000, guid: 0d8ba22e0524fc54f98e4e617a084b34, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1648,6 +1649,64 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200002
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2704,7 +2763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: e79c83242aed354459699545d0acf9be, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 22cdecb2a3954a448b61f511929261aa, type: 2}
   initialSkinName: default
   timeScale: 1
   calculateNormals: 0
