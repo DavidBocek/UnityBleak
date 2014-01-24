@@ -29,7 +29,7 @@ public class BleakUIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (state);
+		//Debug.Log (state);
 		if (working) return;
 		currentInput = KeyCode.None;
 		if (Input.GetKeyDown(KeyCode.RightArrow)){
