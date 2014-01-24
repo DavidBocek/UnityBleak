@@ -3163,16 +3163,32 @@ MonoBehaviour:
     - 26a71155aa1bf144a9427e5b7b272770
     - 26a71155aa1bf144a9427e5b7b272770
     spriteTextureTimeStamps:
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
-    - 1390420980
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    - 1390497493.80212
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Items
+    spriteCollectionGUID: 0ebb32fab42bfb34cad56a42ed009f4b
+    spriteCollectionDataGUID: 1a6918386adfe1445ae709c8d1936601
+    spriteNames:
+    - GrimmEmpty
+    - GrimmFull
+    spriteTextureGUIDs:
+    - 2a25b4beb9a591b46ad16e8324b33a79
+    - fa52d09c1e8ea444ea4837db71b5c9e1
+    spriteTextureTimeStamps:
+    - 1390422049.82218
+    - 1390422049.82518
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

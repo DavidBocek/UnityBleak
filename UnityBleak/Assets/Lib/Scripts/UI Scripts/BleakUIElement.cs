@@ -32,8 +32,10 @@ public class BleakUIElement : MonoBehaviour {
 	}
 
 	//sends a select message under and including this element
-	public void Select(){
-		SendMessage("Select",selectionIndex);
+	public void UISelect(string type){
+		if (type == "inventory"){
+			GetComponent<UIInventoryDisplay>().UISelect(selectionIndex);
+		}
 	}
 
 

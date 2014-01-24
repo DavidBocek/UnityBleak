@@ -398,19 +398,20 @@ public class BleakUIManager : MonoBehaviour {
 	void ActionReturn(){
 		switch (state){
 		case STATE_NONE:
+			Debug.Break ();
 			break;
 		case STATE_INVENTORY:
-			inventory.Select();
+			inventory.UISelect("inventory");
 			break;
 		case STATE_QUESTS:
-			quests.Select();
+			quests.UISelect("quests");
 			break;
 		case STATE_MAP:
 			break;
 		case STATE_KEY:
 			break;
 		case STATE_CONVERSATION:
-			conversation.Select();
+			conversation.UISelect("conversation");
 			break;
 		}
 	}

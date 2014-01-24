@@ -13,9 +13,10 @@ public class Corrode : MonoBehaviour {
 	
 	void HandleGrimmVialUsed(Vector3 useLocation){
 		if ((transform.position - useLocation).magnitude <= activateRadius){
-			AudioSource.PlayClipAtPoint(corrosionSound,transform.position,1f);
+			if (corrosionSound != null)
+				AudioSource.PlayClipAtPoint(corrosionSound,transform.position,1f);
 			Destroy(gameObject,2f);
-			GetComponent<tk2dSpriteAnimator>().Play("dissolve");
+			GetComponent<tk2dSpriteAnimator>().Play("Dissolve");
 		}
 	}
 }

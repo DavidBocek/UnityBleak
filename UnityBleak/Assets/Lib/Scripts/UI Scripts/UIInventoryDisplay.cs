@@ -14,9 +14,15 @@ public class UIInventoryDisplay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inventoryManager = GameObject.FindWithTag("Player").GetComponent<BleakInventoryManager>();
+		displayLocation0.gameObject.SetActive(false);
+		displayLocation1.gameObject.SetActive(false);
+		displayLocation2.gameObject.SetActive(false);
+		displayLocation3.gameObject.SetActive(false);
+		displayLocation4.gameObject.SetActive(false);
 	}
 	
-	void Open(){
+	IEnumerator Open(){
+		yield return new WaitForSeconds(1.5f);
 		int loc = 0;
 		for (int i=0; i<inventoryManager.inventoryItems.Count; i++){
 			Item item = inventoryManager.inventoryItems[i].GetComponent<Item>();
@@ -53,7 +59,10 @@ public class UIInventoryDisplay : MonoBehaviour {
 		displayLocation4.gameObject.SetActive(false);
 	}
 
-	void Select(int index){
+	public void UISelect(int index){
+		if (inventoryManager.inventoryItems.Count <= index){
+			return;
+		}
 		inventoryManager.UseItem(inventoryManager.inventoryItems[index].GetComponent<Item>().itemType);
 		GetComponent<BleakUIElement>().CloseTree ();
 		inventoryManager.RemoveItem(inventoryManager.inventoryItems[index]);
