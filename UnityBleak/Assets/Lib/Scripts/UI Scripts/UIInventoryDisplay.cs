@@ -10,6 +10,8 @@ public class UIInventoryDisplay : MonoBehaviour {
 	public tk2dSprite displayLocation4;
 
 	private BleakInventoryManager inventoryManager;
+	private int cacheLastInventoryCount;
+	private bool isOpen = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +21,25 @@ public class UIInventoryDisplay : MonoBehaviour {
 		displayLocation2.gameObject.SetActive(false);
 		displayLocation3.gameObject.SetActive(false);
 		displayLocation4.gameObject.SetActive(false);
+		cacheLastInventoryCount = inventoryManager.inventoryItems.Count;
+	}
+
+	void FixedUpdate(){
+		if (cacheLastInventoryCount == inventoryManager.inventoryItems.Count){
+			return;
+		} else if (isOpen){
+			FillDisplayLocations();
+			cacheLastInventoryCount = inventoryManager.inventoryItems.Count;
+		}
 	}
 	
 	IEnumerator Open(){
 		yield return new WaitForSeconds(1.5f);
+		isOpen = true;
+		FillDisplayLocations();
+	}
+
+	void FillDisplayLocations(){
 		int loc = 0;
 		for (int i=0; i<inventoryManager.inventoryItems.Count; i++){
 			Item item = inventoryManager.inventoryItems[i].GetComponent<Item>();
@@ -52,6 +69,7 @@ public class UIInventoryDisplay : MonoBehaviour {
 	}
 
 	void Close(){
+		isOpen = false;
 		displayLocation0.gameObject.SetActive(false);
 		displayLocation1.gameObject.SetActive(false);
 		displayLocation2.gameObject.SetActive(false);
@@ -60,11 +78,11 @@ public class UIInventoryDisplay : MonoBehaviour {
 	}
 
 	public void UISelect(int index){
+		isOpen = false;
 		if (inventoryManager.inventoryItems.Count <= index){
 			return;
 		}
 		inventoryManager.UseItem(inventoryManager.inventoryItems[index].GetComponent<Item>().itemType);
-		GetComponent<BleakUIElement>().CloseTree ();
 		inventoryManager.RemoveItem(inventoryManager.inventoryItems[index]);
 	}
 
