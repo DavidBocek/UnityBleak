@@ -927,7 +927,7 @@
 		}
 	},
 	"animation": {},
-	"panel1-2": {
+	"01-02": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1022,7 +1022,7 @@
 			}
 		}
 	},
-	"panel1-4": {
+	"01-04": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1117,7 +1117,7 @@
 			}
 		}
 	},
-	"panel2-1": {
+	"02-01": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1212,7 +1212,7 @@
 			}
 		}
 	},
-	"panel2-3": {
+	"02-03": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1307,7 +1307,7 @@
 			}
 		}
 	},
-	"panel3-2": {
+	"03-02": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1402,7 +1402,7 @@
 			}
 		}
 	},
-	"panel3-4": {
+	"03-04": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1497,7 +1497,7 @@
 			}
 		}
 	},
-	"panel4-1": {
+	"04-01": {
 		"bones": {
 			"middle bar": {
 				"translate": [
@@ -1592,7 +1592,7 @@
 			}
 		}
 	},
-	"panel4-3": {
+	"04-03": {
 		"bones": {
 			"middle bar": {
 				"translate": [
