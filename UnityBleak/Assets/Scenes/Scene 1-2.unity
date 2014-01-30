@@ -1192,6 +1192,81 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &142767435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 142767436}
+  - 33: {fileID: 142767439}
+  - 23: {fileID: 142767438}
+  - 114: {fileID: 142767437}
+  m_Layer: 0
+  m_Name: Quest SkeletonAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142767436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142767435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0382995605, y: 3.17276955, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 986562434}
+--- !u!114 &142767437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142767435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 72d2a5c50e0b3b34a956e8d1cf97ef01, type: 2}
+  initialSkinName: default
+  timeScale: 1
+  calculateNormals: 0
+  calculateTangents: 0
+  loop: 0
+  _animationName: UI top close1
+--- !u!23 &142767438
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142767435}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 3ed493ba6ff31204c9fb30bc87426ac2, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &142767439
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142767435}
+  m_Mesh: {fileID: 0}
 --- !u!1001 &163494882
 Prefab:
   m_ObjectHideFlags: 0
@@ -2506,6 +2581,18 @@ Prefab:
     - target: {fileID: 3300042, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300006, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: openAnimationName
+      value: UI top open1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: closeAnimationName
+      value: UI top close1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
@@ -8252,7 +8339,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11, y: 23, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 142767436}
   m_Father: {fileID: 674500624}
 --- !u!114 &986562435
 MonoBehaviour:
@@ -8302,7 +8390,7 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 310459567}
   m_GameObject: {fileID: 986562433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -8341,8 +8429,8 @@ MonoBehaviour:
   speed: 2
   x: 0
   y: 1
-  openAnimationName: 
-  closeAnimationName: 
+  openAnimationName: UI top open1
+  closeAnimationName: UI top close1
 --- !u!1001 &993605780
 Prefab:
   m_ObjectHideFlags: 0
