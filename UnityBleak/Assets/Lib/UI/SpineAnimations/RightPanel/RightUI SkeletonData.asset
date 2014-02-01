@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: RightUI SkeletonData
   m_EditorClassIdentifier: 
   atlasAsset: {fileID: 11400000, guid: beed6db79aa93f74c86cc48ed1a5c425, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: faf0432022af2e943be1c8afd970e758, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: c730a45f4c93b5d42a15adfb2378f8ca, type: 3}
   scale: .0240000002
   fromAnimation: []
   toAnimation: []

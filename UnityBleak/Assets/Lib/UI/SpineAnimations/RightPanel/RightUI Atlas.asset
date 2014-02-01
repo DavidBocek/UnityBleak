@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: RightUI Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 712a4ac940bd7704981ed05164b0bc13, type: 3}
+  atlasFile: {fileID: 4900000, guid: 28faeabde9e040b49a65130fa916d5e6, type: 3}
   materials:
   - {fileID: 2100000, guid: 3efc05913d555754ebe55d9e9d7ed6f8, type: 2}
