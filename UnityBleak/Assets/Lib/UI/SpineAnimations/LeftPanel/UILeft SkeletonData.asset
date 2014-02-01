@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: UILeft SkeletonData
   m_EditorClassIdentifier: 
   atlasAsset: {fileID: 11400000, guid: a5fead868fc3caa4c8ed9f7153225348, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: 1ce6b16b461319e4a9f6957d4f1d3a73, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 4c1fa12856fb48b49bc5beb9ee84907b, type: 3}
   scale: .0209999997
   fromAnimation: []
   toAnimation: []
