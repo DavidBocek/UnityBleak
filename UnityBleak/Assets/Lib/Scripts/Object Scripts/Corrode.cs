@@ -15,7 +15,7 @@ public class Corrode : MonoBehaviour {
 		if ((transform.position - useLocation).magnitude <= activateRadius){
 			if (corrosionSound != null)
 				AudioSource.PlayClipAtPoint(corrosionSound,transform.position,1f);
-			Destroy(gameObject,2f);
+			Destroy(gameObject,1.2f);
 			GetComponent<tk2dSpriteAnimator>().Play("Dissolve");
 		}
 	}
