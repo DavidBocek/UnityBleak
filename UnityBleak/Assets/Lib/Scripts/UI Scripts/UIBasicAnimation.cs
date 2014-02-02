@@ -30,7 +30,7 @@ public class UIBasicAnimation : MonoBehaviour {
 			if (isOpening){
 				if (Mathf.Abs (movedAmount - offset) <= epsilon){
 					isOpening = false;
-					p_uiElement.FinishWorking();
+					//p_uiElement.FinishWorking();
 					movedAmount = 0f;
 					skeletonAnimation.state.SetAnimation(0,openAnimationName,false);
 				} else {
@@ -41,7 +41,7 @@ public class UIBasicAnimation : MonoBehaviour {
 			} else if (isClosing){
 				if (Mathf.Abs (movedAmount - offset) <= epsilon){
 					isClosing = false;
-					p_uiElement.FinishWorking();
+					//p_uiElement.FinishWorking();
 					movedAmount = 0f;
 				} else {
 					transform.Translate(-offset*speed*Time.smoothDeltaTime,0f,0f);
@@ -53,7 +53,7 @@ public class UIBasicAnimation : MonoBehaviour {
 			if (isOpening){
 				if (Mathf.Abs (movedAmount - offset) <= epsilon){
 					isOpening = false;
-					p_uiElement.FinishWorking();
+					//p_uiElement.FinishWorking();
 					movedAmount = 0f;
 					skeletonAnimation.state.SetAnimation(0,openAnimationName,false);
 				} else {
@@ -64,7 +64,7 @@ public class UIBasicAnimation : MonoBehaviour {
 			} else if (isClosing){
 				if (Mathf.Abs (movedAmount - offset) <= epsilon){
 					isClosing = false;
-					p_uiElement.FinishWorking();
+					//p_uiElement.FinishWorking();
 					movedAmount = 0f;
 				} else {
 					transform.Translate(0f,-offset*speed*Time.smoothDeltaTime,0f);
@@ -76,11 +76,11 @@ public class UIBasicAnimation : MonoBehaviour {
 
 	public void Show(){
 		if (!isOpening){ isOpening = true; isClosing = false;}
-		p_uiElement.StartWorking();
+		//p_uiElement.StartWorking();
 	}
 	public void Hide(){
 		if (!isClosing){ isClosing = true; isOpening = false;}
 		skeletonAnimation.state.SetAnimation(0,closeAnimationName,false);
-		p_uiElement.StartWorking();
+		//p_uiElement.StartWorking();
 	}
 }

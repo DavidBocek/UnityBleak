@@ -257,6 +257,18 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: forceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: forceResolution.y
+      value: 768
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400028, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: offset
+      value: -18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
   m_RootGameObject: {fileID: 674500618}
@@ -4975,7 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b329bef0c47b4fb48acacedcb07b0933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -20
+  offset: -18
   speed: 2
   x: 1
   y: 0
