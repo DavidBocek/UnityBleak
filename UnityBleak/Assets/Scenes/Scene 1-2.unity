@@ -2634,6 +2634,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: selectionMax
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
   m_RootGameObject: {fileID: 674500618}
@@ -5677,7 +5681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasAnimation: 1
   hasSubElements: 0
-  selectionMax: 4
+  selectionMax: 2
   isMapOrKey: 0
   mapKeySkelAnim: {fileID: 0}
 --- !u!114 &666820682

@@ -41,12 +41,12 @@ public class BleakUIElement : MonoBehaviour {
 	}
 
 	public void MapToKey(){
-		StartCoroutine("cSetWorkingForTime",1f);
+		StartCoroutine("cSetWorkingForTime",.75f);
 		mapKeySkelAnim.state.SetAnimation(0,"switchTab2",false);
 	}
 
 	public void KeyToMap(){
-		StartCoroutine("cSetWorkingForTime",1f);
+		StartCoroutine("cSetWorkingForTime",.75f);
 		mapKeySkelAnim.state.SetAnimation(0,"switchTab",false);
 	}
 
@@ -70,14 +70,14 @@ public class BleakUIElement : MonoBehaviour {
 
 	void Open(){
 		if (hasAnimation) {
-			StartCoroutine("cSetWorkingForTime",2f);
+			StartCoroutine("cSetWorkingForTime",1.25f);
 			basicAnimator.Show();
 		}
 	}
 	void Close(){
 		ResetSelection();
 		if (hasAnimation) {
-			StartCoroutine("cSetWorkingForTime",2f);
+			StartCoroutine("cSetWorkingForTime",1.25f);
 			basicAnimator.Hide();
 		}
 	}
