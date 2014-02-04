@@ -572,6 +572,7 @@ MonoBehaviour:
   skelAnimObj: {fileID: 1205936024}
   changeSpeed: .0199999996
   lagSpeed: .0199999996
+  canControl: 1
 --- !u!61 &202123262
 BoxCollider2D:
   m_ObjectHideFlags: 0
