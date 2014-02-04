@@ -12,6 +12,8 @@ public class BleakControllerTopDown : MonoBehaviour {
 	public float changeSpeed;
 	public float lagSpeed;
 
+	public bool canControl = true;
+
 	private Vector2 velocity;
 	private Vector2 position;
 
@@ -119,7 +121,15 @@ public class BleakControllerTopDown : MonoBehaviour {
 				break;
 			}
 		}
+		UpdateInput(dt);
 		UpdatePositionChangeNormal(dt);
+	}
+
+
+	void UpdateInput(float dt){
+		if (Input.GetKeyDown(KeyCode.E) && canControl){
+			Messenger.Broadcast<Transform,BleakControllerTopDown>("BleakInteractionActivateTopDown",transform,this);
+		}
 	}
 
 	void UpdatePositionChangeNormal(float dt){

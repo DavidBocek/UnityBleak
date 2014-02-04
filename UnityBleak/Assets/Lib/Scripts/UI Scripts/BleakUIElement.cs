@@ -8,12 +8,11 @@ public class BleakUIElement : MonoBehaviour {
 	public int selectionMax;
 	public bool isMapOrKey;
 	public SkeletonAnimation mapKeySkelAnim;
-
+	
+	private bool isOpen = false;
 	private SkeletonAnimation skelAnim;
 	private UIBasicAnimation basicAnimator;
 	private tk2dSpriteAnimation animation;
-	//private bool isOpening = false;
-	//private bool isClosing = false;
 	private int selectionIndex = 0;
 
 	void Start(){
@@ -25,12 +24,14 @@ public class BleakUIElement : MonoBehaviour {
 
 	//open the tree under and including this element
 	public void OpenTree(){
-		SendMessage("Open");
+		if (!isOpen)
+			SendMessage("Open");
 	}
 
 	//close the tree under and including this element
 	public void CloseTree(){
-		SendMessage("Close");
+		if (isOpen)
+			SendMessage("Close");
 	}
 
 	//sends a select message under and including this element
@@ -69,12 +70,14 @@ public class BleakUIElement : MonoBehaviour {
 	}
 
 	void Open(){
+		isOpen = true;
 		if (hasAnimation) {
 			StartCoroutine("cSetWorkingForTime",1.25f);
 			basicAnimator.Show();
 		}
 	}
 	void Close(){
+		isOpen = false;
 		ResetSelection();
 		if (hasAnimation) {
 			StartCoroutine("cSetWorkingForTime",1.25f);
