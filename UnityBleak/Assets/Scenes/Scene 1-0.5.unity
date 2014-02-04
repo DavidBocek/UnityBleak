@@ -3570,7 +3570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialDatabase: {fileID: 11400000, guid: 1dbfd0226be7fc54e82994e9a99470db, type: 2}
   displaySettings:
-    dialogueUI: {fileID: 100028, guid: d8b7ad2f5175dc445ba6d9fd8f7112ce, type: 2}
+    dialogueUI: {fileID: 100028, guid: a3e98048e08167a4c90590c4faec62b9, type: 2}
     localizationSettings:
       language: 
       useSystemLanguage: 0

@@ -159,7 +159,9 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Sup brah.
+        value: By the stars! Can it be? The boy of all flesh and bone... I've heard
+          whisperings of your existence. Even if they are all inside my head. Come
+          closer. Tell me your name.
         type: 0
       - title: Video File
         value: 
@@ -201,7 +203,7 @@ MonoBehaviour:
         value: 2
         type: 5
       - title: Menu Text
-        value: Nothing much.
+        value: Bleak
         type: 0
       - title: Dialogue Text
         value: 
@@ -240,7 +242,7 @@ MonoBehaviour:
         value: 2
         type: 5
       - title: Menu Text
-        value: I'm gonna leave now.
+        value: Why?
         type: 0
       - title: Dialogue Text
         value: 
@@ -258,7 +260,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 3
+        destinationConversationID: 1
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Quest["Talk_to_Clamp"].State = "success"
     - id: 4
@@ -276,7 +284,9 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Kthnxbai.
+        value: It is you! Those metal men, C.O.G. Think I don't know what's going
+          on and yet here you are! Just as I knew you would be. Tell me, where is
+          your dear sister?
         type: 0
       - title: Video File
         value: 
@@ -298,6 +308,12 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 4
+        destinationConversationID: 1
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Quest["Talk_to_Clamp"].State = "success"
     - id: 5
@@ -312,7 +328,7 @@ MonoBehaviour:
         value: 2
         type: 5
       - title: Menu Text
-        value: '[f]okbai.'
+        value: She was taken! And now I'm going to find her and bring her back.
         type: 0
       - title: Dialogue Text
         value: 
@@ -330,7 +346,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
     - id: 6
@@ -348,7 +370,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: I already talked to you, go away.
+        value: Long live the resistance...
         type: 0
       - title: Video File
         value: 
@@ -384,10 +406,234 @@ MonoBehaviour:
         value: 2
         type: 5
       - title: Menu Text
-        value: '[f]:c'
+        value: Of course!
         type: 0
       - title: Dialogue Text
         value: 
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+    - id: 8
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Rightfully cautious in these trying times. Asha has taught you well.
+          Lock would be proud. So tell me, Bleak. Where is your sister?
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+    - id: 9
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 1
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: I don't know. They took her. Can you help me?
+        type: 0
+      - title: Dialogue Text
+        value: 
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 9
+        destinationConversationID: 1
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+    - id: 10
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: My goodness! You are as brave as I imagined. Come Bleak. Follow me.
+          We have much to discuss.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+    - id: 11
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Help... Yes. Help. Why don't you step into my humble hovel.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+    - id: 12
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 1
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: Who are you and how do you know my name?
+        type: 0
+      - title: Dialogue Text
+        value: 
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 12
+        destinationConversationID: 1
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+    - id: 13
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Haha! So inquisitive. Step into my office. We'll talk.
         type: 0
       - title: Video File
         value: 
