@@ -26,11 +26,14 @@ public class BleakControllerTopDown : MonoBehaviour {
 	private float dt;
 	void Update(){
 		dt = Time.smoothDeltaTime;
-
 		position = new Vector2(transform.position[0],transform.position[1]);
 
 		float xInput = Input.GetAxis("Horizontal");
 		float yInput = Input.GetAxis("Vertical");
+		if (!canControl){
+			xInput = 0;
+			yInput = 0;
+		}
 
 		if (xInput != 0 || yInput != 0)
 		{
@@ -127,7 +130,7 @@ public class BleakControllerTopDown : MonoBehaviour {
 
 
 	void UpdateInput(float dt){
-		if (Input.GetKeyDown(KeyCode.E) && canControl){
+		if (Input.GetKeyDown(KeyCode.E)){
 			Messenger.Broadcast<Transform,BleakControllerTopDown>("BleakInteractionActivateTopDown",transform,this);
 		}
 	}

@@ -9,29 +9,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1097633651, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: Three NPCs Bark
+  m_Name: New Dialogue Database
   m_EditorClassIdentifier: 
-  version: 1.5.1.0
-  author: Pixel Crushers
-  description: This project demonstrates a method of running a three-NPC sequence
-    of barks. It uses the SendMessage sequencer command to prompt the next speaker,
-    and a variable named Line to keep track of which line the speaker should bark.
+  version: 
+  author: 
+  description: 
   globalUserScript: 
   emphasisSettings:
-  - color: {r: 1, g: 0, b: 0, a: 1}
-    bold: 1
+  - color: {r: 0, g: 0, b: 0, a: 0}
+    bold: 0
     italic: 0
     underline: 0
-  - color: {r: .266666681, g: .713725507, b: .203921571, a: 1}
-    bold: 1
+  - color: {r: 0, g: 0, b: 0, a: 0}
+    bold: 0
     italic: 0
     underline: 0
-  - color: {r: .274509817, g: .533333361, b: .90196079, a: 1}
-    bold: 1
+  - color: {r: 0, g: 0, b: 0, a: 0}
+    bold: 0
     italic: 0
     underline: 0
-  - color: {r: .800000012, g: .800000012, b: .800000012, a: 1}
-    bold: 1
+  - color: {r: 0, g: 0, b: 0, a: 0}
+    bold: 0
     italic: 0
     underline: 0
   actors:
@@ -40,12 +38,6 @@ MonoBehaviour:
     - title: Name
       value: Player
       type: 0
-    - title: Pictures
-      value: '[]'
-      type: 3
-    - title: Description
-      value: The player character.
-      type: 0
     - title: IsPlayer
       value: True
       type: 2
@@ -53,22 +45,36 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: NPC
-      type: 0
-    - title: Pictures
-      value: '[]'
-      type: 3
-    - title: Description
-      value: This actor stands in for all three NPCs.
+      value: Clamp
       type: 0
     - title: IsPlayer
       value: False
       type: 2
     portrait: {fileID: 0}
-  items: []
+  items:
+  - id: 1
+    fields:
+    - title: Name
+      value: Talk to Clamp
+      type: 0
+    - title: State
+      value: unassigned
+      type: 0
+    - title: Description
+      value: 
+      type: 0
+    - title: Success Description
+      value: 
+      type: 0
+    - title: Failure Description
+      value: 
+      type: 0
+    - title: Is Item
+      value: False
+      type: 2
   locations: []
   variables:
-  - id: 0
+  - id: 1
     fields:
     - title: Name
       value: Alert
@@ -76,26 +82,11 @@ MonoBehaviour:
     - title: Initial Value
       value: 
       type: 0
-    - title: Description
-      value: Show alert messages during gameplay by setting this variable.
-      type: 0
-  - id: 1
-    fields:
-    - title: Name
-      value: Line
-      type: 0
-    - title: Initial Value
-      value: 1
-      type: 1
-    - title: Description
-      value: The current line number, used to keep track of where we are in the series
-        of barks.
-      type: 0
   conversations:
   - id: 1
     fields:
     - title: Title
-      value: Barks
+      value: Clamp
       type: 0
     - title: Description
       value: 
@@ -106,7 +97,7 @@ MonoBehaviour:
     - title: Conversant
       value: 2
       type: 5
-    nodeColor: Red
+    nodeColor: 
     dialogueEntries:
     - id: 0
       fields:
@@ -124,7 +115,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: 
-        type: 4
+        type: 0
       - title: Video File
         value: 
         type: 0
@@ -132,9 +123,9 @@ MonoBehaviour:
         value: None()
         type: 0
       conversationID: 1
-      isRoot: 1
+      isRoot: 0
       isGroup: 0
-      nodeColor: White
+      nodeColor: 
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
@@ -148,19 +139,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 0
-        destinationConversationID: 1
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 0
-        destinationConversationID: 1
-        destinationDialogueID: 4
+        destinationDialogueID: 6
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -168,7 +147,7 @@ MonoBehaviour:
     - id: 1
       fields:
       - title: Title
-        value: Adam speaks
+        value: New Dialogue Entry
         type: 0
       - title: Actor
         value: 2
@@ -180,94 +159,112 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: I'm Adam.
-        type: 4
+        value: Sup brah.
+        type: 0
       - title: Video File
         value: 
         type: 0
       - title: Sequence
-        value: SendMessage(OnUse,,Bob)@3
+        value: 
         type: 0
       conversationID: 1
       isRoot: 0
       isGroup: 0
-      nodeColor: White
+      nodeColor: 
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Line"] == 1
-      userScript: Variable["Line"] = 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 1
+        destinationConversationID: 1
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 1
+        destinationConversationID: 1
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: Quest["Talk_to_Clamp"].State == "unassigned"
+      userScript: 
     - id: 2
       fields:
       - title: Title
-        value: Bob speaks
+        value: New Dialogue Entry
         type: 0
       - title: Actor
-        value: 2
-        type: 5
-      - title: Conversant
         value: 1
         type: 5
+      - title: Conversant
+        value: 2
+        type: 5
       - title: Menu Text
-        value: 
+        value: Nothing much.
         type: 0
       - title: Dialogue Text
-        value: I'm Bob.
-        type: 4
+        value: 
+        type: 0
       - title: Video File
         value: 
         type: 0
       - title: Sequence
-        value: SendMessage(OnUse,,Carl)@3
+        value: 
         type: 0
       conversationID: 1
       isRoot: 0
       isGroup: 0
-      nodeColor: White
+      nodeColor: 
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Line"] == 2
-      userScript: Variable["Line"] = 3
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 2
+        destinationConversationID: 1
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
     - id: 3
       fields:
       - title: Title
-        value: Carl speaks
+        value: New Dialogue Entry
         type: 0
       - title: Actor
-        value: 2
-        type: 5
-      - title: Conversant
         value: 1
         type: 5
+      - title: Conversant
+        value: 2
+        type: 5
       - title: Menu Text
-        value: 
+        value: I'm gonna leave now.
         type: 0
       - title: Dialogue Text
-        value: And I'm Carl.
-        type: 4
+        value: 
+        type: 0
       - title: Video File
         value: 
         type: 0
       - title: Sequence
-        value: SendMessage(OnUse,,Adam)@3
+        value: 
         type: 0
       conversationID: 1
       isRoot: 0
       isGroup: 0
-      nodeColor: White
+      nodeColor: 
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["Line"] == 3
-      userScript: Variable["Line"] = 4
+      conditionsString: 
+      userScript: Quest["Talk_to_Clamp"].State = "success"
     - id: 4
       fields:
       - title: Title
-        value: Adam speaks again
+        value: New Dialogue Entry
         type: 0
       - title: Actor
         value: 2
@@ -279,8 +276,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: That's all. Bye!
-        type: 4
+        value: Kthnxbai.
+        type: 0
       - title: Video File
         value: 
         type: 0
@@ -290,10 +287,121 @@ MonoBehaviour:
       conversationID: 1
       isRoot: 0
       isGroup: 0
-      nodeColor: White
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 4
+        destinationConversationID: 1
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Quest["Talk_to_Clamp"].State = "success"
+    - id: 5
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 1
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: '[f]okbai.'
+        type: 0
+      - title: Dialogue Text
+        value: 
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["Line"] == 4
+      conditionsString: 
+      userScript: 
+    - id: 6
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: I already talked to you, go away.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 6
+        destinationConversationID: 1
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: Quest["Talk_to_Clamp"].State == "success"
+      userScript: 
+    - id: 7
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 1
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: '[f]:c'
+        type: 0
+      - title: Dialogue Text
+        value: 
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
       userScript: 

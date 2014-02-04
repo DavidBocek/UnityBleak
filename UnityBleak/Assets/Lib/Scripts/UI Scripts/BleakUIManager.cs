@@ -20,15 +20,28 @@ public class BleakUIManager : MonoBehaviour {
 	public bool working {get; set;}
 
 	private KeyCode currentInput;
+	private BleakController controller;
+	private BleakControllerTopDown controllerTD;
 
 	// Use this for initialization
 	void Start () {
 		state = STATE_NONE;
 		working = false;
+		controller = GetComponent<BleakController>();
+		controllerTD = GetComponent<BleakControllerTopDown>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (controller != null){
+			if (!controller.canControl){
+				return;
+			}
+		} else if (controllerTD != null){
+			if (!controllerTD.canControl){
+				return;
+			}
+		}
 		if (working) return;
 		currentInput = KeyCode.None;
 		if (Input.GetKeyDown(KeyCode.RightArrow)){
