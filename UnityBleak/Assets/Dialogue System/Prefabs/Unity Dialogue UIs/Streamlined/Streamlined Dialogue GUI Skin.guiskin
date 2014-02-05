@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Streamlined Dialogue GUI Skin
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: d6e16a362fceb5a44bf605b70e06dc10, type: 3}
   m_box:
     m_Name: box
     m_Normal:
@@ -121,14 +121,14 @@ MonoBehaviour:
     m_FontSize: 18
     m_FontStyle: 0
     m_Alignment: 4
-    m_WordWrap: 1
-    m_RichText: 1
+    m_WordWrap: 0
+    m_RichText: 0
     m_TextClipping: 1
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
-    m_StretchWidth: 1
+    m_StretchWidth: 0
     m_StretchHeight: 0
   m_toggle:
     m_Name: toggle
@@ -235,7 +235,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 12800000, guid: 2695d38d954a5ce41ba8c477a4107f1e, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_Alignment: 0

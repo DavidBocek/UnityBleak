@@ -2677,6 +2677,7 @@ GameObject:
   - 61: {fileID: 571329704}
   - 114: {fileID: 571329705}
   - 114: {fileID: 571329706}
+  - 58: {fileID: 571329707}
   m_Layer: 0
   m_Name: Clamp
   m_TagString: Untagged
@@ -2739,8 +2740,19 @@ MonoBehaviour:
     acceptedGameObjects: []
   conversant: {fileID: 571329703}
   actor: {fileID: 202123260}
-  trigger: 32
-  stopConversationOnTriggerExit: 0
+  trigger: 8
+  stopConversationOnTriggerExit: 1
+--- !u!58 &571329707
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571329702}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0}
 --- !u!1 &581334047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,7 +3590,7 @@ MonoBehaviour:
       showNPCSubtitlesDuringLine: 1
       showNPCSubtitlesWithResponses: 1
       showPCSubtitlesDuringLine: 0
-      subtitleCharsPerSecond: 30
+      subtitleCharsPerSecond: 15
       minSubtitleSeconds: 2
       waitForContinueButton: 0
       richTextEmphases: 0
