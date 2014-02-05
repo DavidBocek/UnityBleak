@@ -684,7 +684,7 @@ MonoBehaviour:
       value: 0
     y:
       scale: 0
-      value: 20
+      value: 0
     width:
       scale: 1
       value: 1
@@ -758,7 +758,7 @@ MonoBehaviour:
     height:
       scale: 1
       value: 1
-    minPixelWidth: 800
+    minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
     autoSizeWidth: 0
@@ -821,9 +821,9 @@ MonoBehaviour:
       scale: 0
       value: 600
     height:
-      scale: 1
-      value: 1
-    minPixelWidth: 800
+      scale: 0
+      value: 1000
+    minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
     autoSizeWidth: 0
