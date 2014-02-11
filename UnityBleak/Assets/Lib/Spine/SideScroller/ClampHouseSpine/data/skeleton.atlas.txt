@@ -1,0 +1,240 @@
+
+skeleton-1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/handL
+  rotate: false
+  xy: 678, 197
+  size: 320, 796
+  orig: 320, 796
+  offset: 0, 0
+  index: -1
+clamp parts/back/head
+  rotate: false
+  xy: 2, 42
+  size: 674, 951
+  orig: 674, 951
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/footL
+  rotate: false
+  xy: 678, 2
+  size: 320, 193
+  orig: 320, 193
+  offset: 0, 0
+  index: -1
+
+skeleton-2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/armLU
+  rotate: true
+  xy: 2, 8
+  size: 108, 504
+  orig: 108, 504
+  offset: 0, 0
+  index: -1
+clamp parts/back/footL
+  rotate: false
+  xy: 523, 2
+  size: 202, 251
+  orig: 202, 251
+  offset: 0, 0
+  index: -1
+clamp parts/back/footR
+  rotate: true
+  xy: 727, 45
+  size: 208, 262
+  orig: 208, 262
+  offset: 0, 0
+  index: -1
+clamp parts/back/torsoL
+  rotate: false
+  xy: 523, 255
+  size: 494, 763
+  orig: 494, 763
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/head
+  rotate: false
+  xy: 2, 118
+  size: 519, 900
+  orig: 519, 900
+  offset: 0, 0
+  index: -1
+
+skeleton-3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/handR
+  rotate: false
+  xy: 865, 613
+  size: 138, 409
+  orig: 138, 409
+  offset: 0, 0
+  index: -1
+clamp parts/back/legLU
+  rotate: true
+  xy: 396, 317
+  size: 226, 619
+  orig: 226, 619
+  offset: 0, 0
+  index: -1
+clamp parts/back/legRL
+  rotate: true
+  xy: 2, 2
+  size: 301, 745
+  orig: 301, 745
+  offset: 0, 0
+  index: -1
+clamp parts/back/torsoU
+  rotate: false
+  xy: 396, 545
+  size: 467, 477
+  orig: 467, 477
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/legRL
+  rotate: false
+  xy: 2, 305
+  size: 392, 717
+  orig: 392, 717
+  offset: 0, 0
+  index: -1
+
+skeleton-4.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/legLL
+  rotate: false
+  xy: 2, 222
+  size: 275, 789
+  orig: 275, 789
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/armRL
+  rotate: true
+  xy: 386, 2
+  size: 251, 587
+  orig: 251, 587
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/handL
+  rotate: true
+  xy: 2, 29
+  size: 191, 382
+  orig: 191, 382
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/handR
+  rotate: false
+  xy: 537, 287
+  size: 218, 724
+  orig: 218, 724
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/legLL
+  rotate: false
+  xy: 279, 255
+  size: 256, 756
+  orig: 256, 756
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/legLU
+  rotate: false
+  xy: 757, 367
+  size: 257, 644
+  orig: 257, 644
+  offset: 0, 0
+  index: -1
+
+skeleton-5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/armLL
+  rotate: false
+  xy: 2, 328
+  size: 170, 684
+  orig: 170, 684
+  offset: 0, 0
+  index: -1
+clamp parts/back/armRL
+  rotate: false
+  xy: 174, 341
+  size: 112, 671
+  orig: 112, 671
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/armLL
+  rotate: false
+  xy: 729, 414
+  size: 269, 598
+  orig: 269, 598
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/armRU
+  rotate: true
+  xy: 288, 824
+  size: 188, 431
+  orig: 188, 431
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/footR
+  rotate: true
+  xy: 2, 2
+  size: 324, 187
+  orig: 324, 187
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/legRU
+  rotate: true
+  xy: 191, 60
+  size: 279, 536
+  orig: 279, 536
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/torsoL
+  rotate: false
+  xy: 288, 377
+  size: 402, 445
+  orig: 402, 445
+  offset: 0, 0
+  index: -1
+
+skeleton-6.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clamp parts/back/armRU
+  rotate: false
+  xy: 836, 107
+  size: 134, 535
+  orig: 134, 535
+  offset: 0, 0
+  index: -1
+clamp parts/back/legRU
+  rotate: false
+  xy: 2, 2
+  size: 253, 640
+  orig: 253, 640
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/armLU
+  rotate: false
+  xy: 654, 140
+  size: 180, 502
+  orig: 180, 502
+  offset: 0, 0
+  index: -1
+clamp parts/quarter/torsoU
+  rotate: false
+  xy: 257, 202
+  size: 395, 440
+  orig: 395, 440
+  offset: 0, 0
+  index: -1

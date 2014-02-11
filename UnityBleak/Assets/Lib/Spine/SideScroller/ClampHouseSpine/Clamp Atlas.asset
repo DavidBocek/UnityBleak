@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Clamp Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 04272ec49e4313e4087158f475c7bfd0, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 89368d7724f1edf419c573c94b50cec5, type: 2}
+  - {fileID: 2100000, guid: 85b58e7ef9f43f047b4d298dc75cbe84, type: 2}
+  - {fileID: 2100000, guid: c24740b6593682c48a252e976bd9bbeb, type: 2}
+  - {fileID: 2100000, guid: 2ce585c25f8795e4dbc8fdd6d10c7aa4, type: 2}
+  - {fileID: 2100000, guid: 18549090ade08d3498d30c54c04197f2, type: 2}
+  - {fileID: 2100000, guid: 4145a10e6fab4c14aa637acd0e942efe, type: 2}
