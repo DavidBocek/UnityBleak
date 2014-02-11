@@ -3858,15 +3858,23 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 2
+    colliderType: 3
     colliderVertices:
-    - {x: .5, y: .5, z: 0}
-    - {x: .5, y: .5, z: 10}
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
+    - {x: 0, y: 0, z: -10}
+    - {x: 0, y: 0, z: 10}
+    - {x: 1, y: 0, z: -10}
+    - {x: 1, y: 0, z: 10}
+    - {x: 1, y: 1, z: -10}
+    - {x: 1, y: 1, z: 10}
+    colliderIndicesFwd: 020000000100000000000000020000000300000001000000040000000300000002000000040000000500000003000000000000000100000004000000040000000100000005000000020000000000000004000000050000000100000003000000
+    colliderIndicesBack: 000000000100000002000000010000000300000002000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
-    polygonCollider2D: []
+    polygonCollider2D:
+    - points:
+      - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
     edgeCollider2D: []
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/89
@@ -3901,15 +3909,23 @@ MonoBehaviour:
     flipped: 0
     complexGeometry: 0
     physicsEngine: 1
-    colliderType: 2
+    colliderType: 3
     colliderVertices:
-    - {x: .5, y: .5, z: 0}
-    - {x: .5, y: .5, z: 10}
-    colliderIndicesFwd: 
-    colliderIndicesBack: 
+    - {x: 0, y: 1, z: -10}
+    - {x: 0, y: 1, z: 10}
+    - {x: 0, y: 0, z: -10}
+    - {x: 0, y: 0, z: 10}
+    - {x: 1, y: 0, z: -10}
+    - {x: 1, y: 0, z: 10}
+    colliderIndicesFwd: 020000000300000000000000000000000300000001000000040000000300000002000000040000000500000003000000000000000100000004000000040000000100000005000000020000000000000004000000050000000100000003000000
+    colliderIndicesBack: 000000000300000002000000010000000300000000000000020000000300000004000000030000000500000004000000040000000100000000000000050000000100000004000000040000000000000002000000030000000100000005000000
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
-    polygonCollider2D: []
+    polygonCollider2D:
+    - points:
+      - {x: 0, y: 1}
+      - {x: 0, y: 0}
+      - {x: 1, y: 0}
     edgeCollider2D: []
     attachPoints: []
   - name: tilesFINALmergedUSEFINISHED13012/90
@@ -5553,7 +5569,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 22
-  buildKey: 278249193
+  buildKey: 2076630032
   dataGuid: d51123e0698e0c74da73c1f90ce52253
   managedSpriteCollection: 0
   hasPlatformData: 0

@@ -3635,10 +3635,15 @@ MonoBehaviour:
     regionW: 44
     regionH: 44
     regionId: 88
-    colliderType: 2
+    colliderType: 4
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
+    boxColliderMax: {x: 44, y: 44}
+    polyColliderIslands:
+    - connected: 1
+      points:
+      - {x: 0, y: 44}
+      - {x: 44, y: 44}
+      - {x: 44, y: 0}
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
@@ -3675,10 +3680,15 @@ MonoBehaviour:
     regionW: 44
     regionH: 44
     regionId: 89
-    colliderType: 2
+    colliderType: 4
     boxColliderMin: {x: 0, y: 0}
     boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
+    polyColliderIslands:
+    - connected: 1
+      points:
+      - {x: 0, y: 0}
+      - {x: 0, y: 44}
+      - {x: 44, y: 44}
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
@@ -5277,7 +5287,7 @@ MonoBehaviour:
   normalGenerationMode: 0
   padAmount: -1
   autoUpdate: 1
-  editorDisplayScale: 4.4439888
+  editorDisplayScale: 5.61998796
   version: 4
   assetName: 
 --- !u!1001 &100100000

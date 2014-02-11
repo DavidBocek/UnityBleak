@@ -24,6 +24,7 @@ public class BleakController : MonoBehaviour {
 	public AudioClip noooo;
 	public AudioSource cammie;
 	public Aperture aperture;
+	public float maximumSlopeAngle;
 
 	public const float SMALL_JUMP_TIME = .06f;
 	public const float MED_JUMP_TIME = .08f;
@@ -46,6 +47,7 @@ public class BleakController : MonoBehaviour {
 	private KeyCode actionButton = KeyCode.E;
 	private SkeletonAnimation skelAnim;
 	private GameObject attachedRideObject;
+	private bool runningOnSlope = false;
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
@@ -266,7 +268,7 @@ public class BleakController : MonoBehaviour {
 			rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
 			if (!rayHitInfoLBottom && !rayHitInfoCBottom && !rayHitInfoRBottom ){
 				tempVelVert = velocity.y - gravityAcceleration * dt;
-				velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
+				if (!runningOnSlope) velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 				isGrounded = false;
 				//otherwise deal with collisions from the top if the object is not ignoring them
 			} else if (rayHitInfoLBottom || rayHitInfoCBottom|| rayHitInfoRBottom){
@@ -292,7 +294,7 @@ public class BleakController : MonoBehaviour {
 					HandleBottomCollision(rayHitInfoBottom,dt);	
 				} else {
 					tempVelVert = velocity.y - gravityAcceleration * dt;
-					velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
+					if (!runningOnSlope) velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 				}
 			}
 		} else {
@@ -419,6 +421,7 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateLeftRight(float dt){
+		runningOnSlope = false;
 		bool obstructedRight = false;
 		bool obstructedLeft = false;
 		float directionInt = Input.GetAxisRaw("Horizontal");
@@ -464,12 +467,76 @@ public class BleakController : MonoBehaviour {
 			} else { obstructedLeft = false; }
 		} else
 			obstructedLeft = false;
-
+		Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f,0f),Vector3.right,Color.green);
+		Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f,0f),Vector3.right,Color.blue);
 		//player is hitting direction
 		if (directionInt != 0){
+
+
+			RaycastHit2D rayHitInfoSlopeCheckRight = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+			                                                           topRayRight.direction,1f);
+			RaycastHit2D rayHitInfoSlopeCheckRight2 = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f),
+			                                                            topRayRight.direction,1f);
+			RaycastHit2D rayHitInfoSlopeCheckLeft = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+			                                                          topRayLeft.direction,1f);
+			RaycastHit2D rayHitInfoSlopeCheckLeft2 = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f),
+			                                                           topRayLeft.direction,1f);
+			bool lowObstructedRight = false; bool lowObstructedLeft = false;
+			if (rayHitInfoSlopeCheckRight2){
+				if (rayHitInfoSlopeCheckRight2.fraction-boxCollider.size.x/2f<=.02f){
+					lowObstructedRight = true;
+				}
+			}
+			if (rayHitInfoSlopeCheckLeft2){
+				if (rayHitInfoSlopeCheckLeft2.fraction-boxCollider.size.x/2f<=.02f){
+					lowObstructedLeft = true;
+				}
+			}
 			idleDelay = 0;
 			if (runDelay < timeUntilRun){
-				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * joggingMultiplier * directionInt;
+
+				//check for clear space
+				if ((facing && !obstructedRight && !lowObstructedRight) || (!facing && !obstructedLeft && !lowObstructedLeft)){
+					velocity.x = runSpeed * joggingMultiplier * directionInt;
+				}
+
+
+				//check for slopes
+				else if ((facing && lowObstructedRight) || (!facing && lowObstructedLeft)){
+					if (directionInt > 0){
+						if (rayHitInfoSlopeCheckRight){
+							float yDiff = .1f;
+							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
+							float yOverx = yDiff/xDiff;
+							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
+							Debug.Log (angle);
+							if (angle <= maximumSlopeAngle && angle > 0){
+								velocity.x = runSpeed * joggingMultiplier;
+								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckRight2.fraction);
+								velocity.Normalize();
+								velocity *= runSpeed;
+								velocity *= joggingMultiplier;
+								runningOnSlope = true;
+							}
+						}
+					} else if (directionInt < 0){
+						if (rayHitInfoSlopeCheckLeft){
+							float yDiff = .1f;
+							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
+							float yOverx = yDiff/xDiff;
+							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
+							Debug.Log (angle);
+							if (angle <= maximumSlopeAngle && angle > 0){
+								velocity.x = runSpeed * joggingMultiplier;
+								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckLeft2.fraction);
+								velocity.Normalize();
+								velocity *= runSpeed;
+								velocity *= joggingMultiplier;
+								runningOnSlope = true;
+							}
+						}
+					}
+				}
 				if (jumping != -1){
 					//play jogging anim
 					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured" && skelAnim.state.ToString()!="pick up"){
@@ -479,7 +546,46 @@ public class BleakController : MonoBehaviour {
 				}
 				runDelay += dt;
 			} else {
-				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)) velocity.x = runSpeed * directionInt;
+				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)){
+					velocity.x = runSpeed * directionInt;
+					runningOnSlope = false;
+				}
+
+				//check for slopes
+				else if ((facing && lowObstructedRight) || (!facing && lowObstructedLeft)){
+					if (directionInt > 0){
+						if (rayHitInfoSlopeCheckRight){
+							float yDiff = .1f;
+							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
+							float yOverx = yDiff/xDiff;
+							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
+							Debug.Log (angle);
+							if (angle <= maximumSlopeAngle && angle > 0){
+								velocity.x = runSpeed;
+								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckRight2.fraction);
+								velocity.Normalize();
+								velocity *= runSpeed;
+								runningOnSlope = true;
+							}
+						}
+					} else if (directionInt < 0){
+						if (rayHitInfoSlopeCheckLeft){
+							float yDiff = .1f;
+							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
+							float yOverx = yDiff/xDiff;
+							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
+							Debug.Log (angle);
+							if (angle <= maximumSlopeAngle && angle > 0){
+								velocity.x = runSpeed;
+								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckLeft2.fraction);
+								velocity.Normalize();
+								velocity *= runSpeed;
+								runningOnSlope = true;
+							}
+						}
+					}
+				}
+
 				if (jumping != -1){
 					//play running anim
 					if (skelAnim.state.ToString()!="sprint"){
@@ -599,7 +705,7 @@ public class BleakController : MonoBehaviour {
 			moveDelta += attachedRideObject.GetComponent<MoveWithObject>().GetMoveDeltaLastFrame();
 		}
 		RaycastHit2D interpolateInfo;
-		
+
 		//== deal with interpolate collisions down ==
 		deltaY = moveDelta.y;
 		if (deltaY < 0){

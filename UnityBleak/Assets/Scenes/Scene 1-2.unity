@@ -5577,7 +5577,7 @@ MonoBehaviour:
   x: 0
   y: 1
   openAnimationName: UI bottom open
-  closeAnimationName: UI bottom close02
+  closeAnimationName: UI bottom close01
 --- !u!1001 &669427261
 Prefab:
   m_ObjectHideFlags: 0
