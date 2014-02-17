@@ -102,6 +102,10 @@ public class BleakController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//load info from other level
+		numLives = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numLivesPlayer;
+
+		//instantiate
 		transform.position = startPoint.position;
 		position2d = new Vector2(transform.position[0],transform.position[1]);
 		boxCollider = transform.gameObject.GetComponent<BoxCollider2D>();
@@ -142,6 +146,7 @@ public class BleakController : MonoBehaviour {
 				UpdateInputNormal(dt);
 				UpdateIdle(dt);
 				UpdateLeftRight(dt);
+				UpdateUp(dt);
 			}
 			UpdatePositionChangeNormal(fdt);
 			UpdateRotationNormal(dt);
@@ -229,6 +234,7 @@ public class BleakController : MonoBehaviour {
 			UpdateRays(dt);
 			if (canControl) UpdatePushing(dt,LEFT);
 			UpdateGravity(dt);
+			UpdateUp(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
@@ -238,6 +244,7 @@ public class BleakController : MonoBehaviour {
 			UpdateRays(dt);
 			if (canControl) UpdatePushing(dt,RIGHT);
 			UpdateGravity(dt);
+			UpdateUp(dt);
 			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
@@ -266,12 +273,13 @@ public class BleakController : MonoBehaviour {
 			rayHitInfoLBottom = Physics2D.Raycast(leftRayBottom.origin, leftRayBottom.direction,rayLengthBottom);
 			rayHitInfoCBottom = Physics2D.Raycast(centerRayBottom.origin,centerRayBottom.direction,rayLengthBottom);
 			rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
+
 			if (!rayHitInfoLBottom && !rayHitInfoCBottom && !rayHitInfoRBottom ){
 				tempVelVert = velocity.y - gravityAcceleration * dt;
 				if (!runningOnSlope) velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 				isGrounded = false;
 				//otherwise deal with collisions from the top if the object is not ignoring them
-			} else if (rayHitInfoLBottom || rayHitInfoCBottom|| rayHitInfoRBottom){
+			} else if (rayHitInfoLBottom || rayHitInfoCBottom || rayHitInfoRBottom){
 				bool collidableDown = true;
 				bool collidableUp = true;
 				bool aboveCollider = true;
@@ -297,9 +305,6 @@ public class BleakController : MonoBehaviour {
 					if (!runningOnSlope) velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 				}
 			}
-		} else {
-			//accel y is 0, so velocity.y shouldn't change. walking up stairs and such
-			//DEPRECATED canControl? using FORCE_MOVE and death states should replace this i think?
 		}
 	}
 
@@ -509,7 +514,7 @@ public class BleakController : MonoBehaviour {
 							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
-							Debug.Log (angle);
+							//Debug.Log(angle);
 							if (angle <= maximumSlopeAngle && angle > 0){
 								velocity.x = runSpeed * joggingMultiplier;
 								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckRight2.fraction);
@@ -525,7 +530,6 @@ public class BleakController : MonoBehaviour {
 							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
-							Debug.Log (angle);
 							if (angle <= maximumSlopeAngle && angle > 0){
 								velocity.x = runSpeed * joggingMultiplier;
 								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckLeft2.fraction);
@@ -559,7 +563,6 @@ public class BleakController : MonoBehaviour {
 							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
-							Debug.Log (angle);
 							if (angle <= maximumSlopeAngle && angle > 0){
 								velocity.x = runSpeed;
 								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckRight2.fraction);
@@ -574,7 +577,6 @@ public class BleakController : MonoBehaviour {
 							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
-							Debug.Log (angle);
 							if (angle <= maximumSlopeAngle && angle > 0){
 								velocity.x = runSpeed;
 								velocity.y = yOverx * (runSpeed*joggingMultiplier-rayHitInfoSlopeCheckLeft2.fraction);
@@ -595,6 +597,15 @@ public class BleakController : MonoBehaviour {
 			}
 		} else {	//otherwise horizontal direction isn't being applied
 			runDelay = 0;
+		}
+	}
+
+
+	void UpdateUp(float dt){
+		RaycastHit2D rayHitUpC = Physics2D.Raycast(position2d+boxCollider.center,Vector2.up,rayLengthBottom);
+
+		if (rayHitUpC){
+			HandleTopCollision(rayHitUpC,dt);
 		}
 	}
 	
@@ -724,6 +735,7 @@ public class BleakController : MonoBehaviour {
 				//Debug.Log ("overmovement detected! setting new movement distance from: "+deltaY+" to: "+interpolateInfo.distance+" movedelta.y becoming: "+moveDelta.y);
 			}
 		}
+
 		//== deal with interpolate collisions sideways ==
 		deltaX = moveDelta.x;
 		if(deltaX != 0){
@@ -752,7 +764,32 @@ public class BleakController : MonoBehaviour {
 				else if (deltaXLeftC){interpolateInfo = deltaXLeftC;moveDelta.x = -interpolateInfo.fraction * Mathf.Abs(deltaX);}
 				else if (deltaXLeftT){interpolateInfo = deltaXLeftT;moveDelta.x = -interpolateInfo.fraction * Mathf.Abs(deltaX);}
 			}
-		} //all of this may be unnecessary if the rigid body velocity works ok, but it seems to be too choppy
+		}
+
+		//slopes check
+		RaycastHit2D rayHitInfoSlopeRight = Physics2D.Raycast(rightRayBottom.origin-new Vector2(.05f,0f),rightRayBottom.direction,rayLengthBottom+.5f);
+		RaycastHit2D rayHitInfoSlopeLeft = Physics2D.Raycast(leftRayBottom.origin+new Vector2(.05f,0f),leftRayBottom.direction,rayLengthBottom+.5f);
+		RaycastHit2D rayHitInfoSlope;
+		
+		if ((rayHitInfoSlopeLeft || rayHitInfoSlopeRight) && moveDelta.y <= 0){
+			if (rayHitInfoSlopeLeft.normal.x != 0 && rayHitInfoSlopeRight.normal.x != 0){
+				float dist = Mathf.Min (rayHitInfoSlopeLeft.fraction*(rayLengthBottom+.5f),rayHitInfoSlopeRight.fraction*(rayLengthBottom+.5f));
+				deltaY = dist;
+				RaycastHit2D rayHitInfoSlopeCheckRight = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+				                                                           topRayRight.direction,1f);
+				RaycastHit2D rayHitInfoSlopeCheckRight2 = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f),
+				                                                            topRayRight.direction,1f);
+				RaycastHit2D rayHitInfoSlopeCheckLeft = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+				                                                          topRayLeft.direction,1f);
+				RaycastHit2D rayHitInfoSlopeCheckLeft2 = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f),
+				                                                           topRayLeft.direction,1f);
+				if (Input.GetAxis("Horizontal")==0 && rayHitInfoSlopeCheckRight){
+					deltaX = rayHitInfoSlopeCheckRight.fraction;
+				} else if (Input.GetAxis("Horizontal")==0 && rayHitInfoSlopeCheckLeft){
+					deltaX = -rayHitInfoSlopeCheckRight.fraction;
+				}
+			}
+		}
 
 		transform.Translate(new Vector3(moveDelta.x, moveDelta.y, 0.0f));
 	}
@@ -790,6 +827,7 @@ public class BleakController : MonoBehaviour {
 				}
 			}
 			else if (!interpolateInfoR.transform.gameObject.GetComponent<Climbable>()){
+				velocity.y = 10f;
 				SetState(STATE_NORMAL);
 			}
 		}
@@ -823,7 +861,8 @@ public class BleakController : MonoBehaviour {
 			SetState(STATE_NORMAL);
 		}
 		
-		rigidBody.velocity = velocity;
+		//rigidBody.velocity = velocity;
+		transform.Translate(new Vector3(velocity.x*dt,velocity.y*dt));
 	}
 	
 	/// <summary>
@@ -905,6 +944,10 @@ public class BleakController : MonoBehaviour {
 					breakable.Break();
 				} else if (!breakable.needsSlam){
 					breakable.Break();
+				} else if (breakable.needsSlam && jumping != 0){
+					breakable.JumpSound();
+				} else if (breakable.needsSlam){
+					breakable.StandSound();
 				}
 			}
 		}
@@ -914,6 +957,14 @@ public class BleakController : MonoBehaviour {
 			if (rideable.moveWithTop){
 				attachedRideObject = rideable.gameObject;
 			}
+		}
+	}
+
+	void HandleTopCollision(RaycastHit2D hitInfo, float dt){
+		Breakable breakable = hitInfo.transform.gameObject.GetComponent<Breakable>();
+		if (breakable){
+			if (!breakable.isBreaking && breakable.breakableDown)
+				breakable.Break();
 		}
 	}
 	
@@ -964,7 +1015,7 @@ public class BleakController : MonoBehaviour {
 		}
 	}
 	
-	static public int numLives = 2;
+	public int numLives;
 	void Damage(){
 		//audio.PlayOneShot(noooo);
 		cammie.audio.PlayOneShot(noooo);

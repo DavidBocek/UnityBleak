@@ -8,6 +8,7 @@ public class SceneChange : MonoBehaviour {
 
 void OnTriggerEnter2D(Collider2D other)
 	{
+		GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numLivesPlayer = GameObject.FindWithTag("Player").GetComponent<BleakController>().numLives;
 		OnDoor = true;
 	}
 	

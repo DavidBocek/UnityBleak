@@ -131,12 +131,12 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 1000
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
 --- !u!61 &6100000
@@ -254,6 +254,7 @@ MonoBehaviour:
   noooo: {fileID: 8300000, guid: 29ff79486a877bc4e9e19933929db9b4, type: 3}
   cammie: {fileID: 0}
   aperture: {fileID: 0}
+  maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
   forceMoveSpeed: 8
 --- !u!114 &11400004

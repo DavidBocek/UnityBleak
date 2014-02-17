@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.158966, y: 18.7199993, z: 0}
+  m_LocalPosition: {x: 18.9868584, y: 15.7966089, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -183,14 +183,20 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 268482920ed9c8e488fd187a18583b43, type: 2}
-  - {fileID: 2100000, guid: 110b45f527789d9439a8710c2879bc5b, type: 2}
-  - {fileID: 2100000, guid: 268482920ed9c8e488fd187a18583b43, type: 2}
-  - {fileID: 2100000, guid: 110b45f527789d9439a8710c2879bc5b, type: 2}
-  - {fileID: 2100000, guid: 268482920ed9c8e488fd187a18583b43, type: 2}
-  - {fileID: 2100000, guid: 110b45f527789d9439a8710c2879bc5b, type: 2}
-  - {fileID: 2100000, guid: 268482920ed9c8e488fd187a18583b43, type: 2}
-  - {fileID: 2100000, guid: 110b45f527789d9439a8710c2879bc5b, type: 2}
+  - {fileID: 2100000, guid: fea6c34da60cd9d4b815eb6e0e343af0, type: 2}
+  - {fileID: 2100000, guid: a192e3089a5d1974ca2e663f974a5979, type: 2}
+  - {fileID: 2100000, guid: f8209d794c5dc2540a3998120d0d66fe, type: 2}
+  - {fileID: 2100000, guid: d65fb5524f549eb41a5b6710cfa7a734, type: 2}
+  - {fileID: 2100000, guid: f8209d794c5dc2540a3998120d0d66fe, type: 2}
+  - {fileID: 2100000, guid: d65fb5524f549eb41a5b6710cfa7a734, type: 2}
+  - {fileID: 2100000, guid: 558b5a211dce7fd4f8ff90045f7e4414, type: 2}
+  - {fileID: 2100000, guid: 4fc4f79d28b323a429046dd4b221a655, type: 2}
+  - {fileID: 2100000, guid: f8209d794c5dc2540a3998120d0d66fe, type: 2}
+  - {fileID: 2100000, guid: 464a89bd49f48904ba4adfc83f52fb3d, type: 2}
+  - {fileID: 2100000, guid: fea6c34da60cd9d4b815eb6e0e343af0, type: 2}
+  - {fileID: 2100000, guid: a192e3089a5d1974ca2e663f974a5979, type: 2}
+  - {fileID: 2100000, guid: d65fb5524f549eb41a5b6710cfa7a734, type: 2}
+  - {fileID: 2100000, guid: a192e3089a5d1974ca2e663f974a5979, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -259,7 +265,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2546480e5120246488fea55e10c815c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 1
   Mute: 0
   Priority: 128
@@ -319,11 +325,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 400002}
   destPos: {fileID: 400000}
-  moveSpeed: 3
+  moveSpeed: 2
   numberOfBounces: -1
   downDelay: 1.5
   canBeKnockedDown: 1
   hasKnockDownAnimation: 1
+  bash: {fileID: 8300000, guid: 079444155651f3a4d9791c201b5c3921, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springPower: 25
   springResetDelay: 1.25
+  boing: {fileID: 8300000, guid: 53970b924a0abcb4aaaefd00ebb9cd22, type: 3}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 93258f0838fc1904590ee4755943624f, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: c4f217f8e4c7b6740afb7f820eef54df, type: 2}
   initialSkinName: 01
   timeScale: 2
   calculateNormals: 0
