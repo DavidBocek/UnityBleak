@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 685c9551a8e616547a4f326e19a54ec6
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - examine: {instanceID: 0}
+  - thewords: {fileID: 13200000, guid: 80ad6288e3d066a41867dbe5ac04f60a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

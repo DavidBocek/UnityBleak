@@ -9456,7 +9456,7 @@ MonoBehaviour:
   maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
   forceMoveSpeed: 8
-  numLives: 2
+  numLives: 0
 --- !u!61 &794780535
 BoxCollider2D:
   m_ObjectHideFlags: 0
