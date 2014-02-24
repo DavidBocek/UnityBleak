@@ -9,6 +9,7 @@ Material:
   m_Name: atlas0 material
   m_Shader: {fileID: 4800000, guid: 88907f689cb94014980290b8ee139c22, type: 3}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
