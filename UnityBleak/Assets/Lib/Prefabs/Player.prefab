@@ -130,13 +130,13 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 1000
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1
 --- !u!61 &6100000
@@ -237,12 +237,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 5000000}
   boxCollider: {fileID: 6100000}
-  runSpeed: 13
+  runSpeed: 7.5
   joggingMultiplier: .699999988
-  jumpSpeed: 15.8000002
+  jumpSpeed: 11
   maxFallSpeed: 70
   pushSpeed: 7
-  gravityAcceleration: 42
+  gravityAcceleration: 35
   slamMultiplayer: 3
   canControl: 1
   startPoint: {fileID: 0}
@@ -256,7 +256,8 @@ MonoBehaviour:
   aperture: {fileID: 0}
   maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
-  forceMoveSpeed: 8
+  forceMoveSpeed: 6
+  numLives: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

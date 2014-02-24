@@ -51,6 +51,8 @@ public class BleakController : MonoBehaviour {
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
+
+	private BasicEntityCollision collisionHandler;
 	
 	
 
@@ -127,6 +129,9 @@ public class BleakController : MonoBehaviour {
 		topRayLeft = new Ray2D(position2d + sideOffset + boxCollider.center,-Vector2.right);
 		centerRayLeft = new Ray2D(position2d + boxCollider.center,-Vector2.right);
 		bottomRayLeft = new Ray2D(position2d - sideOffset + boxCollider.center,-Vector2.right);
+
+		collisionHandler = new BasicEntityCollision();
+		collisionHandler.Init(boxCollider,rigidBody);
 	}
 	
 	// Update is called once per frame
@@ -148,7 +153,6 @@ public class BleakController : MonoBehaviour {
 				UpdateLeftRight(dt);
 				UpdateUp(dt);
 			}
-			UpdatePositionChangeNormal(fdt);
 			UpdateRotationNormal(dt);
 			break;
 		case STATE_CLIMBING_LEFT:
@@ -174,7 +178,6 @@ public class BleakController : MonoBehaviour {
 					velocity.y = 0;
 				}
 			}
-			UpdatePositionChangeClimbing(dt);
 			break;
 		case STATE_CLIMBING_RIGHT:
 			UpdateRays (dt);
@@ -199,7 +202,6 @@ public class BleakController : MonoBehaviour {
 					velocity.y = 0;
 				}
 			}
-			UpdatePositionChangeClimbing(dt);
 			break;
 		case STATE_FORCE_MOVE:
 			UpdateForceMove(dt);
@@ -235,7 +237,6 @@ public class BleakController : MonoBehaviour {
 			if (canControl) UpdatePushing(dt,LEFT);
 			UpdateGravity(dt);
 			UpdateUp(dt);
-			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
 		case STATE_PUSH_RIGHT:
@@ -245,7 +246,6 @@ public class BleakController : MonoBehaviour {
 			if (canControl) UpdatePushing(dt,RIGHT);
 			UpdateGravity(dt);
 			UpdateUp(dt);
-			UpdatePositionChangeNormal(dt);
 			UpdateRotationNormal(dt);
 			break;
 		}
@@ -258,6 +258,26 @@ public class BleakController : MonoBehaviour {
 		switch (state){
 		case STATE_NORMAL:
 			UpdateJump(fdt);
+			break;
+		}
+	}
+	void LateUpdate(){
+		switch (state){
+		case STATE_NORMAL:
+			//transform.Translate(collisionHandler.Move(velocity*dt,transform.position,(facing ? 1f : -1f)));
+			UpdatePositionChangeNormal(dt);
+			break;
+		case STATE_PUSH_RIGHT:
+			transform.Translate(collisionHandler.Move(velocity*dt,transform.position,(facing ? 1f : -1f)));
+			break;
+		case STATE_PUSH_LEFT:
+			transform.Translate(collisionHandler.Move(velocity*dt,transform.position,(facing ? 1f : -1f)));
+			break;
+		case STATE_CLIMBING_LEFT:
+			UpdatePositionChangeClimbing(dt);
+			break;
+		case STATE_CLIMBING_RIGHT:
+			UpdatePositionChangeClimbing(dt);
 			break;
 		}
 	}
@@ -274,18 +294,26 @@ public class BleakController : MonoBehaviour {
 			rayHitInfoCBottom = Physics2D.Raycast(centerRayBottom.origin,centerRayBottom.direction,rayLengthBottom);
 			rayHitInfoRBottom = Physics2D.Raycast(rightRayBottom.origin,rightRayBottom.direction,rayLengthBottom);
 
+			/*Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+			Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+			Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);*/
+
 			if (!rayHitInfoLBottom && !rayHitInfoCBottom && !rayHitInfoRBottom ){
 				tempVelVert = velocity.y - gravityAcceleration * dt;
 				if (!runningOnSlope) velocity.y = Mathf.Max(tempVelVert, -maxFallSpeed);
 				isGrounded = false;
 				//otherwise deal with collisions from the top if the object is not ignoring them
 			} else if (rayHitInfoLBottom || rayHitInfoCBottom || rayHitInfoRBottom){
+				//Debug.Break();
 				bool collidableDown = true;
 				bool collidableUp = true;
 				bool aboveCollider = true;
 				if (rayHitInfoLBottom){ rayHitInfoBottom = rayHitInfoLBottom;}
 				else if (rayHitInfoCBottom){ rayHitInfoBottom = rayHitInfoCBottom;}
 				else if (rayHitInfoRBottom){ rayHitInfoBottom = rayHitInfoRBottom;}
+				RaycastHit2D highestHitBottom;
+				highestHitBottom = rayHitInfoLBottom.fraction < rayHitInfoRBottom.fraction ? rayHitInfoLBottom : rayHitInfoRBottom;
+				if (rayHitInfoCBottom.fraction < highestHitBottom.fraction) highestHitBottom = rayHitInfoCBottom;
 				/*if (rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>()!=null){ 
 						collidableDown = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreUp();
 						collidableUp = !rayHitInfoBottom.transform.gameObject.GetComponent<IgnoreCollisions>().HasIgnoreDown();
@@ -294,11 +322,11 @@ public class BleakController : MonoBehaviour {
 						Debug.Log ("above collider: "+aboveCollider+" object: "+(rayHitInfoBottom.transform.position.y+rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2-5)+" player: "+(transform.position.y - boxCollider.size.y/2));
 						//Debug.Log("object collider y/2: "+(rayHitInfoBottom.transform.gameObject.GetComponent<BoxCollider>().size.y/2)+" player collider y/2: "+(boxCollider.size.y/2));
 					}*/
-				Debug.DrawRay(leftRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-				Debug.DrawRay(centerRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
-				Debug.DrawRay(rightRayBottom.origin,Vector3.down*rayLengthBottom,Color.green);
+
 				//falling
 				if (/*collidableDown && aboveCollider && */velocity.y <= 0){
+					if (-velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage (); //for right now, no fall damage when slamming. We may need to change this though
+					else if (velocity.y < 0) velocity.y = 0;
 					HandleBottomCollision(rayHitInfoBottom,dt);	
 				} else {
 					tempVelVert = velocity.y - gravityAcceleration * dt;
@@ -363,7 +391,8 @@ public class BleakController : MonoBehaviour {
 	void UpdateForceMove(float dt){
 		if ((transform.position - forceMoveDestination.position).sqrMagnitude >= .25f){
 			velocity = (forceMoveDestination.position-transform.position).normalized * forceMoveSpeed;
-			rigidBody.velocity = velocity;
+			//rigidBody.velocity = velocity;
+			transform.Translate(new Vector3(velocity.x*dt,velocity.y*dt));
 		} else {
 			Messenger.Broadcast<Transform,BleakController>("CompletedForceMove",forceMoveDestination,this);
 		}
@@ -478,22 +507,22 @@ public class BleakController : MonoBehaviour {
 		if (directionInt != 0){
 
 
-			RaycastHit2D rayHitInfoSlopeCheckRight = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+			RaycastHit2D rayHitInfoSlopeCheckRight = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.05f),
 			                                                           topRayRight.direction,1f);
 			RaycastHit2D rayHitInfoSlopeCheckRight2 = Physics2D.Raycast(new Vector2(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f),
 			                                                            topRayRight.direction,1f);
-			RaycastHit2D rayHitInfoSlopeCheckLeft = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f),
+			RaycastHit2D rayHitInfoSlopeCheckLeft = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f+.05f),
 			                                                          topRayLeft.direction,1f);
 			RaycastHit2D rayHitInfoSlopeCheckLeft2 = Physics2D.Raycast(new Vector2(topRayLeft.origin.x,topRayLeft.origin.y-sideOffset.y-boxCollider.size.y/2f),
 			                                                           topRayLeft.direction,1f);
 			bool lowObstructedRight = false; bool lowObstructedLeft = false;
 			if (rayHitInfoSlopeCheckRight2){
-				if (rayHitInfoSlopeCheckRight2.fraction-boxCollider.size.x/2f<=.02f){
+				if (rayHitInfoSlopeCheckRight2.fraction-boxCollider.size.x/2f<=.05f){
 					lowObstructedRight = true;
 				}
 			}
 			if (rayHitInfoSlopeCheckLeft2){
-				if (rayHitInfoSlopeCheckLeft2.fraction-boxCollider.size.x/2f<=.02f){
+				if (rayHitInfoSlopeCheckLeft2.fraction-boxCollider.size.x/2f<=.05f){
 					lowObstructedLeft = true;
 				}
 			}
@@ -510,7 +539,7 @@ public class BleakController : MonoBehaviour {
 				else if ((facing && lowObstructedRight) || (!facing && lowObstructedLeft)){
 					if (directionInt > 0){
 						if (rayHitInfoSlopeCheckRight){
-							float yDiff = .1f;
+							float yDiff = .05f;
 							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
@@ -526,7 +555,7 @@ public class BleakController : MonoBehaviour {
 						}
 					} else if (directionInt < 0){
 						if (rayHitInfoSlopeCheckLeft){
-							float yDiff = .1f;
+							float yDiff = .05f;
 							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
@@ -550,7 +579,7 @@ public class BleakController : MonoBehaviour {
 				}
 				runDelay += dt;
 			} else {
-				if ((facing && !obstructedRight) || (!facing && !obstructedLeft)){
+				if ((facing && !obstructedRight && !lowObstructedRight) || (!facing && !obstructedLeft && !lowObstructedLeft)){
 					velocity.x = runSpeed * directionInt;
 					runningOnSlope = false;
 				}
@@ -559,7 +588,7 @@ public class BleakController : MonoBehaviour {
 				else if ((facing && lowObstructedRight) || (!facing && lowObstructedLeft)){
 					if (directionInt > 0){
 						if (rayHitInfoSlopeCheckRight){
-							float yDiff = .1f;
+							float yDiff = .05f;
 							float xDiff = rayHitInfoSlopeCheckRight.fraction - rayHitInfoSlopeCheckRight2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
@@ -573,7 +602,7 @@ public class BleakController : MonoBehaviour {
 						}
 					} else if (directionInt < 0){
 						if (rayHitInfoSlopeCheckLeft){
-							float yDiff = .1f;
+							float yDiff = .05f;
 							float xDiff = rayHitInfoSlopeCheckLeft.fraction - rayHitInfoSlopeCheckLeft2.fraction;
 							float yOverx = yDiff/xDiff;
 							float angle = Mathf.Atan2(yDiff,xDiff)*Mathf.Rad2Deg;
@@ -728,6 +757,10 @@ public class BleakController : MonoBehaviour {
 			RaycastHit2D deltaYRayHitC = Physics2D.Raycast(deltaYRayOriginCenter,-Vector2.up, -(deltaY));
 			RaycastHit2D deltaYRayHitR = Physics2D.Raycast(deltaYRayOriginRight,-Vector2.up, -(deltaY));
 
+			Debug.DrawRay(new Vector3(deltaYRayOriginLeft.x,deltaYRayOriginLeft.y),Vector3.down*deltaY,Color.green);
+			Debug.DrawRay(new Vector3(deltaYRayOriginCenter.x,deltaYRayOriginCenter.y),Vector3.down*deltaY,Color.green);
+			Debug.DrawRay(new Vector3(deltaYRayOriginRight.x,deltaYRayOriginRight.y),Vector3.down*deltaY,Color.green);
+
 			if (deltaYRayHitL || deltaYRayHitC || deltaYRayHitR){
 				if (deltaYRayHitL) {interpolateInfo = deltaYRayHitL;moveDelta.y = -interpolateInfo.fraction*(-deltaY);}
 				else if (deltaYRayHitC) {interpolateInfo = deltaYRayHitC;moveDelta.y = -interpolateInfo.fraction*(-deltaY);}
@@ -788,6 +821,15 @@ public class BleakController : MonoBehaviour {
 				} else if (Input.GetAxis("Horizontal")==0 && rayHitInfoSlopeCheckLeft){
 					deltaX = -rayHitInfoSlopeCheckRight.fraction;
 				}
+			}
+		}
+		rigidBody.isKinematic = false;
+		if (rayHitInfoSlopeLeft && rayHitInfoSlopeRight){
+			RaycastHit2D higherSlopeInfo;
+			higherSlopeInfo = rayHitInfoSlopeLeft.fraction < rayHitInfoSlopeRight.fraction ? rayHitInfoSlopeLeft : rayHitInfoSlopeRight;
+			//Debug.Log (higherSlopeInfo.normal);
+			if (higherSlopeInfo.normal != Vector2.up){
+				rigidBody.isKinematic = true;
 			}
 		}
 
@@ -893,9 +935,9 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void UpdateDebug(float dt){
-		Debug.DrawRay(position2d - bottomOffset + boxCollider.center,Vector3.down*rayLengthBottom);
+		/*Debug.DrawRay(position2d - bottomOffset + boxCollider.center,Vector3.down*rayLengthBottom);
 		Debug.DrawRay(position2d + boxCollider.center,Vector3.down*rayLengthBottom);
-		Debug.DrawRay(position2d + bottomOffset + boxCollider.center, Vector3.down*rayLengthBottom);
+		Debug.DrawRay(position2d + bottomOffset + boxCollider.center, Vector3.down*rayLengthBottom);*/
 		if (Input.GetKeyDown (KeyCode.Q))
 			Debug.Break();
 	}
@@ -911,8 +953,6 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame was called (in seconds)
 	/// </param>
 	void HandleBottomCollision(RaycastHit2D hitInfo, float dt){
-		if (-velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage (); //for right now, no fall damage when slamming. We may need to change this though
-		else if (velocity.y < 0) velocity.y = 0;
 		isGrounded = true;
 
 		//kill zones component check, to see if bleak should die touching this
@@ -1076,3 +1116,130 @@ public class BleakController : MonoBehaviour {
 	}
 }
 
+public class BasicEntityCollision {
+	private Vector2 size;
+	private Vector3 center;
+	// Give a bit of space between the raycast and boxCollider to prevent ray going through collision layer.
+	private float skin = 0f;
+	
+	private LayerMask collisionMask;
+	private LayerMask playerMask;
+
+	private Rigidbody2D rigidBody;
+
+	public bool OnGround { get; set; }
+	public bool SideCollision { get; set; }
+	
+	public void Init(BoxCollider2D boxCollider, Rigidbody2D rb) {
+		size = boxCollider.size;
+		center = boxCollider.center;
+		rigidBody = rb;
+	}
+	
+	public Vector3 Move(Vector2 moveAmount, Vector3 position, float dirX) {
+		float deltaX = moveAmount.x;
+		float deltaY = moveAmount.y;
+		Vector3 entityPosition = position;
+		// Resolve any possible collisions below and above the entity.
+		deltaY = yAxisCollisions(deltaY, dirX, entityPosition);
+		// Resolve any possible collisions left and right of the entity.
+		// Check if our deltaX value is 0 to avoid unnecessary collision detection.
+		if (deltaX != 0) {
+			deltaX = xAxisCollisions(deltaX, entityPosition);
+		}
+		Vector3 finalTransform = new Vector2(deltaX, deltaY);
+		return finalTransform;
+	}
+	
+	private float xAxisCollisions(float deltaX, Vector3 entityPosition) {
+		SideCollision = false;
+		float i;
+		// If we are on the ground, perform just three, normal sized raycasts.
+		if (OnGround) {
+			i = 0;
+			// Else, perform a larger range of raycasts that extend slightly outside of
+			// the box collider in order to prevent falling through corners in the Collisions layermask.
+		} else {
+			i = -0.01f;
+		}
+		for (; i < 2; ++i) {
+			float dirX = Mathf.Sign(deltaX);
+			
+			float x = entityPosition.x + center.x + size.x / 2 * dirX;
+			float y = (entityPosition.y + center.y - size.y / 2) + size.y / 2 * i *.9f + .05f;
+			
+			RaycastHit2D hit;
+			Ray2D rayX = new Ray2D(new Vector2(x, y), new Vector2(dirX, 0));
+			hit = Physics2D.Raycast(rayX.origin,rayX.direction, Mathf.Abs(deltaX));
+			Debug.DrawRay(rayX.origin, rayX.direction);
+			//Debug.Break();
+			
+			if (hit) {
+				if (hit.normal != Vector2.up && hit.normal != Vector2.right && hit.normal != -Vector2.right) break;
+				Debug.DrawRay(rayX.origin, rayX.direction, Color.yellow);
+				deltaX = 0;
+				SideCollision = true;
+				break;
+			}
+		}
+		
+		return deltaX;
+	}
+	
+	private float yAxisCollisions(float deltaY, float dirX, Vector3 entityPosition) {
+		OnGround = false;
+		// To prevent falling through collision layers by a gap in the corner
+		// if we are facing right, peform y-axis raycasts starting on the right.
+		int facingRight = 1;
+		if (dirX == facingRight) {
+			for (int i = 2; i > -1; --i) {
+				if (yAxisRaycasts(i, ref deltaY, entityPosition)) {
+					break;
+				}
+			}
+			// else we are facing left, peform y-axis raycasts starting on the left
+		} else {
+			for (int i = 0; i < 3; ++i) {
+				if (yAxisRaycasts(i, ref deltaY, entityPosition)) {
+					break;
+				}
+			}
+		}
+		
+		return deltaY;
+	}
+	
+	private bool yAxisRaycasts(int i, ref float deltaY, Vector3 entityPosition) {
+		float dirY = Mathf.Sign(deltaY);
+		// Start at the left or the right of the boxCollider, depending on the value of i.
+		float x = (entityPosition.x + center.x - size.x / 2) + size.x / 2 * i *.8f + .1f;
+		// Bottom or top of boxCollider, depending on if dirY is positive or negative
+		float y = entityPosition.y + center.y + size.y / 2 * dirY;
+		
+		RaycastHit2D hit;
+		Ray2D ray = new Ray2D(new Vector2(x, y), new Vector2(0, dirY));
+		hit = Physics2D.Raycast(ray.origin,ray.direction, Mathf.Abs(deltaY));
+		Debug.DrawRay(ray.origin, ray.direction);
+		
+		if (hit) {
+			if (hit.normal != Vector2.up && hit.normal != Vector2.right && hit.normal != -Vector2.right){
+				rigidBody.isKinematic = true;
+			} else {
+				rigidBody.isKinematic = false;
+			}
+			Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
+			// Get Distance between entity and ground
+			float distance = Vector2.Distance(ray.origin, hit.point);
+			// Stop entity's downward movement after coming within skin width of a boxCollider
+			if (distance > skin) {
+				deltaY = distance * dirY + skin;
+			} else {
+				deltaY = 0;
+			}
+			OnGround = true;
+			return true;
+		}
+		
+		return false;
+	}
+}

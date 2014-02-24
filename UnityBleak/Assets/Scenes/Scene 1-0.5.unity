@@ -87,7 +87,7 @@ GameObject:
   - 114: {fileID: 33916521}
   - 114: {fileID: 33916525}
   - 114: {fileID: 33916524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Screw Tens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - 23: {fileID: 258392858}
   - 33: {fileID: 258392857}
   - 114: {fileID: 258392856}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UIPlaceHolderSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,7 +886,7 @@ GameObject:
   - 114: {fileID: 267256923}
   - 114: {fileID: 267256927}
   - 114: {fileID: 267256926}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scrap Ones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1287,7 +1287,7 @@ GameObject:
   - 114: {fileID: 316595728}
   - 23: {fileID: 316595727}
   - 33: {fileID: 316595726}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tk2dCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1727,7 +1727,7 @@ GameObject:
   - 114: {fileID: 334005805}
   - 114: {fileID: 334005804}
   - 114: {fileID: 334005810}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1868,7 @@ GameObject:
   - 33: {fileID: 339280641}
   - 23: {fileID: 339280640}
   - 114: {fileID: 339280639}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UILeftPanel SkeletonAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1944,7 +1944,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 384660746}
   - 114: {fileID: 384660747}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Scrap Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3274,7 +3274,7 @@ GameObject:
   - 33: {fileID: 682243680}
   - 23: {fileID: 682243679}
   - 114: {fileID: 682243678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Conversation SkeletonAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3355,7 +3355,7 @@ GameObject:
   - 4: {fileID: 684141720}
   - 114: {fileID: 684141721}
   - 114: {fileID: 684141725}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3403,7 +3403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b329bef0c47b4fb48acacedcb07b0933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -20
+  offset: -18
   speed: 2
   x: 1
   y: 0
@@ -3468,8 +3468,8 @@ GameObject:
   - 33: {fileID: 685253445}
   - 23: {fileID: 685253444}
   - 114: {fileID: 685253442}
-  - 61: {fileID: 685253443}
-  m_Layer: 0
+  - 61: {fileID: 2137370061}
+  m_Layer: 2
   m_Name: DisplayLocation3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  boxCollider2D: {fileID: 685253443}
+  boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
   boxCollider: {fileID: 0}
@@ -3517,7 +3517,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 6100002, guid: f1d114cba01552d46a3dee473ee68cda,
     type: 2}
   m_PrefabInternal: {fileID: 1628894971}
-  m_GameObject: {fileID: 685253440}
+  m_GameObject: {fileID: 1341410624}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3673,7 +3673,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 720489204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Counters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3807,7 +3807,7 @@ GameObject:
   - 23: {fileID: 731500855}
   - 114: {fileID: 731500854}
   - 114: {fileID: 731500853}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Conversation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3977,7 +3977,7 @@ GameObject:
   - 23: {fileID: 769853156}
   - 114: {fileID: 769853155}
   - 61: {fileID: 769853154}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DisplayLocation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4607,7 +4607,7 @@ GameObject:
   - 114: {fileID: 893034351}
   - 114: {fileID: 893034356}
   - 114: {fileID: 893034355}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gear Tens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4715,7 +4715,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 899192303}
   - 114: {fileID: 899192304}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Screw Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5124,7 +5124,7 @@ GameObject:
   - 114: {fileID: 1098721921}
   - 114: {fileID: 1098721924}
   - 114: {fileID: 316595736}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gear Ones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5274,7 +5274,7 @@ GameObject:
   - 33: {fileID: 1172273374}
   - 23: {fileID: 1172273373}
   - 114: {fileID: 1172273372}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Quests
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6068,8 +6068,8 @@ GameObject:
   - 33: {fileID: 1341410629}
   - 23: {fileID: 1341410628}
   - 114: {fileID: 1341410626}
-  - 61: {fileID: 1341410627}
-  m_Layer: 0
+  - 61: {fileID: 685253443}
+  m_Layer: 2
   m_Name: DisplayLocation2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6103,7 +6103,7 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  boxCollider2D: {fileID: 1341410627}
+  boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
   boxCollider: {fileID: 0}
@@ -6117,7 +6117,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 6100004, guid: f1d114cba01552d46a3dee473ee68cda,
     type: 2}
   m_PrefabInternal: {fileID: 1628894971}
-  m_GameObject: {fileID: 1341410624}
+  m_GameObject: {fileID: 2137370060}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -6214,7 +6214,7 @@ GameObject:
   - 33: {fileID: 684141724}
   - 23: {fileID: 684141723}
   - 114: {fileID: 1419545321}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightUI SkeletonAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6256,7 +6256,7 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
-  boxCollider2D: {fileID: 2137370061}
+  boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
   boxCollider: {fileID: 0}
@@ -6314,7 +6314,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1438830393}
   - 114: {fileID: 1438830394}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Gear Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6620,7 +6620,7 @@ GameObject:
   - 4: {fileID: 1539062238}
   - 114: {fileID: 1539062239}
   - 114: {fileID: 684141722}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UI Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6766,7 +6766,7 @@ GameObject:
   - 114: {fileID: 1593262642}
   - 114: {fileID: 1593262646}
   - 114: {fileID: 1593262645}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scrap Tens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7114,7 +7114,7 @@ GameObject:
   - 114: {fileID: 1702875763}
   - 114: {fileID: 1702875767}
   - 114: {fileID: 1702875766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Screw Ones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7428,7 +7428,7 @@ GameObject:
   - 81: {fileID: 1724868478}
   - 82: {fileID: 1724868477}
   - 82: {fileID: 1724868479}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Listener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7728,7 +7728,7 @@ GameObject:
   - 114: {fileID: 1850619667}
   - 114: {fileID: 1850619671}
   - 114: {fileID: 1850619670}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Screw Hundreds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7988,7 +7988,7 @@ GameObject:
   - 114: {fileID: 1918266770}
   - 114: {fileID: 1918266774}
   - 114: {fileID: 1918266773}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scrap Hundreds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8148,7 +8148,7 @@ GameObject:
   - 33: {fileID: 1980906684}
   - 23: {fileID: 1980906683}
   - 114: {fileID: 1980906682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quest SkeletonAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8495,7 +8495,7 @@ GameObject:
   - 114: {fileID: 2050467789}
   - 114: {fileID: 2050467793}
   - 114: {fileID: 2050467792}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gear Hundreds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8887,7 +8887,7 @@ GameObject:
   - 23: {fileID: 2056622328}
   - 114: {fileID: 2056622326}
   - 61: {fileID: 2056622327}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DisplayLocation0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9381,8 +9381,8 @@ GameObject:
   - 33: {fileID: 1419545324}
   - 23: {fileID: 1419545323}
   - 114: {fileID: 1419545322}
-  - 61: {fileID: 2137370061}
-  m_Layer: 0
+  - 61: {fileID: 1341410627}
+  m_Layer: 2
   m_Name: DisplayLocation4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9395,7 +9395,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 6100000, guid: f1d114cba01552d46a3dee473ee68cda,
     type: 2}
   m_PrefabInternal: {fileID: 1628894971}
-  m_GameObject: {fileID: 2137370060}
+  m_GameObject: {fileID: 685253440}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
