@@ -5,7 +5,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 3
+  serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -35,8 +35,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 1}
+  m_Script: {fileID: 11500000, guid: d546f34a90531a14eaba82a43b05b86b, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   version: 3
   materialIdsValid: 1
   needMaterialInstance: 0
@@ -2382,7 +2383,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 6ba0cc53dadfc474aadeffea5f241db6, type: 2}
   textures:
-  - {fileID: 2800000, guid: e296260733c7bc1469716da4f48bd888, type: 1}
+  - {fileID: 2800000, guid: e296260733c7bc1469716da4f48bd888, type: 3}
   pngTextures: []
   textureFilterMode: 1
   textureMipMaps: 0
@@ -2393,7 +2394,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 10
-  buildKey: 473255449
+  buildKey: 939719972
   dataGuid: f5e64bab9902aaa4593a2652b8552744
   managedSpriteCollection: 0
   hasPlatformData: 0

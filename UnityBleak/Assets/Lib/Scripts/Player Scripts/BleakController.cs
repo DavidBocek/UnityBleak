@@ -105,7 +105,7 @@ public class BleakController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//load info from other level
-		numLives = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numLivesPlayer;
+		//numLives = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numLivesPlayer;
 
 		//instantiate
 		transform.position = startPoint.position;
