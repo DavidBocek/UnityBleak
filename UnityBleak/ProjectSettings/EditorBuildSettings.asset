@@ -6,16 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-0.unity
+    path: Assets/Scenes/Loader.unity
   - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-0.25.unity
+    path: Assets/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-0.5.unity
+    path: Assets/Scenes/Level1-1.unity
   - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-0.625.unity
-  - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-0.75.unity
-  - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-1.unity
-  - enabled: 1
-    path: Assets/Scenes/OriginalBleak/Scene 1-2.unity
+    path: Assets/Scenes/Level1-2.unity

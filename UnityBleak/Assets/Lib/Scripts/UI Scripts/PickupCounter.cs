@@ -14,7 +14,7 @@ public class PickupCounter : MonoBehaviour {
 	public PickupCounterAnimator tensCounter;
 	public PickupCounterAnimator hundredsCounter;
 
-	private int count;
+	public int count;
 
 	// Use this for initialization
 	void Awake () {
