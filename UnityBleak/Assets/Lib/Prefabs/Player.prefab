@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 18.0299892, z: 0}
+  m_LocalPosition: {x: 6.52271318, y: 19.3167839, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -257,7 +257,7 @@ MonoBehaviour:
   maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
   forceMoveSpeed: 6
-  numLives: 1
+  numLives: 2
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

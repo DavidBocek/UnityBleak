@@ -1242,4 +1242,9 @@ public class BasicEntityCollision {
 		
 		return false;
 	}
+	public static void loadLevel(string sceneName)
+	{
+		LoadingScreen.show();
+		Application.LoadLevel(sceneName);
+	}
 }
