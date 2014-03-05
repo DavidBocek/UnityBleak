@@ -296,6 +296,7 @@ GameObject:
   - 82: {fileID: 21923890}
   - 114: {fileID: 21923889}
   - 114: {fileID: 21923888}
+  - 114: {fileID: 21923894}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -446,16 +447,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 21923891}
   boxCollider: {fileID: 21923892}
-  runSpeed: 7.5
+  runSpeed: 6.80000019
   joggingMultiplier: .699999988
-  jumpSpeed: 11
+  jumpSpeed: 10.5
   maxFallSpeed: 70
   pushSpeed: 7
   gravityAcceleration: 35
   slamMultiplayer: 3
   canControl: 1
   startPoint: {fileID: 2079581142}
-  fallKillSpeed: 70
+  fallKillSpeed: 48
   timeUntilRun: 1.5
   bottomOffsetPushIn: .100000001
   sideOffsetPushIn: 1.5
@@ -467,6 +468,37 @@ MonoBehaviour:
   forceMoveDestination: {fileID: 0}
   forceMoveSpeed: 6
   numLives: 2
+--- !u!114 &21923894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21923886}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110c4c0c921884f41ba2ac6f831fabaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 6.80000019
+  walkFraction: .699999988
+  jumpSpeed: 12
+  pushSpeed: 4.19999981
+  maxFallSpeed: 70
+  deathFallSpeed: 69
+  gravityAcceleration: 2
+  slamming: 0
+  slamMultiplier: 0
+  canControl: 1
+  startPoint: {fileID: 2079581142}
+  aperture: {fileID: 69608330}
+  skelAnimObj: {fileID: 169017017}
+  deathSoundClip: {fileID: 8300000, guid: 29ff79486a877bc4e9e19933929db9b4, type: 3}
+  forceMoveDestination: {fileID: 0}
+  forceMoveSpeed: 6
+  numLives: 2
+  acceptableSlopeAngle: 45
+  sideCollision: 0
+  verticalCollision: 0
 --- !u!1 &28771985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1287,22 @@ Prefab:
     - target: {fileID: 3300002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: runSpeed
+      value: 6.80000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: jumpSpeed
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: fallKillSpeed
+      value: 48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
@@ -8617,6 +8665,14 @@ Prefab:
       propertyPath: upperRight.x
       value: 151.775299
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: forceResolution.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
+      propertyPath: forceResolution.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d114cba01552d46a3dee473ee68cda, type: 2}
   m_RootGameObject: {fileID: 1645489543}
@@ -10024,7 +10080,7 @@ MonoBehaviour:
   viewportRegion: {x: 0, y: 0, z: 100, w: 100}
   zoomFactor: 1
   forceResolutionInEditor: 1
-  forceResolution: {x: 1024, y: 768}
+  forceResolution: {x: 10, y: 10}
 --- !u!20 &1645489554
 Camera:
   m_ObjectHideFlags: 0

@@ -132,6 +132,12 @@ public class BleakController : MonoBehaviour {
 
 		collisionHandler = new BasicEntityCollision();
 		collisionHandler.Init(boxCollider,rigidBody);
+
+		StartCoroutine("RemoveControlForTime",.75f);
+	}
+
+	void OnLevelWasLoaded(int levelIndex){
+		//deal with loading in start point changes and such here
 	}
 	
 	// Update is called once per frame
@@ -350,11 +356,11 @@ public class BleakController : MonoBehaviour {
 				idleDelay = 0;
 			else{
 				if (Input.GetAxisRaw("Horizontal") == 0 && !Input.GetKey(KeyCode.Space) && idleDelay <=6){
-					if (skelAnim.state.ToString()=="sprint"){
+					/*if (skelAnim.state.ToString()=="sprint"){
 						skelAnim.state.ClearTrack(0);
 						skelAnim.state.AddAnimation(0,"skid",false,0.0f);
 						//skelAnim.state.AddAnimation(0,"idle",true,0.0f);
-					} else if (skelAnim.state.ToString()=="run"){
+					} else */if (skelAnim.state.ToString()=="run"){
 						skelAnim.state.ClearTrack(0);
 						if (numLives > 0) skelAnim.state.AddAnimation(0,"idle",true,0.0f);
 						else skelAnim.state.AddAnimation(0,"idle-injured",true,0.0f);
@@ -527,8 +533,7 @@ public class BleakController : MonoBehaviour {
 				}
 			}
 			idleDelay = 0;
-			if (runDelay < timeUntilRun){
-
+			if (Input.GetButton("Walk")){
 				//check for clear space
 				if ((facing && !obstructedRight && !lowObstructedRight) || (!facing && !obstructedLeft && !lowObstructedLeft)){
 					velocity.x = runSpeed * joggingMultiplier * directionInt;
@@ -577,7 +582,6 @@ public class BleakController : MonoBehaviour {
 						else skelAnim.state.SetAnimation(0,"run-injured",true);
 					}
 				}
-				runDelay += dt;
 			} else {
 				if ((facing && !obstructedRight && !lowObstructedRight) || (!facing && !obstructedLeft && !lowObstructedLeft)){
 					velocity.x = runSpeed * directionInt;
