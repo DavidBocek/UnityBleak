@@ -20,11 +20,11 @@ public class PickupCounter : MonoBehaviour {
 	void Awake () {
 		//load counter values from the last scene
 		/*if (isScrapMetal)
-			count = LevelLoaderUtil.scrapCount;
+			//count = LevelLoaderUtil.scrapCount;
 		if (isScrew)
-			count = LevelLoaderUtil.screwCount;
+			//count = LevelLoaderUtil.screwCount;
 		if (isGear)
-			count = LevelLoaderUtil.gearCount;*/
+			PlayerPrefs.SetInt("gears",count);*/
 	}
 
 	void Start(){

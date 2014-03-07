@@ -418,9 +418,9 @@ MonoBehaviour:
     regionW: 50
     regionH: 50
     regionId: 7
-    colliderType: 1
+    colliderType: 3
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
@@ -1476,8 +1476,16 @@ MonoBehaviour:
     regionId: 17
     colliderType: 3
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 50, y: 15}
-    polyColliderIslands: []
+    boxColliderMax: {x: 50, y: 50}
+    polyColliderIslands:
+    - connected: 1
+      points:
+      - {x: 0, y: 0}
+      - {x: 0, y: 50}
+      - {x: 15, y: 50}
+      - {x: 15, y: 24}
+      - {x: 50, y: 25}
+      - {x: 50, y: 0}
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
@@ -1554,9 +1562,9 @@ MonoBehaviour:
     regionW: 50
     regionH: 50
     regionId: 19
-    colliderType: 1
+    colliderType: 3
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
