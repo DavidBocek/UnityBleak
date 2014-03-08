@@ -1063,6 +1063,8 @@ public class BleakController : MonoBehaviour {
 	void Damage(){
 		//audio.PlayOneShot(noooo);
 		cammie.audio.PlayOneShot(noooo);
+		skelAnimObj.transform.localScale = new Vector3(1.0f,skelAnimObj.transform.localScale.y,skelAnimObj.transform.localScale.z);
+		velocity = Vector2.zero;
 		if (numLives > 0){
 			//hurt should reset to a checkpoint and graphically change bleak to look more battered
 			SetState (STATE_HURT);

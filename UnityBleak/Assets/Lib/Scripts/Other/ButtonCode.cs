@@ -32,7 +32,8 @@ public class ButtonCode : MonoBehaviour
 			{
 				indicator.gameObject.renderer.material.color = Color.green;
 				DestroyObject(fallinggrimm);
-				DestroyObject(chainblock);
+				chainblock.SetActive(false);
+				//DestroyObject(chainblock);
 			}
 		}
 	}
