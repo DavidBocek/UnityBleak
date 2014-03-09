@@ -27,7 +27,7 @@ if(GUI.Button(Rect(Screen.width/2-100,Screen.height*0.6-25,200,50),/*blankGfx, *
 if(GUI.Button(Rect(Screen.width/2-125,Screen.height/2-25,250,50),/*blankGfx,*/ "")){
 //This deletes all PlayerPrefs saved during the game such as coins taken and which level we were on last.
 PlayerPrefs.DeleteAll();
-Application.LoadLevel("Level1-2");
+Application.LoadLevel("Level1-0");
 }
 //Exit
 if(GUI.Button(Rect(Screen.width/2-45,Screen.height*.7-25,90,50),/*blankGfx,*/ "")){

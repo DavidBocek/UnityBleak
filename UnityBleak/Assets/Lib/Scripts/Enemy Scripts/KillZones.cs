@@ -8,7 +8,11 @@ public class KillZones : MonoBehaviour {
 	public bool killLeft;
 	public bool killRight;
 	public bool killDown;
-	
+
+	public bool HasKillAny(){
+		return (killAny);
+	}
+
 	public bool HasKillUp(){
 		return (killUp || killAny);
 	}

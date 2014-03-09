@@ -3,8 +3,18 @@ using System.Collections;
 
 public class DestroyOnTriggerEnter : MonoBehaviour {
 
-	void OnTriggerEnter2D(Collider2D other){
-		Destroy(gameObject);
-	}
+	private bool OnTheMoney = false;
+	public GameObject drops;
 
+	void OnCollision2D(Collision2D other)
+	{
+		OnTheMoney = true;
+	}
+	void Update()
+	{
+		if(OnTheMoney)
+		{
+			drops.SetActive(false);
+		}
+	}
 }

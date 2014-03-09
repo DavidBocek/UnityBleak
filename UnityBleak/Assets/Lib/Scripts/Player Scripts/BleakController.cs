@@ -228,7 +228,7 @@ public class BleakController : MonoBehaviour {
 			}
 			break;
 		case STATE_DEAD:
-			skelAnim.state.SetAnimation(0,"death",false);
+			//skelAnim.state.SetAnimation(0,"death",false);
 			if (Input.GetKeyDown(KeyCode.R)){
 				transform.position = startPoint.position;
 				numLives = 2;
@@ -261,10 +261,20 @@ public class BleakController : MonoBehaviour {
 	
 	void FixedUpdate(){
 		fdt = Time.fixedDeltaTime;
+		//Debug.Log(jumping);
 		switch (state){
 		case STATE_NORMAL:
 			UpdateJump(fdt);
 			break;
+		}
+	}
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		KillZones killOnTouch = collision.gameObject.GetComponent<KillZones>();
+		if (killOnTouch){
+			if (killOnTouch.HasKillAny()){
+				Damage();
+			}
 		}
 	}
 	void LateUpdate(){
@@ -331,7 +341,8 @@ public class BleakController : MonoBehaviour {
 
 				//falling
 				if (/*collidableDown && aboveCollider && */velocity.y <= 0){
-					if (-velocity.y > Mathf.Abs(fallKillSpeed) && !IsSlamming()) Damage (); //for right now, no fall damage when slamming. We may need to change this though
+					if (-velocity.y > Mathf.Abs(fallKillSpeed) /*&& !IsSlamming()*/) 
+						Damage (); //for right now, no fall damage when slamming. We may need to change this though
 					else if (velocity.y < 0) velocity.y = 0;
 					HandleBottomCollision(rayHitInfoBottom,dt);	
 				} else {
@@ -507,8 +518,8 @@ public class BleakController : MonoBehaviour {
 			} else { obstructedLeft = false; }
 		} else
 			obstructedLeft = false;
-		Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f,0f),Vector3.right,Color.green);
-		Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f,0f),Vector3.right,Color.blue);
+		//Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f,0f),Vector3.right,Color.green);
+		//Debug.DrawRay(new Vector3(topRayRight.origin.x,topRayRight.origin.y-sideOffset.y-boxCollider.size.y/2f+.1f,0f),Vector3.right,Color.blue);
 		//player is hitting direction
 		if (directionInt != 0){
 
@@ -1061,16 +1072,16 @@ public class BleakController : MonoBehaviour {
 	
 	public int numLives;
 	void Damage(){
-		//audio.PlayOneShot(noooo);
-		cammie.audio.PlayOneShot(noooo);
 		skelAnimObj.transform.localScale = new Vector3(1.0f,skelAnimObj.transform.localScale.y,skelAnimObj.transform.localScale.z);
 		velocity = Vector2.zero;
 		if (numLives > 0){
 			//hurt should reset to a checkpoint and graphically change bleak to look more battered
+			cammie.audio.PlayOneShot(noooo);
 			SetState (STATE_HURT);
 			numLives--;
 		} else {
 			//dead is like a game over and should switch to a menu or move the player back to the beginning of the level
+			cammie.audio.PlayOneShot(noooo);
 			SetState(STATE_DEAD);
 		}
 	}
@@ -1080,14 +1091,14 @@ public class BleakController : MonoBehaviour {
 	}
 
 	public void PickUpPickup(Pickup pickup){
-		StartCoroutine("RemoveControlForTime",1.5f);
-		skelAnim.state.SetAnimation(0,"pick up",false);
+		/*StartCoroutine("RemoveControlForTime",1.5f);
+		skelAnim.state.SetAnimation(0,"pick up",false);*/
 		pickup.Grab(gameObject);
 	}
 
 	public void PickUpItem(Item item){
-		StartCoroutine("RemoveControlForTime",1.5f);
-		skelAnim.state.SetAnimation(0,"pick up",false);
+		/*StartCoroutine("RemoveControlForTime",1.5f);
+		skelAnim.state.SetAnimation(0,"pick up",false);*/
 		item.Grab(gameObject);
 	}
 

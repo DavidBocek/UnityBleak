@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.52271318, y: 19.3167839, z: 0}
+  m_LocalPosition: {x: 20.5254612, y: 189.369492, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -239,14 +239,14 @@ MonoBehaviour:
   boxCollider: {fileID: 6100000}
   runSpeed: 7.5
   joggingMultiplier: .699999988
-  jumpSpeed: 11
+  jumpSpeed: 7
   maxFallSpeed: 70
   pushSpeed: 7
   gravityAcceleration: 35
-  slamMultiplayer: 3
+  slamMultiplayer: 2
   canControl: 1
   startPoint: {fileID: 0}
-  fallKillSpeed: 70
+  fallKillSpeed: 20
   timeUntilRun: 1.5
   bottomOffsetPushIn: .100000001
   sideOffsetPushIn: 1.5

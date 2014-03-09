@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.784264, y: 22.6255836, z: 0}
+  m_LocalPosition: {x: 39.5262375, y: 31.9542236, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,13 +178,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab9077f7d425454782ed2bd3bbc167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needsSlam: 0
+  needsSlam: 1
   breakableUp: 1
   breakableDown: 0
   breakingSound: {fileID: 8300000, guid: b6c7e7ad10ed339449e8ae7cc4a0cfb1, type: 3}
   breakTime: 1
-  standingSound: {fileID: 0}
-  jumpingSound: {fileID: 0}
+  standingSound: {fileID: 8300000, guid: 27f48e639be33e047b5720357e524e16, type: 3}
+  jumpingSound: {fileID: 8300000, guid: 498101df96ad89445901dd2ec7bb94ad, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
