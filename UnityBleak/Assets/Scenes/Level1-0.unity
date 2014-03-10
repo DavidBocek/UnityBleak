@@ -5438,7 +5438,7 @@ Transform:
   m_PrefabInternal: {fileID: 1133343483}
   m_GameObject: {fileID: 809449879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.5254612, y: 189.369492, z: 0}
+  m_LocalPosition: {x: 39.8313637, y: 184.29277, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1024974612}
@@ -5583,7 +5583,7 @@ MonoBehaviour:
   slamMultiplayer: 2
   canControl: 1
   startPoint: {fileID: 449338265}
-  fallKillSpeed: 20
+  fallKillSpeed: 35
   timeUntilRun: 1.5
   bottomOffsetPushIn: .100000001
   sideOffsetPushIn: 1.5
@@ -5595,6 +5595,7 @@ MonoBehaviour:
   forceMoveDestination: {fileID: 0}
   forceMoveSpeed: 6
   numLives: 2
+  distanceToMoveSwitchingRopeSides: .899999976
 --- !u!1001 &832935283
 Prefab:
   m_ObjectHideFlags: 0
@@ -7352,11 +7353,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20.5254612
+      value: 39.8313637
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 189.369492
+      value: 184.29277
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7393,6 +7394,14 @@ Prefab:
     - target: {fileID: 3300002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: distanceToMoveSwitchingRopeSides
+      value: .899999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: fallKillSpeed
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
@@ -11959,7 +11968,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: f7df9fb45b32d4241b030dc6d7085adb, type: 2}
   renderData: {fileID: 696585652}
   spriteCollection: {fileID: 11400000, guid: 0cb9af024862d5e4ea5b8b4c837c28e7, type: 2}
-  spriteCollectionKey: 1859652133
+  spriteCollectionKey: 540976086
   width: 71
   height: 193
   partitionSizeX: 32
@@ -12640,7 +12649,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 5ecea7a461f15e24a8ae68c2dff670ef, type: 2}
   renderData: {fileID: 1854076682}
   spriteCollection: {fileID: 11400000, guid: 0cb9af024862d5e4ea5b8b4c837c28e7, type: 2}
-  spriteCollectionKey: 1859652133
+  spriteCollectionKey: 540976086
   width: 71
   height: 193
   partitionSizeX: 32

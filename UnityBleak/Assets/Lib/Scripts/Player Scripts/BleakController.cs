@@ -142,6 +142,7 @@ public class BleakController : MonoBehaviour {
 	
 	// Update is called once per frame
 	float tempVelVert;
+	float timeSinceEnteredClimbing = 0f;
 	void Update () {
 		position2d.x = transform.position[0]; position2d.y = transform.position[1];
 		if (state != STATE_NORMAL){
@@ -162,9 +163,13 @@ public class BleakController : MonoBehaviour {
 			UpdateRotationNormal(dt);
 			break;
 		case STATE_CLIMBING_LEFT:
+			Debug.Log("left");
 			UpdateRays (dt);
 			if (canControl){
-				if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A)){
+				if (timeSinceEnteredClimbing < 1f){
+					timeSinceEnteredClimbing += Time.smoothDeltaTime;
+				}
+				if (Input.GetKey (KeyCode.W)){
 					if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 					velocity.y = attachedClimbObject.climbSpeed;
 				} else if (Input.GetKey(KeyCode.S)){
@@ -176,19 +181,26 @@ public class BleakController : MonoBehaviour {
 				}*/ else if (Input.GetKey (KeyCode.Space)){
 					SetState(STATE_NORMAL);
 					jumping = -1;
-					velocity.x = runSpeed*joggingMultiplier*.35f;
+					velocity.x = runSpeed*joggingMultiplier*.5f;
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
+				} else if (Input.GetKeyDown (KeyCode.A) && timeSinceEnteredClimbing >= 1f){ 
+					//switch sides
+					StartCoroutine("cSwitchClimbingSide","right");
 				} else {
-					if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					if (skelAnim.state.ToString() != "climb idle" /*and check to be sure it isn't in the rope side transition animation*/) skelAnim.state.SetAnimation(0,"climb idle",true);
 					velocity.y = 0;
 				}
 			}
 			break;
 		case STATE_CLIMBING_RIGHT:
+			Debug.Log("right");
 			UpdateRays (dt);
 			if (canControl){
-				if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D)){
+				if (timeSinceEnteredClimbing < 1f){
+					timeSinceEnteredClimbing += Time.smoothDeltaTime;
+				}
+				if (Input.GetKey (KeyCode.W)){
 					if (skelAnim.state.ToString() != "climb up") skelAnim.state.SetAnimation(0,"climb up",true);
 					velocity.y = attachedClimbObject.climbSpeed;
 				} else if (Input.GetKey(KeyCode.S)){
@@ -200,11 +212,14 @@ public class BleakController : MonoBehaviour {
 				}*/ else if (Input.GetKey (KeyCode.Space)){
 					SetState(STATE_NORMAL);
 					jumping = -1;
-					velocity.x = -runSpeed*joggingMultiplier*.35f;
+					velocity.x = -runSpeed*joggingMultiplier*.5f;
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
+				} else if (Input.GetKeyDown (KeyCode.D) && timeSinceEnteredClimbing >= 1f){ 
+					//switch sides
+					StartCoroutine("cSwitchClimbingSide","left");
 				} else {
-					if (skelAnim.state.ToString() != "climb idle") skelAnim.state.SetAnimation(0,"climb idle",true);
+					if (skelAnim.state.ToString() != "climb idle" /*and check to be sure it isn't in the rope side transition animation*/) skelAnim.state.SetAnimation(0,"climb idle",true);
 					velocity.y = 0;
 				}
 			}
@@ -858,6 +873,7 @@ public class BleakController : MonoBehaviour {
 	/// time since last frame (in seconds).
 	/// </param>
 	void UpdatePositionChangeClimbing(float dt){
+		if (!canControl) return;
 		Vector2 deltaXRayOriginRightTop = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y+boxCollider.size.y/2-sideOffsetPushIn);
 		Vector2 deltaXRayOriginRightCenter = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y);
 		Vector2 deltaXRayOriginRightBottom = new Vector2(transform.position.x+boxCollider.size.x/2-.1f,transform.position.y-boxCollider.size.y/2+sideOffsetPushIn);
@@ -1042,6 +1058,7 @@ public class BleakController : MonoBehaviour {
 		}
 		Climbable climbable = hitInfo.transform.gameObject.GetComponent<Climbable>();
 		if (climbable){
+			timeSinceEnteredClimbing = 0f;
 			SetState (STATE_CLIMBING_RIGHT);
 			attachedClimbObject = climbable;
 		}
@@ -1060,6 +1077,7 @@ public class BleakController : MonoBehaviour {
 		}
 		Climbable climbable = hitInfo.transform.gameObject.GetComponent<Climbable>();
 		if (climbable){
+			timeSinceEnteredClimbing = 0f;
 			SetState (STATE_CLIMBING_LEFT);
 			attachedClimbObject = climbable;
 		}
@@ -1102,6 +1120,38 @@ public class BleakController : MonoBehaviour {
 		item.Grab(gameObject);
 	}
 
+	public float distanceToMoveSwitchingRopeSides;
+	IEnumerator cSwitchClimbingSide(string newSide){
+		rigidBody.isKinematic = true;
+		StartCoroutine("RemoveControlForTime",1f);
+		float directionInt = Input.GetAxisRaw("Horizontal");
+		if (directionInt < 0)
+			facing = !LEFT;
+		if (directionInt >0)
+			facing = !RIGHT;
+		UpdateRotationNormal(Time.smoothDeltaTime);
+		if (newSide == "right"){
+			//play switch left to right side animation
+			//lerp to new location
+			for (float i=0; i<.85f; i+=Time.deltaTime){
+				transform.Translate(new Vector3(-distanceToMoveSwitchingRopeSides/(.75f/Time.deltaTime),0f,0f));
+				yield return null;
+			}
+			timeSinceEnteredClimbing = 0f;
+			SetState(STATE_CLIMBING_RIGHT);
+		} else if (newSide == "left"){
+			//play switch right to left side animation
+			//lerp to new location
+			for (float i=0; i<.85f; i+=Time.deltaTime){
+				transform.Translate(new Vector3(distanceToMoveSwitchingRopeSides/(.75f/Time.deltaTime),0f,0f));
+				yield return null;
+			}
+			timeSinceEnteredClimbing = 0f;
+			SetState(STATE_CLIMBING_LEFT);
+		}
+		yield return new WaitForSeconds(.5f);
+		rigidBody.isKinematic = false;
+	}
 
 	IEnumerator RemoveControlForTime(float time){
 		canControl = false;
