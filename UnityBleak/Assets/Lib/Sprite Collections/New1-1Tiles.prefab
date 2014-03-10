@@ -95,6 +95,24 @@ MonoBehaviour:
     splitMethod: 0
     version: 1
     colliderType: 0
+  - texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
+    tilesX: 0
+    tilesY: 0
+    numTiles: 0
+    anchor: 4
+    pad: 2
+    scale: {x: 1, y: 1, z: 1}
+    additive: 0
+    active: 1
+    tileWidth: 50
+    tileHeight: 50
+    tileMarginX: 0
+    tileMarginY: 0
+    tileSpacingX: 0
+    tileSpacingY: 0
+    splitMethod: 0
+    version: 1
+    colliderType: 0
   fonts: []
   defaults:
     additive: 0
@@ -116,7 +134,7 @@ MonoBehaviour:
   atlasWidth: 256
   atlasHeight: 512
   forceSquareAtlas: 0
-  atlasWastage: 28.6071777
+  atlasWastage: 15.2862549
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -1261,11 +1279,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/0
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1278,34 +1296,34 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
     spriteSheetX: 0
     spriteSheetY: 0
-    extractRegion: 0
+    extractRegion: 1
     regionX: 0
     regionY: 0
-    regionW: 0
-    regionH: 0
+    regionW: 50
+    regionH: 50
     regionId: 0
-    colliderType: 0
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/1
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1318,34 +1336,34 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
+    spriteSheetX: 1
     spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
+    extractRegion: 1
+    regionX: 50
     regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
+    regionW: 50
+    regionH: 50
+    regionId: 1
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1358,34 +1376,34 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
+    spriteSheetX: 2
     spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
+    extractRegion: 1
+    regionX: 100
     regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
+    regionW: 50
+    regionH: 50
+    regionId: 2
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/3
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1398,23 +1416,23 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
+    spriteSheetX: 3
     spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
+    extractRegion: 1
+    regionX: 150
     regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
+    regionW: 50
+    regionH: 50
+    regionId: 3
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
+    boxColliderMax: {x: 50, y: 50}
     polyColliderIslands: []
     polyColliderCap: 1
     colliderConvex: 0
@@ -1829,11 +1847,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/4
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1846,21 +1864,21 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
+    spriteSheetX: 4
     spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
+    extractRegion: 1
+    regionX: 200
     regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
+    regionW: 50
+    regionH: 50
+    regionId: 4
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
     boxColliderMax: {x: 0, y: 0}
     polyColliderIslands: []
@@ -1869,11 +1887,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: standinclifftiles/5
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ae7c11bd7feea0642b52a2ec205b0368, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -1886,21 +1904,21 @@ MonoBehaviour:
     diceUnitX: 64
     diceUnitY: 64
     diceFilter: 0
-    pad: 0
+    pad: 2
     extraPadding: 0
     source: 0
     fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
+    hasSpriteSheetId: 1
+    spriteSheetId: 3
+    spriteSheetX: 5
     spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
+    extractRegion: 1
+    regionX: 250
     regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
+    regionW: 50
+    regionH: 50
+    regionId: 5
+    colliderType: 1
     boxColliderMin: {x: 0, y: 0}
     boxColliderMax: {x: 0, y: 0}
     polyColliderIslands: []

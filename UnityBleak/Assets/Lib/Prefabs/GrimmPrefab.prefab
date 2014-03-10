@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.5, y: 6.5, z: -1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -67,9 +67,9 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: .5, y: .5}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,10 +82,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killAny: 1
-  killUp: 1
-  killLeft: 1
-  killRight: 1
-  killDown: 1
+  killUp: 0
+  killLeft: 0
+  killRight: 0
+  killDown: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 36
-  boxCollider2D: {fileID: 0}
+  boxCollider2D: {fileID: 6100000}
   polygonCollider2D: []
   edgeCollider2D: []
   boxCollider: {fileID: 0}

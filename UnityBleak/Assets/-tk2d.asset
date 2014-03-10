@@ -3253,10 +3253,10 @@ MonoBehaviour:
     - tileexperimentation/9
     - tileexperimentation/10
     - tileexperimentation/11
-    - 
-    - 
-    - 
-    - 
+    - standinclifftiles/0
+    - standinclifftiles/1
+    - standinclifftiles/2
+    - standinclifftiles/3
     - TileSet 1/16
     - TileSet 1/17
     - TileSet 1/18
@@ -3267,8 +3267,8 @@ MonoBehaviour:
     - TileSet 1/23
     - TileSet 1/24
     - TileSet 1/25
-    - 
-    - 
+    - standinclifftiles/4
+    - standinclifftiles/5
     - TileSet 1/28
     - TileSet 1/29
     spriteTextureGUIDs:
@@ -3300,10 +3300,10 @@ MonoBehaviour:
     - 9a92e86e7abc5f84d9b7aa5de558b697
     - 9a92e86e7abc5f84d9b7aa5de558b697
     - 9a92e86e7abc5f84d9b7aa5de558b697
-    - 
-    - 
-    - 
-    - 
+    - ae7c11bd7feea0642b52a2ec205b0368
+    - ae7c11bd7feea0642b52a2ec205b0368
+    - ae7c11bd7feea0642b52a2ec205b0368
+    - ae7c11bd7feea0642b52a2ec205b0368
     - ce58827a375f80e4eadd214520d98ce8
     - ce58827a375f80e4eadd214520d98ce8
     - ce58827a375f80e4eadd214520d98ce8
@@ -3314,8 +3314,8 @@ MonoBehaviour:
     - ce58827a375f80e4eadd214520d98ce8
     - ce58827a375f80e4eadd214520d98ce8
     - ce58827a375f80e4eadd214520d98ce8
-    - 
-    - 
+    - ae7c11bd7feea0642b52a2ec205b0368
+    - ae7c11bd7feea0642b52a2ec205b0368
     - ce58827a375f80e4eadd214520d98ce8
     - ce58827a375f80e4eadd214520d98ce8
     spriteTextureTimeStamps:
@@ -3347,10 +3347,10 @@ MonoBehaviour:
     - 1394311940
     - 1394311940
     - 1394311940
-    - 0
-    - 0
-    - 0
-    - 0
+    - 1394406987
+    - 1394406987
+    - 1394406987
+    - 1394406987
     - 1393232449
     - 1393232449
     - 1393232449
@@ -3361,8 +3361,8 @@ MonoBehaviour:
     - 1393232449
     - 1393232449
     - 1393232449
-    - 0
-    - 0
+    - 1394406987
+    - 1394406987
     - 1393232449
     - 1393232449
     managedSpriteCollection: 0
