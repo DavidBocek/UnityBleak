@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: New1-1Tiles
+  m_Name: New1-1Tiles 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2023,12 +2023,8 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 25
-<<<<<<< HEAD
-  buildKey: 293853600
-=======
-  buildKey: 540976086
->>>>>>> b828bad037a7fa712a267c02a43de9e7375ff1bc
-  dataGuid: 0cb9af024862d5e4ea5b8b4c837c28e7
+  buildKey: 2144306961
+  dataGuid: 4bd996807a0f9f74ca2f12a086d8a6a4
   managedSpriteCollection: 0
   hasPlatformData: 0
   spriteCollectionPlatforms: []

@@ -2007,7 +2007,7 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  spriteCollection: {fileID: 11400000, guid: 0cb9af024862d5e4ea5b8b4c837c28e7, type: 2}
+  spriteCollection: {fileID: 11400000, guid: 4bd996807a0f9f74ca2f12a086d8a6a4, type: 2}
   premultipliedAlpha: 0
   altMaterials:
   - {fileID: 2100000, guid: 50a9c9910a48e0148ac18448e7ea62f0, type: 2}
