@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour {
 
-	public string lastLevel;
+	public string levelEnterLocation;
 	public int numLivesPlayer = 2;
 
 	// Use this for initialization

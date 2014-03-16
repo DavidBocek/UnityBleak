@@ -3478,8 +3478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4717e58959d05fc48876946544bad2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 0
-  nextLevel: Level1-1
 --- !u!4 &632059269
 Transform:
   m_ObjectHideFlags: 0
@@ -5184,7 +5182,7 @@ Transform:
   m_PrefabInternal: {fileID: 1133343483}
   m_GameObject: {fileID: 809449879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.8313637, y: 184.29277, z: 0}
+  m_LocalPosition: {x: 20.3071194, y: 190.213593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1024974612}
@@ -7099,11 +7097,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 39.8313637
+      value: 20.3071194
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 184.29277
+      value: 190.213593
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9592,6 +9590,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1449558578}
   m_GameObject: {fileID: 1521359801}
   m_Mesh: {fileID: 0}
+--- !u!1 &1533121834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1533121836}
+  - 114: {fileID: 1533121835}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: LevelManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1533121835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533121834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82aec0ce978f44fb3e98ed7c5b3228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelEnterLocation: 
+  numLivesPlayer: 2
+--- !u!4 &1533121836
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533121834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!43 &1534988883
 Mesh:
   m_ObjectHideFlags: 0
@@ -13351,8 +13389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4717e58959d05fc48876946544bad2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 0
-  nextLevel: Level1-1
 --- !u!4 &2013480997
 Transform:
   m_ObjectHideFlags: 0
