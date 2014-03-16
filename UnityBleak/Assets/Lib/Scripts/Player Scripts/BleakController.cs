@@ -48,6 +48,8 @@ public class BleakController : MonoBehaviour {
 	private SkeletonAnimation skelAnim;
 	private GameObject attachedRideObject;
 	private bool runningOnSlope = false;
+	private LevelManager levelManager;
+	private Vector3 lastCheckpoint;
 	
 	private const bool LEFT = false;
 	private const bool RIGHT = true;
@@ -109,10 +111,12 @@ public class BleakController : MonoBehaviour {
 
 		//instantiate
 		transform.position = startPoint.position;
+		lastCheckpoint = startPoint.position;
 		position2d = new Vector2(transform.position[0],transform.position[1]);
 		boxCollider = transform.gameObject.GetComponent<BoxCollider2D>();
 		rigidBody = transform.gameObject.GetComponent<Rigidbody2D>();
 		skelAnim = skelAnimObj.GetComponent<SkeletonAnimation>();
+		levelManager = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
 
 		rayLengthBottom = (boxCollider.size.y / 2f)+.05f;
 		rayLengthSide = (boxCollider.size.x / 2f)+.05f;
@@ -134,10 +138,24 @@ public class BleakController : MonoBehaviour {
 		collisionHandler.Init(boxCollider,rigidBody);
 
 		StartCoroutine("RemoveControlForTime",.75f);
+
+		DontDestroyOnLoad(gameObject);	//dont destroy bleak on level loading
 	}
 
 	void OnLevelWasLoaded(int levelIndex){
 		//deal with loading in start point changes and such here
+		Vector3 startPosition = Vector3.zero;
+		if (levelIndex == 0) return; //first level is already set up in the Start() command
+		else {
+			try{
+				startPosition = GameObject.FindWithTag(levelManager.levelEnterLocation).transform.position;
+			}
+			catch{
+				throw new UnityException("Level enter location not recognized: "+levelManager.levelEnterLocation+". Make sure to set this where you change levels!");
+			}
+		}
+		lastCheckpoint = startPosition;
+		transform.position = startPosition;
 	}
 	
 	// Update is called once per frame
@@ -240,6 +258,8 @@ public class BleakController : MonoBehaviour {
 			}
 			if (canControl){
 				StartCoroutine("CloseAndOpenApertureRespawn",startPoint);
+			} else {
+				skelAnim.state.AddAnimation(0,"idle",false,0f);
 			}
 			break;
 		case STATE_DEAD:
@@ -283,6 +303,7 @@ public class BleakController : MonoBehaviour {
 			break;
 		}
 	}
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		KillZones killOnTouch = collision.gameObject.GetComponent<KillZones>();
@@ -292,6 +313,7 @@ public class BleakController : MonoBehaviour {
 			}
 		}
 	}
+
 	void LateUpdate(){
 		switch (state){
 		case STATE_NORMAL:
@@ -386,7 +408,7 @@ public class BleakController : MonoBehaviour {
 						skelAnim.state.ClearTrack(0);
 						skelAnim.state.AddAnimation(0,"skid",false,0.0f);
 						//skelAnim.state.AddAnimation(0,"idle",true,0.0f);
-					} else */if (skelAnim.state.ToString()=="run"){
+					} else */if (skelAnim.state.ToString()=="run" || skelAnim.state.ToString()=="sprint"){
 						skelAnim.state.ClearTrack(0);
 						if (numLives > 0) skelAnim.state.AddAnimation(0,"idle",true,0.0f);
 						else skelAnim.state.AddAnimation(0,"idle-injured",true,0.0f);
@@ -1133,8 +1155,8 @@ public class BleakController : MonoBehaviour {
 		if (newSide == "right"){
 			//play switch left to right side animation
 			//lerp to new location
-			for (float i=0; i<.85f; i+=Time.deltaTime){
-				transform.Translate(new Vector3(-distanceToMoveSwitchingRopeSides/(1f/Time.deltaTime),0f,0f));
+			for (float i=0; i<.45f; i+=Time.deltaTime){
+				transform.Translate(new Vector3(-distanceToMoveSwitchingRopeSides/(1f/Time.deltaTime)*2.35f,0f,0f));
 				yield return null;
 			}
 			timeSinceEnteredClimbing = 0f;
@@ -1142,8 +1164,8 @@ public class BleakController : MonoBehaviour {
 		} else if (newSide == "left"){
 			//play switch right to left side animation
 			//lerp to new location
-			for (float i=0; i<.85f; i+=Time.deltaTime){
-				transform.Translate(new Vector3(distanceToMoveSwitchingRopeSides/(1f/Time.deltaTime),0f,0f));
+			for (float i=0; i<.45f; i+=Time.deltaTime){
+				transform.Translate(new Vector3(distanceToMoveSwitchingRopeSides/(1f/Time.deltaTime)*2.35f,0f,0f));
 				yield return null;
 			}
 			timeSinceEnteredClimbing = 0f;
@@ -1164,8 +1186,9 @@ public class BleakController : MonoBehaviour {
 		aperture.Close();
 		skelAnim.state.SetAnimation(0,"death",false);
 		yield return new WaitForSeconds(1f);
-		transform.position = respawnLocation.position;
+		transform.position = lastCheckpoint;
 		yield return new WaitForSeconds(1f);
+		skelAnim.state.SetAnimation(0,"idle",true);
 		aperture.Open();
 		canControl = true;
 		SetState(STATE_NORMAL);
