@@ -604,7 +604,7 @@ public class BleakController : MonoBehaviour {
 				if (jumping != -1){
 					//play jogging anim
 					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured" && skelAnim.state.ToString()!="pick up"){
-						if (numLives > 0) skelAnim.state.SetAnimation(0,"run",true);
+						if (numLives > 0) skelAnim.state.SetAnimation(0,"running",true);
 						else skelAnim.state.SetAnimation(0,"run-injured",true);
 					}
 				}
