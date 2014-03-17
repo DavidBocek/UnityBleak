@@ -181,7 +181,7 @@ public class BleakController : MonoBehaviour {
 			UpdateRotationNormal(dt);
 			break;
 		case STATE_CLIMBING_LEFT:
-			Debug.Log("left");
+			//Debug.Log("left");
 			UpdateRays (dt);
 			if (canControl){
 				if (timeSinceEnteredClimbing < 1f){
@@ -202,7 +202,7 @@ public class BleakController : MonoBehaviour {
 					velocity.x = runSpeed*joggingMultiplier*.5f;
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
-				} else if (Input.GetKeyDown (KeyCode.A) && timeSinceEnteredClimbing >= 1f){ 
+				} else if (Input.GetKeyDown(KeyCode.A) && timeSinceEnteredClimbing >= 1f){ 
 					//switch sides
 					StartCoroutine("cSwitchClimbingSide","right");
 				} else {
@@ -212,7 +212,7 @@ public class BleakController : MonoBehaviour {
 			}
 			break;
 		case STATE_CLIMBING_RIGHT:
-			Debug.Log("right");
+			//Debug.Log("right");
 			UpdateRays (dt);
 			if (canControl){
 				if (timeSinceEnteredClimbing < 1f){
@@ -233,7 +233,7 @@ public class BleakController : MonoBehaviour {
 					velocity.x = -runSpeed*joggingMultiplier*.5f;
 					velocity.y = jumpSpeed * .35f;
 					skelAnim.state.SetAnimation(0,"jump",false);
-				} else if (Input.GetKeyDown (KeyCode.D) && timeSinceEnteredClimbing >= 1f){ 
+				} else if (Input.GetKeyDown(KeyCode.D) && timeSinceEnteredClimbing >= 1f){ 
 					//switch sides
 					StartCoroutine("cSwitchClimbingSide","left");
 				} else {

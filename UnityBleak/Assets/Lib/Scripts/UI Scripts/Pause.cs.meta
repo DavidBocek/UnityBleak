@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: bc879462bd00fb243a033a22246b23ee
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - pausetex: {fileID: 13100000, guid: 8706c697462fd6e4f8994c6abb7ce089, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

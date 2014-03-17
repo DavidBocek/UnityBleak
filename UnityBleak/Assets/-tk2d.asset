@@ -3063,18 +3063,21 @@ MonoBehaviour:
     - SouthInterfaceConversationAdviser
     - NorthInterfaceQuestTracker
     - EastInterfaceMapKeyBlinds
+    - UIChatPlaceholder
     spriteTextureGUIDs:
     - 056420396cf46f340a05a696797401bd
     - b745ecf952282e14aac23ec5112ac0fb
     - 73a46171cf71ae14b81dc78661d2c9d6
     - 963544f54305c0c4da54f3855229a19a
     - fa78ed74df0b0394abb2d1b1d1d7e0ac
+    - 29c2a16db9b6fb744bb4de0b0618360e
     spriteTextureTimeStamps:
     - 1374428253
     - 1387146335.42653
     - 1387146335.41853
     - 1387146335.41253
     - 1387146335.40553
+    - 1395000167
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

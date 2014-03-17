@@ -5,8 +5,10 @@ TagManager:
   tags:
   - Acid
   - LevelManager
-  - HotSpot
-  - WarmSpot
+  - Level1-1Left
+  - Level1-1Right
+  - Level1-2Top
+  - Level1-2Bottom
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
