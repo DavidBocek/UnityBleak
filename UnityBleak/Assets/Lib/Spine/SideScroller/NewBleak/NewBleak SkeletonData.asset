@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: NewBleak SkeletonData
   m_EditorClassIdentifier: 
   atlasAsset: {fileID: 11400000, guid: 1e3c276c7d2f0a74abacdca3ef4e3cf6, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: 6c60c4befaec99b4bb7bf489751194dc, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 967d9260cdb07534ca7a9fdd6eebf668, type: 3}
   scale: .00159999996
   fromAnimation:
   - running
