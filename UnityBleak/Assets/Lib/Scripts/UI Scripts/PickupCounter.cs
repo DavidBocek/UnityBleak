@@ -16,18 +16,24 @@ public class PickupCounter : MonoBehaviour {
 
 	public int count;
 
-	// Use this for initialization
-	void Awake () {
-		//load counter values from the last scene
-		/*if (isScrapMetal)
-			//count = LevelLoaderUtil.scrapCount;
-		if (isScrew)
-			//count = LevelLoaderUtil.screwCount;
-		if (isGear)
-			PlayerPrefs.SetInt("gears",count);*/
-	}
+	private LevelManager levelManager;
 
-	void Start(){
+	// Use this for initialization
+	void Start () {
+		levelManager = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
+		if (levelManager != null){
+			//load counter values from the last scene
+			if (isScrapMetal){
+				count = levelManager.scrapCount;
+			}
+			if (isScrew){
+				count = levelManager.screwCount;
+			}
+			if (isGear){
+				count = levelManager.gearCount;
+			}
+		}
+
 		UpdateAnimators();
 	}
 	
@@ -36,6 +42,7 @@ public class PickupCounter : MonoBehaviour {
 			count += value;
 			UpdateAnimators();
 		}
+		UpdateLevelManager();
 	}
 
 	public void Subtract(int value){
@@ -43,6 +50,7 @@ public class PickupCounter : MonoBehaviour {
 			count -= value;
 			UpdateAnimators();
 		}
+		UpdateLevelManager();
 	}
 
 	public void SetCount(int value){
@@ -52,6 +60,7 @@ public class PickupCounter : MonoBehaviour {
 		} else {
 			throw new UnityException("attempted to set a pickup counter to greater than its max vaue or less than its min value");
 		}
+		UpdateLevelManager();
 	}
 
 	public int GetCount(){
@@ -69,5 +78,17 @@ public class PickupCounter : MonoBehaviour {
 		tensCounter.ChangeCounterToValue(countCopy % 10);
 		countCopy /= 10;
 		hundredsCounter.ChangeCounterToValue(countCopy % 10);
+	}
+
+	/// <summary>
+	/// Updates the level manager counts for saving
+	/// </summary>
+	void UpdateLevelManager(){
+		if (isScrapMetal)
+			levelManager.scrapCount = count;
+		if (isScrew)
+			levelManager.screwCount = count;
+		if (isGear)
+			levelManager.gearCount = count;
 	}
 }

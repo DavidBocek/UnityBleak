@@ -148,12 +148,13 @@ public class BleakController : MonoBehaviour {
 		if (levelIndex == 0) return; //first level is already set up in the Start() command
 		else {
 			try{
-				startPosition = GameObject.FindWithTag(levelManager.levelEnterLocation).transform.position;
+				startPosition = GameObject.FindWithTag(levelManager.levelEnterPointTag).transform.position;
 			}
 			catch{
-				throw new UnityException("Level enter location not recognized: "+levelManager.levelEnterLocation+". Make sure to set this where you change levels!");
+				throw new UnityException("Level enter location tag not recognized: "+levelManager.levelEnterPointTag+". Make sure to set this where you change levels!");
 			}
 		}
+		numLives = levelManager.numLivesPlayer;
 		lastCheckpoint = startPosition;
 		transform.position = startPosition;
 	}

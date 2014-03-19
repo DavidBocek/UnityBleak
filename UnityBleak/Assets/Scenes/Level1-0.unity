@@ -716,6 +716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 71934168}
   - 131: {fileID: 71934169}
+  - 114: {fileID: 71934170}
   m_Layer: 0
   m_Name: Pause
   m_TagString: Untagged
@@ -754,6 +755,17 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!114 &71934170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71934167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac69849cf284734448f3c36967405c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &81111719
 Mesh:
   m_ObjectHideFlags: 0
@@ -3618,6 +3630,10 @@ Prefab:
     - target: {fileID: 2000000, guid: 2838198da6f30d740b0c493861ab6d54, type: 2}
       propertyPath: near clip plane
       value: 8.43000031
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2838198da6f30d740b0c493861ab6d54, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2838198da6f30d740b0c493861ab6d54, type: 2}
@@ -8921,8 +8937,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b82aec0ce978f44fb3e98ed7c5b3228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelEnterLocation: 
+  levelEnterPointTag: 
   numLivesPlayer: 2
+  scrapCount: 0
+  screwCount: 0
+  gearCount: 0
 --- !u!4 &1533121836
 Transform:
   m_ObjectHideFlags: 0
@@ -11817,7 +11836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &2031702470
 AudioListener:
   m_ObjectHideFlags: 0

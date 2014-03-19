@@ -10,6 +10,13 @@ public class Smooth2DCamera : MonoBehaviour {
 	public Vector2 lowerLeft = new Vector2(0.0f,0.0f);
 	public Vector2 upperRight;
 
+	void OnLevelWasLoaded(int levelIndex){
+		GameObject player = GameObject.FindWithTag("Player");
+		if (player != null){
+			target = player.transform;
+		}
+	}
+
     // Update is called once per frame
     void Update () 
     {

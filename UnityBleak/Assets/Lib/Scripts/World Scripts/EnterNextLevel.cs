@@ -8,7 +8,9 @@ public class EnterNextLevel : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.CompareTag("Player")){
-			GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().levelEnterLocation = nextLevelEnterPointTag;
+			LevelManager lm = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
+			lm.levelEnterPointTag = nextLevelEnterPointTag;
+			lm.SaveGameVars();
 			Application.LoadLevel(nextLevel);
 		}
 	}
