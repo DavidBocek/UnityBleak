@@ -22,7 +22,6 @@ public class BleakController : MonoBehaviour {
 	public float sideOffsetPushIn;
 	public GameObject skelAnimObj;
 	public AudioClip noooo;
-	public AudioSource cammie;
 	public Aperture aperture;
 	public float maximumSlopeAngle;
 
@@ -1117,12 +1116,12 @@ public class BleakController : MonoBehaviour {
 		velocity = Vector2.zero;
 		if (numLives > 0){
 			//hurt should reset to a checkpoint and graphically change bleak to look more battered
-			cammie.audio.PlayOneShot(noooo);
+			audio.PlayOneShot(noooo);
 			SetState (STATE_HURT);
 			numLives--;
 		} else {
 			//dead is like a game over and should switch to a menu or move the player back to the beginning of the level
-			cammie.audio.PlayOneShot(noooo);
+			audio.PlayOneShot(noooo);
 			SetState(STATE_DEAD);
 		}
 	}
