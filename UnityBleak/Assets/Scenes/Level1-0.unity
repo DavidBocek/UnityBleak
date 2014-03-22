@@ -5018,8 +5018,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .699999988, y: 1.85000002}
-  m_Center: {x: 0, y: -.0900000036}
+  m_Size: {x: .699999988, y: 1.5}
+  m_Center: {x: 0, y: -.25}
 --- !u!114 &809449886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,7 +5049,6 @@ MonoBehaviour:
   sideOffsetPushIn: 1.5
   skelAnimObj: {fileID: 1016558168}
   noooo: {fileID: 8300000, guid: 29ff79486a877bc4e9e19933929db9b4, type: 3}
-  cammie: {fileID: 751685477}
   aperture: {fileID: 522771481}
   maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
@@ -5377,6 +5376,14 @@ Prefab:
     - target: {fileID: 400006, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
       propertyPath: m_LocalPosition.y
       value: -1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}
+      propertyPath: m_Center.y
+      value: -.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b24c714ab804084fbed44bc7cfd2eee, type: 2}

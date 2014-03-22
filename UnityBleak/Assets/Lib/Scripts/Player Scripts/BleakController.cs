@@ -378,8 +378,11 @@ public class BleakController : MonoBehaviour {
 
 				//falling
 				if (/*collidableDown && aboveCollider && */velocity.y <= 0){
-					if (-velocity.y > Mathf.Abs(fallKillSpeed) /*&& !IsSlamming()*/) 
+					//skelAnim.state.SetAnimation(0,"falling",true);
+					if (-velocity.y > Mathf.Abs(fallKillSpeed) /*&& !IsSlamming()*/)
+					{
 						Damage (); //for right now, no fall damage when slamming. We may need to change this though
+					}
 					else if (velocity.y < 0) velocity.y = 0;
 					HandleBottomCollision(rayHitInfoBottom,dt);	
 				} else {
@@ -626,8 +629,8 @@ public class BleakController : MonoBehaviour {
 				if (jumping != -1){
 					//play jogging anim
 					if (skelAnim.state.ToString()!="run" && skelAnim.state.ToString()!="run-injured" && skelAnim.state.ToString()!="pick up"){
-						if (numLives > 0) skelAnim.state.SetAnimation(0,"running",true);
-						else skelAnim.state.SetAnimation(0,"run-injured",true);
+						if (numLives > 0) skelAnim.state.SetAnimation(0,"sprint",true); //was running
+						else skelAnim.state.SetAnimation(0,"sprint",true); //was run-injured
 					}
 				}
 			} else {
@@ -701,6 +704,7 @@ public class BleakController : MonoBehaviour {
 		
 		//jumping is 0 when on the ground, >0 for a split second while the jump impulse is occuring, and -1 after that before he hits the ground (so that you can't jump again in air)
 		if (Input.GetKey(KeyCode.Space) && jumping >= 0){
+			skelAnim.state.SetAnimation(0,"jump",false);
 			if (attachedRideObject != null) attachedRideObject = null;
 			//play jump sound
 			jumping += dt;
@@ -720,7 +724,7 @@ public class BleakController : MonoBehaviour {
 			else{
 				velocity.y = jumpSpeed;
 			}
-			skelAnim.state.SetAnimation(0,"jump",false);
+			//skelAnim.state.SetAnimation(0,"jump",false);
 		}
 		//reset jump component, this should only run in the frame after bleak hits the ground.
 		if (isGrounded && jumping == -1){

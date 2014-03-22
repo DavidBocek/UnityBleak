@@ -15,14 +15,65 @@ MonoBehaviour:
   skeletonJSON: {fileID: 4900000, guid: 967d9260cdb07534ca7a9fdd6eebf668, type: 3}
   scale: .00159999996
   fromAnimation:
-  - running
+  - climb down
+  - climb idle
+  - climb idle
+  - climb down
+  - climb up
+  - climb idle
   - jump
-  - running
+  - jump
+  - jump
+  - idle
+  - sprint
+  - jump
+  - jump
+  - sprint
+  - sprint
+  - idle
+  - falling
+  - falling
+  - idle
+  - sprint
   toAnimation:
-  - running with blink
-  - running
+  - climb idle
+  - climb down
+  - climb up
   - jump
+  - jump
+  - jump
+  - climb idle
+  - climb down
+  - climb up
+  - jump
+  - jump
+  - sprint
+  - idle
+  - sprint
+  - falling
+  - falling
+  - sprint
+  - idle
+  - sprint
+  - idle
   duration:
   - .100000001
   - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .0199999996
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .100000001
+  - .400000006
   - .100000001
