@@ -248,10 +248,10 @@ public class BleakController : MonoBehaviour {
 		case STATE_HURT:
 			switch (numLives){
 			case 1:
-				skelAnim.skeleton.SetSkin("damaged01");
+				//skelAnim.skeleton.SetSkin("damaged01");
 				break;
 			case 0:
-				skelAnim.skeleton.SetSkin("damaged02");
+				//skelAnim.skeleton.SetSkin("damaged02");
 				break;
 			default:
 				throw new UnityException("bleak was hurt, and his number of lives was not 0 or 1");
@@ -267,7 +267,7 @@ public class BleakController : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.R)){
 				transform.position = startPoint.position;
 				numLives = 2;
-				skelAnim.skeleton.SetSkin("damaged00");
+				//skelAnim.skeleton.SetSkin("damaged00");
 				SetState(STATE_NORMAL);
 			}
 			break;
@@ -1188,7 +1188,7 @@ public class BleakController : MonoBehaviour {
 	IEnumerator CloseAndOpenApertureRespawn(Transform respawnLocation){
 		canControl = false;
 		aperture.Close();
-		skelAnim.state.SetAnimation(0,"death",false);
+		//skelAnim.state.SetAnimation(0,"death",false);
 		yield return new WaitForSeconds(1f);
 		transform.position = lastCheckpoint;
 		yield return new WaitForSeconds(1f);

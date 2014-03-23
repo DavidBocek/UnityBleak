@@ -5,6 +5,7 @@ public class Pause : MonoBehaviour
 {
 	bool paused = false;
 	public GUITexture pausetex;
+	public GameObject bleak;
 	
 	void Update()
 	{
@@ -18,11 +19,18 @@ public class Pause : MonoBehaviour
 		{
 			pausetex.enabled = true;
 			GUILayout.Label("Pause");
-			if(GUI.Button( new Rect(Screen.width/2-100,Screen.height*0.6f-25,200,50),"Quit"))
+			/*if(GUI.Button( new Rect(Screen.width/2-100,Screen.height*0.5f-25,200,50),"Restart Level"))
+			{
+				DestroyObject(bleak);
+				Application.LoadLevel(Application.loadedLevel);
+				paused = togglePause();
+				//pausetex.enabled = false;
+			}*/
+			if(GUI.Button( new Rect(Screen.width/2-100,Screen.height*0.8f-25,200,50),"Quit"))
 			{
 				Application.Quit();
 			}
-			if(GUI.Button( new Rect(Screen.width/2-100,Screen.height*0.5f-25,200,50),"Return to Game"))
+			if(GUI.Button( new Rect(Screen.width/2-100,Screen.height*0.2f-25,200,50),"Return to Game"))
 				paused = togglePause();
 			
 		}

@@ -337,7 +337,6 @@ MonoBehaviour:
   sideOffsetPushIn: 1.5
   skelAnimObj: {fileID: 169017017}
   noooo: {fileID: 8300000, guid: 29ff79486a877bc4e9e19933929db9b4, type: 3}
-  cammie: {fileID: 1006795383}
   aperture: {fileID: 69608330}
   maximumSlopeAngle: 46
   forceMoveDestination: {fileID: 0}
